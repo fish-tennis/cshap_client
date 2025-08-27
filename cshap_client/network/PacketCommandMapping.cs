@@ -1,8 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Reflection;
+using System.Runtime.CompilerServices;
+using gnet_csharp;
 using Google.Protobuf;
 using Google.Protobuf.Reflection;
 using Gserver;
@@ -13,15 +17,15 @@ namespace cshap_client.network
     // 消息和消息号的映射
     public static class PacketCommandMapping
     {
-        private static readonly Dictionary<Type, int> _messageTypeCmdMapping = new Dictionary<Type, int>();
-        private static readonly Dictionary<int, string> _cmdMessageNameMapping = new Dictionary<int, string>();
+        private static readonly Dictionary<Type, ushort> _messageTypeCmdMapping = new Dictionary<Type, ushort>();
+        private static readonly Dictionary<ushort, MessageDescriptor> _cmdMessageMapping = new Dictionary<ushort, MessageDescriptor>();
         private static TypeRegistry _typeRegistry; // 所有注册的messageDescriptor
 
         // 对应proto文件里的package导出名
         public const string ProtoPackageName = "gserver";
         
         // 根据消息体结构查找对应的消息号
-        public static int GetCommandByProto(IMessage protoMessage)
+        public static ushort GetCommandByProto(IMessage protoMessage)
         {
             if (protoMessage == null)
             {
@@ -30,7 +34,7 @@ namespace cshap_client.network
             }
 
             var type = protoMessage.GetType();
-            if (_messageTypeCmdMapping.TryGetValue(type, out int cmd))
+            if (_messageTypeCmdMapping.TryGetValue(type, out ushort cmd))
             {
                 return cmd;
             }
@@ -63,7 +67,7 @@ namespace cshap_client.network
             foreach (var kvp in mapping)
             {
                 string messageName = kvp.Key;
-                int messageId = kvp.Value;
+                ushort messageId = (ushort)kvp.Value;
                 string fullMessageName = GetFullMessageName(ProtoPackageName, messageName);
                 var messageDescriptor = _typeRegistry.Find(fullMessageName);
                 if (messageDescriptor == null)
@@ -85,7 +89,7 @@ namespace cshap_client.network
                     if (messageInstance != null)
                     {
                         _messageTypeCmdMapping[messageType] = messageId;
-                        _cmdMessageNameMapping[messageId] = messageName;
+                        _cmdMessageMapping[messageId] = messageDescriptor;
                         Console.WriteLine("CommandMapping msg:{0} id:{1}", messageName, messageId);
                     }
                 }
@@ -126,16 +130,9 @@ namespace cshap_client.network
         }
 
         // 根据消息号查找消息类型
-        public static Type GetMessageTypeByCommand(int commandId)
+        public static Type GetMessageTypeByCommand(ushort commandId)
         {
-            if (!_cmdMessageNameMapping.TryGetValue(commandId, out string messageName))
-            {
-                return null;
-            }
-
-            string fullMessageName = GetFullMessageName(ProtoPackageName, messageName);
-            var messageDescriptor =  _typeRegistry.Find(fullMessageName);
-            if (messageDescriptor == null)
+            if (!_cmdMessageMapping.TryGetValue(commandId, out MessageDescriptor messageDescriptor))
             {
                 return null;
             }
@@ -143,7 +140,7 @@ namespace cshap_client.network
         }
 
         // 创建消息号对应的消息实例
-        public static IMessage CreateMessageByCommand(int commandId)
+        public static IMessage CreateMessageByCommand(ushort commandId)
         {
             var messageType = GetMessageTypeByCommand(commandId);
             if (messageType == null)
@@ -159,6 +156,15 @@ namespace cshap_client.network
             {
                 Console.WriteLine(ex.Message);
                 return null;
+            }
+        }
+
+        // 注册消息到网络层解码器
+        public static void RegisterCodec(ProtoCodec codec)
+        {
+            foreach(var kvp in _cmdMessageMapping)
+            {
+                codec.Register((ushort)kvp.Key, kvp.Value);
             }
         }
     }
