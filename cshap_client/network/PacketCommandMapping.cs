@@ -60,15 +60,11 @@ namespace cshap_client.network
             }
             _typeRegistry = TypeRegistry.FromFiles(GlobalFileDescriptorSet.Descriptors);
 
-            foreach (var msg in AccountReflection.Descriptor.MessageTypes)
-            {
-                Console.WriteLine("AccountReflection: {0}", msg.FullName);
-            }
             foreach (var kvp in mapping)
             {
                 string messageName = kvp.Key;
                 ushort messageId = (ushort)kvp.Value;
-                string fullMessageName = GetFullMessageName(ProtoPackageName, messageName);
+                string fullMessageName = GetFullMessageName(messageName);
                 var messageDescriptor = _typeRegistry.Find(fullMessageName);
                 if (messageDescriptor == null)
                 {
@@ -120,29 +116,34 @@ namespace cshap_client.network
             }
         }
 
-        public static string GetFullMessageName(string packageName, string messageName)
+        public static string GetFullMessageName(string messageName)
         {
-            if (string.IsNullOrEmpty(packageName))
+            if (string.IsNullOrEmpty(ProtoPackageName))
             {
                 return messageName;
             }
-            return $"{packageName}.{messageName}";
+            return ProtoPackageName + "." + messageName;
         }
 
         // 根据消息号查找消息类型
-        public static Type GetMessageTypeByCommand(ushort commandId)
+        public static MessageDescriptor GetMessageDescriptorByCommand(ushort commandId)
         {
             if (!_cmdMessageMapping.TryGetValue(commandId, out MessageDescriptor messageDescriptor))
             {
                 return null;
             }
-            return messageDescriptor.ClrType;
+            return messageDescriptor;
+        }
+
+        public static MessageDescriptor GetMessageDescriptor(string messageName)
+        {
+            return _typeRegistry.Find(GetFullMessageName(messageName));
         }
 
         // 创建消息号对应的消息实例
         public static IMessage CreateMessageByCommand(ushort commandId)
         {
-            var messageType = GetMessageTypeByCommand(commandId);
+            var messageType = GetMessageDescriptorByCommand(commandId);
             if (messageType == null)
             {
                 return null;
@@ -150,7 +151,7 @@ namespace cshap_client.network
 
             try
             {
-                return Activator.CreateInstance(messageType) as IMessage;
+                return Activator.CreateInstance(messageType.ClrType) as IMessage;
             }
             catch (Exception ex)
             {

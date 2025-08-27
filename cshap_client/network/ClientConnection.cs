@@ -7,6 +7,7 @@ using System.Reflection;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
+using cshap_client.game;
 using gnet_csharp;
 using Google.Protobuf;
 
@@ -58,7 +59,34 @@ namespace cshap_client.network
                 {
                     Timestamp = now,
                 });
-                Console.WriteLine("AutoPing:" + now);
+                //Console.WriteLine("AutoPing:" + now);
+            }
+        }
+
+        public void ProcessPackets()
+        {
+            while (Client.Instance.IsRunning)
+            {
+                var packet = PopPacket();
+                if (packet == null)
+                {
+                    return;
+                }
+                var descriptor = PacketCommandMapping.GetMessageDescriptorByCommand(packet.Command());
+                if (descriptor != null && descriptor.Name == "HeartBeatRes")
+                {
+                    continue;
+                }
+                // 消息回调
+                // write your logic code here
+                if (packet.ErrorCode() > 0)
+                {
+                    Console.WriteLine("recv err:" + packet.ErrorCode() + " msg:" + packet.Message());
+                }
+                else
+                {
+                    Console.WriteLine("recv cmd:" + packet.Command() + " msg:" + packet.Message());
+                }
             }
         }
     }
