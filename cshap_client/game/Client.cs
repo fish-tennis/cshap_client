@@ -41,6 +41,8 @@ namespace cshap_client.game
         public void Init()
         {
             PacketCommandMapping.InitCommandMappingFromFile("gen/message_command_mapping.json");
+            HandlerRegister.RegisterMethodsForClass(typeof(Login));
+
             var connectionConfig = new ConnectionConfig
             {
                 RecvBufferSize = 1024 * 100,

@@ -78,14 +78,22 @@ namespace cshap_client.network
                     continue;
                 }
                 // 消息回调
-                // write your logic code here
-                if (packet.ErrorCode() > 0)
+                if (packet.Message() == null)
                 {
-                    Console.WriteLine("recv err:" + packet.ErrorCode() + " msg:" + packet.Message());
+                    Console.WriteLine("recv null message, err:" + packet.ErrorCode() + " cmd:" + packet.Command());
+                    continue;
                 }
-                else
+                if (!HandlerRegister.OnRecvPacket(packet))
                 {
-                    Console.WriteLine("recv cmd:" + packet.Command() + " msg:" + packet.Message());
+                    // 没注册的消息
+                    if (packet.ErrorCode() > 0)
+                    {
+                        Console.WriteLine("recv err:" + packet.ErrorCode() + " msg:" + packet.Message());
+                    }
+                    else
+                    {
+                        Console.WriteLine("recv cmd:" + packet.Command() + " msg:" + packet.Message());
+                    }
                 }
             }
         }

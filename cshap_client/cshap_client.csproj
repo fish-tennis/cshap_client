@@ -65,6 +65,7 @@
     <Compile Include="game\Client.cs" />
     <Compile Include="game\Login.cs" />
     <Compile Include="network\ClientConnection.cs" />
+    <Compile Include="network\HandlerRegister.cs" />
     <Compile Include="network\PacketCommandMapping.cs" />
     <Compile Include="pb\Account.cs" />
     <Compile Include="pb\Activity.cs" />
