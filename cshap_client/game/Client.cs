@@ -9,6 +9,8 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using cshap_client.cfg;
+using cshap_client.gen;
 using cshap_client.network;
 using gnet_csharp;
 using Google.Protobuf;
@@ -48,6 +50,9 @@ namespace cshap_client.game
             // 注册消息回调
             HandlerRegister.RegisterMethodsForClass(typeof(Login), "");
             HandlerRegister.RegisterMethodsForPlayer();
+            // 加载配置数据
+            DataMgr.Load("cfgdata/");
+            Preproces.Process(); // 预处理配置数据
 
             // 网络连接初始化
             var connectionConfig = new ConnectionConfig

@@ -25,12 +25,15 @@ namespace cshap_client.game
             else if(err == 0)
             {
                 s_LoginRes = res;
+                Client.Instance.Player = null;
+                // TODO: 网关模式,不需要新建连接,即可直接与游戏服通讯
                 // 账号登录成功,自动进游戏服,假设没有选区服的流程
                 Client.Send(new Gserver.PlayerEntryGameReq{
                     AccountId = res.AccountId,
                     LoginSession = res.LoginSession,
                     RegionId = 1,
                 });
+                // TODO: 非网关模式,需要断开和登录服的连接,重新建立和游戏服的连接
             }
         }
 
