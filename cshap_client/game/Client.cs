@@ -25,6 +25,9 @@ namespace cshap_client.game
         public bool IsRunning = false;
         private ConcurrentQueue<string> m_InputCmds = new ConcurrentQueue<string>();
 
+        // 本机玩家
+        public Player Player { get; set; }
+
         private Client() { }
         public static Client Instance
         {
@@ -40,9 +43,13 @@ namespace cshap_client.game
 
         public void Init()
         {
+            // 消息号映射
             PacketCommandMapping.InitCommandMappingFromFile("gen/message_command_mapping.json");
-            HandlerRegister.RegisterMethodsForClass(typeof(Login));
+            // 注册消息回调
+            HandlerRegister.RegisterMethodsForClass(typeof(Login), "");
+            HandlerRegister.RegisterMethodsForPlayer();
 
+            // 网络连接初始化
             var connectionConfig = new ConnectionConfig
             {
                 RecvBufferSize = 1024 * 100,
@@ -90,13 +97,17 @@ namespace cshap_client.game
             {
                 return;
             }
-            if (cmdArgs[0] == "xxx")
+            // @开头表示是gm命令 如@AddExp 100
+            if (cmdArgs[0].StartsWith("@"))
             {
-                // TODO: 特殊的测试命令
+                m_Connection.Send(new Gserver.TestCmd
+                {
+                    Cmd = cmd.Substring(1),
+                });
             }
             else
             {
-                // 通用的protobuf消息
+                // 通用的protobuf消息,进行动态的组装
                 // 格式: messageName fieldName fieldValue fieldName fieldValue ...
                 var messageName = cmdArgs[0];
                 var messageDescriptor = PacketCommandMapping.GetMessageDescriptor(messageName);
@@ -105,7 +116,7 @@ namespace cshap_client.game
                     Console.WriteLine("not find message:" + messageName);
                     return;
                 }
-                // 创建一个新消息
+                // 创建一个新消息,并对字段进行赋值
                 var message = Activator.CreateInstance(messageDescriptor.ClrType) as IMessage;
                 for (int i = 1; i < cmdArgs.Length && i+1 < cmdArgs.Length; i+=2)
                 {
@@ -155,13 +166,21 @@ namespace cshap_client.game
                             Console.WriteLine("unsupported FieldType:" + fieldDescriptor.FieldType);
                             break;
                     }
-                    
                 }
                 if (!m_Connection.Send(message))
                 {
                     Console.WriteLine("send err:" + messageName);
                 }
             }
+        }
+
+        public static bool Send(IMessage message)
+        {
+            if (Client.Instance.m_Connection == null)
+            {
+                return false;
+            }
+            return Client.Instance.m_Connection.Send(message);
         }
     }
 }

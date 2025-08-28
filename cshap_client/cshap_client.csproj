@@ -62,8 +62,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="game\BaseInfo.cs" />
     <Compile Include="game\Client.cs" />
+    <Compile Include="game\Entity.cs" />
     <Compile Include="game\Login.cs" />
+    <Compile Include="game\Player.cs" />
+    <Compile Include="game\Quest.cs" />
     <Compile Include="network\ClientConnection.cs" />
     <Compile Include="network\HandlerRegister.cs" />
     <Compile Include="network\PacketCommandMapping.cs" />

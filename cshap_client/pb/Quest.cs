@@ -32,16 +32,19 @@ namespace Gserver {
             "OAEaQQoLUXVlc3RzRW50cnkSCwoDa2V5GAEgASgFEiEKBXZhbHVlGAIgASgL",
             "MhIuZ3NlcnZlci5RdWVzdERhdGE6AjgBIkMKC1F1ZXN0VXBkYXRlEhIKCnF1",
             "ZXN0Q2ZnSWQYASABKAUSIAoEZGF0YRgCIAEoCzISLmdzZXJ2ZXIuUXVlc3RE",
-            "YXRhIiQKDkZpbmlzaFF1ZXN0UmVxEhIKCnF1ZXN0Q2ZnSWQYASABKAUiJAoO",
-            "RmluaXNoUXVlc3RSZXMSEgoKcXVlc3RDZmdJZBgBIAEoBUIGWgQuL3BiYgZw",
-            "cm90bzM="));
+            "YXRhIiQKDlF1ZXN0UmVtb3ZlUmVzEhIKCnF1ZXN0Q2ZnSWQYASABKAUiJAoO",
+            "RmluaXNoUXVlc3RSZXESEgoKcXVlc3RDZmdJZBgBIAEoBSJbCg5GaW5pc2hR",
+            "dWVzdFJlcxISCgpxdWVzdENmZ0lkGAEgASgFEjUKEWZpbmlzaGVkUXVlc3RE",
+            "YXRhGAIgASgLMhouZ3NlcnZlci5GaW5pc2hlZFF1ZXN0RGF0YUIGWgQuL3Bi",
+            "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Gserver.PlayerReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.QuestSync), global::Gserver.QuestSync.Parser, new[]{ "Finished", "Quests" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.QuestUpdate), global::Gserver.QuestUpdate.Parser, new[]{ "QuestCfgId", "Data" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.QuestRemoveRes), global::Gserver.QuestRemoveRes.Parser, new[]{ "QuestCfgId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.FinishQuestReq), global::Gserver.FinishQuestReq.Parser, new[]{ "QuestCfgId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.FinishQuestRes), global::Gserver.FinishQuestRes.Parser, new[]{ "QuestCfgId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.FinishQuestRes), global::Gserver.FinishQuestRes.Parser, new[]{ "QuestCfgId", "FinishedQuestData" }, null, null, null, null)
           }));
     }
     #endregion
@@ -503,6 +506,201 @@ namespace Gserver {
   }
 
   /// <summary>
+  /// 删除一个任务
+  /// </summary>
+  public sealed partial class QuestRemoveRes : pb::IMessage<QuestRemoveRes>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<QuestRemoveRes> _parser = new pb::MessageParser<QuestRemoveRes>(() => new QuestRemoveRes());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<QuestRemoveRes> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Gserver.QuestReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public QuestRemoveRes() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public QuestRemoveRes(QuestRemoveRes other) : this() {
+      questCfgId_ = other.questCfgId_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public QuestRemoveRes Clone() {
+      return new QuestRemoveRes(this);
+    }
+
+    /// <summary>Field number for the "questCfgId" field.</summary>
+    public const int QuestCfgIdFieldNumber = 1;
+    private int questCfgId_;
+    /// <summary>
+    /// 任务id
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int QuestCfgId {
+      get { return questCfgId_; }
+      set {
+        questCfgId_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as QuestRemoveRes);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(QuestRemoveRes other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (QuestCfgId != other.QuestCfgId) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (QuestCfgId != 0) hash ^= QuestCfgId.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (QuestCfgId != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(QuestCfgId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (QuestCfgId != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(QuestCfgId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (QuestCfgId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(QuestCfgId);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(QuestRemoveRes other) {
+      if (other == null) {
+        return;
+      }
+      if (other.QuestCfgId != 0) {
+        QuestCfgId = other.QuestCfgId;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            QuestCfgId = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            QuestCfgId = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// 完成任务
   /// </summary>
   public sealed partial class FinishQuestReq : pb::IMessage<FinishQuestReq>
@@ -519,7 +717,7 @@ namespace Gserver {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Gserver.QuestReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Gserver.QuestReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -714,7 +912,7 @@ namespace Gserver {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Gserver.QuestReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Gserver.QuestReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -735,6 +933,7 @@ namespace Gserver {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public FinishQuestRes(FinishQuestRes other) : this() {
       questCfgId_ = other.questCfgId_;
+      finishedQuestData_ = other.finishedQuestData_ != null ? other.finishedQuestData_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -759,6 +958,21 @@ namespace Gserver {
       }
     }
 
+    /// <summary>Field number for the "finishedQuestData" field.</summary>
+    public const int FinishedQuestDataFieldNumber = 2;
+    private global::Gserver.FinishedQuestData finishedQuestData_;
+    /// <summary>
+    /// 完成任务的数据
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Gserver.FinishedQuestData FinishedQuestData {
+      get { return finishedQuestData_; }
+      set {
+        finishedQuestData_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -775,6 +989,7 @@ namespace Gserver {
         return true;
       }
       if (QuestCfgId != other.QuestCfgId) return false;
+      if (!object.Equals(FinishedQuestData, other.FinishedQuestData)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -783,6 +998,7 @@ namespace Gserver {
     public override int GetHashCode() {
       int hash = 1;
       if (QuestCfgId != 0) hash ^= QuestCfgId.GetHashCode();
+      if (finishedQuestData_ != null) hash ^= FinishedQuestData.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -805,6 +1021,10 @@ namespace Gserver {
         output.WriteRawTag(8);
         output.WriteInt32(QuestCfgId);
       }
+      if (finishedQuestData_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(FinishedQuestData);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -819,6 +1039,10 @@ namespace Gserver {
         output.WriteRawTag(8);
         output.WriteInt32(QuestCfgId);
       }
+      if (finishedQuestData_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(FinishedQuestData);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -831,6 +1055,9 @@ namespace Gserver {
       int size = 0;
       if (QuestCfgId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(QuestCfgId);
+      }
+      if (finishedQuestData_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(FinishedQuestData);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -846,6 +1073,12 @@ namespace Gserver {
       }
       if (other.QuestCfgId != 0) {
         QuestCfgId = other.QuestCfgId;
+      }
+      if (other.finishedQuestData_ != null) {
+        if (finishedQuestData_ == null) {
+          FinishedQuestData = new global::Gserver.FinishedQuestData();
+        }
+        FinishedQuestData.MergeFrom(other.FinishedQuestData);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -866,6 +1099,13 @@ namespace Gserver {
             QuestCfgId = input.ReadInt32();
             break;
           }
+          case 18: {
+            if (finishedQuestData_ == null) {
+              FinishedQuestData = new global::Gserver.FinishedQuestData();
+            }
+            input.ReadMessage(FinishedQuestData);
+            break;
+          }
         }
       }
     #endif
@@ -883,6 +1123,13 @@ namespace Gserver {
             break;
           case 8: {
             QuestCfgId = input.ReadInt32();
+            break;
+          }
+          case 18: {
+            if (finishedQuestData_ == null) {
+              FinishedQuestData = new global::Gserver.FinishedQuestData();
+            }
+            input.ReadMessage(FinishedQuestData);
             break;
           }
         }

@@ -72,19 +72,19 @@ namespace cshap_client.network
                 {
                     return;
                 }
-                var descriptor = PacketCommandMapping.GetMessageDescriptorByCommand(packet.Command());
-                if (descriptor != null && descriptor.Name == "HeartBeatRes")
-                {
-                    continue;
-                }
-                // 消息回调
                 if (packet.Message() == null)
                 {
                     Console.WriteLine("recv null message, err:" + packet.ErrorCode() + " cmd:" + packet.Command());
                     continue;
                 }
-                if (!HandlerRegister.OnRecvPacket(packet))
+                // 消息回调
+                if (!HandlerRegister.OnRecvPacket(packet, Client.Instance.Player))
                 {
+                    var descriptor = PacketCommandMapping.GetMessageDescriptorByCommand(packet.Command());
+                    if (descriptor != null && descriptor.Name == "HeartBeatRes")
+                    {
+                        continue; // 心跳包不打印
+                    }
                     // 没注册的消息
                     if (packet.ErrorCode() > 0)
                     {
