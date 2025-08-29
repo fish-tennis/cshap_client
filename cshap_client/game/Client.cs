@@ -51,7 +51,7 @@ namespace cshap_client.game
             HandlerRegister.RegisterMethodsForPlayer();
             // 加载配置数据
             DataMgr.Load("cfgdata/");
-            Preproces.Process(); // 预处理配置数据
+            Helper.AfterLoad(); // 预处理配置数据
 
             // 网络连接初始化
             var connectionConfig = new ConnectionConfig

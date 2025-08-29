@@ -63,7 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="cfg\DataMgr.cs" />
-    <Compile Include="cfg\Preproces.cs" />
+    <Compile Include="cfg\Helper.cs" />
     <Compile Include="game\BaseInfo.cs" />
     <Compile Include="game\Client.cs" />
     <Compile Include="game\Entity.cs" />
