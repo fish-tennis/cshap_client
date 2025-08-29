@@ -70,6 +70,12 @@
     <Compile Include="game\Login.cs" />
     <Compile Include="game\Player.cs" />
     <Compile Include="game\Quest.cs" />
+    <Compile Include="gnet\codec.cs" />
+    <Compile Include="gnet\codec_protobuf_simple.cs" />
+    <Compile Include="gnet\connection.cs" />
+    <Compile Include="gnet\packet.cs" />
+    <Compile Include="gnet\tcp_connection.cs" />
+    <Compile Include="gnet\ws_connection.cs" />
     <Compile Include="network\ClientConnection.cs" />
     <Compile Include="network\HandlerRegister.cs" />
     <Compile Include="network\PacketCommandMapping.cs" />
@@ -99,12 +105,6 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\gnet_csharp\gnet_csharp.csproj">
-      <Project>{63e8a9ef-0895-4247-87f0-02b86d2d2231}</Project>
-      <Name>gnet_csharp</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="gen\" />

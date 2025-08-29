@@ -31,6 +31,11 @@ namespace cshap_client.network
         private void onConnected(IConnection connection, bool success)
         {
             Console.WriteLine("onConnected host:" + GetHostAddress() + " success:" + success);
+            if(Client.Instance.Player == null && !string.IsNullOrEmpty(Login.s_AccountName))
+            {
+                // 自动账号登录
+                Login.AutoLogin();
+            }
         }
 
         private void onClose(IConnection connection)

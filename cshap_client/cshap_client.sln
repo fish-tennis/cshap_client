@@ -5,8 +5,6 @@ VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cshap_client", "cshap_client.csproj", "{BEEB9D66-9468-43A2-973C-2AF7EC08D75E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gnet_csharp", "..\..\gnet_csharp\gnet_csharp.csproj", "{63E8A9EF-0895-4247-87F0-02B86D2D2231}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,10 +15,6 @@ Global
 		{BEEB9D66-9468-43A2-973C-2AF7EC08D75E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BEEB9D66-9468-43A2-973C-2AF7EC08D75E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BEEB9D66-9468-43A2-973C-2AF7EC08D75E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{63E8A9EF-0895-4247-87F0-02B86D2D2231}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{63E8A9EF-0895-4247-87F0-02B86D2D2231}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{63E8A9EF-0895-4247-87F0-02B86D2D2231}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{63E8A9EF-0895-4247-87F0-02B86D2D2231}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -10,7 +10,6 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using cshap_client.cfg;
-using cshap_client.gen;
 using cshap_client.network;
 using gnet_csharp;
 using Google.Protobuf;

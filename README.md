@@ -14,6 +14,7 @@ c#写的测试客户端(控制台程序) 演示和gserver的交互流程
 - (TODO)Entity事件分发
 - (TODO)任务模块,演示了如何实现一个通用且扩展性强的[任务系统](https://github.com/fish-tennis/gserver/blob/main/Design_Quest.md)
 - (TODO)活动模块,演示了如何设计一个通用且支持扩展的活动模块
+- (TODO)背包模块,演示了如何设计一个通用且支持扩展的容器模块
 
 ## 控制台输入protobuf
 编译运行后,在控制台输入命令,可以实现和gserver的交互

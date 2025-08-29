@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -12,7 +13,38 @@ namespace cshap_client.game
     internal class Login
     {
         // 登录过程中的一些临时变量
+        public static string s_AccountName;
+        public static string s_Password;
         private static Gserver.LoginRes s_LoginRes;
+
+        // 账号协议不要发明文密码,而且要加一些混淆词,防止被"撞库"
+        public static string GetMd5Password(string password)
+        {
+            using (MD5 md5 = MD5.Create())
+            {
+                // 1. 将字符串转换为字节数组（UTF8编码）
+                byte[] inputBytes = Encoding.UTF8.GetBytes(password + "gserver");
+                // 2. 计算哈希值
+                byte[] hashBytes = md5.ComputeHash(inputBytes);
+                // 3. 将字节数组转换为十六进制字符串
+                StringBuilder sb = new StringBuilder();
+                for (int i = 0; i < hashBytes.Length; i++)
+                {
+                    sb.Append(hashBytes[i].ToString("x2")); // "x2"表示两位小写十六进制
+                }
+                return sb.ToString();
+            }
+        }
+
+        // 自动账号登录
+        public static void AutoLogin()
+        {
+            Client.Send(new Gserver.LoginReq
+            {
+                AccountName = Login.s_AccountName,
+                Password = Login.GetMd5Password(Login.s_Password),
+            });
+        }
 
         // 账号登录返回
         public static void OnLoginRes(Gserver.LoginRes res, int err)
@@ -21,6 +53,15 @@ namespace cshap_client.game
             if(err == (int)Gserver.ErrorCode.NotReg)
             {
                 Console.WriteLine("register a new account");
+                if (!string.IsNullOrEmpty(s_AccountName))
+                {
+                    // 自动注册
+                    Client.Send(new Gserver.AccountReg
+                    {
+                        AccountName = Login.s_AccountName,
+                        Password = Login.GetMd5Password(Login.s_Password),
+                    });
+                }
             }
             else if(err == 0)
             {
@@ -43,7 +84,14 @@ namespace cshap_client.game
             Console.WriteLine("OnAccountRes:" + res + " err:" + err);
             if (err == 0)
             {
-                Console.WriteLine("create a new account,try login again");
+                if (!string.IsNullOrEmpty(s_AccountName))
+                {
+                    AutoLogin();
+                }
+                else
+                {
+                    Console.WriteLine("create a new account,try login again");
+                }
             }
         }
 
