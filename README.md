@@ -54,3 +54,9 @@ Client.Send(new Gserver.TestCmd{
 });
 ```
 gserver目前支持的测试命令: https://github.com/fish-tennis/gserver/blob/main/game/test_cmd.go
+
+## 命令行参数
+```shell
+-account test -password 123
+```
+命令行参数可以设置账号名和密码,运行控制台程序,将会自动登录
