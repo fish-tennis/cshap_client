@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Gserver;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -58,6 +59,27 @@ namespace cshap_client.game
                 Timestamp = res.FinishedQuestData.Timestamp,
             });
             Console.WriteLine("OnFinishQuestRes:" + res);
+        }
+
+        // 向服务器发送完成任务的请求(领取任务奖励) (TODO: 改成支持批量完成)
+        public void FinishQuestReq(int questCfgId)
+        {
+            Client.Send(new Gserver.FinishQuestReq
+            {
+                QuestCfgId = questCfgId,
+            });
+        }
+
+        // 批量完成任务
+        public void FinishQuestReqBatch(List<int> questCfgIds)
+        {
+            foreach (var questCfgId in questCfgIds)
+            {
+                Client.Send(new Gserver.FinishQuestReq
+                {
+                    QuestCfgId = questCfgId,
+                });
+            }
         }
     }
 }

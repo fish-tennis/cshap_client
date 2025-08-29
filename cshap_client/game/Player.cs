@@ -25,6 +25,8 @@ namespace cshap_client.game
             // TODO:可以通过C#的自定义属性来自动添加组件(在组件类上设置自定义属性)
             AddComponent(new BaseInfo(this));
             AddComponent(new Quest(this));
+            AddComponent(new Exchange(this));
+            AddComponent(new Activities(this));
         }
 
         // 遍历玩家组件

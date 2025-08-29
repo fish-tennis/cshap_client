@@ -64,12 +64,16 @@
   <ItemGroup>
     <Compile Include="cfg\DataMgr.cs" />
     <Compile Include="cfg\Helper.cs" />
+    <Compile Include="game\Activities.cs" />
+    <Compile Include="game\Activity.cs" />
     <Compile Include="game\BaseInfo.cs" />
     <Compile Include="game\Client.cs" />
     <Compile Include="game\Entity.cs" />
+    <Compile Include="game\Exchange.cs" />
     <Compile Include="game\Login.cs" />
     <Compile Include="game\Player.cs" />
     <Compile Include="game\Quest.cs" />
+    <Compile Include="game\Records.cs" />
     <Compile Include="gnet\codec.cs" />
     <Compile Include="gnet\codec_protobuf_simple.cs" />
     <Compile Include="gnet\connection.cs" />
