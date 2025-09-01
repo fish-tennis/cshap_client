@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using cshap_client.cfg;
 using Gserver;
 
@@ -125,6 +126,7 @@ namespace cshap_client.game
         // 同步数据
         private void OnBagsSync(Gserver.BagsSync res)
         {
+            Console.WriteLine("OnBagsSync:" + res);
             // 同步普通物品背包
             BagCountItem.ResetData(res.CountItem);
             // 同步不可叠加的普通物品背包
@@ -136,6 +138,7 @@ namespace cshap_client.game
         // 通用的同步子背包的更新数据(增加,更新,删除)
         private void OnElemContainerUpdate(Gserver.ElemContainerUpdate res)
         {
+            Console.WriteLine("OnElemContainerUpdate:" + res);
             foreach (var elemOp in res.ElemOps)
             {
                 var bag = GetBagByType(elemOp.ContainerType);

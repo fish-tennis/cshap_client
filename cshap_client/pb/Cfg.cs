@@ -54,60 +54,60 @@ namespace Gserver {
             "IAEoBRILCgNLZXkYAiABKAkSCgoCT3AYAyABKAkSDgoGVmFsdWVzGAQgAygF",
             "EjkKClByb3BlcnRpZXMYBSADKAsyJS5nc2VydmVyLkNvbmRpdGlvbkNmZy5Q",
             "cm9wZXJ0aWVzRW50cnkaMQoPUHJvcGVydGllc0VudHJ5EgsKA2tleRgBIAEo",
-            "CRINCgV2YWx1ZRgCIAEoCToCOAEiwgEKFENvbmRpdGlvblRlbXBsYXRlQ2Zn",
+            "CRINCgV2YWx1ZRgCIAEoCToCOAEi1wEKFENvbmRpdGlvblRlbXBsYXRlQ2Zn",
             "Eg0KBUNmZ0lkGAQgASgFEgwKBFR5cGUYASABKAUSCwoDS2V5GAIgASgJEgoK",
             "Ak9wGAMgASgJEkEKClByb3BlcnRpZXMYBSADKAsyLS5nc2VydmVyLkNvbmRp",
-            "dGlvblRlbXBsYXRlQ2ZnLlByb3BlcnRpZXNFbnRyeRoxCg9Qcm9wZXJ0aWVz",
-            "RW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASLkAwoLUHJv",
-            "Z3Jlc3NDZmcSDAoEVHlwZRgBIAEoBRINCgVUb3RhbBgCIAEoBRIQCghOZWVk",
-            "SW5pdBgDIAEoCBINCgVFdmVudBgEIAEoCRIVCg1Qcm9ncmVzc0ZpZWxkGAUg",
-            "ASgJEkAKDkludEV2ZW50RmllbGRzGAYgAygLMiguZ3NlcnZlci5Qcm9ncmVz",
-            "c0NmZy5JbnRFdmVudEZpZWxkc0VudHJ5EkYKEVN0cmluZ0V2ZW50RmllbGRz",
-            "GAcgAygLMisuZ3NlcnZlci5Qcm9ncmVzc0NmZy5TdHJpbmdFdmVudEZpZWxk",
-            "c0VudHJ5EjgKClByb3BlcnRpZXMYCCADKAsyJC5nc2VydmVyLlByb2dyZXNz",
+            "dGlvblRlbXBsYXRlQ2ZnLlByb3BlcnRpZXNFbnRyeRITCgtDbGllbnRDaGVj",
+            "axgGIAEoCBoxCg9Qcm9wZXJ0aWVzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZh",
+            "bHVlGAIgASgJOgI4ASLkAwoLUHJvZ3Jlc3NDZmcSDAoEVHlwZRgBIAEoBRIN",
+            "CgVUb3RhbBgCIAEoBRIQCghOZWVkSW5pdBgDIAEoCBINCgVFdmVudBgEIAEo",
+            "CRIVCg1Qcm9ncmVzc0ZpZWxkGAUgASgJEkAKDkludEV2ZW50RmllbGRzGAYg",
+            "AygLMiguZ3NlcnZlci5Qcm9ncmVzc0NmZy5JbnRFdmVudEZpZWxkc0VudHJ5",
+            "EkYKEVN0cmluZ0V2ZW50RmllbGRzGAcgAygLMisuZ3NlcnZlci5Qcm9ncmVz",
+            "c0NmZy5TdHJpbmdFdmVudEZpZWxkc0VudHJ5EjgKClByb3BlcnRpZXMYCCAD",
+            "KAsyJC5nc2VydmVyLlByb2dyZXNzQ2ZnLlByb3BlcnRpZXNFbnRyeRpPChNJ",
+            "bnRFdmVudEZpZWxkc0VudHJ5EgsKA2tleRgBIAEoCRInCgV2YWx1ZRgCIAEo",
+            "CzIYLmdzZXJ2ZXIuVmFsdWVDb21wYXJlQ2ZnOgI4ARo4ChZTdHJpbmdFdmVu",
+            "dEZpZWxkc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEa",
+            "MQoPUHJvcGVydGllc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEo",
+            "CToCOAEihAQKE1Byb2dyZXNzVGVtcGxhdGVDZmcSDQoFQ2ZnSWQYASABKAUS",
+            "DAoEVHlwZRgCIAEoBRIQCghOZWVkSW5pdBgDIAEoCBINCgVFdmVudBgEIAEo",
+            "CRIVCg1Qcm9ncmVzc0ZpZWxkGAUgASgJEkgKDkludEV2ZW50RmllbGRzGAYg",
+            "AygLMjAuZ3NlcnZlci5Qcm9ncmVzc1RlbXBsYXRlQ2ZnLkludEV2ZW50Rmll",
+            "bGRzRW50cnkSTgoRU3RyaW5nRXZlbnRGaWVsZHMYByADKAsyMy5nc2VydmVy",
+            "LlByb2dyZXNzVGVtcGxhdGVDZmcuU3RyaW5nRXZlbnRGaWVsZHNFbnRyeRJA",
+            "CgpQcm9wZXJ0aWVzGAggAygLMiwuZ3NlcnZlci5Qcm9ncmVzc1RlbXBsYXRl",
             "Q2ZnLlByb3BlcnRpZXNFbnRyeRpPChNJbnRFdmVudEZpZWxkc0VudHJ5EgsK",
             "A2tleRgBIAEoCRInCgV2YWx1ZRgCIAEoCzIYLmdzZXJ2ZXIuVmFsdWVDb21w",
             "YXJlQ2ZnOgI4ARo4ChZTdHJpbmdFdmVudEZpZWxkc0VudHJ5EgsKA2tleRgB",
             "IAEoCRINCgV2YWx1ZRgCIAEoCToCOAEaMQoPUHJvcGVydGllc0VudHJ5EgsK",
-            "A2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEihAQKE1Byb2dyZXNzVGVt",
-            "cGxhdGVDZmcSDQoFQ2ZnSWQYASABKAUSDAoEVHlwZRgCIAEoBRIQCghOZWVk",
-            "SW5pdBgDIAEoCBINCgVFdmVudBgEIAEoCRIVCg1Qcm9ncmVzc0ZpZWxkGAUg",
-            "ASgJEkgKDkludEV2ZW50RmllbGRzGAYgAygLMjAuZ3NlcnZlci5Qcm9ncmVz",
-            "c1RlbXBsYXRlQ2ZnLkludEV2ZW50RmllbGRzRW50cnkSTgoRU3RyaW5nRXZl",
-            "bnRGaWVsZHMYByADKAsyMy5nc2VydmVyLlByb2dyZXNzVGVtcGxhdGVDZmcu",
-            "U3RyaW5nRXZlbnRGaWVsZHNFbnRyeRJACgpQcm9wZXJ0aWVzGAggAygLMiwu",
-            "Z3NlcnZlci5Qcm9ncmVzc1RlbXBsYXRlQ2ZnLlByb3BlcnRpZXNFbnRyeRpP",
-            "ChNJbnRFdmVudEZpZWxkc0VudHJ5EgsKA2tleRgBIAEoCRInCgV2YWx1ZRgC",
-            "IAEoCzIYLmdzZXJ2ZXIuVmFsdWVDb21wYXJlQ2ZnOgI4ARo4ChZTdHJpbmdF",
-            "dmVudEZpZWxkc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToC",
-            "OAEaMQoPUHJvcGVydGllc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgC",
-            "IAEoCToCOAEi2AIKC0V4Y2hhbmdlQ2ZnEg0KBUNmZ0lkGAEgASgFEikKCkNv",
-            "bmRpdGlvbnMYAiADKAsyFS5nc2VydmVyLkNvbmRpdGlvbkNmZxIlCghDb25z",
-            "dW1lcxgDIAMoCzITLmdzZXJ2ZXIuRGVsRWxlbUFyZxIkCgdSZXdhcmRzGAQg",
-            "AygLMhMuZ3NlcnZlci5BZGRFbGVtQXJnEhIKCkNvdW50TGltaXQYBSABKAUS",
-            "EwoLUmVmcmVzaFR5cGUYBiABKAUSOAoKUHJvcGVydGllcxgHIAMoCzIkLmdz",
-            "ZXJ2ZXIuRXhjaGFuZ2VDZmcuUHJvcGVydGllc0VudHJ5EiwKEkNvbmRpdGlv",
-            "blRlbXBsYXRlcxgLIAMoCzIQLmdzZXJ2ZXIuQ2ZnQXJncxoxCg9Qcm9wZXJ0",
-            "aWVzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASKYAwoL",
-            "QWN0aXZpdHlDZmcSDQoFQ2ZnSWQYASABKAUSDAoETmFtZRgCIAEoCRIOCgZE",
-            "ZXRhaWwYAyABKAkSEAoIVGVtcGxhdGUYBCABKAkSEwoLUmVmcmVzaFR5cGUY",
-            "BSABKAUSEQoJQ3ljbGVUeXBlGAYgASgFEhAKCFRpbWVUeXBlGAcgASgFEhEK",
-            "CUJlZ2luVGltZRgIIAEoBRIPCgdFbmRUaW1lGAkgASgFEhMKC0V4Y2hhbmdl",
-            "SWRzGAogAygFEg0KBUlzT2ZmGAsgASgIEhkKEVJlbW92ZURhdGFXaGVuRW5k",
-            "GAwgASgIEhYKDk1pblBsYXllckxldmVsGA4gASgFEhYKDk1heFBsYXllckxl",
-            "dmVsGA8gASgFEhAKCFF1ZXN0SWRzGBAgAygFEjgKClByb3BlcnRpZXMYESAD",
-            "KAsyJC5nc2VydmVyLkFjdGl2aXR5Q2ZnLlByb3BlcnRpZXNFbnRyeRoxCg9Q",
-            "cm9wZXJ0aWVzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4",
-            "ASIqCghMZXZlbEV4cBINCgVMZXZlbBgBIAEoBRIPCgdOZWVkRXhwGAIgASgF",
-            "KmkKBUNvbG9yEg4KCkNvbG9yX05vbmUQABINCglDb2xvcl9SZWQQARIPCgtD",
-            "b2xvcl9HcmVlbhACEg4KCkNvbG9yX0JsdWUQAxIQCgxDb2xvcl9ZZWxsb3cQ",
-            "BBIOCgpDb2xvcl9HcmF5EAUqOAoLUmVmcmVzaFR5cGUSFAoQUmVmcmVzaFR5",
-            "cGVfTm9uZRAAEhMKD1JlZnJlc2hUeXBlX0RheRABKkgKCFRpbWVUeXBlEhEK",
-            "DVRpbWVUeXBlX05vbmUQABIWChJUaW1lVHlwZV9UaW1lc3RhbXAQARIRCg1U",
-            "aW1lVHlwZV9EYXRlEAIqMQoISXRlbVR5cGUSEQoNSXRlbVR5cGVfTm9uZRAA",
-            "EhIKDkl0ZW1UeXBlX0VxdWlwEAEqNwoJUXVlc3RUeXBlEhIKDlF1ZXN0VHlw",
-            "ZV9Ob25lEAASFgoSUXVlc3RUeXBlX1N1YlF1ZXN0EAFCBloELi9wYmIGcHJv",
-            "dG8z"));
+            "A2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEi2AIKC0V4Y2hhbmdlQ2Zn",
+            "Eg0KBUNmZ0lkGAEgASgFEikKCkNvbmRpdGlvbnMYAiADKAsyFS5nc2VydmVy",
+            "LkNvbmRpdGlvbkNmZxIlCghDb25zdW1lcxgDIAMoCzITLmdzZXJ2ZXIuRGVs",
+            "RWxlbUFyZxIkCgdSZXdhcmRzGAQgAygLMhMuZ3NlcnZlci5BZGRFbGVtQXJn",
+            "EhIKCkNvdW50TGltaXQYBSABKAUSEwoLUmVmcmVzaFR5cGUYBiABKAUSOAoK",
+            "UHJvcGVydGllcxgHIAMoCzIkLmdzZXJ2ZXIuRXhjaGFuZ2VDZmcuUHJvcGVy",
+            "dGllc0VudHJ5EiwKEkNvbmRpdGlvblRlbXBsYXRlcxgLIAMoCzIQLmdzZXJ2",
+            "ZXIuQ2ZnQXJncxoxCg9Qcm9wZXJ0aWVzRW50cnkSCwoDa2V5GAEgASgJEg0K",
+            "BXZhbHVlGAIgASgJOgI4ASKYAwoLQWN0aXZpdHlDZmcSDQoFQ2ZnSWQYASAB",
+            "KAUSDAoETmFtZRgCIAEoCRIOCgZEZXRhaWwYAyABKAkSEAoIVGVtcGxhdGUY",
+            "BCABKAkSEwoLUmVmcmVzaFR5cGUYBSABKAUSEQoJQ3ljbGVUeXBlGAYgASgF",
+            "EhAKCFRpbWVUeXBlGAcgASgFEhEKCUJlZ2luVGltZRgIIAEoBRIPCgdFbmRU",
+            "aW1lGAkgASgFEhMKC0V4Y2hhbmdlSWRzGAogAygFEg0KBUlzT2ZmGAsgASgI",
+            "EhkKEVJlbW92ZURhdGFXaGVuRW5kGAwgASgIEhYKDk1pblBsYXllckxldmVs",
+            "GA4gASgFEhYKDk1heFBsYXllckxldmVsGA8gASgFEhAKCFF1ZXN0SWRzGBAg",
+            "AygFEjgKClByb3BlcnRpZXMYESADKAsyJC5nc2VydmVyLkFjdGl2aXR5Q2Zn",
+            "LlByb3BlcnRpZXNFbnRyeRoxCg9Qcm9wZXJ0aWVzRW50cnkSCwoDa2V5GAEg",
+            "ASgJEg0KBXZhbHVlGAIgASgJOgI4ASIqCghMZXZlbEV4cBINCgVMZXZlbBgB",
+            "IAEoBRIPCgdOZWVkRXhwGAIgASgFKmkKBUNvbG9yEg4KCkNvbG9yX05vbmUQ",
+            "ABINCglDb2xvcl9SZWQQARIPCgtDb2xvcl9HcmVlbhACEg4KCkNvbG9yX0Js",
+            "dWUQAxIQCgxDb2xvcl9ZZWxsb3cQBBIOCgpDb2xvcl9HcmF5EAUqOAoLUmVm",
+            "cmVzaFR5cGUSFAoQUmVmcmVzaFR5cGVfTm9uZRAAEhMKD1JlZnJlc2hUeXBl",
+            "X0RheRABKkgKCFRpbWVUeXBlEhEKDVRpbWVUeXBlX05vbmUQABIWChJUaW1l",
+            "VHlwZV9UaW1lc3RhbXAQARIRCg1UaW1lVHlwZV9EYXRlEAIqMQoISXRlbVR5",
+            "cGUSEQoNSXRlbVR5cGVfTm9uZRAAEhIKDkl0ZW1UeXBlX0VxdWlwEAEqNwoJ",
+            "UXVlc3RUeXBlEhIKDlF1ZXN0VHlwZV9Ob25lEAASFgoSUXVlc3RUeXBlX1N1",
+            "YlF1ZXN0EAFCBloELi9wYmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Gserver.Color), typeof(global::Gserver.RefreshType), typeof(global::Gserver.TimeType), typeof(global::Gserver.ItemType), typeof(global::Gserver.QuestType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -121,7 +121,7 @@ namespace Gserver {
             new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.QuestCfg), global::Gserver.QuestCfg.Parser, new[]{ "CfgId", "Name", "QuestType", "RefreshType", "Rewards", "PreQuest", "NextQuests", "Conditions", "Progress", "Properties", "Category", "Detail", "ConditionTemplates", "ProgressTemplate" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.ValueCompareCfg), global::Gserver.ValueCompareCfg.Parser, new[]{ "Op", "Values" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.ConditionCfg), global::Gserver.ConditionCfg.Parser, new[]{ "Type", "Key", "Op", "Values", "Properties" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.ConditionTemplateCfg), global::Gserver.ConditionTemplateCfg.Parser, new[]{ "CfgId", "Type", "Key", "Op", "Properties" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.ConditionTemplateCfg), global::Gserver.ConditionTemplateCfg.Parser, new[]{ "CfgId", "Type", "Key", "Op", "Properties", "ClientCheck" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.ProgressCfg), global::Gserver.ProgressCfg.Parser, new[]{ "Type", "Total", "NeedInit", "Event", "ProgressField", "IntEventFields", "StringEventFields", "Properties" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.ProgressTemplateCfg), global::Gserver.ProgressTemplateCfg.Parser, new[]{ "CfgId", "Type", "NeedInit", "Event", "ProgressField", "IntEventFields", "StringEventFields", "Properties" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.ExchangeCfg), global::Gserver.ExchangeCfg.Parser, new[]{ "CfgId", "Conditions", "Consumes", "Rewards", "CountLimit", "RefreshType", "Properties", "ConditionTemplates" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
@@ -3518,6 +3518,7 @@ namespace Gserver {
       key_ = other.key_;
       op_ = other.op_;
       properties_ = other.properties_.Clone();
+      clientCheck_ = other.clientCheck_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3601,6 +3602,21 @@ namespace Gserver {
       get { return properties_; }
     }
 
+    /// <summary>Field number for the "ClientCheck" field.</summary>
+    public const int ClientCheckFieldNumber = 6;
+    private bool clientCheck_;
+    /// <summary>
+    /// 客户端是否可以直接判断条件,比如玩家的等级
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool ClientCheck {
+      get { return clientCheck_; }
+      set {
+        clientCheck_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -3621,6 +3637,7 @@ namespace Gserver {
       if (Key != other.Key) return false;
       if (Op != other.Op) return false;
       if (!Properties.Equals(other.Properties)) return false;
+      if (ClientCheck != other.ClientCheck) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3633,6 +3650,7 @@ namespace Gserver {
       if (Key.Length != 0) hash ^= Key.GetHashCode();
       if (Op.Length != 0) hash ^= Op.GetHashCode();
       hash ^= Properties.GetHashCode();
+      if (ClientCheck != false) hash ^= ClientCheck.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3668,6 +3686,10 @@ namespace Gserver {
         output.WriteInt32(CfgId);
       }
       properties_.WriteTo(output, _map_properties_codec);
+      if (ClientCheck != false) {
+        output.WriteRawTag(48);
+        output.WriteBool(ClientCheck);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3695,6 +3717,10 @@ namespace Gserver {
         output.WriteInt32(CfgId);
       }
       properties_.WriteTo(ref output, _map_properties_codec);
+      if (ClientCheck != false) {
+        output.WriteRawTag(48);
+        output.WriteBool(ClientCheck);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3718,6 +3744,9 @@ namespace Gserver {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Op);
       }
       size += properties_.CalculateSize(_map_properties_codec);
+      if (ClientCheck != false) {
+        size += 1 + 1;
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -3743,6 +3772,9 @@ namespace Gserver {
         Op = other.Op;
       }
       properties_.Add(other.properties_);
+      if (other.ClientCheck != false) {
+        ClientCheck = other.ClientCheck;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -3778,6 +3810,10 @@ namespace Gserver {
             properties_.AddEntriesFrom(input, _map_properties_codec);
             break;
           }
+          case 48: {
+            ClientCheck = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -3811,6 +3847,10 @@ namespace Gserver {
           }
           case 42: {
             properties_.AddEntriesFrom(ref input, _map_properties_codec);
+            break;
+          }
+          case 48: {
+            ClientCheck = input.ReadBool();
             break;
           }
         }
@@ -5253,7 +5293,7 @@ namespace Gserver {
     public const int CycleTypeFieldNumber = 6;
     private int cycleType_;
     /// <summary>
-    /// 活动周期
+    /// 活动周期类型
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
