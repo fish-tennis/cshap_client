@@ -30,7 +30,7 @@ namespace cshap_client.game
             else
             {
                 activity = new Activity(res.ActivityId, res.BaseData);
-                m_Activities.Add(res.ActivityId, activity);
+                m_Activities[res.ActivityId] = activity;
             }
         }
     }

@@ -26,7 +26,7 @@ namespace cshap_client.game
             Records.Clear();
             foreach(var kvp in res.Records)
             {
-                Records.Add(kvp.Key, kvp.Value);
+                Records[kvp.Key] = kvp.Value;
             }
         }
 
@@ -36,7 +36,7 @@ namespace cshap_client.game
             Console.WriteLine("OnExchangeUpdate:" + res);
             foreach (var v in res.Records)
             {
-                Records.Add(v.CfgId, v);
+                Records[v.CfgId] = v;
             }
         }
 
@@ -50,14 +50,35 @@ namespace cshap_client.game
             }
         }
 
-        // 向服务器发送兑换礼包的请求(TODO: 改成支持批量兑换)
+        // 兑换回复
+        private void OnExchangeRes(Gserver.ExchangeRes res)
+        {
+            Console.WriteLine("OnExchangeRes:" + res);
+            for (int i = 0; i < res.Records.Count; i++)
+            {
+                var record = res.Records[i];
+                Records[record.CfgId] = record;
+            }
+        }
+
+        // 向服务器发送兑换礼包的请求
         public void ExchangeReq(int cfgId, int count)
         {
-            Client.Send(new Gserver.ExchangeReq
+            var req = new Gserver.ExchangeReq();
+            req.IdCounts.Add(new Gserver.IdCount
             {
-                CfgId = cfgId,
+                Id = cfgId,
                 Count = count,
             });
+            Client.Send(req);
+        }
+
+        // 批量兑换请求
+        public void ExchangeReqBatch(List<Gserver.IdCount> idCounts)
+        {
+            var req = new Gserver.ExchangeReq();
+            req.IdCounts.AddRange(idCounts);
+            Client.Send(req);
         }
     }
 }

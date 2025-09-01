@@ -32,19 +32,19 @@ namespace Gserver {
             "OAEaQQoLUXVlc3RzRW50cnkSCwoDa2V5GAEgASgFEiEKBXZhbHVlGAIgASgL",
             "MhIuZ3NlcnZlci5RdWVzdERhdGE6AjgBIkMKC1F1ZXN0VXBkYXRlEhIKCnF1",
             "ZXN0Q2ZnSWQYASABKAUSIAoEZGF0YRgCIAEoCzISLmdzZXJ2ZXIuUXVlc3RE",
-            "YXRhIiQKDlF1ZXN0UmVtb3ZlUmVzEhIKCnF1ZXN0Q2ZnSWQYASABKAUiJAoO",
-            "RmluaXNoUXVlc3RSZXESEgoKcXVlc3RDZmdJZBgBIAEoBSJbCg5GaW5pc2hR",
-            "dWVzdFJlcxISCgpxdWVzdENmZ0lkGAEgASgFEjUKEWZpbmlzaGVkUXVlc3RE",
-            "YXRhGAIgASgLMhouZ3NlcnZlci5GaW5pc2hlZFF1ZXN0RGF0YUIGWgQuL3Bi",
-            "YgZwcm90bzM="));
+            "YXRhIiQKDlF1ZXN0UmVtb3ZlUmVzEhIKCnF1ZXN0Q2ZnSWQYASABKAUiJQoO",
+            "RmluaXNoUXVlc3RSZXESEwoLcXVlc3RDZmdJZHMYASADKAUiXQoORmluaXNo",
+            "UXVlc3RSZXMSEwoLcXVlc3RDZmdJZHMYASADKAUSNgoSZmluaXNoZWRRdWVz",
+            "dERhdGFzGAIgAygLMhouZ3NlcnZlci5GaW5pc2hlZFF1ZXN0RGF0YUIGWgQu",
+            "L3BiYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Gserver.PlayerReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.QuestSync), global::Gserver.QuestSync.Parser, new[]{ "Finished", "Quests" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.QuestUpdate), global::Gserver.QuestUpdate.Parser, new[]{ "QuestCfgId", "Data" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.QuestRemoveRes), global::Gserver.QuestRemoveRes.Parser, new[]{ "QuestCfgId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.FinishQuestReq), global::Gserver.FinishQuestReq.Parser, new[]{ "QuestCfgId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.FinishQuestRes), global::Gserver.FinishQuestRes.Parser, new[]{ "QuestCfgId", "FinishedQuestData" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.FinishQuestReq), global::Gserver.FinishQuestReq.Parser, new[]{ "QuestCfgIds" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.FinishQuestRes), global::Gserver.FinishQuestRes.Parser, new[]{ "QuestCfgIds", "FinishedQuestDatas" }, null, null, null, null)
           }));
     }
     #endregion
@@ -737,7 +737,7 @@ namespace Gserver {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public FinishQuestReq(FinishQuestReq other) : this() {
-      questCfgId_ = other.questCfgId_;
+      questCfgIds_ = other.questCfgIds_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -747,19 +747,18 @@ namespace Gserver {
       return new FinishQuestReq(this);
     }
 
-    /// <summary>Field number for the "questCfgId" field.</summary>
-    public const int QuestCfgIdFieldNumber = 1;
-    private int questCfgId_;
+    /// <summary>Field number for the "questCfgIds" field.</summary>
+    public const int QuestCfgIdsFieldNumber = 1;
+    private static readonly pb::FieldCodec<int> _repeated_questCfgIds_codec
+        = pb::FieldCodec.ForInt32(10);
+    private readonly pbc::RepeatedField<int> questCfgIds_ = new pbc::RepeatedField<int>();
     /// <summary>
     /// 任务id
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int QuestCfgId {
-      get { return questCfgId_; }
-      set {
-        questCfgId_ = value;
-      }
+    public pbc::RepeatedField<int> QuestCfgIds {
+      get { return questCfgIds_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -777,7 +776,7 @@ namespace Gserver {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (QuestCfgId != other.QuestCfgId) return false;
+      if(!questCfgIds_.Equals(other.questCfgIds_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -785,7 +784,7 @@ namespace Gserver {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (QuestCfgId != 0) hash ^= QuestCfgId.GetHashCode();
+      hash ^= questCfgIds_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -804,10 +803,7 @@ namespace Gserver {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (QuestCfgId != 0) {
-        output.WriteRawTag(8);
-        output.WriteInt32(QuestCfgId);
-      }
+      questCfgIds_.WriteTo(output, _repeated_questCfgIds_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -818,10 +814,7 @@ namespace Gserver {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (QuestCfgId != 0) {
-        output.WriteRawTag(8);
-        output.WriteInt32(QuestCfgId);
-      }
+      questCfgIds_.WriteTo(ref output, _repeated_questCfgIds_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -832,9 +825,7 @@ namespace Gserver {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (QuestCfgId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(QuestCfgId);
-      }
+      size += questCfgIds_.CalculateSize(_repeated_questCfgIds_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -847,9 +838,7 @@ namespace Gserver {
       if (other == null) {
         return;
       }
-      if (other.QuestCfgId != 0) {
-        QuestCfgId = other.QuestCfgId;
-      }
+      questCfgIds_.Add(other.questCfgIds_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -865,8 +854,9 @@ namespace Gserver {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
+          case 10:
           case 8: {
-            QuestCfgId = input.ReadInt32();
+            questCfgIds_.AddEntriesFrom(input, _repeated_questCfgIds_codec);
             break;
           }
         }
@@ -884,8 +874,9 @@ namespace Gserver {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
+          case 10:
           case 8: {
-            QuestCfgId = input.ReadInt32();
+            questCfgIds_.AddEntriesFrom(ref input, _repeated_questCfgIds_codec);
             break;
           }
         }
@@ -932,8 +923,8 @@ namespace Gserver {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public FinishQuestRes(FinishQuestRes other) : this() {
-      questCfgId_ = other.questCfgId_;
-      finishedQuestData_ = other.finishedQuestData_ != null ? other.finishedQuestData_.Clone() : null;
+      questCfgIds_ = other.questCfgIds_.Clone();
+      finishedQuestDatas_ = other.finishedQuestDatas_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -943,34 +934,32 @@ namespace Gserver {
       return new FinishQuestRes(this);
     }
 
-    /// <summary>Field number for the "questCfgId" field.</summary>
-    public const int QuestCfgIdFieldNumber = 1;
-    private int questCfgId_;
+    /// <summary>Field number for the "questCfgIds" field.</summary>
+    public const int QuestCfgIdsFieldNumber = 1;
+    private static readonly pb::FieldCodec<int> _repeated_questCfgIds_codec
+        = pb::FieldCodec.ForInt32(10);
+    private readonly pbc::RepeatedField<int> questCfgIds_ = new pbc::RepeatedField<int>();
     /// <summary>
     /// 任务id
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int QuestCfgId {
-      get { return questCfgId_; }
-      set {
-        questCfgId_ = value;
-      }
+    public pbc::RepeatedField<int> QuestCfgIds {
+      get { return questCfgIds_; }
     }
 
-    /// <summary>Field number for the "finishedQuestData" field.</summary>
-    public const int FinishedQuestDataFieldNumber = 2;
-    private global::Gserver.FinishedQuestData finishedQuestData_;
+    /// <summary>Field number for the "finishedQuestDatas" field.</summary>
+    public const int FinishedQuestDatasFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Gserver.FinishedQuestData> _repeated_finishedQuestDatas_codec
+        = pb::FieldCodec.ForMessage(18, global::Gserver.FinishedQuestData.Parser);
+    private readonly pbc::RepeatedField<global::Gserver.FinishedQuestData> finishedQuestDatas_ = new pbc::RepeatedField<global::Gserver.FinishedQuestData>();
     /// <summary>
     /// 完成任务的数据
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Gserver.FinishedQuestData FinishedQuestData {
-      get { return finishedQuestData_; }
-      set {
-        finishedQuestData_ = value;
-      }
+    public pbc::RepeatedField<global::Gserver.FinishedQuestData> FinishedQuestDatas {
+      get { return finishedQuestDatas_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -988,8 +977,8 @@ namespace Gserver {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (QuestCfgId != other.QuestCfgId) return false;
-      if (!object.Equals(FinishedQuestData, other.FinishedQuestData)) return false;
+      if(!questCfgIds_.Equals(other.questCfgIds_)) return false;
+      if(!finishedQuestDatas_.Equals(other.finishedQuestDatas_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -997,8 +986,8 @@ namespace Gserver {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (QuestCfgId != 0) hash ^= QuestCfgId.GetHashCode();
-      if (finishedQuestData_ != null) hash ^= FinishedQuestData.GetHashCode();
+      hash ^= questCfgIds_.GetHashCode();
+      hash ^= finishedQuestDatas_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1017,14 +1006,8 @@ namespace Gserver {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (QuestCfgId != 0) {
-        output.WriteRawTag(8);
-        output.WriteInt32(QuestCfgId);
-      }
-      if (finishedQuestData_ != null) {
-        output.WriteRawTag(18);
-        output.WriteMessage(FinishedQuestData);
-      }
+      questCfgIds_.WriteTo(output, _repeated_questCfgIds_codec);
+      finishedQuestDatas_.WriteTo(output, _repeated_finishedQuestDatas_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1035,14 +1018,8 @@ namespace Gserver {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (QuestCfgId != 0) {
-        output.WriteRawTag(8);
-        output.WriteInt32(QuestCfgId);
-      }
-      if (finishedQuestData_ != null) {
-        output.WriteRawTag(18);
-        output.WriteMessage(FinishedQuestData);
-      }
+      questCfgIds_.WriteTo(ref output, _repeated_questCfgIds_codec);
+      finishedQuestDatas_.WriteTo(ref output, _repeated_finishedQuestDatas_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1053,12 +1030,8 @@ namespace Gserver {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (QuestCfgId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(QuestCfgId);
-      }
-      if (finishedQuestData_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(FinishedQuestData);
-      }
+      size += questCfgIds_.CalculateSize(_repeated_questCfgIds_codec);
+      size += finishedQuestDatas_.CalculateSize(_repeated_finishedQuestDatas_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1071,15 +1044,8 @@ namespace Gserver {
       if (other == null) {
         return;
       }
-      if (other.QuestCfgId != 0) {
-        QuestCfgId = other.QuestCfgId;
-      }
-      if (other.finishedQuestData_ != null) {
-        if (finishedQuestData_ == null) {
-          FinishedQuestData = new global::Gserver.FinishedQuestData();
-        }
-        FinishedQuestData.MergeFrom(other.FinishedQuestData);
-      }
+      questCfgIds_.Add(other.questCfgIds_);
+      finishedQuestDatas_.Add(other.finishedQuestDatas_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1095,15 +1061,13 @@ namespace Gserver {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
+          case 10:
           case 8: {
-            QuestCfgId = input.ReadInt32();
+            questCfgIds_.AddEntriesFrom(input, _repeated_questCfgIds_codec);
             break;
           }
           case 18: {
-            if (finishedQuestData_ == null) {
-              FinishedQuestData = new global::Gserver.FinishedQuestData();
-            }
-            input.ReadMessage(FinishedQuestData);
+            finishedQuestDatas_.AddEntriesFrom(input, _repeated_finishedQuestDatas_codec);
             break;
           }
         }
@@ -1121,15 +1085,13 @@ namespace Gserver {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
+          case 10:
           case 8: {
-            QuestCfgId = input.ReadInt32();
+            questCfgIds_.AddEntriesFrom(ref input, _repeated_questCfgIds_codec);
             break;
           }
           case 18: {
-            if (finishedQuestData_ == null) {
-              FinishedQuestData = new global::Gserver.FinishedQuestData();
-            }
-            input.ReadMessage(FinishedQuestData);
+            finishedQuestDatas_.AddEntriesFrom(ref input, _repeated_finishedQuestDatas_codec);
             break;
           }
         }

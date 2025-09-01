@@ -132,6 +132,12 @@ namespace cshap_client.game
                         Console.WriteLine("not find fieldName:" + fieldName);
                         continue;
                     }
+                    // 暂不支持repeated和map类型的字段的动态赋值
+                    if(fieldDescriptor.IsRepeated || fieldDescriptor.IsMap)
+                    {
+                        Console.WriteLine("not support repeated or map field:" + fieldName);
+                        continue;
+                    }
                     switch(fieldDescriptor.FieldType)
                     {
                         case FieldType.String:

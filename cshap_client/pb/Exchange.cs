@@ -24,23 +24,24 @@ namespace Gserver {
     static ExchangeReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Cg5leGNoYW5nZS5wcm90bxIHZ3NlcnZlchoMcGxheWVyLnByb3RvIowBCgxF",
-            "eGNoYW5nZVN5bmMSMwoHUmVjb3JkcxgBIAMoCzIiLmdzZXJ2ZXIuRXhjaGFu",
-            "Z2VTeW5jLlJlY29yZHNFbnRyeRpHCgxSZWNvcmRzRW50cnkSCwoDa2V5GAEg",
-            "ASgFEiYKBXZhbHVlGAIgASgLMhcuZ3NlcnZlci5FeGNoYW5nZVJlY29yZDoC",
-            "OAEiOgoORXhjaGFuZ2VVcGRhdGUSKAoHUmVjb3JkcxgBIAMoCzIXLmdzZXJ2",
-            "ZXIuRXhjaGFuZ2VSZWNvcmQiIAoORXhjaGFuZ2VSZW1vdmUSDgoGQ2ZnSWRz",
-            "GAEgAygFIisKC0V4Y2hhbmdlUmVxEg0KBUNmZ0lkGAEgASgFEg0KBUNvdW50",
-            "GAIgASgFIkEKC0V4Y2hhbmdlUmVzEg0KBUNmZ0lkGAEgASgFEg0KBUNvdW50",
-            "GAIgASgFEhQKDEN1cnJlbnRDb3VudBgDIAEoBUIGWgQuL3BiYgZwcm90bzM="));
+            "Cg5leGNoYW5nZS5wcm90bxIHZ3NlcnZlchoJY2ZnLnByb3RvGgxwbGF5ZXIu",
+            "cHJvdG8ijAEKDEV4Y2hhbmdlU3luYxIzCgdSZWNvcmRzGAEgAygLMiIuZ3Nl",
+            "cnZlci5FeGNoYW5nZVN5bmMuUmVjb3Jkc0VudHJ5GkcKDFJlY29yZHNFbnRy",
+            "eRILCgNrZXkYASABKAUSJgoFdmFsdWUYAiABKAsyFy5nc2VydmVyLkV4Y2hh",
+            "bmdlUmVjb3JkOgI4ASI6Cg5FeGNoYW5nZVVwZGF0ZRIoCgdSZWNvcmRzGAEg",
+            "AygLMhcuZ3NlcnZlci5FeGNoYW5nZVJlY29yZCIgCg5FeGNoYW5nZVJlbW92",
+            "ZRIOCgZDZmdJZHMYASADKAUiMQoLRXhjaGFuZ2VSZXESIgoISWRDb3VudHMY",
+            "ASADKAsyEC5nc2VydmVyLklkQ291bnQiWwoLRXhjaGFuZ2VSZXMSIgoISWRD",
+            "b3VudHMYASADKAsyEC5nc2VydmVyLklkQ291bnQSKAoHUmVjb3JkcxgCIAMo",
+            "CzIXLmdzZXJ2ZXIuRXhjaGFuZ2VSZWNvcmRCBloELi9wYmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Gserver.PlayerReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Gserver.CfgReflection.Descriptor, global::Gserver.PlayerReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.ExchangeSync), global::Gserver.ExchangeSync.Parser, new[]{ "Records" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.ExchangeUpdate), global::Gserver.ExchangeUpdate.Parser, new[]{ "Records" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.ExchangeRemove), global::Gserver.ExchangeRemove.Parser, new[]{ "CfgIds" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.ExchangeReq), global::Gserver.ExchangeReq.Parser, new[]{ "CfgId", "Count" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.ExchangeRes), global::Gserver.ExchangeRes.Parser, new[]{ "CfgId", "Count", "CurrentCount" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.ExchangeReq), global::Gserver.ExchangeReq.Parser, new[]{ "IdCounts" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.ExchangeRes), global::Gserver.ExchangeRes.Parser, new[]{ "IdCounts", "Records" }, null, null, null, null)
           }));
     }
     #endregion
@@ -635,8 +636,7 @@ namespace Gserver {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ExchangeReq(ExchangeReq other) : this() {
-      cfgId_ = other.cfgId_;
-      count_ = other.count_;
+      idCounts_ = other.idCounts_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -646,34 +646,18 @@ namespace Gserver {
       return new ExchangeReq(this);
     }
 
-    /// <summary>Field number for the "CfgId" field.</summary>
-    public const int CfgIdFieldNumber = 1;
-    private int cfgId_;
+    /// <summary>Field number for the "IdCounts" field.</summary>
+    public const int IdCountsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Gserver.IdCount> _repeated_idCounts_codec
+        = pb::FieldCodec.ForMessage(10, global::Gserver.IdCount.Parser);
+    private readonly pbc::RepeatedField<global::Gserver.IdCount> idCounts_ = new pbc::RepeatedField<global::Gserver.IdCount>();
     /// <summary>
-    /// 兑换配置id
+    /// 支持批量兑换
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CfgId {
-      get { return cfgId_; }
-      set {
-        cfgId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "Count" field.</summary>
-    public const int CountFieldNumber = 2;
-    private int count_;
-    /// <summary>
-    /// 兑换数量(批量兑换)
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int Count {
-      get { return count_; }
-      set {
-        count_ = value;
-      }
+    public pbc::RepeatedField<global::Gserver.IdCount> IdCounts {
+      get { return idCounts_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -691,8 +675,7 @@ namespace Gserver {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (CfgId != other.CfgId) return false;
-      if (Count != other.Count) return false;
+      if(!idCounts_.Equals(other.idCounts_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -700,8 +683,7 @@ namespace Gserver {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (CfgId != 0) hash ^= CfgId.GetHashCode();
-      if (Count != 0) hash ^= Count.GetHashCode();
+      hash ^= idCounts_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -720,14 +702,7 @@ namespace Gserver {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (CfgId != 0) {
-        output.WriteRawTag(8);
-        output.WriteInt32(CfgId);
-      }
-      if (Count != 0) {
-        output.WriteRawTag(16);
-        output.WriteInt32(Count);
-      }
+      idCounts_.WriteTo(output, _repeated_idCounts_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -738,14 +713,7 @@ namespace Gserver {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (CfgId != 0) {
-        output.WriteRawTag(8);
-        output.WriteInt32(CfgId);
-      }
-      if (Count != 0) {
-        output.WriteRawTag(16);
-        output.WriteInt32(Count);
-      }
+      idCounts_.WriteTo(ref output, _repeated_idCounts_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -756,12 +724,7 @@ namespace Gserver {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (CfgId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(CfgId);
-      }
-      if (Count != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Count);
-      }
+      size += idCounts_.CalculateSize(_repeated_idCounts_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -774,12 +737,7 @@ namespace Gserver {
       if (other == null) {
         return;
       }
-      if (other.CfgId != 0) {
-        CfgId = other.CfgId;
-      }
-      if (other.Count != 0) {
-        Count = other.Count;
-      }
+      idCounts_.Add(other.idCounts_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -795,12 +753,8 @@ namespace Gserver {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            CfgId = input.ReadInt32();
-            break;
-          }
-          case 16: {
-            Count = input.ReadInt32();
+          case 10: {
+            idCounts_.AddEntriesFrom(input, _repeated_idCounts_codec);
             break;
           }
         }
@@ -818,12 +772,8 @@ namespace Gserver {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            CfgId = input.ReadInt32();
-            break;
-          }
-          case 16: {
-            Count = input.ReadInt32();
+          case 10: {
+            idCounts_.AddEntriesFrom(ref input, _repeated_idCounts_codec);
             break;
           }
         }
@@ -870,9 +820,8 @@ namespace Gserver {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ExchangeRes(ExchangeRes other) : this() {
-      cfgId_ = other.cfgId_;
-      count_ = other.count_;
-      currentCount_ = other.currentCount_;
+      idCounts_ = other.idCounts_.Clone();
+      records_ = other.records_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -882,49 +831,32 @@ namespace Gserver {
       return new ExchangeRes(this);
     }
 
-    /// <summary>Field number for the "CfgId" field.</summary>
-    public const int CfgIdFieldNumber = 1;
-    private int cfgId_;
+    /// <summary>Field number for the "IdCounts" field.</summary>
+    public const int IdCountsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Gserver.IdCount> _repeated_idCounts_codec
+        = pb::FieldCodec.ForMessage(10, global::Gserver.IdCount.Parser);
+    private readonly pbc::RepeatedField<global::Gserver.IdCount> idCounts_ = new pbc::RepeatedField<global::Gserver.IdCount>();
     /// <summary>
-    /// 兑换配置id
+    /// 兑换请求数据
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CfgId {
-      get { return cfgId_; }
-      set {
-        cfgId_ = value;
-      }
+    public pbc::RepeatedField<global::Gserver.IdCount> IdCounts {
+      get { return idCounts_; }
     }
 
-    /// <summary>Field number for the "Count" field.</summary>
-    public const int CountFieldNumber = 2;
-    private int count_;
+    /// <summary>Field number for the "Records" field.</summary>
+    public const int RecordsFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Gserver.ExchangeRecord> _repeated_records_codec
+        = pb::FieldCodec.ForMessage(18, global::Gserver.ExchangeRecord.Parser);
+    private readonly pbc::RepeatedField<global::Gserver.ExchangeRecord> records_ = new pbc::RepeatedField<global::Gserver.ExchangeRecord>();
     /// <summary>
-    /// 本次兑换数量(批量兑换)
+    /// 当前兑换记录
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int Count {
-      get { return count_; }
-      set {
-        count_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "CurrentCount" field.</summary>
-    public const int CurrentCountFieldNumber = 3;
-    private int currentCount_;
-    /// <summary>
-    /// 当前已兑换数量
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CurrentCount {
-      get { return currentCount_; }
-      set {
-        currentCount_ = value;
-      }
+    public pbc::RepeatedField<global::Gserver.ExchangeRecord> Records {
+      get { return records_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -942,9 +874,8 @@ namespace Gserver {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (CfgId != other.CfgId) return false;
-      if (Count != other.Count) return false;
-      if (CurrentCount != other.CurrentCount) return false;
+      if(!idCounts_.Equals(other.idCounts_)) return false;
+      if(!records_.Equals(other.records_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -952,9 +883,8 @@ namespace Gserver {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (CfgId != 0) hash ^= CfgId.GetHashCode();
-      if (Count != 0) hash ^= Count.GetHashCode();
-      if (CurrentCount != 0) hash ^= CurrentCount.GetHashCode();
+      hash ^= idCounts_.GetHashCode();
+      hash ^= records_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -973,18 +903,8 @@ namespace Gserver {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (CfgId != 0) {
-        output.WriteRawTag(8);
-        output.WriteInt32(CfgId);
-      }
-      if (Count != 0) {
-        output.WriteRawTag(16);
-        output.WriteInt32(Count);
-      }
-      if (CurrentCount != 0) {
-        output.WriteRawTag(24);
-        output.WriteInt32(CurrentCount);
-      }
+      idCounts_.WriteTo(output, _repeated_idCounts_codec);
+      records_.WriteTo(output, _repeated_records_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -995,18 +915,8 @@ namespace Gserver {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (CfgId != 0) {
-        output.WriteRawTag(8);
-        output.WriteInt32(CfgId);
-      }
-      if (Count != 0) {
-        output.WriteRawTag(16);
-        output.WriteInt32(Count);
-      }
-      if (CurrentCount != 0) {
-        output.WriteRawTag(24);
-        output.WriteInt32(CurrentCount);
-      }
+      idCounts_.WriteTo(ref output, _repeated_idCounts_codec);
+      records_.WriteTo(ref output, _repeated_records_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1017,15 +927,8 @@ namespace Gserver {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (CfgId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(CfgId);
-      }
-      if (Count != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Count);
-      }
-      if (CurrentCount != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(CurrentCount);
-      }
+      size += idCounts_.CalculateSize(_repeated_idCounts_codec);
+      size += records_.CalculateSize(_repeated_records_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1038,15 +941,8 @@ namespace Gserver {
       if (other == null) {
         return;
       }
-      if (other.CfgId != 0) {
-        CfgId = other.CfgId;
-      }
-      if (other.Count != 0) {
-        Count = other.Count;
-      }
-      if (other.CurrentCount != 0) {
-        CurrentCount = other.CurrentCount;
-      }
+      idCounts_.Add(other.idCounts_);
+      records_.Add(other.records_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1062,16 +958,12 @@ namespace Gserver {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            CfgId = input.ReadInt32();
+          case 10: {
+            idCounts_.AddEntriesFrom(input, _repeated_idCounts_codec);
             break;
           }
-          case 16: {
-            Count = input.ReadInt32();
-            break;
-          }
-          case 24: {
-            CurrentCount = input.ReadInt32();
+          case 18: {
+            records_.AddEntriesFrom(input, _repeated_records_codec);
             break;
           }
         }
@@ -1089,16 +981,12 @@ namespace Gserver {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            CfgId = input.ReadInt32();
+          case 10: {
+            idCounts_.AddEntriesFrom(ref input, _repeated_idCounts_codec);
             break;
           }
-          case 16: {
-            Count = input.ReadInt32();
-            break;
-          }
-          case 24: {
-            CurrentCount = input.ReadInt32();
+          case 18: {
+            records_.AddEntriesFrom(ref input, _repeated_records_codec);
             break;
           }
         }

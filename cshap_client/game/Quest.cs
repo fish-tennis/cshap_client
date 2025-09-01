@@ -53,33 +53,31 @@ namespace cshap_client.game
         // 任务完成
         public void OnFinishQuestRes(Gserver.FinishQuestRes res)
         {
-            Quests.Remove(res.QuestCfgId);
-            Finished.Add(res.QuestCfgId, new Gserver.FinishedQuestData
-            {
-                Timestamp = res.FinishedQuestData.Timestamp,
-            });
             Console.WriteLine("OnFinishQuestRes:" + res);
+            for (int i = 0; i < res.QuestCfgIds.Count; i++)
+            {
+                Quests.Remove(res.QuestCfgIds[i]);
+                Finished[res.QuestCfgIds[i]] = new Gserver.FinishedQuestData
+                {
+                    Timestamp = res.FinishedQuestDatas[i].Timestamp,
+                };
+            }
         }
 
-        // 向服务器发送完成任务的请求(领取任务奖励) (TODO: 改成支持批量完成)
+        // 向服务器发送完成任务的请求(领取任务奖励)
         public void FinishQuestReq(int questCfgId)
         {
-            Client.Send(new Gserver.FinishQuestReq
-            {
-                QuestCfgId = questCfgId,
-            });
+            var req = new Gserver.FinishQuestReq { };
+            req.QuestCfgIds.Add(questCfgId);
+            Client.Send(req);
         }
 
         // 批量完成任务
         public void FinishQuestReqBatch(List<int> questCfgIds)
         {
-            foreach (var questCfgId in questCfgIds)
-            {
-                Client.Send(new Gserver.FinishQuestReq
-                {
-                    QuestCfgId = questCfgId,
-                });
-            }
+            var req = new Gserver.FinishQuestReq { };
+            req.QuestCfgIds.AddRange(questCfgIds);
+            Client.Send(req);
         }
     }
 }
