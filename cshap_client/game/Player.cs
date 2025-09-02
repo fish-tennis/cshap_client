@@ -15,6 +15,8 @@ namespace cshap_client.game
         public int AccountId { get; set; } // 账号id
         public int RegionId { get; set; } // 区服id
 
+        public BaseInfo m_BaseInfo; // 组件也可以这里保存一个引用,查找组件的时候,就可以直接获取到
+
         public Player(int id) : base(id)
         {
         }
@@ -24,7 +26,7 @@ namespace cshap_client.game
         {
             // TODO:也可以通过C#的自定义属性来自动添加组件(在组件类上设置自定义属性)
             // 这里先手动写,也没问题
-            AddComponent(new BaseInfo(this));
+            m_BaseInfo =  AddComponent(new BaseInfo(this)) as BaseInfo;
             AddComponent(new Quest(this));
             AddComponent(new Exchange(this));
             AddComponent(new Activities(this));
@@ -42,7 +44,7 @@ namespace cshap_client.game
 
         public BaseInfo GetBaseInfo()
         {
-            return GetComponentByName(BaseInfo.ComponentName) as BaseInfo;
+            return m_BaseInfo;
         }
 
         public Quest GetQuest()

@@ -69,6 +69,7 @@
     <Compile Include="game\Bags.cs" />
     <Compile Include="game\BaseInfo.cs" />
     <Compile Include="game\Client.cs" />
+    <Compile Include="game\Condition.cs" />
     <Compile Include="game\CountContainer.cs" />
     <Compile Include="game\ElemContainer.cs" />
     <Compile Include="game\Entity.cs" />
