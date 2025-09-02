@@ -186,11 +186,11 @@ namespace cshap_client.game
 
         public static bool Send(IMessage message)
         {
-            if (Client.Instance.m_Connection == null)
+            if (Instance.m_Connection == null)
             {
                 return false;
             }
-            return Client.Instance.m_Connection.Send(message);
+            return Instance.m_Connection.Send(message);
         }
     }
 }

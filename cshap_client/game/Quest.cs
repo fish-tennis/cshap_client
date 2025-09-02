@@ -69,7 +69,7 @@ namespace cshap_client.game
         {
             var req = new Gserver.FinishQuestReq { };
             req.QuestCfgIds.Add(questCfgId);
-            Client.Send(req);
+            Send(req);
         }
 
         // 批量完成任务
@@ -77,7 +77,7 @@ namespace cshap_client.game
         {
             var req = new Gserver.FinishQuestReq { };
             req.QuestCfgIds.AddRange(questCfgIds);
-            Client.Send(req);
+            Send(req);
         }
     }
 }

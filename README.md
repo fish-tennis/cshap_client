@@ -13,7 +13,7 @@ c#写的测试客户端(控制台程序),演示和gserver的交互流程,并演�
 - 采用Entity-Component设计,模块解耦
 - (TODO)Entity事件分发
 - (TODO)通用且扩展性强的条件接口
-- (TODO)任务模块,演示了如何实现一个通用且扩展性强的[任务系统](https://github.com/fish-tennis/gserver/blob/main/Design_Quest.md)
+- (TODO)任务模块,演示了如何实现一个通用且扩展性强的任务系统[设计文档](/Design_Quest.md)
 - (TODO)兑换模块,演示了如何实现一个通用且扩展性强的兑换功能
 - 活动模块,演示了如何设计一个通用且支持扩展的活动模块
 - 背包模块,演示了如何设计一个通用且支持扩展的容器模块
@@ -69,7 +69,7 @@ gserver目前支持的测试命令: https://github.com/fish-tennis/gserver/blob/
 
 ## 命令行参数
 ```shell
--account test -password 123
+-server 127.0.0.1:10001 -account test -password 123
 ```
 命令行参数可以设置账号名和密码,运行控制台程序,将会自动登录
 

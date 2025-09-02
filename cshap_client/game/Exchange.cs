@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using cshap_client.cfg;
 
 namespace cshap_client.game
 {
@@ -70,15 +71,54 @@ namespace cshap_client.game
                 Id = cfgId,
                 Count = count,
             });
-            Client.Send(req);
+            Send(req);
         }
 
         // 批量兑换请求
-        public void ExchangeReqBatch(List<Gserver.IdCount> idCounts)
+        public void ExchangeReqBatch(IEnumerable<Gserver.IdCount> idCounts)
         {
             var req = new Gserver.ExchangeReq();
             req.IdCounts.AddRange(idCounts);
-            Client.Send(req);
+            Send(req);
+        }
+        
+        // 检查是否兑换
+        public bool CanExchange(int exchangeCfgId, int exchangeCount)
+        {
+            if (exchangeCount <= 0)
+            {
+                return false;
+            }
+            if (!DataMgr.ExchangeCfgs.TryGetValue(exchangeCfgId, out var exchangeCfg))
+            {
+                return false;
+            }
+            // 检查配置的条件
+            object obj;
+            var activityId = ActivityCfgHelper.GetActivityIdByExchangeId(exchangeCfgId);
+            if (activityId > 0)
+            {
+                // 如果是活动礼包,则需要先找到该活动的对象
+                obj = GetPlayer().GetActivities().GetActivity(activityId);
+            }
+            else
+            {
+                obj = GetPlayer();
+            }
+            if (obj == null)
+            {
+                return true;
+            }
+            if (!Condition.CheckConditions(obj, exchangeCfg.Conditions))
+            {
+                return false;
+            }
+            var recordCount = 0;
+            if (Records.TryGetValue(exchangeCfgId, out var record))
+            {
+                recordCount = record.Count;
+            }
+            return exchangeCount + recordCount >= exchangeCfg.CountLimit; // 检查兑换次数限制
         }
     }
 }

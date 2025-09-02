@@ -20,6 +20,7 @@ namespace cshap_client.cfg
             levelAfterLoad();
             exchangeAfterLoad();
             questAfterLoad();
+            ActivityCfgHelper.AfterLoad();
         }
 
         // 等级表预处理,计算出最高等级
@@ -60,6 +61,7 @@ namespace cshap_client.cfg
                 Type = conditionTemplate.Type,
                 Key = conditionTemplate.Key,
                 Op = conditionTemplate.Op,
+                ClientCheck = conditionTemplate.ClientCheck,
             };
             conditionCfg.Values.AddRange(cfgArg.Args.Clone());
             conditionCfg.Properties.Add(conditionTemplate.Properties.Clone());

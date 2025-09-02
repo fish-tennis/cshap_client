@@ -17,6 +17,11 @@ namespace cshap_client.game
         {
             m_Activities = new Dictionary<int, Activity>();
         }
+        
+        public Activity GetActivity(int activityId)
+        {
+            return m_Activities.TryGetValue(activityId, out var activity) ? activity : null;
+        }
 
         // 活动数据同步
         private void OnActivitySync(Gserver.ActivitySync res)

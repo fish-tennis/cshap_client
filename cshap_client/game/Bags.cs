@@ -68,7 +68,7 @@ namespace cshap_client.game
         }
 
         // 检查物品是否足够
-        public bool IsEnough(List<Gserver.ElemNum> items)
+        public bool IsEnough(IEnumerable<Gserver.ElemNum> items)
         {
             // items可能有重复的物品,所以转换成map来统计总数量
             var itemNumMap = ConvertToItemNumMap(items);
@@ -76,7 +76,7 @@ namespace cshap_client.game
         }
         
         // 检查物品是否足够
-        public bool IsEnough(List<Gserver.DelElemArg> items)
+        public bool IsEnough(IEnumerable<Gserver.DelElemArg> items)
         {
             // items可能有重复的物品,所以转换成map来统计总数量
             var itemNumMap = ConvertToItemNumMap(items);
@@ -102,7 +102,7 @@ namespace cshap_client.game
         }
         
         // items可能有重复的物品,所以转换成map来统计总数量
-        public static Dictionary<int, long> ConvertToItemNumMap(List<Gserver.ElemNum> items)
+        public static Dictionary<int, long> ConvertToItemNumMap(IEnumerable<Gserver.ElemNum> items)
         {
             var itemNumMap = new Dictionary<int, long>();
             foreach (var itemNum in items)
@@ -113,7 +113,7 @@ namespace cshap_client.game
         }
         
         // items可能有重复的物品,所以转换成map来统计总数量
-        public static Dictionary<int, long> ConvertToItemNumMap(List<Gserver.DelElemArg> items)
+        public static Dictionary<int, long> ConvertToItemNumMap(IEnumerable<Gserver.DelElemArg> items)
         {
             var itemNumMap = new Dictionary<int, long>();
             foreach (var itemNum in items)

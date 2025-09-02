@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data.OleDb;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.Runtime.Remoting;
+using Google.Protobuf;
 
 namespace cshap_client.game
 {
@@ -26,6 +22,12 @@ namespace cshap_client.game
         IEntity GetEntity();
 
         void SetEntity(IEntity entity);
+    }
+
+    // 获取int32属性值的接口
+    public interface IPropertyInt32
+    {
+        int GetPropertyInt32(string propertyName);
     }
 
     public class BaseEntity : IEntity
@@ -95,10 +97,16 @@ namespace cshap_client.game
         }
     }
 
+    // 玩家组件接口
+    public interface IPlayerComponent
+    {
+        Player GetPlayer();
+    }
+
     /// <summary>
     ///  玩家组件的基类
     /// </summary>
-    public class BasePlayerComponent : BaseComponent
+    public class BasePlayerComponent : BaseComponent,IPlayerComponent
     {
         public BasePlayerComponent(string name, Player player) : base(name, player)
         {
@@ -107,6 +115,11 @@ namespace cshap_client.game
         public Player GetPlayer()
         {
             return base.GetEntity() as Player;
+        }
+        
+        public bool Send(IMessage message)
+        {
+            return GetPlayer() != null && GetPlayer().Send(message);
         }
     }
 

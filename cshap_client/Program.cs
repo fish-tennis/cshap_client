@@ -13,12 +13,12 @@ namespace cshap_client
     {
         static void Main(string[] args)
         {
-            // 可选命令行参数 -account test -password 123
+            // 可选命令行参数 -server 127.0.0.1:10001 -account test -password 123 -gate -ws
             var parsedArgs = ParseArguments(args);
-            if (parsedArgs.TryGetValue("account", out object account))
+            if (parsedArgs.TryGetValue("account", out var account))
             {
                 Login.s_AccountName = account as string;
-                if (parsedArgs.TryGetValue("password", out object password))
+                if (parsedArgs.TryGetValue("password", out var password))
                 {
                     Login.s_Password = password as string;
                 }
@@ -27,9 +27,14 @@ namespace cshap_client
                     Login.s_Password = Login.s_AccountName;
                 }
             }
+            var address = "127.0.0.1:10001";
+            if (parsedArgs.TryGetValue("server", out var server))
+            {
+                address = server as string;
+            }
 
             Client.Instance.Init();
-            Client.Instance.m_Connection.Connect("127.0.0.1:10001");
+            Client.Instance.m_Connection.Connect(address);
 
             Thread thread = new Thread(inputCmd);
             thread.Start();

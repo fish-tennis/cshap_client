@@ -63,6 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="cfg\DataMgr.cs" />
+    <Compile Include="cfg\ActivityCfgHelper.cs" />
     <Compile Include="cfg\Helper.cs" />
     <Compile Include="game\Activities.cs" />
     <Compile Include="game\Activity.cs" />
@@ -77,6 +78,7 @@
     <Compile Include="game\Exchange.cs" />
     <Compile Include="game\Login.cs" />
     <Compile Include="game\Player.cs" />
+    <Compile Include="game\PlayerProperty.cs" />
     <Compile Include="game\Quest.cs" />
     <Compile Include="game\UniqueContainer.cs" />
     <Compile Include="game\UniqueItemBag.cs" />
