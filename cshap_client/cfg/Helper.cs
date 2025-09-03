@@ -10,16 +10,16 @@ using System.Threading.Tasks;
 namespace cshap_client.cfg
 {
     // 配置数据加载完成后,进行一些预处理,对原始配置数据进行一些加工,便于业务处理
-    internal class Helper
+    internal static class Helper
     {
         public static int MaxLevel; // 最高等级
-        // TODO: 任务分类索引
 
         public static void AfterLoad()
         {
             levelAfterLoad();
             exchangeAfterLoad();
             questAfterLoad();
+            QuestCfgHelper.AfterLoad();
             ActivityCfgHelper.AfterLoad();
         }
 
@@ -107,6 +107,24 @@ namespace cshap_client.cfg
                 kvp.Value.Conditions.AddRange(convertConditionCfgs(kvp.Value.ConditionTemplates));
                 kvp.Value.Progress = convertProgressCfg(kvp.Value.ProgressTemplate);
             }
+        }
+        
+        // 根据字段值创建索引字典
+        public static Dictionary<int, Dictionary<int, T>> CreateDictionaryIndex<T>(Dictionary<int, T> data, Func<T, int> indexFn)
+        {
+            var indexDict = new Dictionary<int, Dictionary<int, T>>();
+            foreach (var kvp in data)
+            {
+                var index = indexFn(kvp.Value);
+                indexDict.TryGetValue(index, out var dict);
+                if (dict == null)
+                {
+                    dict = new Dictionary<int, T>();
+                    indexDict.Add(index, dict);
+                }
+                dict.Add(kvp.Key, kvp.Value);
+            }
+            return indexDict;
         }
 
     }

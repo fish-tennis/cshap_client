@@ -65,8 +65,10 @@
     <Compile Include="cfg\DataMgr.cs" />
     <Compile Include="cfg\ActivityCfgHelper.cs" />
     <Compile Include="cfg\Helper.cs" />
+    <Compile Include="cfg\QuestCfgHelper.cs" />
     <Compile Include="game\Activities.cs" />
     <Compile Include="game\Activity.cs" />
+    <Compile Include="game\ActivityProperty.cs" />
     <Compile Include="game\Bags.cs" />
     <Compile Include="game\BaseInfo.cs" />
     <Compile Include="game\Client.cs" />

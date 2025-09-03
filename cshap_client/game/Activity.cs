@@ -29,6 +29,13 @@ namespace cshap_client.game
         // IPropertyInt32的实现
         public int GetPropertyInt32(string property)
         {
+            // 1.先找注册的属性接口
+            if (ActivityProperty.Getters.TryGetValue(property, out var getter))
+            {
+                return getter(this, property);
+            }
+            // 2.再找活动数据上的属性值
+            // 3.再找活动配置上的属性值
             return m_Data.PropertiesInt32.TryGetValue(property, out var value) ? value : GetCfgPropertyInt32(property);
         }
 
@@ -48,6 +55,14 @@ namespace cshap_client.game
         {
             m_Cfg.Properties.TryGetValue(property, out var value);
             return value;
+        }
+
+        // 当前是参加这个活动的第几天,从1开始
+        public int GetDayCount()
+        {
+            var now = DateTime.Now.Date;
+            var joinDate = DateTimeOffset.FromUnixTimeSeconds(m_Data.JoinTime).Date;
+            return (now - joinDate).Days + 1;
         }
     }
 }

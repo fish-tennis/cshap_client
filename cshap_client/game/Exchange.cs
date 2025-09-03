@@ -14,7 +14,7 @@ namespace cshap_client.game
         public const string ComponentName = "Exchange";
 
         public Dictionary<int, Gserver.ExchangeRecord> Records; // 兑换记录
-
+        
         public Exchange(Player player) : base(ComponentName, player)
         {
             Records = new Dictionary<int, Gserver.ExchangeRecord>();

@@ -152,6 +152,7 @@ namespace cshap_client.network
             }
             catch (Exception ex)
             {
+                // TODO: 上报错误给服务器,因为服务器查看日志比较方便
                 Console.WriteLine("OnRecvPacketErr: message" + message.GetType().Name + " ex:" + ex.Message);
                 return false;
             }

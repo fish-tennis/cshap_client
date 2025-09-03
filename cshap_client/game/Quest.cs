@@ -13,7 +13,7 @@ namespace cshap_client.game
         public const string ComponentName = "Quest";
         public Dictionary<int, Gserver.FinishedQuestData> Finished; // 已完成的任务
         public Dictionary<int, Gserver.QuestData> Quests; // 当前任务列表
-
+        
         public Quest(Player player) : base(ComponentName, player)
         {
             Finished = new Dictionary<int, Gserver.FinishedQuestData>();
