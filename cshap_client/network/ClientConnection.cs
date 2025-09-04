@@ -13,24 +13,24 @@ using Google.Protobuf;
 
 namespace cshap_client.network
 {
-    internal class ClientConnection : TcpConnection
+    internal class ClientConnection
     {
-        // 是否使用网关模式,使用网关模式时,客户端只需要连接网关服务器,由网关服务器转发消息给后端服务器
-        // 使用网关模式时,连接登录服务器,可以不使用http
-        public bool m_IsUseGateMode = true;
         private long m_LastPingTimestamp; // 上一次ping的时间戳
         public const int PingInterval = 5; // 几秒钟ping一次
 
-        public ClientConnection(ConnectionConfig connectionConfig, int connectionId) : base(connectionConfig, connectionId)
+        public IConnection m_Connection;
+
+        public ClientConnection(IConnection connection)
         {
-            Tag = this;
-            OnConnected = onConnected;
-            OnClose = onClose;
+            m_Connection = connection;
+            m_Connection.Tag = this;
+            m_Connection.OnConnected = onConnected;
+            m_Connection.OnClose = onClose;
         }
 
         private void onConnected(IConnection connection, bool success)
         {
-            Console.WriteLine("onConnected host:" + GetHostAddress() + " success:" + success);
+            Console.WriteLine("onConnected success:" + success);
             if(Client.Instance.Player == null && !string.IsNullOrEmpty(Login.s_AccountName))
             {
                 // 自动账号登录
@@ -51,7 +51,7 @@ namespace cshap_client.network
             {
                 return false;
             }
-            return Send(cmdId, message);
+            return m_Connection.Send(cmdId, message);
         }
 
         public void AutoPing()
@@ -65,6 +65,19 @@ namespace cshap_client.network
                     Timestamp = now,
                 });
                 //Console.WriteLine("AutoPing:" + now);
+            }
+        }
+        
+        private IPacket PopPacket()
+        {
+            switch (m_Connection)
+            {
+                case TcpConnection tcpConnection:
+                    return tcpConnection.PopPacket();
+                case WsConnection wsConnection:
+                    return wsConnection.PopPacket();
+                default:
+                    return null;
             }
         }
 
@@ -93,11 +106,11 @@ namespace cshap_client.network
                     // 没注册的消息
                     if (packet.ErrorCode() > 0)
                     {
-                        Console.WriteLine("recv err:" + packet.ErrorCode() + " msg:" + packet.Message());
+                        Console.WriteLine("recv err:" + packet.ErrorCode() + " name:" + descriptor.Name + " msg:" + packet.Message());
                     }
                     else
                     {
-                        Console.WriteLine("recv cmd:" + packet.Command() + " msg:" + packet.Message());
+                        Console.WriteLine("recv cmd:" + packet.Command() + " name:" + descriptor.Name + " msg:" + packet.Message());
                     }
                 }
             }

@@ -13,7 +13,8 @@ namespace cshap_client
     {
         static void Main(string[] args)
         {
-            // 可选命令行参数 -server 127.0.0.1:10001 -account test -password 123 -gate -ws
+            // 可选命令行参数 -server 127.0.0.1:10001 -account test -password 123
+            // 如果server是ws://127.0.0.1:10001/ws,则表示使用websocket
             var parsedArgs = ParseArguments(args);
             if (parsedArgs.TryGetValue("account", out var account))
             {
@@ -33,8 +34,18 @@ namespace cshap_client
                 address = server as string;
             }
 
-            Client.Instance.Init();
-            Client.Instance.m_Connection.Connect(address);
+            // 根据服务器地址来自动检查是否使用websocket
+            var connectionMode = "";
+            if (address.StartsWith("ws://"))
+            {
+                connectionMode = "ws";
+            }
+            else if (address.StartsWith("wss://"))
+            {
+                connectionMode = "wss";
+            }
+            Client.Instance.Init(connectionMode);
+            Client.Instance.m_Connection.m_Connection.Connect(address);
 
             Thread thread = new Thread(inputCmd);
             thread.Start();

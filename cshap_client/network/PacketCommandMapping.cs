@@ -161,11 +161,23 @@ namespace cshap_client.network
         }
 
         // 注册消息到网络层解码器
-        public static void RegisterCodec(ProtoCodec codec)
+        public static void RegisterCodec(ICodec codec)
         {
-            foreach(var kvp in _cmdMessageMapping)
+            switch (codec)
             {
-                codec.Register((ushort)kvp.Key, kvp.Value);
+             case ProtoCodec c:
+                 foreach(var kvp in _cmdMessageMapping)
+                 {
+                     c.Register((ushort)kvp.Key, kvp.Value);
+                 }
+                 break;
+             
+             case SimpleProtoCodec c:
+                 foreach(var kvp in _cmdMessageMapping)
+                 {
+                     c.Register((ushort)kvp.Key, kvp.Value);
+                 }
+                 break;
             }
         }
     }

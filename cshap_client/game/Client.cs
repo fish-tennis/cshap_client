@@ -21,6 +21,10 @@ namespace cshap_client.game
     internal class Client
     {
         private static Client _instance = null;
+        // 是否使用网关模式,使用网关模式时,客户端只需要连接网关服务器,由网关服务器转发消息给后端服务器
+        // 使用网关模式时,连接登录服务器,可以不使用http
+        // 暂时强制使用网关模式
+        public static bool m_IsUseGateMode = true;
 
         public ClientConnection m_Connection;
         public bool IsRunning = false;
@@ -42,7 +46,7 @@ namespace cshap_client.game
             }
         }
 
-        public void Init()
+        public void Init(string connectionMode)
         {
             // 消息号映射
             PacketCommandMapping.InitCommandMappingFromFile("gen/message_command_mapping.json");
@@ -60,10 +64,28 @@ namespace cshap_client.game
                 RecvTimeout = 3000,
                 WriteTimeout = 3000
             };
-            var codec = new ProtoCodec();
-            connectionConfig.Codec = codec;
+            IConnection conn = null;
+            ICodec codec = null;
+            // 默认使用TcpConnection
+            if (string.IsNullOrEmpty(connectionMode) || connectionMode == "tcp")
+            {
+                codec = new ProtoCodec();
+                connectionConfig.Codec = codec;
+                conn = new TcpConnection(connectionConfig, 1);
+            }
+            else
+            {
+                // websocket ws/wss
+                if (connectionMode == "wss")
+                {
+                    connectionConfig.InsecureSkipVerify = true;
+                }
+                codec = new SimpleProtoCodec();
+                connectionConfig.Codec = codec;
+                conn = new WsConnection(connectionConfig, 1);
+            }
             PacketCommandMapping.RegisterCodec(codec); // 自动注册所有消息
-            m_Connection = new ClientConnection(connectionConfig, 1);
+            m_Connection = new ClientConnection(conn);
             IsRunning = true;
         }
 
@@ -83,7 +105,7 @@ namespace cshap_client.game
 
         public void Shutdown()
         {
-            m_Connection.Close();
+            m_Connection?.m_Connection.Close();
         }
 
         // 从其他线程收到cmd

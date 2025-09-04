@@ -81,7 +81,7 @@ namespace gnet_csharp
                 {
                     var readResult =
                         m_WebSocket.ReceiveAsync(new ArraySegment<byte>(m_ReadBuffer), CancellationToken.None);
-                    readResult.Wait();
+                    readResult.Wait(); // TODO: 需要处理异常
                     var result = readResult.Result;
                     if (result.MessageType == WebSocketMessageType.Binary)
                     {
