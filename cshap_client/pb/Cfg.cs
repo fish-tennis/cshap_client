@@ -26,119 +26,125 @@ namespace Gserver {
           string.Concat(
             "CgljZmcucHJvdG8SB2dzZXJ2ZXIiJQoHSXRlbU51bRINCgVDZmdJZBgBIAEo",
             "BRILCgNOdW0YAiABKAUiJAoHSWRDb3VudBIKCgJJZBgBIAEoBRINCgVDb3Vu",
-            "dBgCIAEoBSKEAgoHSXRlbUNmZxINCgVDZmdJZBgBIAEoBRIMCgROYW1lGAIg",
+            "dBgCIAEoBSKkAgoHSXRlbUNmZxINCgVDZmdJZBgBIAEoBRIMCgROYW1lGAIg",
             "ASgJEg4KBkRldGFpbBgDIAEoCRIQCghJdGVtVHlwZRgEIAEoBRIPCgdTdWJU",
             "eXBlGAUgASgFEhAKCENhdGVnb3J5GAYgASgFEgsKA0FyZxgHIAEoBRIQCghU",
-            "aW1lVHlwZRgIIAEoBRIPCgdUaW1lb3V0GAkgASgFEjQKClByb3BlcnRpZXMY",
-            "CiADKAsyIC5nc2VydmVyLkl0ZW1DZmcuUHJvcGVydGllc0VudHJ5GjEKD1By",
-            "b3BlcnRpZXNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgB",
-            "IscBCgpBZGRFbGVtQXJnEg0KBUNmZ0lkGAEgASgFEgsKA051bRgCIAEoBRIQ",
-            "CghUaW1lVHlwZRgDIAEoBRIPCgdUaW1lb3V0GAQgASgFEg4KBlNvdXJjZRgF",
-            "IAEoBRI3CgpQcm9wZXJ0aWVzGAYgAygLMiMuZ3NlcnZlci5BZGRFbGVtQXJn",
-            "LlByb3BlcnRpZXNFbnRyeRoxCg9Qcm9wZXJ0aWVzRW50cnkSCwoDa2V5GAEg",
-            "ASgJEg0KBXZhbHVlGAIgASgJOgI4ASK2AQoKRGVsRWxlbUFyZxIQCghVbmlx",
-            "dWVJZBgBIAEoAxINCgVDZmdJZBgCIAEoBRILCgNOdW0YAyABKAUSDgoGU291",
-            "cmNlGAQgASgFEjcKClByb3BlcnRpZXMYBSADKAsyIy5nc2VydmVyLkRlbEVs",
-            "ZW1BcmcuUHJvcGVydGllc0VudHJ5GjEKD1Byb3BlcnRpZXNFbnRyeRILCgNr",
-            "ZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIiQKBkNmZ0FyZxINCgVDZmdJ",
-            "ZBgBIAEoBRILCgNBcmcYAiABKAUiJgoHQ2ZnQXJncxINCgVDZmdJZBgBIAEo",
-            "BRIMCgRBcmdzGAIgAygFItMDCghRdWVzdENmZxINCgVDZmdJZBgBIAEoBRIM",
-            "CgROYW1lGAIgASgJEhEKCVF1ZXN0VHlwZRgDIAEoBRITCgtSZWZyZXNoVHlw",
-            "ZRgEIAEoBRIQCghDYXRlZ29yeRgFIAEoBRIkCgdSZXdhcmRzGAYgAygLMhMu",
-            "Z3NlcnZlci5BZGRFbGVtQXJnEhAKCFByZVF1ZXN0GAcgASgFEhIKCk5leHRR",
-            "dWVzdHMYCCADKAUSKQoKQ29uZGl0aW9ucxgJIAMoCzIVLmdzZXJ2ZXIuQ29u",
-            "ZGl0aW9uQ2ZnEiYKCFByb2dyZXNzGAogASgLMhQuZ3NlcnZlci5Qcm9ncmVz",
-            "c0NmZxI1CgpQcm9wZXJ0aWVzGAsgAygLMiEuZ3NlcnZlci5RdWVzdENmZy5Q",
-            "cm9wZXJ0aWVzRW50cnkSDgoGRGV0YWlsGAwgASgJEiwKEkNvbmRpdGlvblRl",
-            "bXBsYXRlcxgVIAMoCzIQLmdzZXJ2ZXIuQ2ZnQXJncxIpChBQcm9ncmVzc1Rl",
-            "bXBsYXRlGBYgASgLMg8uZ3NlcnZlci5DZmdBcmcaMQoPUHJvcGVydGllc0Vu",
-            "dHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEiLQoPVmFsdWVD",
-            "b21wYXJlQ2ZnEgoKAk9wGAEgASgJEg4KBlZhbHVlcxgCIAMoBSLIAQoMQ29u",
-            "ZGl0aW9uQ2ZnEgwKBFR5cGUYASABKAUSCwoDS2V5GAIgASgJEgoKAk9wGAMg",
-            "ASgJEg4KBlZhbHVlcxgEIAMoBRI5CgpQcm9wZXJ0aWVzGAUgAygLMiUuZ3Nl",
-            "cnZlci5Db25kaXRpb25DZmcuUHJvcGVydGllc0VudHJ5EhMKC0NsaWVudENo",
-            "ZWNrGAYgASgIGjEKD1Byb3BlcnRpZXNFbnRyeRILCgNrZXkYASABKAkSDQoF",
-            "dmFsdWUYAiABKAk6AjgBItcBChRDb25kaXRpb25UZW1wbGF0ZUNmZxINCgVD",
-            "ZmdJZBgEIAEoBRIMCgRUeXBlGAEgASgFEgsKA0tleRgCIAEoCRIKCgJPcBgD",
-            "IAEoCRJBCgpQcm9wZXJ0aWVzGAUgAygLMi0uZ3NlcnZlci5Db25kaXRpb25U",
-            "ZW1wbGF0ZUNmZy5Qcm9wZXJ0aWVzRW50cnkSEwoLQ2xpZW50Q2hlY2sYBiAB",
-            "KAgaMQoPUHJvcGVydGllc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgC",
-            "IAEoCToCOAEi5AMKC1Byb2dyZXNzQ2ZnEgwKBFR5cGUYASABKAUSDQoFVG90",
-            "YWwYAiABKAUSEAoITmVlZEluaXQYAyABKAgSDQoFRXZlbnQYBCABKAkSFQoN",
-            "UHJvZ3Jlc3NGaWVsZBgFIAEoCRJACg5JbnRFdmVudEZpZWxkcxgGIAMoCzIo",
-            "LmdzZXJ2ZXIuUHJvZ3Jlc3NDZmcuSW50RXZlbnRGaWVsZHNFbnRyeRJGChFT",
-            "dHJpbmdFdmVudEZpZWxkcxgHIAMoCzIrLmdzZXJ2ZXIuUHJvZ3Jlc3NDZmcu",
-            "U3RyaW5nRXZlbnRGaWVsZHNFbnRyeRI4CgpQcm9wZXJ0aWVzGAggAygLMiQu",
-            "Z3NlcnZlci5Qcm9ncmVzc0NmZy5Qcm9wZXJ0aWVzRW50cnkaTwoTSW50RXZl",
-            "bnRGaWVsZHNFbnRyeRILCgNrZXkYASABKAkSJwoFdmFsdWUYAiABKAsyGC5n",
-            "c2VydmVyLlZhbHVlQ29tcGFyZUNmZzoCOAEaOAoWU3RyaW5nRXZlbnRGaWVs",
-            "ZHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBGjEKD1By",
-            "b3BlcnRpZXNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgB",
-            "IoQEChNQcm9ncmVzc1RlbXBsYXRlQ2ZnEg0KBUNmZ0lkGAEgASgFEgwKBFR5",
-            "cGUYAiABKAUSEAoITmVlZEluaXQYAyABKAgSDQoFRXZlbnQYBCABKAkSFQoN",
-            "UHJvZ3Jlc3NGaWVsZBgFIAEoCRJICg5JbnRFdmVudEZpZWxkcxgGIAMoCzIw",
-            "LmdzZXJ2ZXIuUHJvZ3Jlc3NUZW1wbGF0ZUNmZy5JbnRFdmVudEZpZWxkc0Vu",
-            "dHJ5Ek4KEVN0cmluZ0V2ZW50RmllbGRzGAcgAygLMjMuZ3NlcnZlci5Qcm9n",
-            "cmVzc1RlbXBsYXRlQ2ZnLlN0cmluZ0V2ZW50RmllbGRzRW50cnkSQAoKUHJv",
-            "cGVydGllcxgIIAMoCzIsLmdzZXJ2ZXIuUHJvZ3Jlc3NUZW1wbGF0ZUNmZy5Q",
-            "cm9wZXJ0aWVzRW50cnkaTwoTSW50RXZlbnRGaWVsZHNFbnRyeRILCgNrZXkY",
-            "ASABKAkSJwoFdmFsdWUYAiABKAsyGC5nc2VydmVyLlZhbHVlQ29tcGFyZUNm",
-            "ZzoCOAEaOAoWU3RyaW5nRXZlbnRGaWVsZHNFbnRyeRILCgNrZXkYASABKAkS",
-            "DQoFdmFsdWUYAiABKAk6AjgBGjEKD1Byb3BlcnRpZXNFbnRyeRILCgNrZXkY",
-            "ASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIvoCCgtFeGNoYW5nZUNmZxINCgVD",
-            "ZmdJZBgBIAEoBRIpCgpDb25kaXRpb25zGAIgAygLMhUuZ3NlcnZlci5Db25k",
-            "aXRpb25DZmcSJQoIQ29uc3VtZXMYAyADKAsyEy5nc2VydmVyLkRlbEVsZW1B",
-            "cmcSJAoHUmV3YXJkcxgEIAMoCzITLmdzZXJ2ZXIuQWRkRWxlbUFyZxISCgpD",
-            "b3VudExpbWl0GAUgASgFEhMKC1JlZnJlc2hUeXBlGAYgASgFEhAKCENhdGVn",
-            "b3J5GAcgASgFEjgKClByb3BlcnRpZXMYCCADKAsyJC5nc2VydmVyLkV4Y2hh",
-            "bmdlQ2ZnLlByb3BlcnRpZXNFbnRyeRIOCgZEZXRhaWwYCSABKAkSLAoSQ29u",
-            "ZGl0aW9uVGVtcGxhdGVzGBUgAygLMhAuZ3NlcnZlci5DZmdBcmdzGjEKD1By",
-            "b3BlcnRpZXNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgB",
-            "IpgDCgtBY3Rpdml0eUNmZxINCgVDZmdJZBgBIAEoBRIMCgROYW1lGAIgASgJ",
-            "Eg4KBkRldGFpbBgDIAEoCRIQCghUZW1wbGF0ZRgEIAEoCRITCgtSZWZyZXNo",
-            "VHlwZRgFIAEoBRIRCglDeWNsZVR5cGUYBiABKAUSEAoIVGltZVR5cGUYByAB",
-            "KAUSEQoJQmVnaW5UaW1lGAggASgFEg8KB0VuZFRpbWUYCSABKAUSEwoLRXhj",
-            "aGFuZ2VJZHMYCiADKAUSDQoFSXNPZmYYCyABKAgSGQoRUmVtb3ZlRGF0YVdo",
-            "ZW5FbmQYDCABKAgSFgoOTWluUGxheWVyTGV2ZWwYDiABKAUSFgoOTWF4UGxh",
-            "eWVyTGV2ZWwYDyABKAUSEAoIUXVlc3RJZHMYECADKAUSOAoKUHJvcGVydGll",
-            "cxgRIAMoCzIkLmdzZXJ2ZXIuQWN0aXZpdHlDZmcuUHJvcGVydGllc0VudHJ5",
-            "GjEKD1Byb3BlcnRpZXNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiAB",
-            "KAk6AjgBIioKCExldmVsRXhwEg0KBUxldmVsGAEgASgFEg8KB05lZWRFeHAY",
-            "AiABKAUqaQoFQ29sb3ISDgoKQ29sb3JfTm9uZRAAEg0KCUNvbG9yX1JlZBAB",
-            "Eg8KC0NvbG9yX0dyZWVuEAISDgoKQ29sb3JfQmx1ZRADEhAKDENvbG9yX1ll",
-            "bGxvdxAEEg4KCkNvbG9yX0dyYXkQBSo4CgtSZWZyZXNoVHlwZRIUChBSZWZy",
-            "ZXNoVHlwZV9Ob25lEAASEwoPUmVmcmVzaFR5cGVfRGF5EAEqSAoIVGltZVR5",
-            "cGUSEQoNVGltZVR5cGVfTm9uZRAAEhYKElRpbWVUeXBlX1RpbWVzdGFtcBAB",
-            "EhEKDVRpbWVUeXBlX0RhdGUQAioxCghJdGVtVHlwZRIRCg1JdGVtVHlwZV9O",
-            "b25lEAASEgoOSXRlbVR5cGVfRXF1aXAQASpOCgtJdGVtU3ViVHlwZRIUChBJ",
-            "dGVtU3ViVHlwZV9Ob25lEAASFAoQSXRlbVN1YlR5cGVfR29sZBABEhMKD0l0",
-            "ZW1TdWJUeXBlX0V4cBACKiUKDEl0ZW1DYXRlZ29yeRIVChFJdGVtQ2F0ZWdv",
-            "cnlfTm9uZRAAKlIKCVF1ZXN0VHlwZRISCg5RdWVzdFR5cGVfTm9uZRAAEhYK",
-            "ElF1ZXN0VHlwZV9TdWJRdWVzdBABEhkKFVF1ZXN0VHlwZV9BY2hpZXZlbWVu",
-            "dBACKlcKDVF1ZXN0Q2F0ZWdvcnkSFgoSUXVlc3RDYXRlZ29yeV9Ob25lEAAS",
-            "FgoSUXVlc3RDYXRlZ29yeV9NYWluEAESFgoSUXVlc3RDYXRlZ29yeV9TaWRl",
-            "EAIqSAoQRXhjaGFuZ2VDYXRlZ29yeRIZChVFeGNoYW5nZUNhdGVnb3J5X05v",
-            "bmUQABIZChVFeGNoYW5nZUNhdGVnb3J5X1Nob3AQAUIGWgQuL3BiYgZwcm90",
-            "bzM="));
+            "aW1lVHlwZRgIIAEoBRIPCgdUaW1lb3V0GAkgASgFEhAKCFZpZXdUeXBlGAog",
+            "ASgFEjQKClByb3BlcnRpZXMYCyADKAsyIC5nc2VydmVyLkl0ZW1DZmcuUHJv",
+            "cGVydGllc0VudHJ5EgwKBEljb24YDCABKAkaMQoPUHJvcGVydGllc0VudHJ5",
+            "EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEixwEKCkFkZEVsZW1B",
+            "cmcSDQoFQ2ZnSWQYASABKAUSCwoDTnVtGAIgASgFEhAKCFRpbWVUeXBlGAMg",
+            "ASgFEg8KB1RpbWVvdXQYBCABKAUSDgoGU291cmNlGAUgASgFEjcKClByb3Bl",
+            "cnRpZXMYBiADKAsyIy5nc2VydmVyLkFkZEVsZW1BcmcuUHJvcGVydGllc0Vu",
+            "dHJ5GjEKD1Byb3BlcnRpZXNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUY",
+            "AiABKAk6AjgBIrYBCgpEZWxFbGVtQXJnEhAKCFVuaXF1ZUlkGAEgASgDEg0K",
+            "BUNmZ0lkGAIgASgFEgsKA051bRgDIAEoBRIOCgZTb3VyY2UYBCABKAUSNwoK",
+            "UHJvcGVydGllcxgFIAMoCzIjLmdzZXJ2ZXIuRGVsRWxlbUFyZy5Qcm9wZXJ0",
+            "aWVzRW50cnkaMQoPUHJvcGVydGllc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2",
+            "YWx1ZRgCIAEoCToCOAEiJAoGQ2ZnQXJnEg0KBUNmZ0lkGAEgASgFEgsKA0Fy",
+            "ZxgCIAEoBSImCgdDZmdBcmdzEg0KBUNmZ0lkGAEgASgFEgwKBEFyZ3MYAiAD",
+            "KAUi6AMKCFF1ZXN0Q2ZnEg0KBUNmZ0lkGAEgASgFEgwKBE5hbWUYAiABKAkS",
+            "EQoJUXVlc3RUeXBlGAMgASgFEhMKC1JlZnJlc2hUeXBlGAQgASgFEhAKCENh",
+            "dGVnb3J5GAUgASgFEiQKB1Jld2FyZHMYBiADKAsyEy5nc2VydmVyLkFkZEVs",
+            "ZW1BcmcSEAoIUHJlUXVlc3QYByABKAUSEgoKTmV4dFF1ZXN0cxgIIAMoBRIp",
+            "CgpDb25kaXRpb25zGAkgAygLMhUuZ3NlcnZlci5Db25kaXRpb25DZmcSJgoI",
+            "UHJvZ3Jlc3MYCiABKAsyFC5nc2VydmVyLlByb2dyZXNzQ2ZnEjUKClByb3Bl",
+            "cnRpZXMYCyADKAsyIS5nc2VydmVyLlF1ZXN0Q2ZnLlByb3BlcnRpZXNFbnRy",
+            "eRIOCgZEZXRhaWwYDCABKAkSEwoLUGxheWVyTGV2ZWwYDSABKAUSLAoSQ29u",
+            "ZGl0aW9uVGVtcGxhdGVzGBUgAygLMhAuZ3NlcnZlci5DZmdBcmdzEikKEFBy",
+            "b2dyZXNzVGVtcGxhdGUYFiABKAsyDy5nc2VydmVyLkNmZ0FyZxoxCg9Qcm9w",
+            "ZXJ0aWVzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASIt",
+            "Cg9WYWx1ZUNvbXBhcmVDZmcSCgoCT3AYASABKAkSDgoGVmFsdWVzGAIgAygF",
+            "IsgBCgxDb25kaXRpb25DZmcSDAoEVHlwZRgBIAEoBRILCgNLZXkYAiABKAkS",
+            "CgoCT3AYAyABKAkSDgoGVmFsdWVzGAQgAygFEjkKClByb3BlcnRpZXMYBSAD",
+            "KAsyJS5nc2VydmVyLkNvbmRpdGlvbkNmZy5Qcm9wZXJ0aWVzRW50cnkSEwoL",
+            "Q2xpZW50Q2hlY2sYBiABKAgaMQoPUHJvcGVydGllc0VudHJ5EgsKA2tleRgB",
+            "IAEoCRINCgV2YWx1ZRgCIAEoCToCOAEi1wEKFENvbmRpdGlvblRlbXBsYXRl",
+            "Q2ZnEg0KBUNmZ0lkGAQgASgFEgwKBFR5cGUYASABKAUSCwoDS2V5GAIgASgJ",
+            "EgoKAk9wGAMgASgJEkEKClByb3BlcnRpZXMYBSADKAsyLS5nc2VydmVyLkNv",
+            "bmRpdGlvblRlbXBsYXRlQ2ZnLlByb3BlcnRpZXNFbnRyeRITCgtDbGllbnRD",
+            "aGVjaxgGIAEoCBoxCg9Qcm9wZXJ0aWVzRW50cnkSCwoDa2V5GAEgASgJEg0K",
+            "BXZhbHVlGAIgASgJOgI4ASLkAwoLUHJvZ3Jlc3NDZmcSDAoEVHlwZRgBIAEo",
+            "BRINCgVUb3RhbBgCIAEoBRIQCghOZWVkSW5pdBgDIAEoCBINCgVFdmVudBgE",
+            "IAEoCRIVCg1Qcm9ncmVzc0ZpZWxkGAUgASgJEkAKDkludEV2ZW50RmllbGRz",
+            "GAYgAygLMiguZ3NlcnZlci5Qcm9ncmVzc0NmZy5JbnRFdmVudEZpZWxkc0Vu",
+            "dHJ5EkYKEVN0cmluZ0V2ZW50RmllbGRzGAcgAygLMisuZ3NlcnZlci5Qcm9n",
+            "cmVzc0NmZy5TdHJpbmdFdmVudEZpZWxkc0VudHJ5EjgKClByb3BlcnRpZXMY",
+            "CCADKAsyJC5nc2VydmVyLlByb2dyZXNzQ2ZnLlByb3BlcnRpZXNFbnRyeRpP",
+            "ChNJbnRFdmVudEZpZWxkc0VudHJ5EgsKA2tleRgBIAEoCRInCgV2YWx1ZRgC",
+            "IAEoCzIYLmdzZXJ2ZXIuVmFsdWVDb21wYXJlQ2ZnOgI4ARo4ChZTdHJpbmdF",
+            "dmVudEZpZWxkc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToC",
+            "OAEaMQoPUHJvcGVydGllc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgC",
+            "IAEoCToCOAEihAQKE1Byb2dyZXNzVGVtcGxhdGVDZmcSDQoFQ2ZnSWQYASAB",
+            "KAUSDAoEVHlwZRgCIAEoBRIQCghOZWVkSW5pdBgDIAEoCBINCgVFdmVudBgE",
+            "IAEoCRIVCg1Qcm9ncmVzc0ZpZWxkGAUgASgJEkgKDkludEV2ZW50RmllbGRz",
+            "GAYgAygLMjAuZ3NlcnZlci5Qcm9ncmVzc1RlbXBsYXRlQ2ZnLkludEV2ZW50",
+            "RmllbGRzRW50cnkSTgoRU3RyaW5nRXZlbnRGaWVsZHMYByADKAsyMy5nc2Vy",
+            "dmVyLlByb2dyZXNzVGVtcGxhdGVDZmcuU3RyaW5nRXZlbnRGaWVsZHNFbnRy",
+            "eRJACgpQcm9wZXJ0aWVzGAggAygLMiwuZ3NlcnZlci5Qcm9ncmVzc1RlbXBs",
+            "YXRlQ2ZnLlByb3BlcnRpZXNFbnRyeRpPChNJbnRFdmVudEZpZWxkc0VudHJ5",
+            "EgsKA2tleRgBIAEoCRInCgV2YWx1ZRgCIAEoCzIYLmdzZXJ2ZXIuVmFsdWVD",
+            "b21wYXJlQ2ZnOgI4ARo4ChZTdHJpbmdFdmVudEZpZWxkc0VudHJ5EgsKA2tl",
+            "eRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEaMQoPUHJvcGVydGllc0VudHJ5",
+            "EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEiiAMKC0V4Y2hhbmdl",
+            "Q2ZnEg0KBUNmZ0lkGAEgASgFEikKCkNvbmRpdGlvbnMYAiADKAsyFS5nc2Vy",
+            "dmVyLkNvbmRpdGlvbkNmZxIlCghDb25zdW1lcxgDIAMoCzITLmdzZXJ2ZXIu",
+            "RGVsRWxlbUFyZxIkCgdSZXdhcmRzGAQgAygLMhMuZ3NlcnZlci5BZGRFbGVt",
+            "QXJnEhIKCkNvdW50TGltaXQYBSABKAUSEwoLUmVmcmVzaFR5cGUYBiABKAUS",
+            "EAoIQ2F0ZWdvcnkYByABKAUSOAoKUHJvcGVydGllcxgIIAMoCzIkLmdzZXJ2",
+            "ZXIuRXhjaGFuZ2VDZmcuUHJvcGVydGllc0VudHJ5Eg4KBkRldGFpbBgJIAEo",
+            "CRIMCgRJY29uGAogASgJEiwKEkNvbmRpdGlvblRlbXBsYXRlcxgVIAMoCzIQ",
+            "LmdzZXJ2ZXIuQ2ZnQXJncxoxCg9Qcm9wZXJ0aWVzRW50cnkSCwoDa2V5GAEg",
+            "ASgJEg0KBXZhbHVlGAIgASgJOgI4ASKYAwoLQWN0aXZpdHlDZmcSDQoFQ2Zn",
+            "SWQYASABKAUSDAoETmFtZRgCIAEoCRIOCgZEZXRhaWwYAyABKAkSEAoIVGVt",
+            "cGxhdGUYBCABKAkSEwoLUmVmcmVzaFR5cGUYBSABKAUSEQoJQ3ljbGVUeXBl",
+            "GAYgASgFEhAKCFRpbWVUeXBlGAcgASgFEhEKCUJlZ2luVGltZRgIIAEoBRIP",
+            "CgdFbmRUaW1lGAkgASgFEhMKC0V4Y2hhbmdlSWRzGAogAygFEg0KBUlzT2Zm",
+            "GAsgASgIEhkKEVJlbW92ZURhdGFXaGVuRW5kGAwgASgIEhYKDk1pblBsYXll",
+            "ckxldmVsGA4gASgFEhYKDk1heFBsYXllckxldmVsGA8gASgFEhAKCFF1ZXN0",
+            "SWRzGBAgAygFEjgKClByb3BlcnRpZXMYESADKAsyJC5nc2VydmVyLkFjdGl2",
+            "aXR5Q2ZnLlByb3BlcnRpZXNFbnRyeRoxCg9Qcm9wZXJ0aWVzRW50cnkSCwoD",
+            "a2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASIqCghMZXZlbEV4cBINCgVM",
+            "ZXZlbBgBIAEoBRIPCgdOZWVkRXhwGAIgASgFIqQBCgdTaG9wQ2ZnEg0KBUNm",
+            "Z0lkGAEgASgFEgwKBE5hbWUYAiABKAkSEwoLRXhjaGFuZ2VJZHMYAyADKAUS",
+            "NAoKUHJvcGVydGllcxgIIAMoCzIgLmdzZXJ2ZXIuU2hvcENmZy5Qcm9wZXJ0",
+            "aWVzRW50cnkaMQoPUHJvcGVydGllc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2",
+            "YWx1ZRgCIAEoCToCOAEqaQoFQ29sb3ISDgoKQ29sb3JfTm9uZRAAEg0KCUNv",
+            "bG9yX1JlZBABEg8KC0NvbG9yX0dyZWVuEAISDgoKQ29sb3JfQmx1ZRADEhAK",
+            "DENvbG9yX1llbGxvdxAEEg4KCkNvbG9yX0dyYXkQBSo4CgtSZWZyZXNoVHlw",
+            "ZRIUChBSZWZyZXNoVHlwZV9Ob25lEAASEwoPUmVmcmVzaFR5cGVfRGF5EAEq",
+            "SAoIVGltZVR5cGUSEQoNVGltZVR5cGVfTm9uZRAAEhYKElRpbWVUeXBlX1Rp",
+            "bWVzdGFtcBABEhEKDVRpbWVUeXBlX0RhdGUQAioxCghJdGVtVHlwZRIRCg1J",
+            "dGVtVHlwZV9Ob25lEAASEgoOSXRlbVR5cGVfRXF1aXAQASpOCgtJdGVtU3Vi",
+            "VHlwZRIUChBJdGVtU3ViVHlwZV9Ob25lEAASFAoQSXRlbVN1YlR5cGVfR29s",
+            "ZBABEhMKD0l0ZW1TdWJUeXBlX0V4cBACKiUKDEl0ZW1DYXRlZ29yeRIVChFJ",
+            "dGVtQ2F0ZWdvcnlfTm9uZRAAKjwKDEl0ZW1WaWV3VHlwZRIVChFJdGVtVmll",
+            "d1R5cGVfTm9uZRAAEhUKEUl0ZW1WaWV3VHlwZV9IaWRlEAEqUgoJUXVlc3RU",
+            "eXBlEhIKDlF1ZXN0VHlwZV9Ob25lEAASFgoSUXVlc3RUeXBlX1N1YlF1ZXN0",
+            "EAESGQoVUXVlc3RUeXBlX0FjaGlldmVtZW50EAIqJwoNUXVlc3RDYXRlZ29y",
+            "eRIWChJRdWVzdENhdGVnb3J5X05vbmUQACpIChBFeGNoYW5nZUNhdGVnb3J5",
+            "EhkKFUV4Y2hhbmdlQ2F0ZWdvcnlfTm9uZRAAEhkKFUV4Y2hhbmdlQ2F0ZWdv",
+            "cnlfU2hvcBABQgZaBC4vcGJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Gserver.Color), typeof(global::Gserver.RefreshType), typeof(global::Gserver.TimeType), typeof(global::Gserver.ItemType), typeof(global::Gserver.ItemSubType), typeof(global::Gserver.ItemCategory), typeof(global::Gserver.QuestType), typeof(global::Gserver.QuestCategory), typeof(global::Gserver.ExchangeCategory), }, null, new pbr::GeneratedClrTypeInfo[] {
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Gserver.Color), typeof(global::Gserver.RefreshType), typeof(global::Gserver.TimeType), typeof(global::Gserver.ItemType), typeof(global::Gserver.ItemSubType), typeof(global::Gserver.ItemCategory), typeof(global::Gserver.ItemViewType), typeof(global::Gserver.QuestType), typeof(global::Gserver.QuestCategory), typeof(global::Gserver.ExchangeCategory), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.ItemNum), global::Gserver.ItemNum.Parser, new[]{ "CfgId", "Num" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.IdCount), global::Gserver.IdCount.Parser, new[]{ "Id", "Count" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.ItemCfg), global::Gserver.ItemCfg.Parser, new[]{ "CfgId", "Name", "Detail", "ItemType", "SubType", "Category", "Arg", "TimeType", "Timeout", "Properties" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.ItemCfg), global::Gserver.ItemCfg.Parser, new[]{ "CfgId", "Name", "Detail", "ItemType", "SubType", "Category", "Arg", "TimeType", "Timeout", "ViewType", "Properties", "Icon" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.AddElemArg), global::Gserver.AddElemArg.Parser, new[]{ "CfgId", "Num", "TimeType", "Timeout", "Source", "Properties" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.DelElemArg), global::Gserver.DelElemArg.Parser, new[]{ "UniqueId", "CfgId", "Num", "Source", "Properties" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.CfgArg), global::Gserver.CfgArg.Parser, new[]{ "CfgId", "Arg" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.CfgArgs), global::Gserver.CfgArgs.Parser, new[]{ "CfgId", "Args" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.QuestCfg), global::Gserver.QuestCfg.Parser, new[]{ "CfgId", "Name", "QuestType", "RefreshType", "Category", "Rewards", "PreQuest", "NextQuests", "Conditions", "Progress", "Properties", "Detail", "ConditionTemplates", "ProgressTemplate" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.QuestCfg), global::Gserver.QuestCfg.Parser, new[]{ "CfgId", "Name", "QuestType", "RefreshType", "Category", "Rewards", "PreQuest", "NextQuests", "Conditions", "Progress", "Properties", "Detail", "PlayerLevel", "ConditionTemplates", "ProgressTemplate" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.ValueCompareCfg), global::Gserver.ValueCompareCfg.Parser, new[]{ "Op", "Values" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.ConditionCfg), global::Gserver.ConditionCfg.Parser, new[]{ "Type", "Key", "Op", "Values", "Properties", "ClientCheck" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.ConditionTemplateCfg), global::Gserver.ConditionTemplateCfg.Parser, new[]{ "CfgId", "Type", "Key", "Op", "Properties", "ClientCheck" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.ProgressCfg), global::Gserver.ProgressCfg.Parser, new[]{ "Type", "Total", "NeedInit", "Event", "ProgressField", "IntEventFields", "StringEventFields", "Properties" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.ProgressTemplateCfg), global::Gserver.ProgressTemplateCfg.Parser, new[]{ "CfgId", "Type", "NeedInit", "Event", "ProgressField", "IntEventFields", "StringEventFields", "Properties" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.ExchangeCfg), global::Gserver.ExchangeCfg.Parser, new[]{ "CfgId", "Conditions", "Consumes", "Rewards", "CountLimit", "RefreshType", "Category", "Properties", "Detail", "ConditionTemplates" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.ExchangeCfg), global::Gserver.ExchangeCfg.Parser, new[]{ "CfgId", "Conditions", "Consumes", "Rewards", "CountLimit", "RefreshType", "Category", "Properties", "Detail", "Icon", "ConditionTemplates" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.ActivityCfg), global::Gserver.ActivityCfg.Parser, new[]{ "CfgId", "Name", "Detail", "Template", "RefreshType", "CycleType", "TimeType", "BeginTime", "EndTime", "ExchangeIds", "IsOff", "RemoveDataWhenEnd", "MinPlayerLevel", "MaxPlayerLevel", "QuestIds", "Properties" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.LevelExp), global::Gserver.LevelExp.Parser, new[]{ "Level", "NeedExp" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.LevelExp), global::Gserver.LevelExp.Parser, new[]{ "Level", "NeedExp" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.ShopCfg), global::Gserver.ShopCfg.Parser, new[]{ "CfgId", "Name", "ExchangeIds", "Properties" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -220,7 +226,18 @@ namespace Gserver {
   }
 
   /// <summary>
-  /// 任务类型
+  /// 物品显示类型
+  /// </summary>
+  public enum ItemViewType {
+    [pbr::OriginalName("ItemViewType_None")] None = 0,
+    /// <summary>
+    /// 隐藏,不显示在背包中,不占背包格子
+    /// </summary>
+    [pbr::OriginalName("ItemViewType_Hide")] Hide = 1,
+  }
+
+  /// <summary>
+  /// 任务类型 (NOTE:根据项目实际需求,自行调整)
   /// </summary>
   public enum QuestType {
     [pbr::OriginalName("QuestType_None")] None = 0,
@@ -235,18 +252,10 @@ namespace Gserver {
   }
 
   /// <summary>
-  /// 任务分类
+  /// 任务分类 (NOTE:根据项目实际需求,自行调整)
   /// </summary>
   public enum QuestCategory {
     [pbr::OriginalName("QuestCategory_None")] None = 0,
-    /// <summary>
-    /// 主线任务
-    /// </summary>
-    [pbr::OriginalName("QuestCategory_Main")] Main = 1,
-    /// <summary>
-    /// 支线任务
-    /// </summary>
-    [pbr::OriginalName("QuestCategory_Side")] Side = 2,
   }
 
   /// <summary>
@@ -776,7 +785,9 @@ namespace Gserver {
       arg_ = other.arg_;
       timeType_ = other.timeType_;
       timeout_ = other.timeout_;
+      viewType_ = other.viewType_;
       properties_ = other.properties_.Clone();
+      icon_ = other.icon_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -912,10 +923,25 @@ namespace Gserver {
       }
     }
 
+    /// <summary>Field number for the "ViewType" field.</summary>
+    public const int ViewTypeFieldNumber = 10;
+    private int viewType_;
+    /// <summary>
+    /// 物品显示类型(enum ItemViewType)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int ViewType {
+      get { return viewType_; }
+      set {
+        viewType_ = value;
+      }
+    }
+
     /// <summary>Field number for the "Properties" field.</summary>
-    public const int PropertiesFieldNumber = 10;
+    public const int PropertiesFieldNumber = 11;
     private static readonly pbc::MapField<string, string>.Codec _map_properties_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 82);
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 90);
     private readonly pbc::MapField<string, string> properties_ = new pbc::MapField<string, string>();
     /// <summary>
     /// 扩展属性
@@ -924,6 +950,21 @@ namespace Gserver {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::MapField<string, string> Properties {
       get { return properties_; }
+    }
+
+    /// <summary>Field number for the "Icon" field.</summary>
+    public const int IconFieldNumber = 12;
+    private string icon_ = "";
+    /// <summary>
+    /// 物品图标(客户端使用)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Icon {
+      get { return icon_; }
+      set {
+        icon_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -950,7 +991,9 @@ namespace Gserver {
       if (Arg != other.Arg) return false;
       if (TimeType != other.TimeType) return false;
       if (Timeout != other.Timeout) return false;
+      if (ViewType != other.ViewType) return false;
       if (!Properties.Equals(other.Properties)) return false;
+      if (Icon != other.Icon) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -967,7 +1010,9 @@ namespace Gserver {
       if (Arg != 0) hash ^= Arg.GetHashCode();
       if (TimeType != 0) hash ^= TimeType.GetHashCode();
       if (Timeout != 0) hash ^= Timeout.GetHashCode();
+      if (ViewType != 0) hash ^= ViewType.GetHashCode();
       hash ^= Properties.GetHashCode();
+      if (Icon.Length != 0) hash ^= Icon.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1022,7 +1067,15 @@ namespace Gserver {
         output.WriteRawTag(72);
         output.WriteInt32(Timeout);
       }
+      if (ViewType != 0) {
+        output.WriteRawTag(80);
+        output.WriteInt32(ViewType);
+      }
       properties_.WriteTo(output, _map_properties_codec);
+      if (Icon.Length != 0) {
+        output.WriteRawTag(98);
+        output.WriteString(Icon);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1069,7 +1122,15 @@ namespace Gserver {
         output.WriteRawTag(72);
         output.WriteInt32(Timeout);
       }
+      if (ViewType != 0) {
+        output.WriteRawTag(80);
+        output.WriteInt32(ViewType);
+      }
       properties_.WriteTo(ref output, _map_properties_codec);
+      if (Icon.Length != 0) {
+        output.WriteRawTag(98);
+        output.WriteString(Icon);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1107,7 +1168,13 @@ namespace Gserver {
       if (Timeout != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Timeout);
       }
+      if (ViewType != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(ViewType);
+      }
       size += properties_.CalculateSize(_map_properties_codec);
+      if (Icon.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Icon);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1147,7 +1214,13 @@ namespace Gserver {
       if (other.Timeout != 0) {
         Timeout = other.Timeout;
       }
+      if (other.ViewType != 0) {
+        ViewType = other.ViewType;
+      }
       properties_.Add(other.properties_);
+      if (other.Icon.Length != 0) {
+        Icon = other.Icon;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1199,8 +1272,16 @@ namespace Gserver {
             Timeout = input.ReadInt32();
             break;
           }
-          case 82: {
+          case 80: {
+            ViewType = input.ReadInt32();
+            break;
+          }
+          case 90: {
             properties_.AddEntriesFrom(input, _map_properties_codec);
+            break;
+          }
+          case 98: {
+            Icon = input.ReadString();
             break;
           }
         }
@@ -1254,8 +1335,16 @@ namespace Gserver {
             Timeout = input.ReadInt32();
             break;
           }
-          case 82: {
+          case 80: {
+            ViewType = input.ReadInt32();
+            break;
+          }
+          case 90: {
             properties_.AddEntriesFrom(ref input, _map_properties_codec);
+            break;
+          }
+          case 98: {
+            Icon = input.ReadString();
             break;
           }
         }
@@ -2503,6 +2592,7 @@ namespace Gserver {
       progress_ = other.progress_ != null ? other.progress_.Clone() : null;
       properties_ = other.properties_.Clone();
       detail_ = other.detail_;
+      playerLevel_ = other.playerLevel_;
       conditionTemplates_ = other.conditionTemplates_.Clone();
       progressTemplate_ = other.progressTemplate_ != null ? other.progressTemplate_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -2684,6 +2774,21 @@ namespace Gserver {
       }
     }
 
+    /// <summary>Field number for the "PlayerLevel" field.</summary>
+    public const int PlayerLevelFieldNumber = 13;
+    private int playerLevel_;
+    /// <summary>
+    /// 玩家等级限制(0表示不限制)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int PlayerLevel {
+      get { return playerLevel_; }
+      set {
+        playerLevel_ = value;
+      }
+    }
+
     /// <summary>Field number for the "ConditionTemplates" field.</summary>
     public const int ConditionTemplatesFieldNumber = 21;
     private static readonly pb::FieldCodec<global::Gserver.CfgArgs> _repeated_conditionTemplates_codec
@@ -2740,6 +2845,7 @@ namespace Gserver {
       if (!object.Equals(Progress, other.Progress)) return false;
       if (!Properties.Equals(other.Properties)) return false;
       if (Detail != other.Detail) return false;
+      if (PlayerLevel != other.PlayerLevel) return false;
       if(!conditionTemplates_.Equals(other.conditionTemplates_)) return false;
       if (!object.Equals(ProgressTemplate, other.ProgressTemplate)) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -2761,6 +2867,7 @@ namespace Gserver {
       if (progress_ != null) hash ^= Progress.GetHashCode();
       hash ^= Properties.GetHashCode();
       if (Detail.Length != 0) hash ^= Detail.GetHashCode();
+      if (PlayerLevel != 0) hash ^= PlayerLevel.GetHashCode();
       hash ^= conditionTemplates_.GetHashCode();
       if (progressTemplate_ != null) hash ^= ProgressTemplate.GetHashCode();
       if (_unknownFields != null) {
@@ -2817,6 +2924,10 @@ namespace Gserver {
         output.WriteRawTag(98);
         output.WriteString(Detail);
       }
+      if (PlayerLevel != 0) {
+        output.WriteRawTag(104);
+        output.WriteInt32(PlayerLevel);
+      }
       conditionTemplates_.WriteTo(output, _repeated_conditionTemplates_codec);
       if (progressTemplate_ != null) {
         output.WriteRawTag(178, 1);
@@ -2868,6 +2979,10 @@ namespace Gserver {
         output.WriteRawTag(98);
         output.WriteString(Detail);
       }
+      if (PlayerLevel != 0) {
+        output.WriteRawTag(104);
+        output.WriteInt32(PlayerLevel);
+      }
       conditionTemplates_.WriteTo(ref output, _repeated_conditionTemplates_codec);
       if (progressTemplate_ != null) {
         output.WriteRawTag(178, 1);
@@ -2910,6 +3025,9 @@ namespace Gserver {
       size += properties_.CalculateSize(_map_properties_codec);
       if (Detail.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Detail);
+      }
+      if (PlayerLevel != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PlayerLevel);
       }
       size += conditionTemplates_.CalculateSize(_repeated_conditionTemplates_codec);
       if (progressTemplate_ != null) {
@@ -2957,6 +3075,9 @@ namespace Gserver {
       properties_.Add(other.properties_);
       if (other.Detail.Length != 0) {
         Detail = other.Detail;
+      }
+      if (other.PlayerLevel != 0) {
+        PlayerLevel = other.PlayerLevel;
       }
       conditionTemplates_.Add(other.conditionTemplates_);
       if (other.progressTemplate_ != null) {
@@ -3030,6 +3151,10 @@ namespace Gserver {
           }
           case 98: {
             Detail = input.ReadString();
+            break;
+          }
+          case 104: {
+            PlayerLevel = input.ReadInt32();
             break;
           }
           case 170: {
@@ -3108,6 +3233,10 @@ namespace Gserver {
           }
           case 98: {
             Detail = input.ReadString();
+            break;
+          }
+          case 104: {
+            PlayerLevel = input.ReadInt32();
             break;
           }
           case 170: {
@@ -5043,6 +5172,7 @@ namespace Gserver {
       category_ = other.category_;
       properties_ = other.properties_.Clone();
       detail_ = other.detail_;
+      icon_ = other.icon_;
       conditionTemplates_ = other.conditionTemplates_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -5178,6 +5308,21 @@ namespace Gserver {
       }
     }
 
+    /// <summary>Field number for the "Icon" field.</summary>
+    public const int IconFieldNumber = 10;
+    private string icon_ = "";
+    /// <summary>
+    /// 图标(客户端使用)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Icon {
+      get { return icon_; }
+      set {
+        icon_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     /// <summary>Field number for the "ConditionTemplates" field.</summary>
     public const int ConditionTemplatesFieldNumber = 21;
     private static readonly pb::FieldCodec<global::Gserver.CfgArgs> _repeated_conditionTemplates_codec
@@ -5216,6 +5361,7 @@ namespace Gserver {
       if (Category != other.Category) return false;
       if (!Properties.Equals(other.Properties)) return false;
       if (Detail != other.Detail) return false;
+      if (Icon != other.Icon) return false;
       if(!conditionTemplates_.Equals(other.conditionTemplates_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -5233,6 +5379,7 @@ namespace Gserver {
       if (Category != 0) hash ^= Category.GetHashCode();
       hash ^= Properties.GetHashCode();
       if (Detail.Length != 0) hash ^= Detail.GetHashCode();
+      if (Icon.Length != 0) hash ^= Icon.GetHashCode();
       hash ^= conditionTemplates_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -5276,6 +5423,10 @@ namespace Gserver {
         output.WriteRawTag(74);
         output.WriteString(Detail);
       }
+      if (Icon.Length != 0) {
+        output.WriteRawTag(82);
+        output.WriteString(Icon);
+      }
       conditionTemplates_.WriteTo(output, _repeated_conditionTemplates_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -5311,6 +5462,10 @@ namespace Gserver {
         output.WriteRawTag(74);
         output.WriteString(Detail);
       }
+      if (Icon.Length != 0) {
+        output.WriteRawTag(82);
+        output.WriteString(Icon);
+      }
       conditionTemplates_.WriteTo(ref output, _repeated_conditionTemplates_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -5340,6 +5495,9 @@ namespace Gserver {
       size += properties_.CalculateSize(_map_properties_codec);
       if (Detail.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Detail);
+      }
+      if (Icon.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Icon);
       }
       size += conditionTemplates_.CalculateSize(_repeated_conditionTemplates_codec);
       if (_unknownFields != null) {
@@ -5372,6 +5530,9 @@ namespace Gserver {
       properties_.Add(other.properties_);
       if (other.Detail.Length != 0) {
         Detail = other.Detail;
+      }
+      if (other.Icon.Length != 0) {
+        Icon = other.Icon;
       }
       conditionTemplates_.Add(other.conditionTemplates_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -5423,6 +5584,10 @@ namespace Gserver {
           }
           case 74: {
             Detail = input.ReadString();
+            break;
+          }
+          case 82: {
+            Icon = input.ReadString();
             break;
           }
           case 170: {
@@ -5478,6 +5643,10 @@ namespace Gserver {
           }
           case 74: {
             Detail = input.ReadString();
+            break;
+          }
+          case 82: {
+            Icon = input.ReadString();
             break;
           }
           case 170: {
@@ -6474,6 +6643,301 @@ namespace Gserver {
           }
           case 16: {
             NeedExp = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// 商店配置
+  /// </summary>
+  public sealed partial class ShopCfg : pb::IMessage<ShopCfg>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ShopCfg> _parser = new pb::MessageParser<ShopCfg>(() => new ShopCfg());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ShopCfg> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Gserver.CfgReflection.Descriptor.MessageTypes[16]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ShopCfg() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ShopCfg(ShopCfg other) : this() {
+      cfgId_ = other.cfgId_;
+      name_ = other.name_;
+      exchangeIds_ = other.exchangeIds_.Clone();
+      properties_ = other.properties_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ShopCfg Clone() {
+      return new ShopCfg(this);
+    }
+
+    /// <summary>Field number for the "CfgId" field.</summary>
+    public const int CfgIdFieldNumber = 1;
+    private int cfgId_;
+    /// <summary>
+    /// 商店id
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CfgId {
+      get { return cfgId_; }
+      set {
+        cfgId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "Name" field.</summary>
+    public const int NameFieldNumber = 2;
+    private string name_ = "";
+    /// <summary>
+    /// 商店名
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "ExchangeIds" field.</summary>
+    public const int ExchangeIdsFieldNumber = 3;
+    private static readonly pb::FieldCodec<int> _repeated_exchangeIds_codec
+        = pb::FieldCodec.ForInt32(26);
+    private readonly pbc::RepeatedField<int> exchangeIds_ = new pbc::RepeatedField<int>();
+    /// <summary>
+    /// 商店的每1个格子就是1个兑换礼包
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<int> ExchangeIds {
+      get { return exchangeIds_; }
+    }
+
+    /// <summary>Field number for the "Properties" field.</summary>
+    public const int PropertiesFieldNumber = 8;
+    private static readonly pbc::MapField<string, string>.Codec _map_properties_codec
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 66);
+    private readonly pbc::MapField<string, string> properties_ = new pbc::MapField<string, string>();
+    /// <summary>
+    /// 扩展属性
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, string> Properties {
+      get { return properties_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ShopCfg);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ShopCfg other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (CfgId != other.CfgId) return false;
+      if (Name != other.Name) return false;
+      if(!exchangeIds_.Equals(other.exchangeIds_)) return false;
+      if (!Properties.Equals(other.Properties)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (CfgId != 0) hash ^= CfgId.GetHashCode();
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      hash ^= exchangeIds_.GetHashCode();
+      hash ^= Properties.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (CfgId != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(CfgId);
+      }
+      if (Name.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Name);
+      }
+      exchangeIds_.WriteTo(output, _repeated_exchangeIds_codec);
+      properties_.WriteTo(output, _map_properties_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (CfgId != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(CfgId);
+      }
+      if (Name.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Name);
+      }
+      exchangeIds_.WriteTo(ref output, _repeated_exchangeIds_codec);
+      properties_.WriteTo(ref output, _map_properties_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (CfgId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(CfgId);
+      }
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      size += exchangeIds_.CalculateSize(_repeated_exchangeIds_codec);
+      size += properties_.CalculateSize(_map_properties_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ShopCfg other) {
+      if (other == null) {
+        return;
+      }
+      if (other.CfgId != 0) {
+        CfgId = other.CfgId;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      exchangeIds_.Add(other.exchangeIds_);
+      properties_.Add(other.properties_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            CfgId = input.ReadInt32();
+            break;
+          }
+          case 18: {
+            Name = input.ReadString();
+            break;
+          }
+          case 26:
+          case 24: {
+            exchangeIds_.AddEntriesFrom(input, _repeated_exchangeIds_codec);
+            break;
+          }
+          case 66: {
+            properties_.AddEntriesFrom(input, _map_properties_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            CfgId = input.ReadInt32();
+            break;
+          }
+          case 18: {
+            Name = input.ReadString();
+            break;
+          }
+          case 26:
+          case 24: {
+            exchangeIds_.AddEntriesFrom(ref input, _repeated_exchangeIds_codec);
+            break;
+          }
+          case 66: {
+            properties_.AddEntriesFrom(ref input, _map_properties_codec);
             break;
           }
         }

@@ -29,6 +29,9 @@ namespace cshap_client.cfg
 		//任务数据
 		public static Dictionary<int, Gserver.QuestCfg> Quests;
 		
+		//商店数据
+		public static Dictionary<int, Gserver.ShopCfg> ShopCfgs;
+		
 		//活动数据
 		public static Dictionary<int, Gserver.ActivityCfg> ActivityCfgs;
 		
@@ -101,6 +104,17 @@ namespace cshap_client.cfg
             catch (Exception ex)
             {
                 Console.WriteLine("Load Quests.json Err:" + ex.Message);
+            }
+			
+            try
+            {
+                string jsonContent = File.ReadAllText(dataDir+"ShopCfg.json");
+                ShopCfgs = JsonConvert.DeserializeObject<Dictionary<int, Gserver.ShopCfg>>(jsonContent);
+                Console.WriteLine("Load ShopCfg.json:" + ShopCfgs.Count);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Load ShopCfg.json Err:" + ex.Message);
             }
 			
             try

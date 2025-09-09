@@ -34,18 +34,8 @@ namespace cshap_client
                 address = server as string;
             }
 
-            // 根据服务器地址来自动检查是否使用websocket
-            var connectionMode = "";
-            if (address.StartsWith("ws://"))
-            {
-                connectionMode = "ws";
-            }
-            else if (address.StartsWith("wss://"))
-            {
-                connectionMode = "wss";
-            }
-            Client.Instance.Init(connectionMode);
-            Client.Instance.m_Connection.m_Connection.Connect(address);
+            Client.Instance.Init();
+            Client.Instance.Connect(address);
 
             Thread thread = new Thread(inputCmd);
             thread.Start();

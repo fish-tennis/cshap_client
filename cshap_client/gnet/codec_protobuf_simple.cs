@@ -115,6 +115,7 @@ namespace gnet_csharp
             if (bodyData != null) writer.Write(bodyData);
             writer.Flush();
             var packetBytes = stream.ToArray();
+            // Console.WriteLine("Encode: {0} {1}", command, packetBytes);
             // DataEncoder可以继续对packetBytes进行编码,如异或,加密,压缩等
             // DataEncoder can continue to encode packetBytes here, such as XOR, encryption, compression, etc
             return DataEncoder == null

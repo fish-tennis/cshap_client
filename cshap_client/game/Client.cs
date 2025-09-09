@@ -26,6 +26,8 @@ namespace cshap_client.game
         // 暂时强制使用网关模式
         public static bool m_IsUseGateMode = true;
 
+        public ConnectionConfig m_ConnectionConfig;
+        public ICodec m_Codec;
         public ClientConnection m_Connection;
         public bool IsRunning = false;
         private ConcurrentQueue<string> m_InputCmds = new ConcurrentQueue<string>();
@@ -46,10 +48,10 @@ namespace cshap_client.game
             }
         }
 
-        public void Init(string connectionMode)
+        public void Init()
         {
             // 消息号映射
-            PacketCommandMapping.InitCommandMappingFromFile("gen/message_command_mapping.json");
+            PacketCommandMapping.InitCommandMappingFromFile("cfgdata/message_command_mapping.json");
             // 注册消息回调
             HandlerRegister.RegisterMethodsForClass(typeof(Login), "");
             HandlerRegister.RegisterMethodsForPlayer();
@@ -57,48 +59,73 @@ namespace cshap_client.game
             DataMgr.Load("cfgdata/");
             Helper.AfterLoad(); // 预处理配置数据
 
-            // 网络连接初始化
-            var connectionConfig = new ConnectionConfig
+            // 网络参数配置
+            m_ConnectionConfig = new ConnectionConfig
             {
                 RecvBufferSize = 1024 * 100,
                 RecvTimeout = 3000,
                 WriteTimeout = 3000
             };
+        }
+
+        // 连接服务器
+        // 如果address是127.0.0.1:10001,表示使用tcp
+        // 如果address是ws://127.0.0.1:10001/ws或wss://127.0.0.1:10001/wss,则表示使用Websocket
+        public bool Connect(string address)
+        {
+            // 根据服务器地址来自动检查是否使用websocket
+            var connectionMode = "";
+            if (address.StartsWith("ws://"))
+            {
+                connectionMode = "ws";
+            }
+            else if (address.StartsWith("wss://"))
+            {
+                connectionMode = "wss";
+            }
             IConnection conn = null;
-            ICodec codec = null;
-            // 默认使用TcpConnection
-            if (string.IsNullOrEmpty(connectionMode) || connectionMode == "tcp")
+            if (m_Codec == null)
             {
-                codec = new ProtoCodec();
-                connectionConfig.Codec = codec;
-                conn = new TcpConnection(connectionConfig, 1);
-            }
-            else
-            {
-                // websocket ws/wss
-                if (connectionMode == "wss")
+                // 默认使用TcpConnection
+                if (string.IsNullOrEmpty(connectionMode) || connectionMode == "tcp")
                 {
-                    connectionConfig.InsecureSkipVerify = true;
+                    m_Codec = new ProtoCodec();
+                    m_ConnectionConfig.Codec = m_Codec;
+                    conn = new TcpConnection(m_ConnectionConfig, 1);
                 }
-                codec = new SimpleProtoCodec();
-                connectionConfig.Codec = codec;
-                conn = new WsConnection(connectionConfig, 1);
+                else
+                {
+                    // websocket ws/wss
+                    if (connectionMode == "wss")
+                    {
+                        m_ConnectionConfig.InsecureSkipVerify = true;
+                    }
+                    m_Codec = new SimpleProtoCodec();
+                    m_ConnectionConfig.Codec = m_Codec;
+                    conn = new WsConnection(m_ConnectionConfig, 1);
+                }
+                PacketCommandMapping.RegisterCodec(m_Codec); // 自动注册所有消息
             }
-            PacketCommandMapping.RegisterCodec(codec); // 自动注册所有消息
             m_Connection = new ClientConnection(conn);
             IsRunning = true;
+            return m_Connection.m_Connection.Connect(address);
+        }
+
+        public void Update()
+        {
+            m_Connection?.ProcessPackets();
+            m_Connection?.AutoPing();
         }
 
         public void Run()
         {
             while (IsRunning)
             {
-                m_Connection.AutoPing();
                 if (m_InputCmds.TryDequeue(out string cmd))
                 {
                     OnCommand(cmd);
                 }
-                m_Connection.ProcessPackets();
+                Update();
                 Thread.Sleep(50);
             }
         }
