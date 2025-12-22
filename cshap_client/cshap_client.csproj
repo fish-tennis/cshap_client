@@ -107,7 +107,6 @@
     <Compile Include="pb\Guild.cs" />
     <Compile Include="pb\Item.cs" />
     <Compile Include="pb\Login.cs" />
-    <Compile Include="pb\Money.cs" />
     <Compile Include="pb\Player.cs" />
     <Compile Include="pb\Progress.cs" />
     <Compile Include="pb\Quest.cs" />
