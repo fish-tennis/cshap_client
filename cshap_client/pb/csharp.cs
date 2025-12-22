@@ -39,8 +39,6 @@ namespace Gserver {
 			
 			fileDescriptors.Add(LoginReflection.Descriptor);
 			
-			fileDescriptors.Add(MoneyReflection.Descriptor);
-			
 			fileDescriptors.Add(PlayerReflection.Descriptor);
 			
 			fileDescriptors.Add(ProgressReflection.Descriptor);

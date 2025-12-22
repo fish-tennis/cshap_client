@@ -29,56 +29,54 @@ namespace Gserver {
             "IAEoBRILCgNleHAYAyABKAUSEAoIdG90YWxQYXkYBCABKAUSFgoObGFzdFVw",
             "ZGF0ZURhdGUYBSABKAUSGgoSbGFzdExvZ2luVGltZXN0YW1wGAYgASgDEhsK",
             "E2xhc3RMb2dvdXRUaW1lc3RhbXAYByABKAMSGgoSdG90YWxPbmxpbmVTZWNv",
-            "bmRzGAggASgFIiYKBU1vbmV5EgwKBGNvaW4YASABKAUSDwoHZGlhbW9uZBgC",
-            "IAEoBSLCAgoLQmFnU2F2ZURhdGESNgoJQ291bnRJdGVtGAEgAygLMiMuZ3Nl",
-            "cnZlci5CYWdTYXZlRGF0YS5Db3VudEl0ZW1FbnRyeRI4CgpVbmlxdWVJdGVt",
-            "GAIgAygLMiQuZ3NlcnZlci5CYWdTYXZlRGF0YS5VbmlxdWVJdGVtRW50cnkS",
-            "LgoFRXF1aXAYAyADKAsyHy5nc2VydmVyLkJhZ1NhdmVEYXRhLkVxdWlwRW50",
-            "cnkaMAoOQ291bnRJdGVtRW50cnkSCwoDa2V5GAEgASgFEg0KBXZhbHVlGAIg",
-            "ASgFOgI4ARoxCg9VbmlxdWVJdGVtRW50cnkSCwoDa2V5GAEgASgDEg0KBXZh",
-            "bHVlGAIgASgMOgI4ARosCgpFcXVpcEVudHJ5EgsKA2tleRgBIAEoAxINCgV2",
-            "YWx1ZRgCIAEoDDoCOAEi2wEKDVF1ZXN0U2F2ZURhdGESNgoIZmluaXNoZWQY",
-            "ASADKAsyJC5nc2VydmVyLlF1ZXN0U2F2ZURhdGEuRmluaXNoZWRFbnRyeRIy",
-            "CgZxdWVzdHMYAiADKAsyIi5nc2VydmVyLlF1ZXN0U2F2ZURhdGEuUXVlc3Rz",
-            "RW50cnkaLwoNRmluaXNoZWRFbnRyeRILCgNrZXkYASABKAUSDQoFdmFsdWUY",
-            "AiABKAw6AjgBGi0KC1F1ZXN0c0VudHJ5EgsKA2tleRgBIAEoBRINCgV2YWx1",
-            "ZRgCIAEoDDoCOAEiQAoJUXVlc3REYXRhEg0KBWNmZ0lkGAEgASgFEhAKCHBy",
-            "b2dyZXNzGAIgASgFEhIKCmFjdGl2aXR5SWQYAyABKAUiJgoRRmluaXNoZWRR",
-            "dWVzdERhdGESEQoJdGltZXN0YW1wGAEgASgFIiIKD1BsYXllckd1aWxkRGF0",
-            "YRIPCgdndWlsZElkGAEgASgDIsEECgpQbGF5ZXJEYXRhEgsKA19pZBgBIAEo",
-            "AxIMCgROYW1lGAIgASgJEhEKCUFjY291bnRJZBgDIAEoAxIQCghSZWdpb25J",
-            "ZBgEIAEoBRIjCghCYXNlSW5mbxgFIAEoCzIRLmdzZXJ2ZXIuQmFzZUluZm8S",
-            "DQoFTW9uZXkYBiABKAwSIgoEQmFncxgHIAEoCzIULmdzZXJ2ZXIuQmFnU2F2",
-            "ZURhdGESJQoFUXVlc3QYCCABKAsyFi5nc2VydmVyLlF1ZXN0U2F2ZURhdGES",
-            "JwoFR3VpbGQYCSABKAsyGC5nc2VydmVyLlBsYXllckd1aWxkRGF0YRJBCg9Q",
-            "ZW5kaW5nTWVzc2FnZXMYCiADKAsyKC5nc2VydmVyLlBsYXllckRhdGEuUGVu",
-            "ZGluZ01lc3NhZ2VzRW50cnkSNwoKQWN0aXZpdGllcxgLIAMoCzIjLmdzZXJ2",
-            "ZXIuUGxheWVyRGF0YS5BY3Rpdml0aWVzRW50cnkSMwoIRXhjaGFuZ2UYDCAD",
-            "KAsyIS5nc2VydmVyLlBsYXllckRhdGEuRXhjaGFuZ2VFbnRyeRo2ChRQZW5k",
-            "aW5nTWVzc2FnZXNFbnRyeRILCgNrZXkYASABKAMSDQoFdmFsdWUYAiABKAw6",
-            "AjgBGjEKD0FjdGl2aXRpZXNFbnRyeRILCgNrZXkYASABKAUSDQoFdmFsdWUY",
-            "AiABKAw6AjgBGi8KDUV4Y2hhbmdlRW50cnkSCwoDa2V5GAEgASgFEg0KBXZh",
-            "bHVlGAIgASgMOgI4ASLLAQoXQWN0aXZpdHlEZWZhdWx0QmFzZURhdGESFgoO",
-            "TGFzdFVwZGF0ZVRpbWUYASABKAUSEAoISm9pblRpbWUYBCABKAUSTgoPUHJv",
-            "cGVydGllc0ludDMyGAUgAygLMjUuZ3NlcnZlci5BY3Rpdml0eURlZmF1bHRC",
-            "YXNlRGF0YS5Qcm9wZXJ0aWVzSW50MzJFbnRyeRo2ChRQcm9wZXJ0aWVzSW50",
-            "MzJFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAU6AjgBIncKDlBl",
-            "bmRpbmdNZXNzYWdlEhEKCW1lc3NhZ2VJZBgBIAEoAxIVCg1wYWNrZXRDb21t",
-            "YW5kGAIgASgFEigKCnBhY2tldERhdGEYAyABKAsyFC5nb29nbGUucHJvdG9i",
-            "dWYuQW55EhEKCXRpbWVzdGFtcBgEIAEoBSJBCg5FeGNoYW5nZVJlY29yZBIN",
-            "CgVDZmdJZBgBIAEoBRINCgVDb3VudBgCIAEoBRIRCglUaW1lc3RhbXAYAyAB",
-            "KAVCBloELi9wYmIGcHJvdG8z"));
+            "bmRzGAggASgFIsICCgtCYWdTYXZlRGF0YRI2CglDb3VudEl0ZW0YASADKAsy",
+            "Iy5nc2VydmVyLkJhZ1NhdmVEYXRhLkNvdW50SXRlbUVudHJ5EjgKClVuaXF1",
+            "ZUl0ZW0YAiADKAsyJC5nc2VydmVyLkJhZ1NhdmVEYXRhLlVuaXF1ZUl0ZW1F",
+            "bnRyeRIuCgVFcXVpcBgDIAMoCzIfLmdzZXJ2ZXIuQmFnU2F2ZURhdGEuRXF1",
+            "aXBFbnRyeRowCg5Db3VudEl0ZW1FbnRyeRILCgNrZXkYASABKAUSDQoFdmFs",
+            "dWUYAiABKAU6AjgBGjEKD1VuaXF1ZUl0ZW1FbnRyeRILCgNrZXkYASABKAMS",
+            "DQoFdmFsdWUYAiABKAw6AjgBGiwKCkVxdWlwRW50cnkSCwoDa2V5GAEgASgD",
+            "Eg0KBXZhbHVlGAIgASgMOgI4ASLbAQoNUXVlc3RTYXZlRGF0YRI2CghmaW5p",
+            "c2hlZBgBIAMoCzIkLmdzZXJ2ZXIuUXVlc3RTYXZlRGF0YS5GaW5pc2hlZEVu",
+            "dHJ5EjIKBnF1ZXN0cxgCIAMoCzIiLmdzZXJ2ZXIuUXVlc3RTYXZlRGF0YS5R",
+            "dWVzdHNFbnRyeRovCg1GaW5pc2hlZEVudHJ5EgsKA2tleRgBIAEoBRINCgV2",
+            "YWx1ZRgCIAEoDDoCOAEaLQoLUXVlc3RzRW50cnkSCwoDa2V5GAEgASgFEg0K",
+            "BXZhbHVlGAIgASgMOgI4ASJACglRdWVzdERhdGESDQoFY2ZnSWQYASABKAUS",
+            "EAoIcHJvZ3Jlc3MYAiABKAUSEgoKYWN0aXZpdHlJZBgDIAEoBSImChFGaW5p",
+            "c2hlZFF1ZXN0RGF0YRIRCgl0aW1lc3RhbXAYASABKAUiIgoPUGxheWVyR3Vp",
+            "bGREYXRhEg8KB2d1aWxkSWQYASABKAMisgQKClBsYXllckRhdGESCwoDX2lk",
+            "GAEgASgDEgwKBE5hbWUYAiABKAkSEQoJQWNjb3VudElkGAMgASgDEhAKCFJl",
+            "Z2lvbklkGAQgASgFEiMKCEJhc2VJbmZvGAUgASgLMhEuZ3NlcnZlci5CYXNl",
+            "SW5mbxIiCgRCYWdzGAcgASgLMhQuZ3NlcnZlci5CYWdTYXZlRGF0YRIlCgVR",
+            "dWVzdBgIIAEoCzIWLmdzZXJ2ZXIuUXVlc3RTYXZlRGF0YRInCgVHdWlsZBgJ",
+            "IAEoCzIYLmdzZXJ2ZXIuUGxheWVyR3VpbGREYXRhEkEKD1BlbmRpbmdNZXNz",
+            "YWdlcxgKIAMoCzIoLmdzZXJ2ZXIuUGxheWVyRGF0YS5QZW5kaW5nTWVzc2Fn",
+            "ZXNFbnRyeRI3CgpBY3Rpdml0aWVzGAsgAygLMiMuZ3NlcnZlci5QbGF5ZXJE",
+            "YXRhLkFjdGl2aXRpZXNFbnRyeRIzCghFeGNoYW5nZRgMIAMoCzIhLmdzZXJ2",
+            "ZXIuUGxheWVyRGF0YS5FeGNoYW5nZUVudHJ5GjYKFFBlbmRpbmdNZXNzYWdl",
+            "c0VudHJ5EgsKA2tleRgBIAEoAxINCgV2YWx1ZRgCIAEoDDoCOAEaMQoPQWN0",
+            "aXZpdGllc0VudHJ5EgsKA2tleRgBIAEoBRINCgV2YWx1ZRgCIAEoDDoCOAEa",
+            "LwoNRXhjaGFuZ2VFbnRyeRILCgNrZXkYASABKAUSDQoFdmFsdWUYAiABKAw6",
+            "AjgBIssBChdBY3Rpdml0eURlZmF1bHRCYXNlRGF0YRIWCg5MYXN0VXBkYXRl",
+            "VGltZRgBIAEoBRIQCghKb2luVGltZRgEIAEoBRJOCg9Qcm9wZXJ0aWVzSW50",
+            "MzIYBSADKAsyNS5nc2VydmVyLkFjdGl2aXR5RGVmYXVsdEJhc2VEYXRhLlBy",
+            "b3BlcnRpZXNJbnQzMkVudHJ5GjYKFFByb3BlcnRpZXNJbnQzMkVudHJ5EgsK",
+            "A2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoBToCOAEidwoOUGVuZGluZ01lc3Nh",
+            "Z2USEQoJbWVzc2FnZUlkGAEgASgDEhUKDXBhY2tldENvbW1hbmQYAiABKAUS",
+            "KAoKcGFja2V0RGF0YRgDIAEoCzIULmdvb2dsZS5wcm90b2J1Zi5BbnkSEQoJ",
+            "dGltZXN0YW1wGAQgASgFIkEKDkV4Y2hhbmdlUmVjb3JkEg0KBUNmZ0lkGAEg",
+            "ASgFEg0KBUNvdW50GAIgASgFEhEKCVRpbWVzdGFtcBgDIAEoBUIGWgQuL3Bi",
+            "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.AnyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.BaseInfo), global::Gserver.BaseInfo.Parser, new[]{ "Gender", "Level", "Exp", "TotalPay", "LastUpdateDate", "LastLoginTimestamp", "LastLogoutTimestamp", "TotalOnlineSeconds" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.Money), global::Gserver.Money.Parser, new[]{ "Coin", "Diamond" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.BagSaveData), global::Gserver.BagSaveData.Parser, new[]{ "CountItem", "UniqueItem", "Equip" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.QuestSaveData), global::Gserver.QuestSaveData.Parser, new[]{ "Finished", "Quests" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.QuestData), global::Gserver.QuestData.Parser, new[]{ "CfgId", "Progress", "ActivityId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.FinishedQuestData), global::Gserver.FinishedQuestData.Parser, new[]{ "Timestamp" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.PlayerGuildData), global::Gserver.PlayerGuildData.Parser, new[]{ "GuildId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.PlayerData), global::Gserver.PlayerData.Parser, new[]{ "Id", "Name", "AccountId", "RegionId", "BaseInfo", "Money", "Bags", "Quest", "Guild", "PendingMessages", "Activities", "Exchange" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.PlayerData), global::Gserver.PlayerData.Parser, new[]{ "Id", "Name", "AccountId", "RegionId", "BaseInfo", "Bags", "Quest", "Guild", "PendingMessages", "Activities", "Exchange" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.ActivityDefaultBaseData), global::Gserver.ActivityDefaultBaseData.Parser, new[]{ "LastUpdateTime", "JoinTime", "PropertiesInt32" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.PendingMessage), global::Gserver.PendingMessage.Parser, new[]{ "MessageId", "PacketCommand", "PacketData", "Timestamp" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.ExchangeRecord), global::Gserver.ExchangeRecord.Parser, new[]{ "CfgId", "Count", "Timestamp" }, null, null, null, null)
@@ -564,241 +562,6 @@ namespace Gserver {
   }
 
   /// <summary>
-  /// 玩家的钱财数据
-  /// </summary>
-  public sealed partial class Money : pb::IMessage<Money>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<Money> _parser = new pb::MessageParser<Money>(() => new Money());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<Money> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Gserver.PlayerReflection.Descriptor.MessageTypes[1]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public Money() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public Money(Money other) : this() {
-      coin_ = other.coin_;
-      diamond_ = other.diamond_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public Money Clone() {
-      return new Money(this);
-    }
-
-    /// <summary>Field number for the "coin" field.</summary>
-    public const int CoinFieldNumber = 1;
-    private int coin_;
-    /// <summary>
-    /// 金币
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int Coin {
-      get { return coin_; }
-      set {
-        coin_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "diamond" field.</summary>
-    public const int DiamondFieldNumber = 2;
-    private int diamond_;
-    /// <summary>
-    /// 钻石
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int Diamond {
-      get { return diamond_; }
-      set {
-        diamond_ = value;
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other) {
-      return Equals(other as Money);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(Money other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (Coin != other.Coin) return false;
-      if (Diamond != other.Diamond) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (Coin != 0) hash ^= Coin.GetHashCode();
-      if (Diamond != 0) hash ^= Diamond.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      if (Coin != 0) {
-        output.WriteRawTag(8);
-        output.WriteInt32(Coin);
-      }
-      if (Diamond != 0) {
-        output.WriteRawTag(16);
-        output.WriteInt32(Diamond);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Coin != 0) {
-        output.WriteRawTag(8);
-        output.WriteInt32(Coin);
-      }
-      if (Diamond != 0) {
-        output.WriteRawTag(16);
-        output.WriteInt32(Diamond);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize() {
-      int size = 0;
-      if (Coin != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Coin);
-      }
-      if (Diamond != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Diamond);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(Money other) {
-      if (other == null) {
-        return;
-      }
-      if (other.Coin != 0) {
-        Coin = other.Coin;
-      }
-      if (other.Diamond != 0) {
-        Diamond = other.Diamond;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 8: {
-            Coin = input.ReadInt32();
-            break;
-          }
-          case 16: {
-            Diamond = input.ReadInt32();
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 8: {
-            Coin = input.ReadInt32();
-            break;
-          }
-          case 16: {
-            Diamond = input.ReadInt32();
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
-  /// <summary>
   /// 背包模块数据
   /// </summary>
   public sealed partial class BagSaveData : pb::IMessage<BagSaveData>
@@ -815,7 +578,7 @@ namespace Gserver {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Gserver.PlayerReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Gserver.PlayerReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1048,7 +811,7 @@ namespace Gserver {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Gserver.PlayerReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Gserver.PlayerReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1261,7 +1024,7 @@ namespace Gserver {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Gserver.PlayerReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Gserver.PlayerReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1536,7 +1299,7 @@ namespace Gserver {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Gserver.PlayerReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Gserver.PlayerReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1731,7 +1494,7 @@ namespace Gserver {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Gserver.PlayerReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Gserver.PlayerReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1927,7 +1690,7 @@ namespace Gserver {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Gserver.PlayerReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Gserver.PlayerReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1952,7 +1715,6 @@ namespace Gserver {
       accountId_ = other.accountId_;
       regionId_ = other.regionId_;
       baseInfo_ = other.baseInfo_ != null ? other.baseInfo_.Clone() : null;
-      money_ = other.money_;
       bags_ = other.bags_ != null ? other.bags_.Clone() : null;
       quest_ = other.quest_ != null ? other.quest_.Clone() : null;
       guild_ = other.guild_ != null ? other.guild_.Clone() : null;
@@ -2037,18 +1799,6 @@ namespace Gserver {
       get { return baseInfo_; }
       set {
         baseInfo_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "Money" field.</summary>
-    public const int MoneyFieldNumber = 6;
-    private pb::ByteString money_ = pb::ByteString.Empty;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pb::ByteString Money {
-      get { return money_; }
-      set {
-        money_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -2150,7 +1900,6 @@ namespace Gserver {
       if (AccountId != other.AccountId) return false;
       if (RegionId != other.RegionId) return false;
       if (!object.Equals(BaseInfo, other.BaseInfo)) return false;
-      if (Money != other.Money) return false;
       if (!object.Equals(Bags, other.Bags)) return false;
       if (!object.Equals(Quest, other.Quest)) return false;
       if (!object.Equals(Guild, other.Guild)) return false;
@@ -2169,7 +1918,6 @@ namespace Gserver {
       if (AccountId != 0L) hash ^= AccountId.GetHashCode();
       if (RegionId != 0) hash ^= RegionId.GetHashCode();
       if (baseInfo_ != null) hash ^= BaseInfo.GetHashCode();
-      if (Money.Length != 0) hash ^= Money.GetHashCode();
       if (bags_ != null) hash ^= Bags.GetHashCode();
       if (quest_ != null) hash ^= Quest.GetHashCode();
       if (guild_ != null) hash ^= Guild.GetHashCode();
@@ -2213,10 +1961,6 @@ namespace Gserver {
       if (baseInfo_ != null) {
         output.WriteRawTag(42);
         output.WriteMessage(BaseInfo);
-      }
-      if (Money.Length != 0) {
-        output.WriteRawTag(50);
-        output.WriteBytes(Money);
       }
       if (bags_ != null) {
         output.WriteRawTag(58);
@@ -2263,10 +2007,6 @@ namespace Gserver {
         output.WriteRawTag(42);
         output.WriteMessage(BaseInfo);
       }
-      if (Money.Length != 0) {
-        output.WriteRawTag(50);
-        output.WriteBytes(Money);
-      }
       if (bags_ != null) {
         output.WriteRawTag(58);
         output.WriteMessage(Bags);
@@ -2306,9 +2046,6 @@ namespace Gserver {
       }
       if (baseInfo_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(BaseInfo);
-      }
-      if (Money.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Money);
       }
       if (bags_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Bags);
@@ -2351,9 +2088,6 @@ namespace Gserver {
           BaseInfo = new global::Gserver.BaseInfo();
         }
         BaseInfo.MergeFrom(other.BaseInfo);
-      }
-      if (other.Money.Length != 0) {
-        Money = other.Money;
       }
       if (other.bags_ != null) {
         if (bags_ == null) {
@@ -2412,10 +2146,6 @@ namespace Gserver {
               BaseInfo = new global::Gserver.BaseInfo();
             }
             input.ReadMessage(BaseInfo);
-            break;
-          }
-          case 50: {
-            Money = input.ReadBytes();
             break;
           }
           case 58: {
@@ -2489,10 +2219,6 @@ namespace Gserver {
             input.ReadMessage(BaseInfo);
             break;
           }
-          case 50: {
-            Money = input.ReadBytes();
-            break;
-          }
           case 58: {
             if (bags_ == null) {
               Bags = new global::Gserver.BagSaveData();
@@ -2550,7 +2276,7 @@ namespace Gserver {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Gserver.PlayerReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Gserver.PlayerReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2814,7 +2540,7 @@ namespace Gserver {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Gserver.PlayerReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Gserver.PlayerReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3138,7 +2864,7 @@ namespace Gserver {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Gserver.PlayerReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Gserver.PlayerReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
