@@ -66,7 +66,7 @@ namespace cshap_client.game
                     DelElem(m_UniqueIdGetter.Invoke(elem));
                     break;
                 case Gserver.ElemOpType.Update:
-                    m_Elems[m_CfgIdGetter.Invoke(elem)] = elem;
+                    m_Elems[m_UniqueIdGetter.Invoke(elem)] = elem;
                     break;
                 default:
                     break;
