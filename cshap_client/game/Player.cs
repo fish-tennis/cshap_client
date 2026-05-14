@@ -66,9 +66,9 @@ namespace cshap_client.game
         
         // 获取玩家数据上的int32属性值
         // IPropertyInt32的实现
-        public int GetPropertyInt32(string property)
+        public int GetPropertyInt32(string property, Gserver.ConditionCfg conditionCfg)
         {
-            return PlayerProperty.Getters.TryGetValue(property, out var getter) ? getter(this, property) : 0;
+            return PlayerProperty.Getters.TryGetValue(property, out var getter) ? getter(this, property, conditionCfg) : 0;
         }
         
         public bool Send(IMessage message)

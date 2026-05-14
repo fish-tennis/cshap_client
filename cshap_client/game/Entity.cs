@@ -27,7 +27,7 @@ namespace cshap_client.game
     // 获取int32属性值的接口
     public interface IPropertyInt32
     {
-        int GetPropertyInt32(string propertyName);
+        int GetPropertyInt32(string propertyName, Gserver.ConditionCfg conditionCfg);
     }
 
     public class BaseEntity : IEntity

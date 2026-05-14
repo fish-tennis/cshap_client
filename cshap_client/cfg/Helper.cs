@@ -34,7 +34,7 @@ namespace cshap_client.cfg
         }
 
         // 条件模板id+values,转换成ConditionCfg对象
-        private static List<Gserver.ConditionCfg> convertConditionCfgs(RepeatedField<Gserver.CfgArgs> cfgArgs)
+        private static List<Gserver.ConditionCfg> convertConditionCfgs(RepeatedField<Gserver.CfgArgOptions> cfgArgs)
         {
             if (cfgArgs == null)
             {
@@ -49,7 +49,7 @@ namespace cshap_client.cfg
         }
 
         // 条件模板id+values,转换成ConditionCfg对象
-        private static Gserver.ConditionCfg convertConditionCfg(Gserver.CfgArgs cfgArg)
+        private static Gserver.ConditionCfg convertConditionCfg(Gserver.CfgArgOptions cfgArg)
         {
             if(!DataMgr.ConditionTemplateCfgs.TryGetValue(cfgArg.CfgId, out var conditionTemplate))
             {
@@ -64,6 +64,7 @@ namespace cshap_client.cfg
                 ClientCheck = conditionTemplate.ClientCheck,
             };
             conditionCfg.Values.AddRange(cfgArg.Args.Clone());
+            conditionCfg.Options.AddRange(cfgArg.Options.Clone());
             conditionCfg.Properties.Add(conditionTemplate.Properties.Clone());
             return conditionCfg;
         }

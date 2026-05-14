@@ -2,7 +2,7 @@
 
 namespace cshap_client.game
 {
-    using ActivityPropertyGetter = System.Func<Activity, string, int>;
+    using ActivityPropertyGetter = System.Func<Activity, string, Gserver.ConditionCfg, int>;
     
     public static class ActivityProperty
     {
@@ -11,7 +11,7 @@ namespace cshap_client.game
         // 由Activity.GetPropertyInt32调用
         public static Dictionary<string,ActivityPropertyGetter> Getters = new Dictionary<string, ActivityPropertyGetter>
         {
-            {"DayCount",(activity,_)=> activity.GetDayCount()}, // 当前是参加这个活动的第几天,从1开始
+            {"DayCount",(activity,propertyName,conditionCfg)=> activity.GetDayCount()}, // 当前是参加这个活动的第几天,从1开始
         };
     }
 }

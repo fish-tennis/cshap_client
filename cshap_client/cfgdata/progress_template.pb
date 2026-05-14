@@ -1,0 +1,22 @@
+::
+PropertyOnlineMinute"EventPlayerProperty*Delta5"EventPlayerProperty*Delta:
+PropertyLevel"
+EventFight!"
+EventFight2
+IsPvp
+=2"
+EventFight2
+IsPvp
+=2
+IsWin
+=_"
+EventFight2
+IsWin
+=2
+	RoomLevel
+>2
+RoomType
+=2
+Score	
+[]d»6:
+PropertyTotalPay"EventPlayerProperty*Delta

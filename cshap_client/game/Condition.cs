@@ -103,7 +103,7 @@ namespace cshap_client.game
             {
                 return false;
             }
-            var propertyValue = propertyGetter.GetPropertyInt32(propertyName);
+            var propertyValue = propertyGetter.GetPropertyInt32(propertyName, conditionCfg);
             var valueCompareCfg = new Gserver.ValueCompareCfg {Op = conditionCfg.Op};
             valueCompareCfg.Values.AddRange(conditionCfg.Values);
             return CompareOpValue(obj, propertyValue, valueCompareCfg);

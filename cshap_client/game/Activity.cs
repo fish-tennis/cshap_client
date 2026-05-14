@@ -27,12 +27,12 @@ namespace cshap_client.game
 
         // 获取活动数据上的int32属性值(先查找m_Data,如果没有再查找该活动配置的Properties)
         // IPropertyInt32的实现
-        public int GetPropertyInt32(string property)
+        public int GetPropertyInt32(string property, Gserver.ConditionCfg conditionCfg)
         {
             // 1.先找注册的属性接口
             if (ActivityProperty.Getters.TryGetValue(property, out var getter))
             {
-                return getter(this, property);
+                return getter(this, property, conditionCfg);
             }
             // 2.再找活动数据上的属性值
             // 3.再找活动配置上的属性值
