@@ -25,8 +25,6 @@ namespace Gserver {
 			
 			fileDescriptors.Add(BaseinfoReflection.Descriptor);
 			
-			fileDescriptors.Add(CfgReflection.Descriptor);
-			
 			fileDescriptors.Add(ClientBaseReflection.Descriptor);
 			
 			fileDescriptors.Add(ExchangeReflection.Descriptor);
@@ -46,8 +44,6 @@ namespace Gserver {
 			fileDescriptors.Add(QuestReflection.Descriptor);
 			
 			fileDescriptors.Add(RouteReflection.Descriptor);
-			
-			fileDescriptors.Add(ServerBaseReflection.Descriptor);
 			
 		}
 	}

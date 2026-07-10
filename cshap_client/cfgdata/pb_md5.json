@@ -1,10 +1,10 @@
 {
-  "ItemCfg.pb": "b4ff90ab8556f4c63e2b7e7202f563bf",
-  "Quests.pb": "070ef315ea51d8533923a350d0e1691c",
+  "ItemCfg.pb": "265d00da5f45b98ad3c31562635d1108",
+  "Quests.pb": "566ceda0c9efcac9aa61d267d156d324",
   "ShopCfg.pb": "e83ff274cea543ca620a6be4d22a5b6c",
-  "activitycfg.pb": "836ae0d11c36f55d0ce9a2baeca1f606",
-  "condition_template.pb": "8e193bb684146fdaa86e978ae304bff0",
-  "exchange.pb": "806249e03c3e8b5559414b26dbf781e3",
-  "levelcfg.pb": "a506ea4ce85c93f0777591b787f1d363",
-  "progress_template.pb": "cee22b3b244008b758e1e698d529586b"
+  "activitycfg.pb": "16443b0ed3dc9902adcc683999367d90",
+  "condition_template.pb": "9fc03649e3bbd0bed414d2138057667d",
+  "exchange.pb": "da905bbba57c94dc68d5a7a29584ff26",
+  "levelcfg.pb": "9ac5e3eac4ee163bfec5474097a44fdf",
+  "progress_template.pb": "13b691f842daf8a64f09d466dc34cd3e"
 }
