@@ -25,16 +25,16 @@ namespace Gserver {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CgtxdWVzdC5wcm90bxIHZ3NlcnZlchoMcGxheWVyLnByb3RvIv8BCglRdWVz",
-            "dFN5bmMSMgoIZmluaXNoZWQYASADKAsyIC5nc2VydmVyLlF1ZXN0U3luYy5G",
-            "aW5pc2hlZEVudHJ5Ei4KBnF1ZXN0cxgCIAMoCzIeLmdzZXJ2ZXIuUXVlc3RT",
+            "dFN5bmMSMgoIRmluaXNoZWQYASADKAsyIC5nc2VydmVyLlF1ZXN0U3luYy5G",
+            "aW5pc2hlZEVudHJ5Ei4KBlF1ZXN0cxgCIAMoCzIeLmdzZXJ2ZXIuUXVlc3RT",
             "eW5jLlF1ZXN0c0VudHJ5GksKDUZpbmlzaGVkRW50cnkSCwoDa2V5GAEgASgF",
             "EikKBXZhbHVlGAIgASgLMhouZ3NlcnZlci5GaW5pc2hlZFF1ZXN0RGF0YToC",
             "OAEaQQoLUXVlc3RzRW50cnkSCwoDa2V5GAEgASgFEiEKBXZhbHVlGAIgASgL",
-            "MhIuZ3NlcnZlci5RdWVzdERhdGE6AjgBIkMKC1F1ZXN0VXBkYXRlEhIKCnF1",
-            "ZXN0Q2ZnSWQYASABKAUSIAoEZGF0YRgCIAEoCzISLmdzZXJ2ZXIuUXVlc3RE",
-            "YXRhIiQKDlF1ZXN0UmVtb3ZlUmVzEhIKCnF1ZXN0Q2ZnSWQYASABKAUiJQoO",
-            "RmluaXNoUXVlc3RSZXESEwoLcXVlc3RDZmdJZHMYASADKAUiXQoORmluaXNo",
-            "UXVlc3RSZXMSEwoLcXVlc3RDZmdJZHMYASADKAUSNgoSZmluaXNoZWRRdWVz",
+            "MhIuZ3NlcnZlci5RdWVzdERhdGE6AjgBIkMKC1F1ZXN0VXBkYXRlEhIKClF1",
+            "ZXN0Q2ZnSWQYASABKAUSIAoERGF0YRgCIAEoCzISLmdzZXJ2ZXIuUXVlc3RE",
+            "YXRhIiQKDlF1ZXN0UmVtb3ZlUmVzEhIKClF1ZXN0Q2ZnSWQYASABKAUiJQoO",
+            "RmluaXNoUXVlc3RSZXESEwoLUXVlc3RDZmdJZHMYASADKAUiXQoORmluaXNo",
+            "UXVlc3RSZXMSEwoLUXVlc3RDZmdJZHMYASADKAUSNgoSRmluaXNoZWRRdWVz",
             "dERhdGFzGAIgAygLMhouZ3NlcnZlci5GaW5pc2hlZFF1ZXN0RGF0YUIGWgQu",
             "L3BiYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -100,7 +100,7 @@ namespace Gserver {
       return new QuestSync(this);
     }
 
-    /// <summary>Field number for the "finished" field.</summary>
+    /// <summary>Field number for the "Finished" field.</summary>
     public const int FinishedFieldNumber = 1;
     private static readonly pbc::MapField<int, global::Gserver.FinishedQuestData>.Codec _map_finished_codec
         = new pbc::MapField<int, global::Gserver.FinishedQuestData>.Codec(pb::FieldCodec.ForInt32(8, 0), pb::FieldCodec.ForMessage(18, global::Gserver.FinishedQuestData.Parser), 10);
@@ -114,7 +114,7 @@ namespace Gserver {
       get { return finished_; }
     }
 
-    /// <summary>Field number for the "quests" field.</summary>
+    /// <summary>Field number for the "Quests" field.</summary>
     public const int QuestsFieldNumber = 2;
     private static readonly pbc::MapField<int, global::Gserver.QuestData>.Codec _map_quests_codec
         = new pbc::MapField<int, global::Gserver.QuestData>.Codec(pb::FieldCodec.ForInt32(8, 0), pb::FieldCodec.ForMessage(18, global::Gserver.QuestData.Parser), 18);
@@ -314,7 +314,7 @@ namespace Gserver {
       return new QuestUpdate(this);
     }
 
-    /// <summary>Field number for the "questCfgId" field.</summary>
+    /// <summary>Field number for the "QuestCfgId" field.</summary>
     public const int QuestCfgIdFieldNumber = 1;
     private int questCfgId_;
     /// <summary>
@@ -329,7 +329,7 @@ namespace Gserver {
       }
     }
 
-    /// <summary>Field number for the "data" field.</summary>
+    /// <summary>Field number for the "Data" field.</summary>
     public const int DataFieldNumber = 2;
     private global::Gserver.QuestData data_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -555,7 +555,7 @@ namespace Gserver {
       return new QuestRemoveRes(this);
     }
 
-    /// <summary>Field number for the "questCfgId" field.</summary>
+    /// <summary>Field number for the "QuestCfgId" field.</summary>
     public const int QuestCfgIdFieldNumber = 1;
     private int questCfgId_;
     /// <summary>
@@ -751,7 +751,7 @@ namespace Gserver {
       return new FinishQuestReq(this);
     }
 
-    /// <summary>Field number for the "questCfgIds" field.</summary>
+    /// <summary>Field number for the "QuestCfgIds" field.</summary>
     public const int QuestCfgIdsFieldNumber = 1;
     private static readonly pb::FieldCodec<int> _repeated_questCfgIds_codec
         = pb::FieldCodec.ForInt32(10);
@@ -939,7 +939,7 @@ namespace Gserver {
       return new FinishQuestRes(this);
     }
 
-    /// <summary>Field number for the "questCfgIds" field.</summary>
+    /// <summary>Field number for the "QuestCfgIds" field.</summary>
     public const int QuestCfgIdsFieldNumber = 1;
     private static readonly pb::FieldCodec<int> _repeated_questCfgIds_codec
         = pb::FieldCodec.ForInt32(10);
@@ -953,7 +953,7 @@ namespace Gserver {
       get { return questCfgIds_; }
     }
 
-    /// <summary>Field number for the "finishedQuestDatas" field.</summary>
+    /// <summary>Field number for the "FinishedQuestDatas" field.</summary>
     public const int FinishedQuestDatasFieldNumber = 2;
     private static readonly pb::FieldCodec<global::Gserver.FinishedQuestData> _repeated_finishedQuestDatas_codec
         = pb::FieldCodec.ForMessage(18, global::Gserver.FinishedQuestData.Parser);

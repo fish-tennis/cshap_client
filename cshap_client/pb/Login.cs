@@ -24,43 +24,806 @@ namespace Gserver {
     static LoginReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Cgtsb2dpbi5wcm90bxIHZ3NlcnZlchoMcGxheWVyLnByb3RvIjEKCExvZ2lu",
-            "UmVxEhMKC2FjY291bnROYW1lGAEgASgJEhAKCHBhc3N3b3JkGAIgASgJInUK",
-            "CExvZ2luUmVzEhMKC2FjY291bnROYW1lGAEgASgJEhEKCWFjY291bnRJZBgC",
-            "IAEoAxIUCgxsb2dpblNlc3Npb24YAyABKAkSKwoKZ2FtZVNlcnZlchgEIAEo",
-            "CzIXLmdzZXJ2ZXIuR2FtZVNlcnZlckluZm8iMwoKQWNjb3VudFJlZxITCgth",
-            "Y2NvdW50TmFtZRgBIAEoCRIQCghwYXNzd29yZBgCIAEoCSI0CgpBY2NvdW50",
-            "UmVzEhMKC2FjY291bnROYW1lGAEgASgJEhEKCWFjY291bnRJZBgCIAEoAyI8",
-            "Cg5HYW1lU2VydmVySW5mbxIQCghzZXJ2ZXJJZBgBIAEoBRIYChBjbGllbnRM",
-            "aXN0ZW5BZGRyGAIgASgJIk8KElBsYXllckVudHJ5R2FtZVJlcRIRCglhY2Nv",
-            "dW50SWQYASABKAMSFAoMbG9naW5TZXNzaW9uGAIgASgJEhAKCHJlZ2lvbklk",
-            "GAMgASgFIl8KElBsYXllckVudHJ5R2FtZVJlcxIRCglhY2NvdW50SWQYASAB",
-            "KAMSEAoIcGxheWVySWQYAiABKAMSEAoIcmVnaW9uSWQYAyABKAUSEgoKcGxh",
-            "eWVyTmFtZRgEIAEoCSJqCg9DcmVhdGVQbGF5ZXJSZXESEQoJYWNjb3VudElk",
-            "GAEgASgDEhQKDGxvZ2luU2Vzc2lvbhgCIAEoCRIQCghyZWdpb25JZBgDIAEo",
-            "BRIMCgRuYW1lGAQgASgJEg4KBmdlbmRlchgFIAEoBSJECg9DcmVhdGVQbGF5",
-            "ZXJSZXMSEQoJYWNjb3VudElkGAEgASgDEhAKCHJlZ2lvbklkGAIgASgFEgwK",
-            "BG5hbWUYAyABKAkiFgoHVGVzdENtZBILCgNjbWQYASABKAlCBloELi9wYmIG",
-            "cHJvdG8z"));
+            "Cgtsb2dpbi5wcm90bxIHZ3NlcnZlchoMcGxheWVyLnByb3RvIpIBCgZSZWdp",
+            "b24SCgoCSWQYASABKAUSDAoETmFtZRgCIAEoCRIlCgZTdGF0dXMYAyABKA4y",
+            "FS5nc2VydmVyLlJlZ2lvblN0YXR1cxIXCg9DcmVhdGVUaW1lc3RhbXAYBCAB",
+            "KAMSFwoPVXBkYXRlVGltZXN0YW1wGAUgASgDEhUKDU9wZW5UaW1lc3RhbXAY",
+            "BiABKAMiVwoOUmVnaW9uUm9sZUluZm8SEAoIUmVnaW9uSWQYASABKAUSEAoI",
+            "UGxheWVySWQYAiABKAMSEgoKUGxheWVyTmFtZRgDIAEoCRINCgVMZXZlbBgE",
+            "IAEoBSJUCghMb2dpblJlcRITCgtBY2NvdW50TmFtZRgBIAEoCRIQCghQYXNz",
+            "d29yZBgCIAEoCRIPCgdWZXJzaW9uGAMgASgJEhAKCENsaWVudElwGAQgASgJ",
+            "Iu0BCghMb2dpblJlcxITCgtBY2NvdW50TmFtZRgBIAEoCRIRCglBY2NvdW50",
+            "SWQYAiABKAMSFAoMTG9naW5TZXNzaW9uGAMgASgJEisKCkdhbWVTZXJ2ZXIY",
+            "BCABKAsyFy5nc2VydmVyLkdhbWVTZXJ2ZXJJbmZvEhEKCUJhblJlYXNvbhgF",
+            "IAEoCRITCgtCYW5EZWFkbGluZRgGIAEoAxIgCgdSZWdpb25zGAcgAygLMg8u",
+            "Z3NlcnZlci5SZWdpb24SLAoLUmVnaW9uUm9sZXMYCCADKAsyFy5nc2VydmVy",
+            "LlJlZ2lvblJvbGVJbmZvIjMKCkFjY291bnRSZWcSEwoLQWNjb3VudE5hbWUY",
+            "ASABKAkSEAoIUGFzc3dvcmQYAiABKAkiNAoKQWNjb3VudFJlcxITCgtBY2Nv",
+            "dW50TmFtZRgBIAEoCRIRCglBY2NvdW50SWQYAiABKAMiPAoOR2FtZVNlcnZl",
+            "ckluZm8SEAoIU2VydmVySWQYASABKAUSGAoQQ2xpZW50TGlzdGVuQWRkchgC",
+            "IAEoCSJyChJQbGF5ZXJFbnRyeUdhbWVSZXESEQoJQWNjb3VudElkGAEgASgD",
+            "EhQKDExvZ2luU2Vzc2lvbhgCIAEoCRIQCghSZWdpb25JZBgDIAEoBRIPCgdW",
+            "ZXJzaW9uGAQgASgJEhAKCENsaWVudElwGAUgASgJIp0BChJQbGF5ZXJFbnRy",
+            "eUdhbWVSZXMSEQoJQWNjb3VudElkGAEgASgDEhAKCFBsYXllcklkGAIgASgD",
+            "EhAKCFJlZ2lvbklkGAMgASgFEhIKClBsYXllck5hbWUYBCABKAkSFAoMR2Ft",
+            "ZVNlcnZlcklkGAUgASgFEhEKCUJhblJlYXNvbhgGIAEoCRITCgtCYW5EZWFk",
+            "bGluZRgHIAEoAyKQAQoWUGxheWVyUmVjb25uZWN0R2FtZVJlcRIRCglBY2Nv",
+            "dW50SWQYASABKAMSEAoIUGxheWVySWQYAiABKAMSGAoQUmVjb25uZWN0U2Vz",
+            "c2lvbhgDIAEoCRIPCgdWZXJzaW9uGAQgASgJEhQKDEdhbWVTZXJ2ZXJJZBgF",
+            "IAEoBRIQCghDbGllbnRJcBgGIAEoCSJ7ChZQbGF5ZXJSZWNvbm5lY3RHYW1l",
+            "UmVzEhEKCUFjY291bnRJZBgBIAEoAxIQCghQbGF5ZXJJZBgCIAEoAxIUCgxH",
+            "YW1lU2VydmVySWQYAyABKAUSEQoJQmFuUmVhc29uGAQgASgJEhMKC0JhbkRl",
+            "YWRsaW5lGAUgASgDIo0BCg9DcmVhdGVQbGF5ZXJSZXESEQoJQWNjb3VudElk",
+            "GAEgASgDEhQKDExvZ2luU2Vzc2lvbhgCIAEoCRIQCghSZWdpb25JZBgDIAEo",
+            "BRIMCgROYW1lGAQgASgJEg4KBkdlbmRlchgFIAEoBRIPCgdWZXJzaW9uGAYg",
+            "ASgJEhAKCENsaWVudElwGAcgASgJIkQKD0NyZWF0ZVBsYXllclJlcxIRCglB",
+            "Y2NvdW50SWQYASABKAMSEAoIUmVnaW9uSWQYAiABKAUSDAoETmFtZRgDIAEo",
+            "CSIWCgdUZXN0Q21kEgsKA0NtZBgBIAEoCSIZCgdUZXN0UmVzEg4KBlJlc3Vs",
+            "dBgBIAEoCSqKAQoMUmVnaW9uU3RhdHVzEhcKE1JlZ2lvblN0YXR1c19Ob3Jt",
+            "YWwQABIcChhSZWdpb25TdGF0dXNfUmVjb21tZW5kZWQQARIjCh9SZWdpb25T",
+            "dGF0dXNfQ2xvc2VkUmVnaXN0cmF0aW9uEAISHgoaUmVnaW9uU3RhdHVzX09u",
+            "bHlXaGl0ZUxpc3QQA0IGWgQuL3BiYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Gserver.PlayerReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.LoginReq), global::Gserver.LoginReq.Parser, new[]{ "AccountName", "Password" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.LoginRes), global::Gserver.LoginRes.Parser, new[]{ "AccountName", "AccountId", "LoginSession", "GameServer" }, null, null, null, null),
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Gserver.RegionStatus), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.Region), global::Gserver.Region.Parser, new[]{ "Id", "Name", "Status", "CreateTimestamp", "UpdateTimestamp", "OpenTimestamp" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.RegionRoleInfo), global::Gserver.RegionRoleInfo.Parser, new[]{ "RegionId", "PlayerId", "PlayerName", "Level" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.LoginReq), global::Gserver.LoginReq.Parser, new[]{ "AccountName", "Password", "Version", "ClientIp" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.LoginRes), global::Gserver.LoginRes.Parser, new[]{ "AccountName", "AccountId", "LoginSession", "GameServer", "BanReason", "BanDeadline", "Regions", "RegionRoles" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.AccountReg), global::Gserver.AccountReg.Parser, new[]{ "AccountName", "Password" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.AccountRes), global::Gserver.AccountRes.Parser, new[]{ "AccountName", "AccountId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.GameServerInfo), global::Gserver.GameServerInfo.Parser, new[]{ "ServerId", "ClientListenAddr" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.PlayerEntryGameReq), global::Gserver.PlayerEntryGameReq.Parser, new[]{ "AccountId", "LoginSession", "RegionId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.PlayerEntryGameRes), global::Gserver.PlayerEntryGameRes.Parser, new[]{ "AccountId", "PlayerId", "RegionId", "PlayerName" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.CreatePlayerReq), global::Gserver.CreatePlayerReq.Parser, new[]{ "AccountId", "LoginSession", "RegionId", "Name", "Gender" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.PlayerEntryGameReq), global::Gserver.PlayerEntryGameReq.Parser, new[]{ "AccountId", "LoginSession", "RegionId", "Version", "ClientIp" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.PlayerEntryGameRes), global::Gserver.PlayerEntryGameRes.Parser, new[]{ "AccountId", "PlayerId", "RegionId", "PlayerName", "GameServerId", "BanReason", "BanDeadline" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.PlayerReconnectGameReq), global::Gserver.PlayerReconnectGameReq.Parser, new[]{ "AccountId", "PlayerId", "ReconnectSession", "Version", "GameServerId", "ClientIp" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.PlayerReconnectGameRes), global::Gserver.PlayerReconnectGameRes.Parser, new[]{ "AccountId", "PlayerId", "GameServerId", "BanReason", "BanDeadline" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.CreatePlayerReq), global::Gserver.CreatePlayerReq.Parser, new[]{ "AccountId", "LoginSession", "RegionId", "Name", "Gender", "Version", "ClientIp" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.CreatePlayerRes), global::Gserver.CreatePlayerRes.Parser, new[]{ "AccountId", "RegionId", "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.TestCmd), global::Gserver.TestCmd.Parser, new[]{ "Cmd" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.TestCmd), global::Gserver.TestCmd.Parser, new[]{ "Cmd" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.TestRes), global::Gserver.TestRes.Parser, new[]{ "Result" }, null, null, null, null)
           }));
     }
     #endregion
 
   }
+  #region Enums
+  /// <summary>
+  /// 区服状态
+  /// </summary>
+  public enum RegionStatus {
+    /// <summary>
+    /// 流畅
+    /// </summary>
+    [pbr::OriginalName("RegionStatus_Normal")] Normal = 0,
+    /// <summary>
+    /// 推荐
+    /// </summary>
+    [pbr::OriginalName("RegionStatus_Recommended")] Recommended = 1,
+    /// <summary>
+    /// 关闭注册新角色
+    /// </summary>
+    [pbr::OriginalName("RegionStatus_ClosedRegistration")] ClosedRegistration = 2,
+    /// <summary>
+    /// 维护:只能白名单进,一般用于内部验收
+    /// </summary>
+    [pbr::OriginalName("RegionStatus_OnlyWhiteList")] OnlyWhiteList = 3,
+  }
+
+  #endregion
+
   #region Messages
+  /// <summary>
+  /// 区服信息
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class Region : pb::IMessage<Region>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<Region> _parser = new pb::MessageParser<Region>(() => new Region());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<Region> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Gserver.LoginReflection.Descriptor.MessageTypes[0]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Region() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Region(Region other) : this() {
+      id_ = other.id_;
+      name_ = other.name_;
+      status_ = other.status_;
+      createTimestamp_ = other.createTimestamp_;
+      updateTimestamp_ = other.updateTimestamp_;
+      openTimestamp_ = other.openTimestamp_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Region Clone() {
+      return new Region(this);
+    }
+
+    /// <summary>Field number for the "Id" field.</summary>
+    public const int IdFieldNumber = 1;
+    private int id_;
+    /// <summary>
+    /// 区服id
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int Id {
+      get { return id_; }
+      set {
+        id_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "Name" field.</summary>
+    public const int NameFieldNumber = 2;
+    private string name_ = "";
+    /// <summary>
+    /// 区服名称
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "Status" field.</summary>
+    public const int StatusFieldNumber = 3;
+    private global::Gserver.RegionStatus status_ = global::Gserver.RegionStatus.Normal;
+    /// <summary>
+    /// 区服状态
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Gserver.RegionStatus Status {
+      get { return status_; }
+      set {
+        status_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "CreateTimestamp" field.</summary>
+    public const int CreateTimestampFieldNumber = 4;
+    private long createTimestamp_;
+    /// <summary>
+    /// 创建时间戳(秒)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long CreateTimestamp {
+      get { return createTimestamp_; }
+      set {
+        createTimestamp_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "UpdateTimestamp" field.</summary>
+    public const int UpdateTimestampFieldNumber = 5;
+    private long updateTimestamp_;
+    /// <summary>
+    /// 最后一次修改的时间戳(秒)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long UpdateTimestamp {
+      get { return updateTimestamp_; }
+      set {
+        updateTimestamp_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "OpenTimestamp" field.</summary>
+    public const int OpenTimestampFieldNumber = 6;
+    private long openTimestamp_;
+    /// <summary>
+    /// 开服时间戳(秒),0=不限制,开服时间前仅白名单账号可进入
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long OpenTimestamp {
+      get { return openTimestamp_; }
+      set {
+        openTimestamp_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as Region);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(Region other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Id != other.Id) return false;
+      if (Name != other.Name) return false;
+      if (Status != other.Status) return false;
+      if (CreateTimestamp != other.CreateTimestamp) return false;
+      if (UpdateTimestamp != other.UpdateTimestamp) return false;
+      if (OpenTimestamp != other.OpenTimestamp) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Id != 0) hash ^= Id.GetHashCode();
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (Status != global::Gserver.RegionStatus.Normal) hash ^= Status.GetHashCode();
+      if (CreateTimestamp != 0L) hash ^= CreateTimestamp.GetHashCode();
+      if (UpdateTimestamp != 0L) hash ^= UpdateTimestamp.GetHashCode();
+      if (OpenTimestamp != 0L) hash ^= OpenTimestamp.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Id != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(Id);
+      }
+      if (Name.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Name);
+      }
+      if (Status != global::Gserver.RegionStatus.Normal) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) Status);
+      }
+      if (CreateTimestamp != 0L) {
+        output.WriteRawTag(32);
+        output.WriteInt64(CreateTimestamp);
+      }
+      if (UpdateTimestamp != 0L) {
+        output.WriteRawTag(40);
+        output.WriteInt64(UpdateTimestamp);
+      }
+      if (OpenTimestamp != 0L) {
+        output.WriteRawTag(48);
+        output.WriteInt64(OpenTimestamp);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Id != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(Id);
+      }
+      if (Name.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Name);
+      }
+      if (Status != global::Gserver.RegionStatus.Normal) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) Status);
+      }
+      if (CreateTimestamp != 0L) {
+        output.WriteRawTag(32);
+        output.WriteInt64(CreateTimestamp);
+      }
+      if (UpdateTimestamp != 0L) {
+        output.WriteRawTag(40);
+        output.WriteInt64(UpdateTimestamp);
+      }
+      if (OpenTimestamp != 0L) {
+        output.WriteRawTag(48);
+        output.WriteInt64(OpenTimestamp);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Id != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Id);
+      }
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (Status != global::Gserver.RegionStatus.Normal) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
+      }
+      if (CreateTimestamp != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(CreateTimestamp);
+      }
+      if (UpdateTimestamp != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(UpdateTimestamp);
+      }
+      if (OpenTimestamp != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(OpenTimestamp);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(Region other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Id != 0) {
+        Id = other.Id;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.Status != global::Gserver.RegionStatus.Normal) {
+        Status = other.Status;
+      }
+      if (other.CreateTimestamp != 0L) {
+        CreateTimestamp = other.CreateTimestamp;
+      }
+      if (other.UpdateTimestamp != 0L) {
+        UpdateTimestamp = other.UpdateTimestamp;
+      }
+      if (other.OpenTimestamp != 0L) {
+        OpenTimestamp = other.OpenTimestamp;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Id = input.ReadInt32();
+            break;
+          }
+          case 18: {
+            Name = input.ReadString();
+            break;
+          }
+          case 24: {
+            Status = (global::Gserver.RegionStatus) input.ReadEnum();
+            break;
+          }
+          case 32: {
+            CreateTimestamp = input.ReadInt64();
+            break;
+          }
+          case 40: {
+            UpdateTimestamp = input.ReadInt64();
+            break;
+          }
+          case 48: {
+            OpenTimestamp = input.ReadInt64();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Id = input.ReadInt32();
+            break;
+          }
+          case 18: {
+            Name = input.ReadString();
+            break;
+          }
+          case 24: {
+            Status = (global::Gserver.RegionStatus) input.ReadEnum();
+            break;
+          }
+          case 32: {
+            CreateTimestamp = input.ReadInt64();
+            break;
+          }
+          case 40: {
+            UpdateTimestamp = input.ReadInt64();
+            break;
+          }
+          case 48: {
+            OpenTimestamp = input.ReadInt64();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// 账号在某区服的角色概要
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class RegionRoleInfo : pb::IMessage<RegionRoleInfo>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<RegionRoleInfo> _parser = new pb::MessageParser<RegionRoleInfo>(() => new RegionRoleInfo());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<RegionRoleInfo> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Gserver.LoginReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RegionRoleInfo() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RegionRoleInfo(RegionRoleInfo other) : this() {
+      regionId_ = other.regionId_;
+      playerId_ = other.playerId_;
+      playerName_ = other.playerName_;
+      level_ = other.level_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RegionRoleInfo Clone() {
+      return new RegionRoleInfo(this);
+    }
+
+    /// <summary>Field number for the "RegionId" field.</summary>
+    public const int RegionIdFieldNumber = 1;
+    private int regionId_;
+    /// <summary>
+    /// 区服id
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int RegionId {
+      get { return regionId_; }
+      set {
+        regionId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "PlayerId" field.</summary>
+    public const int PlayerIdFieldNumber = 2;
+    private long playerId_;
+    /// <summary>
+    /// 角色id
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long PlayerId {
+      get { return playerId_; }
+      set {
+        playerId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "PlayerName" field.</summary>
+    public const int PlayerNameFieldNumber = 3;
+    private string playerName_ = "";
+    /// <summary>
+    /// 角色名
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PlayerName {
+      get { return playerName_; }
+      set {
+        playerName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "Level" field.</summary>
+    public const int LevelFieldNumber = 4;
+    private int level_;
+    /// <summary>
+    /// 角色等级
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int Level {
+      get { return level_; }
+      set {
+        level_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as RegionRoleInfo);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(RegionRoleInfo other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (RegionId != other.RegionId) return false;
+      if (PlayerId != other.PlayerId) return false;
+      if (PlayerName != other.PlayerName) return false;
+      if (Level != other.Level) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (RegionId != 0) hash ^= RegionId.GetHashCode();
+      if (PlayerId != 0L) hash ^= PlayerId.GetHashCode();
+      if (PlayerName.Length != 0) hash ^= PlayerName.GetHashCode();
+      if (Level != 0) hash ^= Level.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (RegionId != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(RegionId);
+      }
+      if (PlayerId != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(PlayerId);
+      }
+      if (PlayerName.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(PlayerName);
+      }
+      if (Level != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(Level);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (RegionId != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(RegionId);
+      }
+      if (PlayerId != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(PlayerId);
+      }
+      if (PlayerName.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(PlayerName);
+      }
+      if (Level != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(Level);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (RegionId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(RegionId);
+      }
+      if (PlayerId != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(PlayerId);
+      }
+      if (PlayerName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PlayerName);
+      }
+      if (Level != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Level);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(RegionRoleInfo other) {
+      if (other == null) {
+        return;
+      }
+      if (other.RegionId != 0) {
+        RegionId = other.RegionId;
+      }
+      if (other.PlayerId != 0L) {
+        PlayerId = other.PlayerId;
+      }
+      if (other.PlayerName.Length != 0) {
+        PlayerName = other.PlayerName;
+      }
+      if (other.Level != 0) {
+        Level = other.Level;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            RegionId = input.ReadInt32();
+            break;
+          }
+          case 16: {
+            PlayerId = input.ReadInt64();
+            break;
+          }
+          case 26: {
+            PlayerName = input.ReadString();
+            break;
+          }
+          case 32: {
+            Level = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            RegionId = input.ReadInt32();
+            break;
+          }
+          case 16: {
+            PlayerId = input.ReadInt64();
+            break;
+          }
+          case 26: {
+            PlayerName = input.ReadString();
+            break;
+          }
+          case 32: {
+            Level = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
   /// <summary>
   /// 账号登录请求
   /// </summary>
@@ -79,7 +842,7 @@ namespace Gserver {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Gserver.LoginReflection.Descriptor.MessageTypes[0]; }
+      get { return global::Gserver.LoginReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -101,6 +864,8 @@ namespace Gserver {
     public LoginReq(LoginReq other) : this() {
       accountName_ = other.accountName_;
       password_ = other.password_;
+      version_ = other.version_;
+      clientIp_ = other.clientIp_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -110,7 +875,7 @@ namespace Gserver {
       return new LoginReq(this);
     }
 
-    /// <summary>Field number for the "accountName" field.</summary>
+    /// <summary>Field number for the "AccountName" field.</summary>
     public const int AccountNameFieldNumber = 1;
     private string accountName_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -122,7 +887,7 @@ namespace Gserver {
       }
     }
 
-    /// <summary>Field number for the "password" field.</summary>
+    /// <summary>Field number for the "Password" field.</summary>
     public const int PasswordFieldNumber = 2;
     private string password_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -131,6 +896,36 @@ namespace Gserver {
       get { return password_; }
       set {
         password_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "Version" field.</summary>
+    public const int VersionFieldNumber = 3;
+    private string version_ = "";
+    /// <summary>
+    /// 客户端版本号,如0.0.0.1
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Version {
+      get { return version_; }
+      set {
+        version_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "ClientIp" field.</summary>
+    public const int ClientIpFieldNumber = 4;
+    private string clientIp_ = "";
+    /// <summary>
+    /// 客户端Ip,网关模式在转发消息时需要传入客户端Ip
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ClientIp {
+      get { return clientIp_; }
+      set {
+        clientIp_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -151,6 +946,8 @@ namespace Gserver {
       }
       if (AccountName != other.AccountName) return false;
       if (Password != other.Password) return false;
+      if (Version != other.Version) return false;
+      if (ClientIp != other.ClientIp) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -160,6 +957,8 @@ namespace Gserver {
       int hash = 1;
       if (AccountName.Length != 0) hash ^= AccountName.GetHashCode();
       if (Password.Length != 0) hash ^= Password.GetHashCode();
+      if (Version.Length != 0) hash ^= Version.GetHashCode();
+      if (ClientIp.Length != 0) hash ^= ClientIp.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -186,6 +985,14 @@ namespace Gserver {
         output.WriteRawTag(18);
         output.WriteString(Password);
       }
+      if (Version.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Version);
+      }
+      if (ClientIp.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(ClientIp);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -204,6 +1011,14 @@ namespace Gserver {
         output.WriteRawTag(18);
         output.WriteString(Password);
       }
+      if (Version.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Version);
+      }
+      if (ClientIp.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(ClientIp);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -219,6 +1034,12 @@ namespace Gserver {
       }
       if (Password.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Password);
+      }
+      if (Version.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Version);
+      }
+      if (ClientIp.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ClientIp);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -237,6 +1058,12 @@ namespace Gserver {
       }
       if (other.Password.Length != 0) {
         Password = other.Password;
+      }
+      if (other.Version.Length != 0) {
+        Version = other.Version;
+      }
+      if (other.ClientIp.Length != 0) {
+        ClientIp = other.ClientIp;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -261,6 +1088,14 @@ namespace Gserver {
             Password = input.ReadString();
             break;
           }
+          case 26: {
+            Version = input.ReadString();
+            break;
+          }
+          case 34: {
+            ClientIp = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -282,6 +1117,14 @@ namespace Gserver {
           }
           case 18: {
             Password = input.ReadString();
+            break;
+          }
+          case 26: {
+            Version = input.ReadString();
+            break;
+          }
+          case 34: {
+            ClientIp = input.ReadString();
             break;
           }
         }
@@ -309,7 +1152,7 @@ namespace Gserver {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Gserver.LoginReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Gserver.LoginReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -333,6 +1176,10 @@ namespace Gserver {
       accountId_ = other.accountId_;
       loginSession_ = other.loginSession_;
       gameServer_ = other.gameServer_ != null ? other.gameServer_.Clone() : null;
+      banReason_ = other.banReason_;
+      banDeadline_ = other.banDeadline_;
+      regions_ = other.regions_.Clone();
+      regionRoles_ = other.regionRoles_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -342,7 +1189,7 @@ namespace Gserver {
       return new LoginRes(this);
     }
 
-    /// <summary>Field number for the "accountName" field.</summary>
+    /// <summary>Field number for the "AccountName" field.</summary>
     public const int AccountNameFieldNumber = 1;
     private string accountName_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -354,7 +1201,7 @@ namespace Gserver {
       }
     }
 
-    /// <summary>Field number for the "accountId" field.</summary>
+    /// <summary>Field number for the "AccountId" field.</summary>
     public const int AccountIdFieldNumber = 2;
     private long accountId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -366,7 +1213,7 @@ namespace Gserver {
       }
     }
 
-    /// <summary>Field number for the "loginSession" field.</summary>
+    /// <summary>Field number for the "LoginSession" field.</summary>
     public const int LoginSessionFieldNumber = 3;
     private string loginSession_ = "";
     /// <summary>
@@ -381,7 +1228,7 @@ namespace Gserver {
       }
     }
 
-    /// <summary>Field number for the "gameServer" field.</summary>
+    /// <summary>Field number for the "GameServer" field.</summary>
     public const int GameServerFieldNumber = 4;
     private global::Gserver.GameServerInfo gameServer_;
     /// <summary>
@@ -394,6 +1241,64 @@ namespace Gserver {
       set {
         gameServer_ = value;
       }
+    }
+
+    /// <summary>Field number for the "BanReason" field.</summary>
+    public const int BanReasonFieldNumber = 5;
+    private string banReason_ = "";
+    /// <summary>
+    /// 封禁原因（封禁时返回）
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string BanReason {
+      get { return banReason_; }
+      set {
+        banReason_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "BanDeadline" field.</summary>
+    public const int BanDeadlineFieldNumber = 6;
+    private long banDeadline_;
+    /// <summary>
+    /// 封禁截止时间戳（秒，0=永久封禁）（封禁时返回）
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long BanDeadline {
+      get { return banDeadline_; }
+      set {
+        banDeadline_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "Regions" field.</summary>
+    public const int RegionsFieldNumber = 7;
+    private static readonly pb::FieldCodec<global::Gserver.Region> _repeated_regions_codec
+        = pb::FieldCodec.ForMessage(58, global::Gserver.Region.Parser);
+    private readonly pbc::RepeatedField<global::Gserver.Region> regions_ = new pbc::RepeatedField<global::Gserver.Region>();
+    /// <summary>
+    /// 区服列表
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Gserver.Region> Regions {
+      get { return regions_; }
+    }
+
+    /// <summary>Field number for the "RegionRoles" field.</summary>
+    public const int RegionRolesFieldNumber = 8;
+    private static readonly pb::FieldCodec<global::Gserver.RegionRoleInfo> _repeated_regionRoles_codec
+        = pb::FieldCodec.ForMessage(66, global::Gserver.RegionRoleInfo.Parser);
+    private readonly pbc::RepeatedField<global::Gserver.RegionRoleInfo> regionRoles_ = new pbc::RepeatedField<global::Gserver.RegionRoleInfo>();
+    /// <summary>
+    /// 该账号在各区服的角色概要
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Gserver.RegionRoleInfo> RegionRoles {
+      get { return regionRoles_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -415,6 +1320,10 @@ namespace Gserver {
       if (AccountId != other.AccountId) return false;
       if (LoginSession != other.LoginSession) return false;
       if (!object.Equals(GameServer, other.GameServer)) return false;
+      if (BanReason != other.BanReason) return false;
+      if (BanDeadline != other.BanDeadline) return false;
+      if(!regions_.Equals(other.regions_)) return false;
+      if(!regionRoles_.Equals(other.regionRoles_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -426,6 +1335,10 @@ namespace Gserver {
       if (AccountId != 0L) hash ^= AccountId.GetHashCode();
       if (LoginSession.Length != 0) hash ^= LoginSession.GetHashCode();
       if (gameServer_ != null) hash ^= GameServer.GetHashCode();
+      if (BanReason.Length != 0) hash ^= BanReason.GetHashCode();
+      if (BanDeadline != 0L) hash ^= BanDeadline.GetHashCode();
+      hash ^= regions_.GetHashCode();
+      hash ^= regionRoles_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -460,6 +1373,16 @@ namespace Gserver {
         output.WriteRawTag(34);
         output.WriteMessage(GameServer);
       }
+      if (BanReason.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(BanReason);
+      }
+      if (BanDeadline != 0L) {
+        output.WriteRawTag(48);
+        output.WriteInt64(BanDeadline);
+      }
+      regions_.WriteTo(output, _repeated_regions_codec);
+      regionRoles_.WriteTo(output, _repeated_regionRoles_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -486,6 +1409,16 @@ namespace Gserver {
         output.WriteRawTag(34);
         output.WriteMessage(GameServer);
       }
+      if (BanReason.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(BanReason);
+      }
+      if (BanDeadline != 0L) {
+        output.WriteRawTag(48);
+        output.WriteInt64(BanDeadline);
+      }
+      regions_.WriteTo(ref output, _repeated_regions_codec);
+      regionRoles_.WriteTo(ref output, _repeated_regionRoles_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -508,6 +1441,14 @@ namespace Gserver {
       if (gameServer_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(GameServer);
       }
+      if (BanReason.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(BanReason);
+      }
+      if (BanDeadline != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(BanDeadline);
+      }
+      size += regions_.CalculateSize(_repeated_regions_codec);
+      size += regionRoles_.CalculateSize(_repeated_regionRoles_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -535,6 +1476,14 @@ namespace Gserver {
         }
         GameServer.MergeFrom(other.GameServer);
       }
+      if (other.BanReason.Length != 0) {
+        BanReason = other.BanReason;
+      }
+      if (other.BanDeadline != 0L) {
+        BanDeadline = other.BanDeadline;
+      }
+      regions_.Add(other.regions_);
+      regionRoles_.Add(other.regionRoles_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -567,6 +1516,22 @@ namespace Gserver {
               GameServer = new global::Gserver.GameServerInfo();
             }
             input.ReadMessage(GameServer);
+            break;
+          }
+          case 42: {
+            BanReason = input.ReadString();
+            break;
+          }
+          case 48: {
+            BanDeadline = input.ReadInt64();
+            break;
+          }
+          case 58: {
+            regions_.AddEntriesFrom(input, _repeated_regions_codec);
+            break;
+          }
+          case 66: {
+            regionRoles_.AddEntriesFrom(input, _repeated_regionRoles_codec);
             break;
           }
         }
@@ -603,6 +1568,22 @@ namespace Gserver {
             input.ReadMessage(GameServer);
             break;
           }
+          case 42: {
+            BanReason = input.ReadString();
+            break;
+          }
+          case 48: {
+            BanDeadline = input.ReadInt64();
+            break;
+          }
+          case 58: {
+            regions_.AddEntriesFrom(ref input, _repeated_regions_codec);
+            break;
+          }
+          case 66: {
+            regionRoles_.AddEntriesFrom(ref input, _repeated_regionRoles_codec);
+            break;
+          }
         }
       }
     }
@@ -628,7 +1609,7 @@ namespace Gserver {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Gserver.LoginReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Gserver.LoginReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -659,7 +1640,7 @@ namespace Gserver {
       return new AccountReg(this);
     }
 
-    /// <summary>Field number for the "accountName" field.</summary>
+    /// <summary>Field number for the "AccountName" field.</summary>
     public const int AccountNameFieldNumber = 1;
     private string accountName_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -671,7 +1652,7 @@ namespace Gserver {
       }
     }
 
-    /// <summary>Field number for the "password" field.</summary>
+    /// <summary>Field number for the "Password" field.</summary>
     public const int PasswordFieldNumber = 2;
     private string password_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -858,7 +1839,7 @@ namespace Gserver {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Gserver.LoginReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Gserver.LoginReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -889,7 +1870,7 @@ namespace Gserver {
       return new AccountRes(this);
     }
 
-    /// <summary>Field number for the "accountName" field.</summary>
+    /// <summary>Field number for the "AccountName" field.</summary>
     public const int AccountNameFieldNumber = 1;
     private string accountName_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -901,7 +1882,7 @@ namespace Gserver {
       }
     }
 
-    /// <summary>Field number for the "accountId" field.</summary>
+    /// <summary>Field number for the "AccountId" field.</summary>
     public const int AccountIdFieldNumber = 2;
     private long accountId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1088,7 +2069,7 @@ namespace Gserver {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Gserver.LoginReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Gserver.LoginReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1119,7 +2100,7 @@ namespace Gserver {
       return new GameServerInfo(this);
     }
 
-    /// <summary>Field number for the "serverId" field.</summary>
+    /// <summary>Field number for the "ServerId" field.</summary>
     public const int ServerIdFieldNumber = 1;
     private int serverId_;
     /// <summary>
@@ -1134,7 +2115,7 @@ namespace Gserver {
       }
     }
 
-    /// <summary>Field number for the "clientListenAddr" field.</summary>
+    /// <summary>Field number for the "ClientListenAddr" field.</summary>
     public const int ClientListenAddrFieldNumber = 2;
     private string clientListenAddr_ = "";
     /// <summary>
@@ -1324,7 +2305,7 @@ namespace Gserver {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Gserver.LoginReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Gserver.LoginReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1347,6 +2328,8 @@ namespace Gserver {
       accountId_ = other.accountId_;
       loginSession_ = other.loginSession_;
       regionId_ = other.regionId_;
+      version_ = other.version_;
+      clientIp_ = other.clientIp_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1356,7 +2339,7 @@ namespace Gserver {
       return new PlayerEntryGameReq(this);
     }
 
-    /// <summary>Field number for the "accountId" field.</summary>
+    /// <summary>Field number for the "AccountId" field.</summary>
     public const int AccountIdFieldNumber = 1;
     private long accountId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1368,7 +2351,7 @@ namespace Gserver {
       }
     }
 
-    /// <summary>Field number for the "loginSession" field.</summary>
+    /// <summary>Field number for the "LoginSession" field.</summary>
     public const int LoginSessionFieldNumber = 2;
     private string loginSession_ = "";
     /// <summary>
@@ -1383,7 +2366,7 @@ namespace Gserver {
       }
     }
 
-    /// <summary>Field number for the "regionId" field.</summary>
+    /// <summary>Field number for the "RegionId" field.</summary>
     public const int RegionIdFieldNumber = 3;
     private int regionId_;
     /// <summary>
@@ -1395,6 +2378,36 @@ namespace Gserver {
       get { return regionId_; }
       set {
         regionId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "Version" field.</summary>
+    public const int VersionFieldNumber = 4;
+    private string version_ = "";
+    /// <summary>
+    /// 客户端版本号,如0.0.0.1
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Version {
+      get { return version_; }
+      set {
+        version_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "ClientIp" field.</summary>
+    public const int ClientIpFieldNumber = 5;
+    private string clientIp_ = "";
+    /// <summary>
+    /// 客户端Ip,网关模式在转发消息时需要传入客户端Ip
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ClientIp {
+      get { return clientIp_; }
+      set {
+        clientIp_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -1416,6 +2429,8 @@ namespace Gserver {
       if (AccountId != other.AccountId) return false;
       if (LoginSession != other.LoginSession) return false;
       if (RegionId != other.RegionId) return false;
+      if (Version != other.Version) return false;
+      if (ClientIp != other.ClientIp) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1426,6 +2441,8 @@ namespace Gserver {
       if (AccountId != 0L) hash ^= AccountId.GetHashCode();
       if (LoginSession.Length != 0) hash ^= LoginSession.GetHashCode();
       if (RegionId != 0) hash ^= RegionId.GetHashCode();
+      if (Version.Length != 0) hash ^= Version.GetHashCode();
+      if (ClientIp.Length != 0) hash ^= ClientIp.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1456,6 +2473,14 @@ namespace Gserver {
         output.WriteRawTag(24);
         output.WriteInt32(RegionId);
       }
+      if (Version.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Version);
+      }
+      if (ClientIp.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(ClientIp);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1478,6 +2503,14 @@ namespace Gserver {
         output.WriteRawTag(24);
         output.WriteInt32(RegionId);
       }
+      if (Version.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Version);
+      }
+      if (ClientIp.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(ClientIp);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1496,6 +2529,12 @@ namespace Gserver {
       }
       if (RegionId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(RegionId);
+      }
+      if (Version.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Version);
+      }
+      if (ClientIp.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ClientIp);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1517,6 +2556,12 @@ namespace Gserver {
       }
       if (other.RegionId != 0) {
         RegionId = other.RegionId;
+      }
+      if (other.Version.Length != 0) {
+        Version = other.Version;
+      }
+      if (other.ClientIp.Length != 0) {
+        ClientIp = other.ClientIp;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1543,6 +2588,14 @@ namespace Gserver {
           }
           case 24: {
             RegionId = input.ReadInt32();
+            break;
+          }
+          case 34: {
+            Version = input.ReadString();
+            break;
+          }
+          case 42: {
+            ClientIp = input.ReadString();
             break;
           }
         }
@@ -1572,6 +2625,14 @@ namespace Gserver {
             RegionId = input.ReadInt32();
             break;
           }
+          case 34: {
+            Version = input.ReadString();
+            break;
+          }
+          case 42: {
+            ClientIp = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -1581,7 +2642,6 @@ namespace Gserver {
 
   /// <summary>
   /// 玩家登录游戏服回复
-  /// @Player
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PlayerEntryGameRes : pb::IMessage<PlayerEntryGameRes>
@@ -1598,7 +2658,7 @@ namespace Gserver {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Gserver.LoginReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Gserver.LoginReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1622,6 +2682,9 @@ namespace Gserver {
       playerId_ = other.playerId_;
       regionId_ = other.regionId_;
       playerName_ = other.playerName_;
+      gameServerId_ = other.gameServerId_;
+      banReason_ = other.banReason_;
+      banDeadline_ = other.banDeadline_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1631,7 +2694,7 @@ namespace Gserver {
       return new PlayerEntryGameRes(this);
     }
 
-    /// <summary>Field number for the "accountId" field.</summary>
+    /// <summary>Field number for the "AccountId" field.</summary>
     public const int AccountIdFieldNumber = 1;
     private long accountId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1643,7 +2706,7 @@ namespace Gserver {
       }
     }
 
-    /// <summary>Field number for the "playerId" field.</summary>
+    /// <summary>Field number for the "PlayerId" field.</summary>
     public const int PlayerIdFieldNumber = 2;
     private long playerId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1655,7 +2718,7 @@ namespace Gserver {
       }
     }
 
-    /// <summary>Field number for the "regionId" field.</summary>
+    /// <summary>Field number for the "RegionId" field.</summary>
     public const int RegionIdFieldNumber = 3;
     private int regionId_;
     /// <summary>
@@ -1670,7 +2733,7 @@ namespace Gserver {
       }
     }
 
-    /// <summary>Field number for the "playerName" field.</summary>
+    /// <summary>Field number for the "PlayerName" field.</summary>
     public const int PlayerNameFieldNumber = 4;
     private string playerName_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1679,6 +2742,51 @@ namespace Gserver {
       get { return playerName_; }
       set {
         playerName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "GameServerId" field.</summary>
+    public const int GameServerIdFieldNumber = 5;
+    private int gameServerId_;
+    /// <summary>
+    /// game服Id,客户端重连时需要带上
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int GameServerId {
+      get { return gameServerId_; }
+      set {
+        gameServerId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "BanReason" field.</summary>
+    public const int BanReasonFieldNumber = 6;
+    private string banReason_ = "";
+    /// <summary>
+    /// 封禁原因（封禁时返回）
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string BanReason {
+      get { return banReason_; }
+      set {
+        banReason_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "BanDeadline" field.</summary>
+    public const int BanDeadlineFieldNumber = 7;
+    private long banDeadline_;
+    /// <summary>
+    /// 封禁截止时间戳（秒，0=永久封禁）（封禁时返回）
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long BanDeadline {
+      get { return banDeadline_; }
+      set {
+        banDeadline_ = value;
       }
     }
 
@@ -1701,6 +2809,9 @@ namespace Gserver {
       if (PlayerId != other.PlayerId) return false;
       if (RegionId != other.RegionId) return false;
       if (PlayerName != other.PlayerName) return false;
+      if (GameServerId != other.GameServerId) return false;
+      if (BanReason != other.BanReason) return false;
+      if (BanDeadline != other.BanDeadline) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1712,6 +2823,9 @@ namespace Gserver {
       if (PlayerId != 0L) hash ^= PlayerId.GetHashCode();
       if (RegionId != 0) hash ^= RegionId.GetHashCode();
       if (PlayerName.Length != 0) hash ^= PlayerName.GetHashCode();
+      if (GameServerId != 0) hash ^= GameServerId.GetHashCode();
+      if (BanReason.Length != 0) hash ^= BanReason.GetHashCode();
+      if (BanDeadline != 0L) hash ^= BanDeadline.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1746,6 +2860,18 @@ namespace Gserver {
         output.WriteRawTag(34);
         output.WriteString(PlayerName);
       }
+      if (GameServerId != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(GameServerId);
+      }
+      if (BanReason.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(BanReason);
+      }
+      if (BanDeadline != 0L) {
+        output.WriteRawTag(56);
+        output.WriteInt64(BanDeadline);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1772,6 +2898,18 @@ namespace Gserver {
         output.WriteRawTag(34);
         output.WriteString(PlayerName);
       }
+      if (GameServerId != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(GameServerId);
+      }
+      if (BanReason.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(BanReason);
+      }
+      if (BanDeadline != 0L) {
+        output.WriteRawTag(56);
+        output.WriteInt64(BanDeadline);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1793,6 +2931,15 @@ namespace Gserver {
       }
       if (PlayerName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(PlayerName);
+      }
+      if (GameServerId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(GameServerId);
+      }
+      if (BanReason.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(BanReason);
+      }
+      if (BanDeadline != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(BanDeadline);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1818,6 +2965,15 @@ namespace Gserver {
       if (other.PlayerName.Length != 0) {
         PlayerName = other.PlayerName;
       }
+      if (other.GameServerId != 0) {
+        GameServerId = other.GameServerId;
+      }
+      if (other.BanReason.Length != 0) {
+        BanReason = other.BanReason;
+      }
+      if (other.BanDeadline != 0L) {
+        BanDeadline = other.BanDeadline;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1849,6 +3005,18 @@ namespace Gserver {
             PlayerName = input.ReadString();
             break;
           }
+          case 40: {
+            GameServerId = input.ReadInt32();
+            break;
+          }
+          case 50: {
+            BanReason = input.ReadString();
+            break;
+          }
+          case 56: {
+            BanDeadline = input.ReadInt64();
+            break;
+          }
         }
       }
     #endif
@@ -1878,6 +3046,758 @@ namespace Gserver {
           }
           case 34: {
             PlayerName = input.ReadString();
+            break;
+          }
+          case 40: {
+            GameServerId = input.ReadInt32();
+            break;
+          }
+          case 50: {
+            BanReason = input.ReadString();
+            break;
+          }
+          case 56: {
+            BanDeadline = input.ReadInt64();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// 玩家重连游戏服
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class PlayerReconnectGameReq : pb::IMessage<PlayerReconnectGameReq>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<PlayerReconnectGameReq> _parser = new pb::MessageParser<PlayerReconnectGameReq>(() => new PlayerReconnectGameReq());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<PlayerReconnectGameReq> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Gserver.LoginReflection.Descriptor.MessageTypes[9]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PlayerReconnectGameReq() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PlayerReconnectGameReq(PlayerReconnectGameReq other) : this() {
+      accountId_ = other.accountId_;
+      playerId_ = other.playerId_;
+      reconnectSession_ = other.reconnectSession_;
+      version_ = other.version_;
+      gameServerId_ = other.gameServerId_;
+      clientIp_ = other.clientIp_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PlayerReconnectGameReq Clone() {
+      return new PlayerReconnectGameReq(this);
+    }
+
+    /// <summary>Field number for the "AccountId" field.</summary>
+    public const int AccountIdFieldNumber = 1;
+    private long accountId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long AccountId {
+      get { return accountId_; }
+      set {
+        accountId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "PlayerId" field.</summary>
+    public const int PlayerIdFieldNumber = 2;
+    private long playerId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long PlayerId {
+      get { return playerId_; }
+      set {
+        playerId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "ReconnectSession" field.</summary>
+    public const int ReconnectSessionFieldNumber = 3;
+    private string reconnectSession_ = "";
+    /// <summary>
+    /// 重连验证session
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ReconnectSession {
+      get { return reconnectSession_; }
+      set {
+        reconnectSession_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "Version" field.</summary>
+    public const int VersionFieldNumber = 4;
+    private string version_ = "";
+    /// <summary>
+    /// 客户端版本号,如0.0.0.1
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Version {
+      get { return version_; }
+      set {
+        version_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "GameServerId" field.</summary>
+    public const int GameServerIdFieldNumber = 5;
+    private int gameServerId_;
+    /// <summary>
+    /// game服Id
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int GameServerId {
+      get { return gameServerId_; }
+      set {
+        gameServerId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "ClientIp" field.</summary>
+    public const int ClientIpFieldNumber = 6;
+    private string clientIp_ = "";
+    /// <summary>
+    /// 客户端Ip,网关模式在转发消息时需要传入客户端Ip
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ClientIp {
+      get { return clientIp_; }
+      set {
+        clientIp_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as PlayerReconnectGameReq);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(PlayerReconnectGameReq other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (AccountId != other.AccountId) return false;
+      if (PlayerId != other.PlayerId) return false;
+      if (ReconnectSession != other.ReconnectSession) return false;
+      if (Version != other.Version) return false;
+      if (GameServerId != other.GameServerId) return false;
+      if (ClientIp != other.ClientIp) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (AccountId != 0L) hash ^= AccountId.GetHashCode();
+      if (PlayerId != 0L) hash ^= PlayerId.GetHashCode();
+      if (ReconnectSession.Length != 0) hash ^= ReconnectSession.GetHashCode();
+      if (Version.Length != 0) hash ^= Version.GetHashCode();
+      if (GameServerId != 0) hash ^= GameServerId.GetHashCode();
+      if (ClientIp.Length != 0) hash ^= ClientIp.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (AccountId != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(AccountId);
+      }
+      if (PlayerId != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(PlayerId);
+      }
+      if (ReconnectSession.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(ReconnectSession);
+      }
+      if (Version.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Version);
+      }
+      if (GameServerId != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(GameServerId);
+      }
+      if (ClientIp.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(ClientIp);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (AccountId != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(AccountId);
+      }
+      if (PlayerId != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(PlayerId);
+      }
+      if (ReconnectSession.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(ReconnectSession);
+      }
+      if (Version.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Version);
+      }
+      if (GameServerId != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(GameServerId);
+      }
+      if (ClientIp.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(ClientIp);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (AccountId != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(AccountId);
+      }
+      if (PlayerId != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(PlayerId);
+      }
+      if (ReconnectSession.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ReconnectSession);
+      }
+      if (Version.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Version);
+      }
+      if (GameServerId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(GameServerId);
+      }
+      if (ClientIp.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ClientIp);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(PlayerReconnectGameReq other) {
+      if (other == null) {
+        return;
+      }
+      if (other.AccountId != 0L) {
+        AccountId = other.AccountId;
+      }
+      if (other.PlayerId != 0L) {
+        PlayerId = other.PlayerId;
+      }
+      if (other.ReconnectSession.Length != 0) {
+        ReconnectSession = other.ReconnectSession;
+      }
+      if (other.Version.Length != 0) {
+        Version = other.Version;
+      }
+      if (other.GameServerId != 0) {
+        GameServerId = other.GameServerId;
+      }
+      if (other.ClientIp.Length != 0) {
+        ClientIp = other.ClientIp;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            AccountId = input.ReadInt64();
+            break;
+          }
+          case 16: {
+            PlayerId = input.ReadInt64();
+            break;
+          }
+          case 26: {
+            ReconnectSession = input.ReadString();
+            break;
+          }
+          case 34: {
+            Version = input.ReadString();
+            break;
+          }
+          case 40: {
+            GameServerId = input.ReadInt32();
+            break;
+          }
+          case 50: {
+            ClientIp = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            AccountId = input.ReadInt64();
+            break;
+          }
+          case 16: {
+            PlayerId = input.ReadInt64();
+            break;
+          }
+          case 26: {
+            ReconnectSession = input.ReadString();
+            break;
+          }
+          case 34: {
+            Version = input.ReadString();
+            break;
+          }
+          case 40: {
+            GameServerId = input.ReadInt32();
+            break;
+          }
+          case 50: {
+            ClientIp = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// 玩家重连游戏服
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class PlayerReconnectGameRes : pb::IMessage<PlayerReconnectGameRes>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<PlayerReconnectGameRes> _parser = new pb::MessageParser<PlayerReconnectGameRes>(() => new PlayerReconnectGameRes());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<PlayerReconnectGameRes> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Gserver.LoginReflection.Descriptor.MessageTypes[10]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PlayerReconnectGameRes() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PlayerReconnectGameRes(PlayerReconnectGameRes other) : this() {
+      accountId_ = other.accountId_;
+      playerId_ = other.playerId_;
+      gameServerId_ = other.gameServerId_;
+      banReason_ = other.banReason_;
+      banDeadline_ = other.banDeadline_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PlayerReconnectGameRes Clone() {
+      return new PlayerReconnectGameRes(this);
+    }
+
+    /// <summary>Field number for the "AccountId" field.</summary>
+    public const int AccountIdFieldNumber = 1;
+    private long accountId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long AccountId {
+      get { return accountId_; }
+      set {
+        accountId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "PlayerId" field.</summary>
+    public const int PlayerIdFieldNumber = 2;
+    private long playerId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long PlayerId {
+      get { return playerId_; }
+      set {
+        playerId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "GameServerId" field.</summary>
+    public const int GameServerIdFieldNumber = 3;
+    private int gameServerId_;
+    /// <summary>
+    /// game服Id
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int GameServerId {
+      get { return gameServerId_; }
+      set {
+        gameServerId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "BanReason" field.</summary>
+    public const int BanReasonFieldNumber = 4;
+    private string banReason_ = "";
+    /// <summary>
+    /// 封禁原因（封禁时返回）
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string BanReason {
+      get { return banReason_; }
+      set {
+        banReason_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "BanDeadline" field.</summary>
+    public const int BanDeadlineFieldNumber = 5;
+    private long banDeadline_;
+    /// <summary>
+    /// 封禁截止时间戳（秒，0=永久封禁）（封禁时返回）
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long BanDeadline {
+      get { return banDeadline_; }
+      set {
+        banDeadline_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as PlayerReconnectGameRes);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(PlayerReconnectGameRes other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (AccountId != other.AccountId) return false;
+      if (PlayerId != other.PlayerId) return false;
+      if (GameServerId != other.GameServerId) return false;
+      if (BanReason != other.BanReason) return false;
+      if (BanDeadline != other.BanDeadline) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (AccountId != 0L) hash ^= AccountId.GetHashCode();
+      if (PlayerId != 0L) hash ^= PlayerId.GetHashCode();
+      if (GameServerId != 0) hash ^= GameServerId.GetHashCode();
+      if (BanReason.Length != 0) hash ^= BanReason.GetHashCode();
+      if (BanDeadline != 0L) hash ^= BanDeadline.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (AccountId != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(AccountId);
+      }
+      if (PlayerId != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(PlayerId);
+      }
+      if (GameServerId != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(GameServerId);
+      }
+      if (BanReason.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(BanReason);
+      }
+      if (BanDeadline != 0L) {
+        output.WriteRawTag(40);
+        output.WriteInt64(BanDeadline);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (AccountId != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(AccountId);
+      }
+      if (PlayerId != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(PlayerId);
+      }
+      if (GameServerId != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(GameServerId);
+      }
+      if (BanReason.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(BanReason);
+      }
+      if (BanDeadline != 0L) {
+        output.WriteRawTag(40);
+        output.WriteInt64(BanDeadline);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (AccountId != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(AccountId);
+      }
+      if (PlayerId != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(PlayerId);
+      }
+      if (GameServerId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(GameServerId);
+      }
+      if (BanReason.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(BanReason);
+      }
+      if (BanDeadline != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(BanDeadline);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(PlayerReconnectGameRes other) {
+      if (other == null) {
+        return;
+      }
+      if (other.AccountId != 0L) {
+        AccountId = other.AccountId;
+      }
+      if (other.PlayerId != 0L) {
+        PlayerId = other.PlayerId;
+      }
+      if (other.GameServerId != 0) {
+        GameServerId = other.GameServerId;
+      }
+      if (other.BanReason.Length != 0) {
+        BanReason = other.BanReason;
+      }
+      if (other.BanDeadline != 0L) {
+        BanDeadline = other.BanDeadline;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            AccountId = input.ReadInt64();
+            break;
+          }
+          case 16: {
+            PlayerId = input.ReadInt64();
+            break;
+          }
+          case 24: {
+            GameServerId = input.ReadInt32();
+            break;
+          }
+          case 34: {
+            BanReason = input.ReadString();
+            break;
+          }
+          case 40: {
+            BanDeadline = input.ReadInt64();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            AccountId = input.ReadInt64();
+            break;
+          }
+          case 16: {
+            PlayerId = input.ReadInt64();
+            break;
+          }
+          case 24: {
+            GameServerId = input.ReadInt32();
+            break;
+          }
+          case 34: {
+            BanReason = input.ReadString();
+            break;
+          }
+          case 40: {
+            BanDeadline = input.ReadInt64();
             break;
           }
         }
@@ -1905,7 +3825,7 @@ namespace Gserver {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Gserver.LoginReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Gserver.LoginReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1930,6 +3850,8 @@ namespace Gserver {
       regionId_ = other.regionId_;
       name_ = other.name_;
       gender_ = other.gender_;
+      version_ = other.version_;
+      clientIp_ = other.clientIp_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1939,7 +3861,7 @@ namespace Gserver {
       return new CreatePlayerReq(this);
     }
 
-    /// <summary>Field number for the "accountId" field.</summary>
+    /// <summary>Field number for the "AccountId" field.</summary>
     public const int AccountIdFieldNumber = 1;
     private long accountId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1951,7 +3873,7 @@ namespace Gserver {
       }
     }
 
-    /// <summary>Field number for the "loginSession" field.</summary>
+    /// <summary>Field number for the "LoginSession" field.</summary>
     public const int LoginSessionFieldNumber = 2;
     private string loginSession_ = "";
     /// <summary>
@@ -1966,7 +3888,7 @@ namespace Gserver {
       }
     }
 
-    /// <summary>Field number for the "regionId" field.</summary>
+    /// <summary>Field number for the "RegionId" field.</summary>
     public const int RegionIdFieldNumber = 3;
     private int regionId_;
     /// <summary>
@@ -1981,7 +3903,7 @@ namespace Gserver {
       }
     }
 
-    /// <summary>Field number for the "name" field.</summary>
+    /// <summary>Field number for the "Name" field.</summary>
     public const int NameFieldNumber = 4;
     private string name_ = "";
     /// <summary>
@@ -1996,7 +3918,7 @@ namespace Gserver {
       }
     }
 
-    /// <summary>Field number for the "gender" field.</summary>
+    /// <summary>Field number for the "Gender" field.</summary>
     public const int GenderFieldNumber = 5;
     private int gender_;
     /// <summary>
@@ -2008,6 +3930,36 @@ namespace Gserver {
       get { return gender_; }
       set {
         gender_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "Version" field.</summary>
+    public const int VersionFieldNumber = 6;
+    private string version_ = "";
+    /// <summary>
+    /// 客户端版本号,如0.0.0.1
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Version {
+      get { return version_; }
+      set {
+        version_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "ClientIp" field.</summary>
+    public const int ClientIpFieldNumber = 7;
+    private string clientIp_ = "";
+    /// <summary>
+    /// 客户端Ip,网关模式在转发消息时需要传入客户端Ip
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ClientIp {
+      get { return clientIp_; }
+      set {
+        clientIp_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -2031,6 +3983,8 @@ namespace Gserver {
       if (RegionId != other.RegionId) return false;
       if (Name != other.Name) return false;
       if (Gender != other.Gender) return false;
+      if (Version != other.Version) return false;
+      if (ClientIp != other.ClientIp) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2043,6 +3997,8 @@ namespace Gserver {
       if (RegionId != 0) hash ^= RegionId.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (Gender != 0) hash ^= Gender.GetHashCode();
+      if (Version.Length != 0) hash ^= Version.GetHashCode();
+      if (ClientIp.Length != 0) hash ^= ClientIp.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2081,6 +4037,14 @@ namespace Gserver {
         output.WriteRawTag(40);
         output.WriteInt32(Gender);
       }
+      if (Version.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(Version);
+      }
+      if (ClientIp.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(ClientIp);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2111,6 +4075,14 @@ namespace Gserver {
         output.WriteRawTag(40);
         output.WriteInt32(Gender);
       }
+      if (Version.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(Version);
+      }
+      if (ClientIp.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(ClientIp);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2135,6 +4107,12 @@ namespace Gserver {
       }
       if (Gender != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Gender);
+      }
+      if (Version.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Version);
+      }
+      if (ClientIp.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ClientIp);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2163,6 +4141,12 @@ namespace Gserver {
       if (other.Gender != 0) {
         Gender = other.Gender;
       }
+      if (other.Version.Length != 0) {
+        Version = other.Version;
+      }
+      if (other.ClientIp.Length != 0) {
+        ClientIp = other.ClientIp;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -2196,6 +4180,14 @@ namespace Gserver {
           }
           case 40: {
             Gender = input.ReadInt32();
+            break;
+          }
+          case 50: {
+            Version = input.ReadString();
+            break;
+          }
+          case 58: {
+            ClientIp = input.ReadString();
             break;
           }
         }
@@ -2233,6 +4225,14 @@ namespace Gserver {
             Gender = input.ReadInt32();
             break;
           }
+          case 50: {
+            Version = input.ReadString();
+            break;
+          }
+          case 58: {
+            ClientIp = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -2258,7 +4258,7 @@ namespace Gserver {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Gserver.LoginReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Gserver.LoginReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2290,7 +4290,7 @@ namespace Gserver {
       return new CreatePlayerRes(this);
     }
 
-    /// <summary>Field number for the "accountId" field.</summary>
+    /// <summary>Field number for the "AccountId" field.</summary>
     public const int AccountIdFieldNumber = 1;
     private long accountId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2302,7 +4302,7 @@ namespace Gserver {
       }
     }
 
-    /// <summary>Field number for the "regionId" field.</summary>
+    /// <summary>Field number for the "RegionId" field.</summary>
     public const int RegionIdFieldNumber = 2;
     private int regionId_;
     /// <summary>
@@ -2317,7 +4317,7 @@ namespace Gserver {
       }
     }
 
-    /// <summary>Field number for the "name" field.</summary>
+    /// <summary>Field number for the "Name" field.</summary>
     public const int NameFieldNumber = 3;
     private string name_ = "";
     /// <summary>
@@ -2531,7 +4531,7 @@ namespace Gserver {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Gserver.LoginReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Gserver.LoginReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2561,7 +4561,7 @@ namespace Gserver {
       return new TestCmd(this);
     }
 
-    /// <summary>Field number for the "cmd" field.</summary>
+    /// <summary>Field number for the "Cmd" field.</summary>
     public const int CmdFieldNumber = 1;
     private string cmd_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2697,6 +4697,199 @@ namespace Gserver {
             break;
           case 10: {
             Cmd = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// 测试命令响应
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class TestRes : pb::IMessage<TestRes>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<TestRes> _parser = new pb::MessageParser<TestRes>(() => new TestRes());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<TestRes> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Gserver.LoginReflection.Descriptor.MessageTypes[14]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TestRes() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TestRes(TestRes other) : this() {
+      result_ = other.result_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TestRes Clone() {
+      return new TestRes(this);
+    }
+
+    /// <summary>Field number for the "Result" field.</summary>
+    public const int ResultFieldNumber = 1;
+    private string result_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Result {
+      get { return result_; }
+      set {
+        result_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as TestRes);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(TestRes other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Result != other.Result) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Result.Length != 0) hash ^= Result.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Result.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Result);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Result.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Result);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Result.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Result);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(TestRes other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Result.Length != 0) {
+        Result = other.Result;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Result = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Result = input.ReadString();
             break;
           }
         }

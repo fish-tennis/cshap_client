@@ -25,52 +25,53 @@ namespace Gserver {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CgxwbGF5ZXIucHJvdG8SB2dzZXJ2ZXIaGWdvb2dsZS9wcm90b2J1Zi9hbnku",
-            "cHJvdG8itQEKCEJhc2VJbmZvEg4KBmdlbmRlchgBIAEoBRINCgVsZXZlbBgC",
-            "IAEoBRILCgNleHAYAyABKAUSEAoIdG90YWxQYXkYBCABKAUSFgoObGFzdFVw",
-            "ZGF0ZURhdGUYBSABKAUSGgoSbGFzdExvZ2luVGltZXN0YW1wGAYgASgDEhsK",
-            "E2xhc3RMb2dvdXRUaW1lc3RhbXAYByABKAMSGgoSdG90YWxPbmxpbmVTZWNv",
-            "bmRzGAggASgFIsICCgtCYWdTYXZlRGF0YRI2CglDb3VudEl0ZW0YASADKAsy",
-            "Iy5nc2VydmVyLkJhZ1NhdmVEYXRhLkNvdW50SXRlbUVudHJ5EjgKClVuaXF1",
-            "ZUl0ZW0YAiADKAsyJC5nc2VydmVyLkJhZ1NhdmVEYXRhLlVuaXF1ZUl0ZW1F",
-            "bnRyeRIuCgVFcXVpcBgDIAMoCzIfLmdzZXJ2ZXIuQmFnU2F2ZURhdGEuRXF1",
-            "aXBFbnRyeRowCg5Db3VudEl0ZW1FbnRyeRILCgNrZXkYASABKAUSDQoFdmFs",
-            "dWUYAiABKAU6AjgBGjEKD1VuaXF1ZUl0ZW1FbnRyeRILCgNrZXkYASABKAMS",
-            "DQoFdmFsdWUYAiABKAw6AjgBGiwKCkVxdWlwRW50cnkSCwoDa2V5GAEgASgD",
-            "Eg0KBXZhbHVlGAIgASgMOgI4ASLbAQoNUXVlc3RTYXZlRGF0YRI2CghmaW5p",
-            "c2hlZBgBIAMoCzIkLmdzZXJ2ZXIuUXVlc3RTYXZlRGF0YS5GaW5pc2hlZEVu",
-            "dHJ5EjIKBnF1ZXN0cxgCIAMoCzIiLmdzZXJ2ZXIuUXVlc3RTYXZlRGF0YS5R",
-            "dWVzdHNFbnRyeRovCg1GaW5pc2hlZEVudHJ5EgsKA2tleRgBIAEoBRINCgV2",
-            "YWx1ZRgCIAEoDDoCOAEaLQoLUXVlc3RzRW50cnkSCwoDa2V5GAEgASgFEg0K",
-            "BXZhbHVlGAIgASgMOgI4ASJACglRdWVzdERhdGESDQoFY2ZnSWQYASABKAUS",
-            "EAoIcHJvZ3Jlc3MYAiABKAUSEgoKYWN0aXZpdHlJZBgDIAEoBSImChFGaW5p",
-            "c2hlZFF1ZXN0RGF0YRIRCgl0aW1lc3RhbXAYASABKAUiIgoPUGxheWVyR3Vp",
-            "bGREYXRhEg8KB2d1aWxkSWQYASABKAMisgQKClBsYXllckRhdGESCwoDX2lk",
-            "GAEgASgDEgwKBE5hbWUYAiABKAkSEQoJQWNjb3VudElkGAMgASgDEhAKCFJl",
-            "Z2lvbklkGAQgASgFEiMKCEJhc2VJbmZvGAUgASgLMhEuZ3NlcnZlci5CYXNl",
-            "SW5mbxIiCgRCYWdzGAcgASgLMhQuZ3NlcnZlci5CYWdTYXZlRGF0YRIlCgVR",
-            "dWVzdBgIIAEoCzIWLmdzZXJ2ZXIuUXVlc3RTYXZlRGF0YRInCgVHdWlsZBgJ",
-            "IAEoCzIYLmdzZXJ2ZXIuUGxheWVyR3VpbGREYXRhEkEKD1BlbmRpbmdNZXNz",
-            "YWdlcxgKIAMoCzIoLmdzZXJ2ZXIuUGxheWVyRGF0YS5QZW5kaW5nTWVzc2Fn",
-            "ZXNFbnRyeRI3CgpBY3Rpdml0aWVzGAsgAygLMiMuZ3NlcnZlci5QbGF5ZXJE",
-            "YXRhLkFjdGl2aXRpZXNFbnRyeRIzCghFeGNoYW5nZRgMIAMoCzIhLmdzZXJ2",
-            "ZXIuUGxheWVyRGF0YS5FeGNoYW5nZUVudHJ5GjYKFFBlbmRpbmdNZXNzYWdl",
-            "c0VudHJ5EgsKA2tleRgBIAEoAxINCgV2YWx1ZRgCIAEoDDoCOAEaMQoPQWN0",
-            "aXZpdGllc0VudHJ5EgsKA2tleRgBIAEoBRINCgV2YWx1ZRgCIAEoDDoCOAEa",
-            "LwoNRXhjaGFuZ2VFbnRyeRILCgNrZXkYASABKAUSDQoFdmFsdWUYAiABKAw6",
-            "AjgBIssBChdBY3Rpdml0eURlZmF1bHRCYXNlRGF0YRIWCg5MYXN0VXBkYXRl",
-            "VGltZRgBIAEoBRIQCghKb2luVGltZRgEIAEoBRJOCg9Qcm9wZXJ0aWVzSW50",
-            "MzIYBSADKAsyNS5nc2VydmVyLkFjdGl2aXR5RGVmYXVsdEJhc2VEYXRhLlBy",
-            "b3BlcnRpZXNJbnQzMkVudHJ5GjYKFFByb3BlcnRpZXNJbnQzMkVudHJ5EgsK",
-            "A2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoBToCOAEidwoOUGVuZGluZ01lc3Nh",
-            "Z2USEQoJbWVzc2FnZUlkGAEgASgDEhUKDXBhY2tldENvbW1hbmQYAiABKAUS",
-            "KAoKcGFja2V0RGF0YRgDIAEoCzIULmdvb2dsZS5wcm90b2J1Zi5BbnkSEQoJ",
-            "dGltZXN0YW1wGAQgASgFIkEKDkV4Y2hhbmdlUmVjb3JkEg0KBUNmZ0lkGAEg",
-            "ASgFEg0KBUNvdW50GAIgASgFEhEKCVRpbWVzdGFtcBgDIAEoBUIGWgQuL3Bi",
-            "YgZwcm90bzM="));
+            "cHJvdG8i6AEKCEJhc2VJbmZvEg4KBkdlbmRlchgBIAEoBRINCgVMZXZlbBgC",
+            "IAEoBRILCgNFeHAYAyABKAUSEAoIVG90YWxQYXkYBCABKAUSFgoOTGFzdFVw",
+            "ZGF0ZURhdGUYBSABKAUSGgoSTGFzdExvZ2luVGltZXN0YW1wGAYgASgDEhsK",
+            "E0xhc3RMb2dvdXRUaW1lc3RhbXAYByABKAMSGgoSVG90YWxPbmxpbmVTZWNv",
+            "bmRzGAggASgFEhgKEFJlY29ubmVjdFNlc3Npb24YCSABKAkSFwoPQ3JlYXRl",
+            "VGltZXN0YW1wGAogASgDIsICCgtCYWdTYXZlRGF0YRI2CglDb3VudEl0ZW0Y",
+            "ASADKAsyIy5nc2VydmVyLkJhZ1NhdmVEYXRhLkNvdW50SXRlbUVudHJ5EjgK",
+            "ClVuaXF1ZUl0ZW0YAiADKAsyJC5nc2VydmVyLkJhZ1NhdmVEYXRhLlVuaXF1",
+            "ZUl0ZW1FbnRyeRIuCgVFcXVpcBgDIAMoCzIfLmdzZXJ2ZXIuQmFnU2F2ZURh",
+            "dGEuRXF1aXBFbnRyeRowCg5Db3VudEl0ZW1FbnRyeRILCgNrZXkYASABKAUS",
+            "DQoFdmFsdWUYAiABKAU6AjgBGjEKD1VuaXF1ZUl0ZW1FbnRyeRILCgNrZXkY",
+            "ASABKAMSDQoFdmFsdWUYAiABKAw6AjgBGiwKCkVxdWlwRW50cnkSCwoDa2V5",
+            "GAEgASgDEg0KBXZhbHVlGAIgASgMOgI4ASLbAQoNUXVlc3RTYXZlRGF0YRI2",
+            "CghGaW5pc2hlZBgBIAMoCzIkLmdzZXJ2ZXIuUXVlc3RTYXZlRGF0YS5GaW5p",
+            "c2hlZEVudHJ5EjIKBlF1ZXN0cxgCIAMoCzIiLmdzZXJ2ZXIuUXVlc3RTYXZl",
+            "RGF0YS5RdWVzdHNFbnRyeRovCg1GaW5pc2hlZEVudHJ5EgsKA2tleRgBIAEo",
+            "BRINCgV2YWx1ZRgCIAEoDDoCOAEaLQoLUXVlc3RzRW50cnkSCwoDa2V5GAEg",
+            "ASgFEg0KBXZhbHVlGAIgASgMOgI4ASJACglRdWVzdERhdGESDQoFQ2ZnSWQY",
+            "ASABKAUSEAoIUHJvZ3Jlc3MYAiABKAUSEgoKQWN0aXZpdHlJZBgDIAEoBSIm",
+            "ChFGaW5pc2hlZFF1ZXN0RGF0YRIRCglUaW1lc3RhbXAYASABKAUiIgoPUGxh",
+            "eWVyR3VpbGREYXRhEg8KB0d1aWxkSWQYASABKAMisgQKClBsYXllckRhdGES",
+            "CwoDX2lkGAEgASgDEgwKBE5hbWUYAiABKAkSEQoJQWNjb3VudElkGAMgASgD",
+            "EhAKCFJlZ2lvbklkGAQgASgFEiMKCEJhc2VJbmZvGAUgASgLMhEuZ3NlcnZl",
+            "ci5CYXNlSW5mbxIiCgRCYWdzGAcgASgLMhQuZ3NlcnZlci5CYWdTYXZlRGF0",
+            "YRIlCgVRdWVzdBgIIAEoCzIWLmdzZXJ2ZXIuUXVlc3RTYXZlRGF0YRInCgVH",
+            "dWlsZBgJIAEoCzIYLmdzZXJ2ZXIuUGxheWVyR3VpbGREYXRhEkEKD1BlbmRp",
+            "bmdNZXNzYWdlcxgKIAMoCzIoLmdzZXJ2ZXIuUGxheWVyRGF0YS5QZW5kaW5n",
+            "TWVzc2FnZXNFbnRyeRI3CgpBY3Rpdml0aWVzGAsgAygLMiMuZ3NlcnZlci5Q",
+            "bGF5ZXJEYXRhLkFjdGl2aXRpZXNFbnRyeRIzCghFeGNoYW5nZRgMIAMoCzIh",
+            "LmdzZXJ2ZXIuUGxheWVyRGF0YS5FeGNoYW5nZUVudHJ5GjYKFFBlbmRpbmdN",
+            "ZXNzYWdlc0VudHJ5EgsKA2tleRgBIAEoAxINCgV2YWx1ZRgCIAEoDDoCOAEa",
+            "MQoPQWN0aXZpdGllc0VudHJ5EgsKA2tleRgBIAEoBRINCgV2YWx1ZRgCIAEo",
+            "DDoCOAEaLwoNRXhjaGFuZ2VFbnRyeRILCgNrZXkYASABKAUSDQoFdmFsdWUY",
+            "AiABKAw6AjgBIssBChdBY3Rpdml0eURlZmF1bHRCYXNlRGF0YRIWCg5MYXN0",
+            "VXBkYXRlVGltZRgBIAEoBRIQCghKb2luVGltZRgEIAEoBRJOCg9Qcm9wZXJ0",
+            "aWVzSW50MzIYBSADKAsyNS5nc2VydmVyLkFjdGl2aXR5RGVmYXVsdEJhc2VE",
+            "YXRhLlByb3BlcnRpZXNJbnQzMkVudHJ5GjYKFFByb3BlcnRpZXNJbnQzMkVu",
+            "dHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoBToCOAEidwoOUGVuZGlu",
+            "Z01lc3NhZ2USEQoJTWVzc2FnZUlkGAEgASgDEhUKDVBhY2tldENvbW1hbmQY",
+            "AiABKAUSKAoKUGFja2V0RGF0YRgDIAEoCzIULmdvb2dsZS5wcm90b2J1Zi5B",
+            "bnkSEQoJVGltZXN0YW1wGAQgASgFIkEKDkV4Y2hhbmdlUmVjb3JkEg0KBUNm",
+            "Z0lkGAEgASgFEg0KBUNvdW50GAIgASgFEhEKCVRpbWVzdGFtcBgDIAEoBUIG",
+            "WgQuL3BiYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.AnyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.BaseInfo), global::Gserver.BaseInfo.Parser, new[]{ "Gender", "Level", "Exp", "TotalPay", "LastUpdateDate", "LastLoginTimestamp", "LastLogoutTimestamp", "TotalOnlineSeconds" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.BaseInfo), global::Gserver.BaseInfo.Parser, new[]{ "Gender", "Level", "Exp", "TotalPay", "LastUpdateDate", "LastLoginTimestamp", "LastLogoutTimestamp", "TotalOnlineSeconds", "ReconnectSession", "CreateTimestamp" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.BagSaveData), global::Gserver.BagSaveData.Parser, new[]{ "CountItem", "UniqueItem", "Equip" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.QuestSaveData), global::Gserver.QuestSaveData.Parser, new[]{ "Finished", "Quests" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.QuestData), global::Gserver.QuestData.Parser, new[]{ "CfgId", "Progress", "ActivityId" }, null, null, null, null),
@@ -132,6 +133,8 @@ namespace Gserver {
       lastLoginTimestamp_ = other.lastLoginTimestamp_;
       lastLogoutTimestamp_ = other.lastLogoutTimestamp_;
       totalOnlineSeconds_ = other.totalOnlineSeconds_;
+      reconnectSession_ = other.reconnectSession_;
+      createTimestamp_ = other.createTimestamp_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -141,7 +144,7 @@ namespace Gserver {
       return new BaseInfo(this);
     }
 
-    /// <summary>Field number for the "gender" field.</summary>
+    /// <summary>Field number for the "Gender" field.</summary>
     public const int GenderFieldNumber = 1;
     private int gender_;
     /// <summary>
@@ -156,7 +159,7 @@ namespace Gserver {
       }
     }
 
-    /// <summary>Field number for the "level" field.</summary>
+    /// <summary>Field number for the "Level" field.</summary>
     public const int LevelFieldNumber = 2;
     private int level_;
     /// <summary>
@@ -171,7 +174,7 @@ namespace Gserver {
       }
     }
 
-    /// <summary>Field number for the "exp" field.</summary>
+    /// <summary>Field number for the "Exp" field.</summary>
     public const int ExpFieldNumber = 3;
     private int exp_;
     /// <summary>
@@ -186,7 +189,7 @@ namespace Gserver {
       }
     }
 
-    /// <summary>Field number for the "totalPay" field.</summary>
+    /// <summary>Field number for the "TotalPay" field.</summary>
     public const int TotalPayFieldNumber = 4;
     private int totalPay_;
     /// <summary>
@@ -201,7 +204,7 @@ namespace Gserver {
       }
     }
 
-    /// <summary>Field number for the "lastUpdateDate" field.</summary>
+    /// <summary>Field number for the "LastUpdateDate" field.</summary>
     public const int LastUpdateDateFieldNumber = 5;
     private int lastUpdateDate_;
     /// <summary>
@@ -216,7 +219,7 @@ namespace Gserver {
       }
     }
 
-    /// <summary>Field number for the "lastLoginTimestamp" field.</summary>
+    /// <summary>Field number for the "LastLoginTimestamp" field.</summary>
     public const int LastLoginTimestampFieldNumber = 6;
     private long lastLoginTimestamp_;
     /// <summary>
@@ -231,7 +234,7 @@ namespace Gserver {
       }
     }
 
-    /// <summary>Field number for the "lastLogoutTimestamp" field.</summary>
+    /// <summary>Field number for the "LastLogoutTimestamp" field.</summary>
     public const int LastLogoutTimestampFieldNumber = 7;
     private long lastLogoutTimestamp_;
     /// <summary>
@@ -246,7 +249,7 @@ namespace Gserver {
       }
     }
 
-    /// <summary>Field number for the "totalOnlineSeconds" field.</summary>
+    /// <summary>Field number for the "TotalOnlineSeconds" field.</summary>
     public const int TotalOnlineSecondsFieldNumber = 8;
     private int totalOnlineSeconds_;
     /// <summary>
@@ -258,6 +261,36 @@ namespace Gserver {
       get { return totalOnlineSeconds_; }
       set {
         totalOnlineSeconds_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "ReconnectSession" field.</summary>
+    public const int ReconnectSessionFieldNumber = 9;
+    private string reconnectSession_ = "";
+    /// <summary>
+    /// 重连验证session
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ReconnectSession {
+      get { return reconnectSession_; }
+      set {
+        reconnectSession_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "CreateTimestamp" field.</summary>
+    public const int CreateTimestampFieldNumber = 10;
+    private long createTimestamp_;
+    /// <summary>
+    /// 创建角色时间戳(秒)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long CreateTimestamp {
+      get { return createTimestamp_; }
+      set {
+        createTimestamp_ = value;
       }
     }
 
@@ -284,6 +317,8 @@ namespace Gserver {
       if (LastLoginTimestamp != other.LastLoginTimestamp) return false;
       if (LastLogoutTimestamp != other.LastLogoutTimestamp) return false;
       if (TotalOnlineSeconds != other.TotalOnlineSeconds) return false;
+      if (ReconnectSession != other.ReconnectSession) return false;
+      if (CreateTimestamp != other.CreateTimestamp) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -299,6 +334,8 @@ namespace Gserver {
       if (LastLoginTimestamp != 0L) hash ^= LastLoginTimestamp.GetHashCode();
       if (LastLogoutTimestamp != 0L) hash ^= LastLogoutTimestamp.GetHashCode();
       if (TotalOnlineSeconds != 0) hash ^= TotalOnlineSeconds.GetHashCode();
+      if (ReconnectSession.Length != 0) hash ^= ReconnectSession.GetHashCode();
+      if (CreateTimestamp != 0L) hash ^= CreateTimestamp.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -349,6 +386,14 @@ namespace Gserver {
         output.WriteRawTag(64);
         output.WriteInt32(TotalOnlineSeconds);
       }
+      if (ReconnectSession.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(ReconnectSession);
+      }
+      if (CreateTimestamp != 0L) {
+        output.WriteRawTag(80);
+        output.WriteInt64(CreateTimestamp);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -391,6 +436,14 @@ namespace Gserver {
         output.WriteRawTag(64);
         output.WriteInt32(TotalOnlineSeconds);
       }
+      if (ReconnectSession.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(ReconnectSession);
+      }
+      if (CreateTimestamp != 0L) {
+        output.WriteRawTag(80);
+        output.WriteInt64(CreateTimestamp);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -424,6 +477,12 @@ namespace Gserver {
       }
       if (TotalOnlineSeconds != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(TotalOnlineSeconds);
+      }
+      if (ReconnectSession.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ReconnectSession);
+      }
+      if (CreateTimestamp != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(CreateTimestamp);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -460,6 +519,12 @@ namespace Gserver {
       }
       if (other.TotalOnlineSeconds != 0) {
         TotalOnlineSeconds = other.TotalOnlineSeconds;
+      }
+      if (other.ReconnectSession.Length != 0) {
+        ReconnectSession = other.ReconnectSession;
+      }
+      if (other.CreateTimestamp != 0L) {
+        CreateTimestamp = other.CreateTimestamp;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -508,6 +573,14 @@ namespace Gserver {
             TotalOnlineSeconds = input.ReadInt32();
             break;
           }
+          case 74: {
+            ReconnectSession = input.ReadString();
+            break;
+          }
+          case 80: {
+            CreateTimestamp = input.ReadInt64();
+            break;
+          }
         }
       }
     #endif
@@ -553,6 +626,14 @@ namespace Gserver {
           }
           case 64: {
             TotalOnlineSeconds = input.ReadInt32();
+            break;
+          }
+          case 74: {
+            ReconnectSession = input.ReadString();
+            break;
+          }
+          case 80: {
+            CreateTimestamp = input.ReadInt64();
             break;
           }
         }
@@ -845,7 +926,7 @@ namespace Gserver {
       return new QuestSaveData(this);
     }
 
-    /// <summary>Field number for the "finished" field.</summary>
+    /// <summary>Field number for the "Finished" field.</summary>
     public const int FinishedFieldNumber = 1;
     private static readonly pbc::MapField<int, pb::ByteString>.Codec _map_finished_codec
         = new pbc::MapField<int, pb::ByteString>.Codec(pb::FieldCodec.ForInt32(8, 0), pb::FieldCodec.ForBytes(18, pb::ByteString.Empty), 10);
@@ -859,7 +940,7 @@ namespace Gserver {
       get { return finished_; }
     }
 
-    /// <summary>Field number for the "quests" field.</summary>
+    /// <summary>Field number for the "Quests" field.</summary>
     public const int QuestsFieldNumber = 2;
     private static readonly pbc::MapField<int, pb::ByteString>.Codec _map_quests_codec
         = new pbc::MapField<int, pb::ByteString>.Codec(pb::FieldCodec.ForInt32(8, 0), pb::FieldCodec.ForBytes(18, pb::ByteString.Empty), 18);
@@ -1060,7 +1141,7 @@ namespace Gserver {
       return new QuestData(this);
     }
 
-    /// <summary>Field number for the "cfgId" field.</summary>
+    /// <summary>Field number for the "CfgId" field.</summary>
     public const int CfgIdFieldNumber = 1;
     private int cfgId_;
     /// <summary>
@@ -1075,7 +1156,7 @@ namespace Gserver {
       }
     }
 
-    /// <summary>Field number for the "progress" field.</summary>
+    /// <summary>Field number for the "Progress" field.</summary>
     public const int ProgressFieldNumber = 2;
     private int progress_;
     /// <summary>
@@ -1090,7 +1171,7 @@ namespace Gserver {
       }
     }
 
-    /// <summary>Field number for the "activityId" field.</summary>
+    /// <summary>Field number for the "ActivityId" field.</summary>
     public const int ActivityIdFieldNumber = 3;
     private int activityId_;
     /// <summary>
@@ -1334,7 +1415,7 @@ namespace Gserver {
       return new FinishedQuestData(this);
     }
 
-    /// <summary>Field number for the "timestamp" field.</summary>
+    /// <summary>Field number for the "Timestamp" field.</summary>
     public const int TimestampFieldNumber = 1;
     private int timestamp_;
     /// <summary>
@@ -1530,7 +1611,7 @@ namespace Gserver {
       return new PlayerGuildData(this);
     }
 
-    /// <summary>Field number for the "guildId" field.</summary>
+    /// <summary>Field number for the "GuildId" field.</summary>
     public const int GuildIdFieldNumber = 1;
     private long guildId_;
     /// <summary>
@@ -2582,7 +2663,7 @@ namespace Gserver {
       return new PendingMessage(this);
     }
 
-    /// <summary>Field number for the "messageId" field.</summary>
+    /// <summary>Field number for the "MessageId" field.</summary>
     public const int MessageIdFieldNumber = 1;
     private long messageId_;
     /// <summary>
@@ -2597,7 +2678,7 @@ namespace Gserver {
       }
     }
 
-    /// <summary>Field number for the "packetCommand" field.</summary>
+    /// <summary>Field number for the "PacketCommand" field.</summary>
     public const int PacketCommandFieldNumber = 2;
     private int packetCommand_;
     /// <summary>
@@ -2612,7 +2693,7 @@ namespace Gserver {
       }
     }
 
-    /// <summary>Field number for the "packetData" field.</summary>
+    /// <summary>Field number for the "PacketData" field.</summary>
     public const int PacketDataFieldNumber = 3;
     private global::Google.Protobuf.WellKnownTypes.Any packetData_;
     /// <summary>
@@ -2627,7 +2708,7 @@ namespace Gserver {
       }
     }
 
-    /// <summary>Field number for the "timestamp" field.</summary>
+    /// <summary>Field number for the "Timestamp" field.</summary>
     public const int TimestampFieldNumber = 4;
     private int timestamp_;
     /// <summary>

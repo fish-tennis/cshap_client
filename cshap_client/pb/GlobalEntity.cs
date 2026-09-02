@@ -25,12 +25,12 @@ namespace Gserver {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChNnbG9iYWxfZW50aXR5LnByb3RvEgdnc2VydmVyImYKD1Byb2Nlc3NTdGF0",
-            "SW5mbxIcChRsYXN0U3RhcnR1cFRpbWVzdGFtcBgBIAEoAxIdChVsYXN0U2h1",
-            "dGRvd25UaW1lc3RhbXAYAiABKAMSFgoObGFzdFVwZGF0ZURhdGUYAyABKAUi",
-            "UgoQR2xvYmFsRW50aXR5RGF0YRILCgNrZXkYASABKAkSMQoPcHJvY2Vzc1N0",
+            "SW5mbxIcChRMYXN0U3RhcnR1cFRpbWVzdGFtcBgBIAEoAxIdChVMYXN0U2h1",
+            "dGRvd25UaW1lc3RhbXAYAiABKAMSFgoOTGFzdFVwZGF0ZURhdGUYAyABKAUi",
+            "UgoQR2xvYmFsRW50aXR5RGF0YRILCgNLZXkYASABKAkSMQoPUHJvY2Vzc1N0",
             "YXRJbmZvGAIgASgLMhguZ3NlcnZlci5Qcm9jZXNzU3RhdEluZm8iHwoKU3Rh",
-            "cnR1cFJlcRIRCgl0aW1lc3RhbXAYASABKAMiIAoLU2h1dGRvd25SZXESEQoJ",
-            "dGltZXN0YW1wGAEgASgDQgZaBC4vcGJiBnByb3RvMw=="));
+            "cnR1cFJlcRIRCglUaW1lc3RhbXAYASABKAMiIAoLU2h1dGRvd25SZXESEQoJ",
+            "VGltZXN0YW1wGAEgASgDQgZaBC4vcGJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -94,7 +94,7 @@ namespace Gserver {
       return new ProcessStatInfo(this);
     }
 
-    /// <summary>Field number for the "lastStartupTimestamp" field.</summary>
+    /// <summary>Field number for the "LastStartupTimestamp" field.</summary>
     public const int LastStartupTimestampFieldNumber = 1;
     private long lastStartupTimestamp_;
     /// <summary>
@@ -109,7 +109,7 @@ namespace Gserver {
       }
     }
 
-    /// <summary>Field number for the "lastShutdownTimestamp" field.</summary>
+    /// <summary>Field number for the "LastShutdownTimestamp" field.</summary>
     public const int LastShutdownTimestampFieldNumber = 2;
     private long lastShutdownTimestamp_;
     /// <summary>
@@ -124,7 +124,7 @@ namespace Gserver {
       }
     }
 
-    /// <summary>Field number for the "lastUpdateDate" field.</summary>
+    /// <summary>Field number for the "LastUpdateDate" field.</summary>
     public const int LastUpdateDateFieldNumber = 3;
     private int lastUpdateDate_;
     /// <summary>
@@ -370,7 +370,7 @@ namespace Gserver {
       return new GlobalEntityData(this);
     }
 
-    /// <summary>Field number for the "key" field.</summary>
+    /// <summary>Field number for the "Key" field.</summary>
     public const int KeyFieldNumber = 1;
     private string key_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -382,7 +382,7 @@ namespace Gserver {
       }
     }
 
-    /// <summary>Field number for the "processStatInfo" field.</summary>
+    /// <summary>Field number for the "ProcessStatInfo" field.</summary>
     public const int ProcessStatInfoFieldNumber = 2;
     private global::Gserver.ProcessStatInfo processStatInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -605,7 +605,7 @@ namespace Gserver {
       return new StartupReq(this);
     }
 
-    /// <summary>Field number for the "timestamp" field.</summary>
+    /// <summary>Field number for the "Timestamp" field.</summary>
     public const int TimestampFieldNumber = 1;
     private long timestamp_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -795,7 +795,7 @@ namespace Gserver {
       return new ShutdownReq(this);
     }
 
-    /// <summary>Field number for the "timestamp" field.</summary>
+    /// <summary>Field number for the "Timestamp" field.</summary>
     public const int TimestampFieldNumber = 1;
     private long timestamp_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

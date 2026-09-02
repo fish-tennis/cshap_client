@@ -24,21 +24,22 @@ namespace Gserver {
     static ItemReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CgppdGVtLnByb3RvEgdnc2VydmVyIikKCUNvdW50SXRlbRINCgVjZmdJZBgB",
-            "IAEoBRINCgVjb3VudBgCIAEoBSJDCg9VbmlxdWVDb3VudEl0ZW0SEAoIdW5p",
-            "cXVlSWQYASABKAMSDQoFY2ZnSWQYAiABKAUSDwoHdGltZW91dBgDIAEoBSI5",
-            "CgVFcXVpcBIQCgh1bmlxdWVJZBgBIAEoAxINCgVjZmdJZBgCIAEoBRIPCgd0",
-            "aW1lb3V0GAMgASgFIi0KCkl0ZW1Vc2VSZXESDQoFY2ZnSWQYASABKAUSEAoI",
-            "dW5pcXVlSWQYAiABKAMiLQoKSXRlbVVzZVJlcxINCgVjZmdJZBgBIAEoBRIQ",
-            "Cgh1bmlxdWVJZBgCIAEoA0IGWgQuL3BiYgZwcm90bzM="));
+            "CgppdGVtLnByb3RvEgdnc2VydmVyIikKCUNvdW50SXRlbRINCgVDZmdJZBgB",
+            "IAEoBRINCgVDb3VudBgCIAEoBSJDCg9VbmlxdWVDb3VudEl0ZW0SEAoIVW5p",
+            "cXVlSWQYASABKAMSDQoFQ2ZnSWQYAiABKAUSDwoHVGltZW91dBgDIAEoBSI5",
+            "CgVFcXVpcBIQCghVbmlxdWVJZBgBIAEoAxINCgVDZmdJZBgCIAEoBRIPCgdU",
+            "aW1lb3V0GAMgASgFIjoKCkl0ZW1Vc2VSZXESDQoFQ2ZnSWQYASABKAUSEAoI",
+            "VW5pcXVlSWQYAiABKAMSCwoDTnVtGAMgASgFIjoKCkl0ZW1Vc2VSZXMSDQoF",
+            "Q2ZnSWQYASABKAUSEAoIVW5pcXVlSWQYAiABKAMSCwoDTnVtGAMgASgFQgZa",
+            "BC4vcGJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.CountItem), global::Gserver.CountItem.Parser, new[]{ "CfgId", "Count" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.UniqueCountItem), global::Gserver.UniqueCountItem.Parser, new[]{ "UniqueId", "CfgId", "Timeout" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.Equip), global::Gserver.Equip.Parser, new[]{ "UniqueId", "CfgId", "Timeout" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.ItemUseReq), global::Gserver.ItemUseReq.Parser, new[]{ "CfgId", "UniqueId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.ItemUseRes), global::Gserver.ItemUseRes.Parser, new[]{ "CfgId", "UniqueId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.ItemUseReq), global::Gserver.ItemUseReq.Parser, new[]{ "CfgId", "UniqueId", "Num" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.ItemUseRes), global::Gserver.ItemUseRes.Parser, new[]{ "CfgId", "UniqueId", "Num" }, null, null, null, null)
           }));
     }
     #endregion
@@ -94,7 +95,7 @@ namespace Gserver {
       return new CountItem(this);
     }
 
-    /// <summary>Field number for the "cfgId" field.</summary>
+    /// <summary>Field number for the "CfgId" field.</summary>
     public const int CfgIdFieldNumber = 1;
     private int cfgId_;
     /// <summary>
@@ -109,7 +110,7 @@ namespace Gserver {
       }
     }
 
-    /// <summary>Field number for the "count" field.</summary>
+    /// <summary>Field number for the "Count" field.</summary>
     public const int CountFieldNumber = 2;
     private int count_;
     /// <summary>
@@ -331,7 +332,7 @@ namespace Gserver {
       return new UniqueCountItem(this);
     }
 
-    /// <summary>Field number for the "uniqueId" field.</summary>
+    /// <summary>Field number for the "UniqueId" field.</summary>
     public const int UniqueIdFieldNumber = 1;
     private long uniqueId_;
     /// <summary>
@@ -346,7 +347,7 @@ namespace Gserver {
       }
     }
 
-    /// <summary>Field number for the "cfgId" field.</summary>
+    /// <summary>Field number for the "CfgId" field.</summary>
     public const int CfgIdFieldNumber = 2;
     private int cfgId_;
     /// <summary>
@@ -361,7 +362,7 @@ namespace Gserver {
       }
     }
 
-    /// <summary>Field number for the "timeout" field.</summary>
+    /// <summary>Field number for the "Timeout" field.</summary>
     public const int TimeoutFieldNumber = 3;
     private int timeout_;
     /// <summary>
@@ -607,7 +608,7 @@ namespace Gserver {
       return new Equip(this);
     }
 
-    /// <summary>Field number for the "uniqueId" field.</summary>
+    /// <summary>Field number for the "UniqueId" field.</summary>
     public const int UniqueIdFieldNumber = 1;
     private long uniqueId_;
     /// <summary>
@@ -622,11 +623,11 @@ namespace Gserver {
       }
     }
 
-    /// <summary>Field number for the "cfgId" field.</summary>
+    /// <summary>Field number for the "CfgId" field.</summary>
     public const int CfgIdFieldNumber = 2;
     private int cfgId_;
     /// <summary>
-    /// 物品配置id
+    /// 装备配置id，引用 EquipCfg.CfgId
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -637,7 +638,7 @@ namespace Gserver {
       }
     }
 
-    /// <summary>Field number for the "timeout" field.</summary>
+    /// <summary>Field number for the "Timeout" field.</summary>
     public const int TimeoutFieldNumber = 3;
     private int timeout_;
     /// <summary>
@@ -873,6 +874,7 @@ namespace Gserver {
     public ItemUseReq(ItemUseReq other) : this() {
       cfgId_ = other.cfgId_;
       uniqueId_ = other.uniqueId_;
+      num_ = other.num_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -882,7 +884,7 @@ namespace Gserver {
       return new ItemUseReq(this);
     }
 
-    /// <summary>Field number for the "cfgId" field.</summary>
+    /// <summary>Field number for the "CfgId" field.</summary>
     public const int CfgIdFieldNumber = 1;
     private int cfgId_;
     /// <summary>
@@ -897,7 +899,7 @@ namespace Gserver {
       }
     }
 
-    /// <summary>Field number for the "uniqueId" field.</summary>
+    /// <summary>Field number for the "UniqueId" field.</summary>
     public const int UniqueIdFieldNumber = 2;
     private long uniqueId_;
     /// <summary>
@@ -909,6 +911,18 @@ namespace Gserver {
       get { return uniqueId_; }
       set {
         uniqueId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "Num" field.</summary>
+    public const int NumFieldNumber = 3;
+    private int num_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int Num {
+      get { return num_; }
+      set {
+        num_ = value;
       }
     }
 
@@ -929,6 +943,7 @@ namespace Gserver {
       }
       if (CfgId != other.CfgId) return false;
       if (UniqueId != other.UniqueId) return false;
+      if (Num != other.Num) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -938,6 +953,7 @@ namespace Gserver {
       int hash = 1;
       if (CfgId != 0) hash ^= CfgId.GetHashCode();
       if (UniqueId != 0L) hash ^= UniqueId.GetHashCode();
+      if (Num != 0) hash ^= Num.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -964,6 +980,10 @@ namespace Gserver {
         output.WriteRawTag(16);
         output.WriteInt64(UniqueId);
       }
+      if (Num != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(Num);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -982,6 +1002,10 @@ namespace Gserver {
         output.WriteRawTag(16);
         output.WriteInt64(UniqueId);
       }
+      if (Num != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(Num);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -997,6 +1021,9 @@ namespace Gserver {
       }
       if (UniqueId != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(UniqueId);
+      }
+      if (Num != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Num);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1015,6 +1042,9 @@ namespace Gserver {
       }
       if (other.UniqueId != 0L) {
         UniqueId = other.UniqueId;
+      }
+      if (other.Num != 0) {
+        Num = other.Num;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1039,6 +1069,10 @@ namespace Gserver {
             UniqueId = input.ReadInt64();
             break;
           }
+          case 24: {
+            Num = input.ReadInt32();
+            break;
+          }
         }
       }
     #endif
@@ -1060,6 +1094,10 @@ namespace Gserver {
           }
           case 16: {
             UniqueId = input.ReadInt64();
+            break;
+          }
+          case 24: {
+            Num = input.ReadInt32();
             break;
           }
         }
@@ -1109,6 +1147,7 @@ namespace Gserver {
     public ItemUseRes(ItemUseRes other) : this() {
       cfgId_ = other.cfgId_;
       uniqueId_ = other.uniqueId_;
+      num_ = other.num_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1118,7 +1157,7 @@ namespace Gserver {
       return new ItemUseRes(this);
     }
 
-    /// <summary>Field number for the "cfgId" field.</summary>
+    /// <summary>Field number for the "CfgId" field.</summary>
     public const int CfgIdFieldNumber = 1;
     private int cfgId_;
     /// <summary>
@@ -1133,7 +1172,7 @@ namespace Gserver {
       }
     }
 
-    /// <summary>Field number for the "uniqueId" field.</summary>
+    /// <summary>Field number for the "UniqueId" field.</summary>
     public const int UniqueIdFieldNumber = 2;
     private long uniqueId_;
     /// <summary>
@@ -1145,6 +1184,18 @@ namespace Gserver {
       get { return uniqueId_; }
       set {
         uniqueId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "Num" field.</summary>
+    public const int NumFieldNumber = 3;
+    private int num_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int Num {
+      get { return num_; }
+      set {
+        num_ = value;
       }
     }
 
@@ -1165,6 +1216,7 @@ namespace Gserver {
       }
       if (CfgId != other.CfgId) return false;
       if (UniqueId != other.UniqueId) return false;
+      if (Num != other.Num) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1174,6 +1226,7 @@ namespace Gserver {
       int hash = 1;
       if (CfgId != 0) hash ^= CfgId.GetHashCode();
       if (UniqueId != 0L) hash ^= UniqueId.GetHashCode();
+      if (Num != 0) hash ^= Num.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1200,6 +1253,10 @@ namespace Gserver {
         output.WriteRawTag(16);
         output.WriteInt64(UniqueId);
       }
+      if (Num != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(Num);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1218,6 +1275,10 @@ namespace Gserver {
         output.WriteRawTag(16);
         output.WriteInt64(UniqueId);
       }
+      if (Num != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(Num);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1233,6 +1294,9 @@ namespace Gserver {
       }
       if (UniqueId != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(UniqueId);
+      }
+      if (Num != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Num);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1251,6 +1315,9 @@ namespace Gserver {
       }
       if (other.UniqueId != 0L) {
         UniqueId = other.UniqueId;
+      }
+      if (other.Num != 0) {
+        Num = other.Num;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1275,6 +1342,10 @@ namespace Gserver {
             UniqueId = input.ReadInt64();
             break;
           }
+          case 24: {
+            Num = input.ReadInt32();
+            break;
+          }
         }
       }
     #endif
@@ -1296,6 +1367,10 @@ namespace Gserver {
           }
           case 16: {
             UniqueId = input.ReadInt64();
+            break;
+          }
+          case 24: {
+            Num = input.ReadInt32();
             break;
           }
         }

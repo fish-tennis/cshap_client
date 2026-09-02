@@ -25,29 +25,54 @@ namespace Gserver {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cgtyb3V0ZS5wcm90bxIHZ3NlcnZlchoZZ29vZ2xlL3Byb3RvYnVmL2FueS5w",
-            "cm90byKsAQoSUm91dGVQbGF5ZXJNZXNzYWdlEg0KBWVycm9yGAEgASgJEhIK",
-            "CnRvUGxheWVySWQYAiABKAMSFQoNcGFja2V0Q29tbWFuZBgDIAEoBRIYChBk",
-            "aXJlY3RTZW5kQ2xpZW50GAQgASgIEhgKEHBlbmRpbmdNZXNzYWdlSWQYBSAB",
-            "KAMSKAoKcGFja2V0RGF0YRgGIAEoCzIULmdvb2dsZS5wcm90b2J1Zi5Bbnki",
-            "tgEKGkd1aWxkUm91dGVQbGF5ZXJNZXNzYWdlUmVxEhQKDGZyb21QbGF5ZXJJ",
-            "ZBgBIAEoAxITCgtmcm9tR3VpbGRJZBgCIAEoAxIUCgxmcm9tU2VydmVySWQY",
-            "AyABKAUSFgoOZnJvbVBsYXllck5hbWUYBCABKAkSFQoNcGFja2V0Q29tbWFu",
-            "ZBgFIAEoBRIoCgpwYWNrZXREYXRhGAYgASgLMhQuZ29vZ2xlLnByb3RvYnVm",
-            "LkFueUIGWgQuL3BiYgZwcm90bzM="));
+            "cm90byKjAQoSUm91dGVQbGF5ZXJNZXNzYWdlEg0KBUVycm9yGAEgASgJEhIK",
+            "ClRvUGxheWVySWQYAiABKAMSFQoNUGFja2V0Q29tbWFuZBgDIAEoBRIPCgdP",
+            "cHRpb25zGAQgASgFEhgKEFBlbmRpbmdNZXNzYWdlSWQYBSABKAMSKAoKUGFj",
+            "a2V0RGF0YRgGIAEoCzIULmdvb2dsZS5wcm90b2J1Zi5BbnkitgEKGkd1aWxk",
+            "Um91dGVQbGF5ZXJNZXNzYWdlUmVxEhQKDEZyb21QbGF5ZXJJZBgBIAEoAxIT",
+            "CgtGcm9tR3VpbGRJZBgCIAEoAxIUCgxGcm9tU2VydmVySWQYAyABKAUSFgoO",
+            "RnJvbVBsYXllck5hbWUYBCABKAkSFQoNUGFja2V0Q29tbWFuZBgFIAEoBRIo",
+            "CgpQYWNrZXREYXRhGAYgASgLMhQuZ29vZ2xlLnByb3RvYnVmLkFueSLJAQoV",
+            "Um91dGVQbGF5ZXJNZXNzYWdlUmVxEhQKDEZyb21QbGF5ZXJJZBgBIAEoAxIT",
+            "CgtGcm9tR3VpbGRJZBgCIAEoAxIUCgxGcm9tU2VydmVySWQYAyABKAUSFgoO",
+            "RnJvbVBsYXllck5hbWUYBCABKAkSFQoNUGFja2V0Q29tbWFuZBgFIAEoBRIo",
+            "CgpQYWNrZXREYXRhGAYgASgLMhQuZ29vZ2xlLnByb3RvYnVmLkFueRIWCg5U",
+            "YXJnZXRFbnRpdHlJZBgHIAEoAypdCgtSb3V0ZU9wdGlvbhIUChBSb3V0ZU9w",
+            "dGlvbl9Ob25lEAASIAocUm91dGVPcHRpb25fRGlyZWN0U2VuZENsaWVudBAB",
+            "EhYKElJvdXRlT3B0aW9uX1NhdmVEYhACQgZaBC4vcGJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.AnyReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.RoutePlayerMessage), global::Gserver.RoutePlayerMessage.Parser, new[]{ "Error", "ToPlayerId", "PacketCommand", "DirectSendClient", "PendingMessageId", "PacketData" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.GuildRoutePlayerMessageReq), global::Gserver.GuildRoutePlayerMessageReq.Parser, new[]{ "FromPlayerId", "FromGuildId", "FromServerId", "FromPlayerName", "PacketCommand", "PacketData" }, null, null, null, null)
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Gserver.RouteOption), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.RoutePlayerMessage), global::Gserver.RoutePlayerMessage.Parser, new[]{ "Error", "ToPlayerId", "PacketCommand", "Options", "PendingMessageId", "PacketData" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.GuildRoutePlayerMessageReq), global::Gserver.GuildRoutePlayerMessageReq.Parser, new[]{ "FromPlayerId", "FromGuildId", "FromServerId", "FromPlayerName", "PacketCommand", "PacketData" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.RoutePlayerMessageReq), global::Gserver.RoutePlayerMessageReq.Parser, new[]{ "FromPlayerId", "FromGuildId", "FromServerId", "FromPlayerName", "PacketCommand", "PacketData", "TargetEntityId" }, null, null, null, null)
           }));
     }
     #endregion
 
   }
+  #region Enums
+  /// <summary>
+  /// 路由选项(位掩码,可组合使用)
+  /// </summary>
+  public enum RouteOption {
+    [pbr::OriginalName("RouteOption_None")] None = 0,
+    /// <summary>
+    /// 直接转发给客户端,不做逻辑处理
+    /// </summary>
+    [pbr::OriginalName("RouteOption_DirectSendClient")] DirectSendClient = 1,
+    /// <summary>
+    /// 先存数据库,防止路由失败造成消息丢失
+    /// </summary>
+    [pbr::OriginalName("RouteOption_SaveDb")] SaveDb = 2,
+  }
+
+  #endregion
+
   #region Messages
   /// <summary>
-  /// 路由转发给玩家的消息
-  /// server -> otherserver -> player
+  /// [其他服或其他协程]发给[game服]再路由转发给玩家的消息
+  /// otherserver -> game -> player
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RoutePlayerMessage : pb::IMessage<RoutePlayerMessage>
@@ -87,7 +112,7 @@ namespace Gserver {
       error_ = other.error_;
       toPlayerId_ = other.toPlayerId_;
       packetCommand_ = other.packetCommand_;
-      directSendClient_ = other.directSendClient_;
+      options_ = other.options_;
       pendingMessageId_ = other.pendingMessageId_;
       packetData_ = other.packetData_ != null ? other.packetData_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -99,7 +124,7 @@ namespace Gserver {
       return new RoutePlayerMessage(this);
     }
 
-    /// <summary>Field number for the "error" field.</summary>
+    /// <summary>Field number for the "Error" field.</summary>
     public const int ErrorFieldNumber = 1;
     private string error_ = "";
     /// <summary>
@@ -114,7 +139,7 @@ namespace Gserver {
       }
     }
 
-    /// <summary>Field number for the "toPlayerId" field.</summary>
+    /// <summary>Field number for the "ToPlayerId" field.</summary>
     public const int ToPlayerIdFieldNumber = 2;
     private long toPlayerId_;
     /// <summary>
@@ -129,7 +154,7 @@ namespace Gserver {
       }
     }
 
-    /// <summary>Field number for the "packetCommand" field.</summary>
+    /// <summary>Field number for the "PacketCommand" field.</summary>
     public const int PacketCommandFieldNumber = 3;
     private int packetCommand_;
     /// <summary>
@@ -144,22 +169,22 @@ namespace Gserver {
       }
     }
 
-    /// <summary>Field number for the "directSendClient" field.</summary>
-    public const int DirectSendClientFieldNumber = 4;
-    private bool directSendClient_;
+    /// <summary>Field number for the "Options" field.</summary>
+    public const int OptionsFieldNumber = 4;
+    private int options_;
     /// <summary>
-    /// 是否直接转发给客户端
+    /// RouteOption位掩码
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool DirectSendClient {
-      get { return directSendClient_; }
+    public int Options {
+      get { return options_; }
       set {
-        directSendClient_ = value;
+        options_ = value;
       }
     }
 
-    /// <summary>Field number for the "pendingMessageId" field.</summary>
+    /// <summary>Field number for the "PendingMessageId" field.</summary>
     public const int PendingMessageIdFieldNumber = 5;
     private long pendingMessageId_;
     /// <summary>
@@ -174,7 +199,7 @@ namespace Gserver {
       }
     }
 
-    /// <summary>Field number for the "packetData" field.</summary>
+    /// <summary>Field number for the "PacketData" field.</summary>
     public const int PacketDataFieldNumber = 6;
     private global::Google.Protobuf.WellKnownTypes.Any packetData_;
     /// <summary>
@@ -207,7 +232,7 @@ namespace Gserver {
       if (Error != other.Error) return false;
       if (ToPlayerId != other.ToPlayerId) return false;
       if (PacketCommand != other.PacketCommand) return false;
-      if (DirectSendClient != other.DirectSendClient) return false;
+      if (Options != other.Options) return false;
       if (PendingMessageId != other.PendingMessageId) return false;
       if (!object.Equals(PacketData, other.PacketData)) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -220,7 +245,7 @@ namespace Gserver {
       if (Error.Length != 0) hash ^= Error.GetHashCode();
       if (ToPlayerId != 0L) hash ^= ToPlayerId.GetHashCode();
       if (PacketCommand != 0) hash ^= PacketCommand.GetHashCode();
-      if (DirectSendClient != false) hash ^= DirectSendClient.GetHashCode();
+      if (Options != 0) hash ^= Options.GetHashCode();
       if (PendingMessageId != 0L) hash ^= PendingMessageId.GetHashCode();
       if (packetData_ != null) hash ^= PacketData.GetHashCode();
       if (_unknownFields != null) {
@@ -253,9 +278,9 @@ namespace Gserver {
         output.WriteRawTag(24);
         output.WriteInt32(PacketCommand);
       }
-      if (DirectSendClient != false) {
+      if (Options != 0) {
         output.WriteRawTag(32);
-        output.WriteBool(DirectSendClient);
+        output.WriteInt32(Options);
       }
       if (PendingMessageId != 0L) {
         output.WriteRawTag(40);
@@ -287,9 +312,9 @@ namespace Gserver {
         output.WriteRawTag(24);
         output.WriteInt32(PacketCommand);
       }
-      if (DirectSendClient != false) {
+      if (Options != 0) {
         output.WriteRawTag(32);
-        output.WriteBool(DirectSendClient);
+        output.WriteInt32(Options);
       }
       if (PendingMessageId != 0L) {
         output.WriteRawTag(40);
@@ -318,8 +343,8 @@ namespace Gserver {
       if (PacketCommand != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(PacketCommand);
       }
-      if (DirectSendClient != false) {
-        size += 1 + 1;
+      if (Options != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Options);
       }
       if (PendingMessageId != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(PendingMessageId);
@@ -348,8 +373,8 @@ namespace Gserver {
       if (other.PacketCommand != 0) {
         PacketCommand = other.PacketCommand;
       }
-      if (other.DirectSendClient != false) {
-        DirectSendClient = other.DirectSendClient;
+      if (other.Options != 0) {
+        Options = other.Options;
       }
       if (other.PendingMessageId != 0L) {
         PendingMessageId = other.PendingMessageId;
@@ -388,7 +413,7 @@ namespace Gserver {
             break;
           }
           case 32: {
-            DirectSendClient = input.ReadBool();
+            Options = input.ReadInt32();
             break;
           }
           case 40: {
@@ -430,7 +455,7 @@ namespace Gserver {
             break;
           }
           case 32: {
-            DirectSendClient = input.ReadBool();
+            Options = input.ReadInt32();
             break;
           }
           case 40: {
@@ -452,8 +477,8 @@ namespace Gserver {
   }
 
   /// <summary>
-  /// 路由转发玩家的公会请求消息
-  /// server -> otherserver -> guild
+  /// [game服]发给[其他服或其他协程]再路由到玩家所在的公会请求消息
+  /// game -> otherserver -> guild
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GuildRoutePlayerMessageReq : pb::IMessage<GuildRoutePlayerMessageReq>
@@ -505,7 +530,7 @@ namespace Gserver {
       return new GuildRoutePlayerMessageReq(this);
     }
 
-    /// <summary>Field number for the "fromPlayerId" field.</summary>
+    /// <summary>Field number for the "FromPlayerId" field.</summary>
     public const int FromPlayerIdFieldNumber = 1;
     private long fromPlayerId_;
     /// <summary>
@@ -520,7 +545,7 @@ namespace Gserver {
       }
     }
 
-    /// <summary>Field number for the "fromGuildId" field.</summary>
+    /// <summary>Field number for the "FromGuildId" field.</summary>
     public const int FromGuildIdFieldNumber = 2;
     private long fromGuildId_;
     /// <summary>
@@ -535,7 +560,7 @@ namespace Gserver {
       }
     }
 
-    /// <summary>Field number for the "fromServerId" field.</summary>
+    /// <summary>Field number for the "FromServerId" field.</summary>
     public const int FromServerIdFieldNumber = 3;
     private int fromServerId_;
     /// <summary>
@@ -550,7 +575,7 @@ namespace Gserver {
       }
     }
 
-    /// <summary>Field number for the "fromPlayerName" field.</summary>
+    /// <summary>Field number for the "FromPlayerName" field.</summary>
     public const int FromPlayerNameFieldNumber = 4;
     private string fromPlayerName_ = "";
     /// <summary>
@@ -565,7 +590,7 @@ namespace Gserver {
       }
     }
 
-    /// <summary>Field number for the "packetCommand" field.</summary>
+    /// <summary>Field number for the "PacketCommand" field.</summary>
     public const int PacketCommandFieldNumber = 5;
     private int packetCommand_;
     /// <summary>
@@ -580,7 +605,7 @@ namespace Gserver {
       }
     }
 
-    /// <summary>Field number for the "packetData" field.</summary>
+    /// <summary>Field number for the "PacketData" field.</summary>
     public const int PacketDataFieldNumber = 6;
     private global::Google.Protobuf.WellKnownTypes.Any packetData_;
     /// <summary>
@@ -848,6 +873,452 @@ namespace Gserver {
               PacketData = new global::Google.Protobuf.WellKnownTypes.Any();
             }
             input.ReadMessage(PacketData);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// [game服]发给[其他服]的玩家请求消息
+  /// game -> otherserver(如fight)
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class RoutePlayerMessageReq : pb::IMessage<RoutePlayerMessageReq>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<RoutePlayerMessageReq> _parser = new pb::MessageParser<RoutePlayerMessageReq>(() => new RoutePlayerMessageReq());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<RoutePlayerMessageReq> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Gserver.RouteReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RoutePlayerMessageReq() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RoutePlayerMessageReq(RoutePlayerMessageReq other) : this() {
+      fromPlayerId_ = other.fromPlayerId_;
+      fromGuildId_ = other.fromGuildId_;
+      fromServerId_ = other.fromServerId_;
+      fromPlayerName_ = other.fromPlayerName_;
+      packetCommand_ = other.packetCommand_;
+      packetData_ = other.packetData_ != null ? other.packetData_.Clone() : null;
+      targetEntityId_ = other.targetEntityId_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RoutePlayerMessageReq Clone() {
+      return new RoutePlayerMessageReq(this);
+    }
+
+    /// <summary>Field number for the "FromPlayerId" field.</summary>
+    public const int FromPlayerIdFieldNumber = 1;
+    private long fromPlayerId_;
+    /// <summary>
+    /// 玩家id
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long FromPlayerId {
+      get { return fromPlayerId_; }
+      set {
+        fromPlayerId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "FromGuildId" field.</summary>
+    public const int FromGuildIdFieldNumber = 2;
+    private long fromGuildId_;
+    /// <summary>
+    /// 玩家公会id
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long FromGuildId {
+      get { return fromGuildId_; }
+      set {
+        fromGuildId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "FromServerId" field.</summary>
+    public const int FromServerIdFieldNumber = 3;
+    private int fromServerId_;
+    /// <summary>
+    /// 玩家当前所在服务器id
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int FromServerId {
+      get { return fromServerId_; }
+      set {
+        fromServerId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "FromPlayerName" field.</summary>
+    public const int FromPlayerNameFieldNumber = 4;
+    private string fromPlayerName_ = "";
+    /// <summary>
+    /// 玩家名
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string FromPlayerName {
+      get { return fromPlayerName_; }
+      set {
+        fromPlayerName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "PacketCommand" field.</summary>
+    public const int PacketCommandFieldNumber = 5;
+    private int packetCommand_;
+    /// <summary>
+    /// 消息号
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int PacketCommand {
+      get { return packetCommand_; }
+      set {
+        packetCommand_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "PacketData" field.</summary>
+    public const int PacketDataFieldNumber = 6;
+    private global::Google.Protobuf.WellKnownTypes.Any packetData_;
+    /// <summary>
+    /// 消息内容
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Any PacketData {
+      get { return packetData_; }
+      set {
+        packetData_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "TargetEntityId" field.</summary>
+    public const int TargetEntityIdFieldNumber = 7;
+    private long targetEntityId_;
+    /// <summary>
+    /// 需要路由到的目标实体Id(如公会id,场景id等)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long TargetEntityId {
+      get { return targetEntityId_; }
+      set {
+        targetEntityId_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as RoutePlayerMessageReq);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(RoutePlayerMessageReq other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (FromPlayerId != other.FromPlayerId) return false;
+      if (FromGuildId != other.FromGuildId) return false;
+      if (FromServerId != other.FromServerId) return false;
+      if (FromPlayerName != other.FromPlayerName) return false;
+      if (PacketCommand != other.PacketCommand) return false;
+      if (!object.Equals(PacketData, other.PacketData)) return false;
+      if (TargetEntityId != other.TargetEntityId) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (FromPlayerId != 0L) hash ^= FromPlayerId.GetHashCode();
+      if (FromGuildId != 0L) hash ^= FromGuildId.GetHashCode();
+      if (FromServerId != 0) hash ^= FromServerId.GetHashCode();
+      if (FromPlayerName.Length != 0) hash ^= FromPlayerName.GetHashCode();
+      if (PacketCommand != 0) hash ^= PacketCommand.GetHashCode();
+      if (packetData_ != null) hash ^= PacketData.GetHashCode();
+      if (TargetEntityId != 0L) hash ^= TargetEntityId.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (FromPlayerId != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(FromPlayerId);
+      }
+      if (FromGuildId != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(FromGuildId);
+      }
+      if (FromServerId != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(FromServerId);
+      }
+      if (FromPlayerName.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(FromPlayerName);
+      }
+      if (PacketCommand != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(PacketCommand);
+      }
+      if (packetData_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(PacketData);
+      }
+      if (TargetEntityId != 0L) {
+        output.WriteRawTag(56);
+        output.WriteInt64(TargetEntityId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (FromPlayerId != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(FromPlayerId);
+      }
+      if (FromGuildId != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(FromGuildId);
+      }
+      if (FromServerId != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(FromServerId);
+      }
+      if (FromPlayerName.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(FromPlayerName);
+      }
+      if (PacketCommand != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(PacketCommand);
+      }
+      if (packetData_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(PacketData);
+      }
+      if (TargetEntityId != 0L) {
+        output.WriteRawTag(56);
+        output.WriteInt64(TargetEntityId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (FromPlayerId != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(FromPlayerId);
+      }
+      if (FromGuildId != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(FromGuildId);
+      }
+      if (FromServerId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(FromServerId);
+      }
+      if (FromPlayerName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(FromPlayerName);
+      }
+      if (PacketCommand != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PacketCommand);
+      }
+      if (packetData_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PacketData);
+      }
+      if (TargetEntityId != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(TargetEntityId);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(RoutePlayerMessageReq other) {
+      if (other == null) {
+        return;
+      }
+      if (other.FromPlayerId != 0L) {
+        FromPlayerId = other.FromPlayerId;
+      }
+      if (other.FromGuildId != 0L) {
+        FromGuildId = other.FromGuildId;
+      }
+      if (other.FromServerId != 0) {
+        FromServerId = other.FromServerId;
+      }
+      if (other.FromPlayerName.Length != 0) {
+        FromPlayerName = other.FromPlayerName;
+      }
+      if (other.PacketCommand != 0) {
+        PacketCommand = other.PacketCommand;
+      }
+      if (other.packetData_ != null) {
+        if (packetData_ == null) {
+          PacketData = new global::Google.Protobuf.WellKnownTypes.Any();
+        }
+        PacketData.MergeFrom(other.PacketData);
+      }
+      if (other.TargetEntityId != 0L) {
+        TargetEntityId = other.TargetEntityId;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            FromPlayerId = input.ReadInt64();
+            break;
+          }
+          case 16: {
+            FromGuildId = input.ReadInt64();
+            break;
+          }
+          case 24: {
+            FromServerId = input.ReadInt32();
+            break;
+          }
+          case 34: {
+            FromPlayerName = input.ReadString();
+            break;
+          }
+          case 40: {
+            PacketCommand = input.ReadInt32();
+            break;
+          }
+          case 50: {
+            if (packetData_ == null) {
+              PacketData = new global::Google.Protobuf.WellKnownTypes.Any();
+            }
+            input.ReadMessage(PacketData);
+            break;
+          }
+          case 56: {
+            TargetEntityId = input.ReadInt64();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            FromPlayerId = input.ReadInt64();
+            break;
+          }
+          case 16: {
+            FromGuildId = input.ReadInt64();
+            break;
+          }
+          case 24: {
+            FromServerId = input.ReadInt32();
+            break;
+          }
+          case 34: {
+            FromPlayerName = input.ReadString();
+            break;
+          }
+          case 40: {
+            PacketCommand = input.ReadInt32();
+            break;
+          }
+          case 50: {
+            if (packetData_ == null) {
+              PacketData = new global::Google.Protobuf.WellKnownTypes.Any();
+            }
+            input.ReadMessage(PacketData);
+            break;
+          }
+          case 56: {
+            TargetEntityId = input.ReadInt64();
             break;
           }
         }

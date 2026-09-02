@@ -25,43 +25,43 @@ namespace Gserver {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CgtndWlsZC5wcm90bxIHZ3NlcnZlchoMcGxheWVyLnByb3RvIrYCCg1HdWls",
-            "ZExvYWREYXRhEgoKAmlkGAEgASgDEiQKCGJhc2VJbmZvGAIgASgLMhIuZ3Nl",
-            "cnZlci5HdWlsZEluZm8SNAoHbWVtYmVycxgDIAMoCzIjLmdzZXJ2ZXIuR3Vp",
-            "bGRMb2FkRGF0YS5NZW1iZXJzRW50cnkSPgoMam9pblJlcXVlc3RzGAQgAygL",
+            "ZExvYWREYXRhEgoKAklkGAEgASgDEiQKCEJhc2VJbmZvGAIgASgLMhIuZ3Nl",
+            "cnZlci5HdWlsZEluZm8SNAoHTWVtYmVycxgDIAMoCzIjLmdzZXJ2ZXIuR3Vp",
+            "bGRMb2FkRGF0YS5NZW1iZXJzRW50cnkSPgoMSm9pblJlcXVlc3RzGAQgAygL",
             "MiguZ3NlcnZlci5HdWlsZExvYWREYXRhLkpvaW5SZXF1ZXN0c0VudHJ5GkgK",
             "DE1lbWJlcnNFbnRyeRILCgNrZXkYASABKAMSJwoFdmFsdWUYAiABKAsyGC5n",
             "c2VydmVyLkd1aWxkTWVtYmVyRGF0YToCOAEaMwoRSm9pblJlcXVlc3RzRW50",
             "cnkSCwoDa2V5GAEgASgDEg0KBXZhbHVlGAIgASgMOgI4ASLFAgoJR3VpbGRE",
-            "YXRhEgoKAmlkGAEgASgDEiQKCGJhc2VJbmZvGAIgASgLMhIuZ3NlcnZlci5H",
-            "dWlsZEluZm8SMAoHbWVtYmVycxgDIAMoCzIfLmdzZXJ2ZXIuR3VpbGREYXRh",
-            "Lk1lbWJlcnNFbnRyeRI6Cgxqb2luUmVxdWVzdHMYBCADKAsyJC5nc2VydmVy",
+            "YXRhEgoKAklkGAEgASgDEiQKCEJhc2VJbmZvGAIgASgLMhIuZ3NlcnZlci5H",
+            "dWlsZEluZm8SMAoHTWVtYmVycxgDIAMoCzIfLmdzZXJ2ZXIuR3VpbGREYXRh",
+            "Lk1lbWJlcnNFbnRyeRI6CgxKb2luUmVxdWVzdHMYBCADKAsyJC5nc2VydmVy",
             "Lkd1aWxkRGF0YS5Kb2luUmVxdWVzdHNFbnRyeRpICgxNZW1iZXJzRW50cnkS",
             "CwoDa2V5GAEgASgDEicKBXZhbHVlGAIgASgLMhguZ3NlcnZlci5HdWlsZE1l",
             "bWJlckRhdGE6AjgBGk4KEUpvaW5SZXF1ZXN0c0VudHJ5EgsKA2tleRgBIAEo",
             "AxIoCgV2YWx1ZRgCIAEoCzIZLmdzZXJ2ZXIuR3VpbGRKb2luUmVxdWVzdDoC",
-            "OAEiPQoPR3VpbGRNZW1iZXJEYXRhEgoKAmlkGAEgASgDEgwKBG5hbWUYAiAB",
-            "KAkSEAoIcG9zaXRpb24YAyABKAUiSQoJR3VpbGRJbmZvEgoKAmlkGAEgASgD",
-            "EgwKBG5hbWUYAiABKAkSDQoFaW50cm8YAyABKAkSEwoLbWVtYmVyQ291bnQY",
-            "BCABKAUiMwoJR3VpbGRTeW5jEiYKBGRhdGEYASABKAsyGC5nc2VydmVyLlBs",
-            "YXllckd1aWxkRGF0YSJOChBHdWlsZEpvaW5SZXF1ZXN0EhAKCHBsYXllcklk",
-            "GAEgASgDEhIKCnBsYXllck5hbWUYAiABKAkSFAoMdGltZXN0YW1wU2VjGAMg",
-            "ASgFIiEKDEd1aWxkTGlzdFJlcRIRCglwYWdlSW5kZXgYASABKAUiXAoMR3Vp",
-            "bGRMaXN0UmVzEhEKCXBhZ2VJbmRleBgBIAEoBRIRCglwYWdlQ291bnQYAiAB",
-            "KAUSJgoKZ3VpbGRJbmZvcxgDIAMoCzISLmdzZXJ2ZXIuR3VpbGRJbmZvIi0K",
-            "Dkd1aWxkQ3JlYXRlUmVxEgwKBG5hbWUYASABKAkSDQoFaW50cm8YAiABKAki",
-            "OQoOR3VpbGRDcmVhdGVSZXMSDQoFZXJyb3IYASABKAkSCgoCaWQYAiABKAMS",
-            "DAoEbmFtZRgDIAEoCSIaCgxHdWlsZEpvaW5SZXESCgoCaWQYASABKAMiKQoM",
-            "R3VpbGRKb2luUmVzEg0KBWVycm9yGAEgASgJEgoKAmlkGAIgASgDIjoKEUd1",
-            "aWxkSm9pbkFncmVlUmVxEhQKDGpvaW5QbGF5ZXJJZBgBIAEoAxIPCgdpc0Fn",
-            "cmVlGAIgASgIInMKEUd1aWxkSm9pbkFncmVlUmVzEg0KBWVycm9yGAEgASgJ",
-            "Eg8KB2d1aWxkSWQYAiABKAMSFwoPbWFuYWdlclBsYXllcklkGAMgASgDEhQK",
-            "DGpvaW5QbGF5ZXJJZBgEIAEoAxIPCgdpc0FncmVlGAUgASgIIhIKEEd1aWxk",
-            "RGF0YVZpZXdSZXEiOQoQR3VpbGREYXRhVmlld1JlcxIlCglndWlsZERhdGEY",
+            "OAEiPQoPR3VpbGRNZW1iZXJEYXRhEgoKAklkGAEgASgDEgwKBE5hbWUYAiAB",
+            "KAkSEAoIUG9zaXRpb24YAyABKAUiSQoJR3VpbGRJbmZvEgoKAklkGAEgASgD",
+            "EgwKBE5hbWUYAiABKAkSDQoFSW50cm8YAyABKAkSEwoLTWVtYmVyQ291bnQY",
+            "BCABKAUiMwoJR3VpbGRTeW5jEiYKBERhdGEYASABKAsyGC5nc2VydmVyLlBs",
+            "YXllckd1aWxkRGF0YSJOChBHdWlsZEpvaW5SZXF1ZXN0EhAKCFBsYXllcklk",
+            "GAEgASgDEhIKClBsYXllck5hbWUYAiABKAkSFAoMVGltZXN0YW1wU2VjGAMg",
+            "ASgFIiEKDEd1aWxkTGlzdFJlcRIRCglQYWdlSW5kZXgYASABKAUiXAoMR3Vp",
+            "bGRMaXN0UmVzEhEKCVBhZ2VJbmRleBgBIAEoBRIRCglQYWdlQ291bnQYAiAB",
+            "KAUSJgoKR3VpbGRJbmZvcxgDIAMoCzISLmdzZXJ2ZXIuR3VpbGRJbmZvIi0K",
+            "Dkd1aWxkQ3JlYXRlUmVxEgwKBE5hbWUYASABKAkSDQoFSW50cm8YAiABKAki",
+            "OQoOR3VpbGRDcmVhdGVSZXMSDQoFRXJyb3IYASABKAkSCgoCSWQYAiABKAMS",
+            "DAoETmFtZRgDIAEoCSIaCgxHdWlsZEpvaW5SZXESCgoCSWQYASABKAMiKQoM",
+            "R3VpbGRKb2luUmVzEg0KBUVycm9yGAEgASgJEgoKAklkGAIgASgDIjoKEUd1",
+            "aWxkSm9pbkFncmVlUmVxEhQKDEpvaW5QbGF5ZXJJZBgBIAEoAxIPCgdJc0Fn",
+            "cmVlGAIgASgIInMKEUd1aWxkSm9pbkFncmVlUmVzEg0KBUVycm9yGAEgASgJ",
+            "Eg8KB0d1aWxkSWQYAiABKAMSFwoPTWFuYWdlclBsYXllcklkGAMgASgDEhQK",
+            "DEpvaW5QbGF5ZXJJZBgEIAEoAxIPCgdJc0FncmVlGAUgASgIIhIKEEd1aWxk",
+            "RGF0YVZpZXdSZXEiOQoQR3VpbGREYXRhVmlld1JlcxIlCglHdWlsZERhdGEY",
             "ASABKAsyEi5nc2VydmVyLkd1aWxkRGF0YSI3Cg9HdWlsZEpvaW5SZXFUaXAS",
-            "EAoIcGxheWVySWQYASABKAMSEgoKcGxheWVyTmFtZRgCIAEoCSJ2ChRHdWls",
-            "ZEpvaW5SZXFPcFJlc3VsdBINCgVlcnJvchgBIAEoCRIPCgdndWlsZElkGAIg",
-            "ASgDEhcKD21hbmFnZXJQbGF5ZXJJZBgDIAEoAxIUCgxqb2luUGxheWVySWQY",
-            "BCABKAMSDwoHaXNBZ3JlZRgFIAEoCCo0Cg1HdWlsZFBvc2l0aW9uEgoKBk1l",
+            "EAoIUGxheWVySWQYASABKAMSEgoKUGxheWVyTmFtZRgCIAEoCSJ2ChRHdWls",
+            "ZEpvaW5SZXFPcFJlc3VsdBINCgVFcnJvchgBIAEoCRIPCgdHdWlsZElkGAIg",
+            "ASgDEhcKD01hbmFnZXJQbGF5ZXJJZBgDIAEoAxIUCgxKb2luUGxheWVySWQY",
+            "BCABKAMSDwoHSXNBZ3JlZRgFIAEoCCo0Cg1HdWlsZFBvc2l0aW9uEgoKBk1l",
             "bWJlchAAEgsKB01hbmFnZXIQARIKCgZMZWFkZXIQAkIGWgQuL3BiYgZwcm90",
             "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -161,7 +161,7 @@ namespace Gserver {
       return new GuildLoadData(this);
     }
 
-    /// <summary>Field number for the "id" field.</summary>
+    /// <summary>Field number for the "Id" field.</summary>
     public const int IdFieldNumber = 1;
     private long id_;
     /// <summary>
@@ -176,7 +176,7 @@ namespace Gserver {
       }
     }
 
-    /// <summary>Field number for the "baseInfo" field.</summary>
+    /// <summary>Field number for the "BaseInfo" field.</summary>
     public const int BaseInfoFieldNumber = 2;
     private global::Gserver.GuildInfo baseInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -188,7 +188,7 @@ namespace Gserver {
       }
     }
 
-    /// <summary>Field number for the "members" field.</summary>
+    /// <summary>Field number for the "Members" field.</summary>
     public const int MembersFieldNumber = 3;
     private static readonly pbc::MapField<long, global::Gserver.GuildMemberData>.Codec _map_members_codec
         = new pbc::MapField<long, global::Gserver.GuildMemberData>.Codec(pb::FieldCodec.ForInt64(8, 0L), pb::FieldCodec.ForMessage(18, global::Gserver.GuildMemberData.Parser), 26);
@@ -202,7 +202,7 @@ namespace Gserver {
       get { return members_; }
     }
 
-    /// <summary>Field number for the "joinRequests" field.</summary>
+    /// <summary>Field number for the "JoinRequests" field.</summary>
     public const int JoinRequestsFieldNumber = 4;
     private static readonly pbc::MapField<long, pb::ByteString>.Codec _map_joinRequests_codec
         = new pbc::MapField<long, pb::ByteString>.Codec(pb::FieldCodec.ForInt64(8, 0L), pb::FieldCodec.ForBytes(18, pb::ByteString.Empty), 34);
@@ -461,7 +461,7 @@ namespace Gserver {
       return new GuildData(this);
     }
 
-    /// <summary>Field number for the "id" field.</summary>
+    /// <summary>Field number for the "Id" field.</summary>
     public const int IdFieldNumber = 1;
     private long id_;
     /// <summary>
@@ -476,7 +476,7 @@ namespace Gserver {
       }
     }
 
-    /// <summary>Field number for the "baseInfo" field.</summary>
+    /// <summary>Field number for the "BaseInfo" field.</summary>
     public const int BaseInfoFieldNumber = 2;
     private global::Gserver.GuildInfo baseInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -488,7 +488,7 @@ namespace Gserver {
       }
     }
 
-    /// <summary>Field number for the "members" field.</summary>
+    /// <summary>Field number for the "Members" field.</summary>
     public const int MembersFieldNumber = 3;
     private static readonly pbc::MapField<long, global::Gserver.GuildMemberData>.Codec _map_members_codec
         = new pbc::MapField<long, global::Gserver.GuildMemberData>.Codec(pb::FieldCodec.ForInt64(8, 0L), pb::FieldCodec.ForMessage(18, global::Gserver.GuildMemberData.Parser), 26);
@@ -502,7 +502,7 @@ namespace Gserver {
       get { return members_; }
     }
 
-    /// <summary>Field number for the "joinRequests" field.</summary>
+    /// <summary>Field number for the "JoinRequests" field.</summary>
     public const int JoinRequestsFieldNumber = 4;
     private static readonly pbc::MapField<long, global::Gserver.GuildJoinRequest>.Codec _map_joinRequests_codec
         = new pbc::MapField<long, global::Gserver.GuildJoinRequest>.Codec(pb::FieldCodec.ForInt64(8, 0L), pb::FieldCodec.ForMessage(18, global::Gserver.GuildJoinRequest.Parser), 34);
@@ -760,7 +760,7 @@ namespace Gserver {
       return new GuildMemberData(this);
     }
 
-    /// <summary>Field number for the "id" field.</summary>
+    /// <summary>Field number for the "Id" field.</summary>
     public const int IdFieldNumber = 1;
     private long id_;
     /// <summary>
@@ -775,7 +775,7 @@ namespace Gserver {
       }
     }
 
-    /// <summary>Field number for the "name" field.</summary>
+    /// <summary>Field number for the "Name" field.</summary>
     public const int NameFieldNumber = 2;
     private string name_ = "";
     /// <summary>
@@ -790,7 +790,7 @@ namespace Gserver {
       }
     }
 
-    /// <summary>Field number for the "position" field.</summary>
+    /// <summary>Field number for the "Position" field.</summary>
     public const int PositionFieldNumber = 3;
     private int position_;
     /// <summary>
@@ -1037,7 +1037,7 @@ namespace Gserver {
       return new GuildInfo(this);
     }
 
-    /// <summary>Field number for the "id" field.</summary>
+    /// <summary>Field number for the "Id" field.</summary>
     public const int IdFieldNumber = 1;
     private long id_;
     /// <summary>
@@ -1052,7 +1052,7 @@ namespace Gserver {
       }
     }
 
-    /// <summary>Field number for the "name" field.</summary>
+    /// <summary>Field number for the "Name" field.</summary>
     public const int NameFieldNumber = 2;
     private string name_ = "";
     /// <summary>
@@ -1067,7 +1067,7 @@ namespace Gserver {
       }
     }
 
-    /// <summary>Field number for the "intro" field.</summary>
+    /// <summary>Field number for the "Intro" field.</summary>
     public const int IntroFieldNumber = 3;
     private string intro_ = "";
     /// <summary>
@@ -1082,7 +1082,7 @@ namespace Gserver {
       }
     }
 
-    /// <summary>Field number for the "memberCount" field.</summary>
+    /// <summary>Field number for the "MemberCount" field.</summary>
     public const int MemberCountFieldNumber = 4;
     private int memberCount_;
     /// <summary>
@@ -1347,7 +1347,7 @@ namespace Gserver {
       return new GuildSync(this);
     }
 
-    /// <summary>Field number for the "data" field.</summary>
+    /// <summary>Field number for the "Data" field.</summary>
     public const int DataFieldNumber = 1;
     private global::Gserver.PlayerGuildData data_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1551,7 +1551,7 @@ namespace Gserver {
       return new GuildJoinRequest(this);
     }
 
-    /// <summary>Field number for the "playerId" field.</summary>
+    /// <summary>Field number for the "PlayerId" field.</summary>
     public const int PlayerIdFieldNumber = 1;
     private long playerId_;
     /// <summary>
@@ -1566,7 +1566,7 @@ namespace Gserver {
       }
     }
 
-    /// <summary>Field number for the "playerName" field.</summary>
+    /// <summary>Field number for the "PlayerName" field.</summary>
     public const int PlayerNameFieldNumber = 2;
     private string playerName_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1578,7 +1578,7 @@ namespace Gserver {
       }
     }
 
-    /// <summary>Field number for the "timestampSec" field.</summary>
+    /// <summary>Field number for the "TimestampSec" field.</summary>
     public const int TimestampSecFieldNumber = 3;
     private int timestampSec_;
     /// <summary>
@@ -1822,7 +1822,7 @@ namespace Gserver {
       return new GuildListReq(this);
     }
 
-    /// <summary>Field number for the "pageIndex" field.</summary>
+    /// <summary>Field number for the "PageIndex" field.</summary>
     public const int PageIndexFieldNumber = 1;
     private int pageIndex_;
     /// <summary>
@@ -2021,7 +2021,7 @@ namespace Gserver {
       return new GuildListRes(this);
     }
 
-    /// <summary>Field number for the "pageIndex" field.</summary>
+    /// <summary>Field number for the "PageIndex" field.</summary>
     public const int PageIndexFieldNumber = 1;
     private int pageIndex_;
     /// <summary>
@@ -2036,7 +2036,7 @@ namespace Gserver {
       }
     }
 
-    /// <summary>Field number for the "pageCount" field.</summary>
+    /// <summary>Field number for the "PageCount" field.</summary>
     public const int PageCountFieldNumber = 2;
     private int pageCount_;
     /// <summary>
@@ -2051,7 +2051,7 @@ namespace Gserver {
       }
     }
 
-    /// <summary>Field number for the "guildInfos" field.</summary>
+    /// <summary>Field number for the "GuildInfos" field.</summary>
     public const int GuildInfosFieldNumber = 3;
     private static readonly pb::FieldCodec<global::Gserver.GuildInfo> _repeated_guildInfos_codec
         = pb::FieldCodec.ForMessage(26, global::Gserver.GuildInfo.Parser);
@@ -2285,7 +2285,7 @@ namespace Gserver {
       return new GuildCreateReq(this);
     }
 
-    /// <summary>Field number for the "name" field.</summary>
+    /// <summary>Field number for the "Name" field.</summary>
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
@@ -2300,7 +2300,7 @@ namespace Gserver {
       }
     }
 
-    /// <summary>Field number for the "intro" field.</summary>
+    /// <summary>Field number for the "Intro" field.</summary>
     public const int IntroFieldNumber = 2;
     private string intro_ = "";
     /// <summary>
@@ -2523,7 +2523,7 @@ namespace Gserver {
       return new GuildCreateRes(this);
     }
 
-    /// <summary>Field number for the "error" field.</summary>
+    /// <summary>Field number for the "Error" field.</summary>
     public const int ErrorFieldNumber = 1;
     private string error_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2535,7 +2535,7 @@ namespace Gserver {
       }
     }
 
-    /// <summary>Field number for the "id" field.</summary>
+    /// <summary>Field number for the "Id" field.</summary>
     public const int IdFieldNumber = 2;
     private long id_;
     /// <summary>
@@ -2550,7 +2550,7 @@ namespace Gserver {
       }
     }
 
-    /// <summary>Field number for the "name" field.</summary>
+    /// <summary>Field number for the "Name" field.</summary>
     public const int NameFieldNumber = 3;
     private string name_ = "";
     /// <summary>
@@ -2794,7 +2794,7 @@ namespace Gserver {
       return new GuildJoinReq(this);
     }
 
-    /// <summary>Field number for the "id" field.</summary>
+    /// <summary>Field number for the "Id" field.</summary>
     public const int IdFieldNumber = 1;
     private long id_;
     /// <summary>
@@ -2992,7 +2992,7 @@ namespace Gserver {
       return new GuildJoinRes(this);
     }
 
-    /// <summary>Field number for the "error" field.</summary>
+    /// <summary>Field number for the "Error" field.</summary>
     public const int ErrorFieldNumber = 1;
     private string error_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3004,7 +3004,7 @@ namespace Gserver {
       }
     }
 
-    /// <summary>Field number for the "id" field.</summary>
+    /// <summary>Field number for the "Id" field.</summary>
     public const int IdFieldNumber = 2;
     private long id_;
     /// <summary>
@@ -3225,7 +3225,7 @@ namespace Gserver {
       return new GuildJoinAgreeReq(this);
     }
 
-    /// <summary>Field number for the "joinPlayerId" field.</summary>
+    /// <summary>Field number for the "JoinPlayerId" field.</summary>
     public const int JoinPlayerIdFieldNumber = 1;
     private long joinPlayerId_;
     /// <summary>
@@ -3240,7 +3240,7 @@ namespace Gserver {
       }
     }
 
-    /// <summary>Field number for the "isAgree" field.</summary>
+    /// <summary>Field number for the "IsAgree" field.</summary>
     public const int IsAgreeFieldNumber = 2;
     private bool isAgree_;
     /// <summary>
@@ -3465,7 +3465,7 @@ namespace Gserver {
       return new GuildJoinAgreeRes(this);
     }
 
-    /// <summary>Field number for the "error" field.</summary>
+    /// <summary>Field number for the "Error" field.</summary>
     public const int ErrorFieldNumber = 1;
     private string error_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3477,7 +3477,7 @@ namespace Gserver {
       }
     }
 
-    /// <summary>Field number for the "guildId" field.</summary>
+    /// <summary>Field number for the "GuildId" field.</summary>
     public const int GuildIdFieldNumber = 2;
     private long guildId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3489,7 +3489,7 @@ namespace Gserver {
       }
     }
 
-    /// <summary>Field number for the "managerPlayerId" field.</summary>
+    /// <summary>Field number for the "ManagerPlayerId" field.</summary>
     public const int ManagerPlayerIdFieldNumber = 3;
     private long managerPlayerId_;
     /// <summary>
@@ -3504,7 +3504,7 @@ namespace Gserver {
       }
     }
 
-    /// <summary>Field number for the "joinPlayerId" field.</summary>
+    /// <summary>Field number for the "JoinPlayerId" field.</summary>
     public const int JoinPlayerIdFieldNumber = 4;
     private long joinPlayerId_;
     /// <summary>
@@ -3519,7 +3519,7 @@ namespace Gserver {
       }
     }
 
-    /// <summary>Field number for the "isAgree" field.</summary>
+    /// <summary>Field number for the "IsAgree" field.</summary>
     public const int IsAgreeFieldNumber = 5;
     private bool isAgree_;
     /// <summary>
@@ -3968,7 +3968,7 @@ namespace Gserver {
       return new GuildDataViewRes(this);
     }
 
-    /// <summary>Field number for the "guildData" field.</summary>
+    /// <summary>Field number for the "GuildData" field.</summary>
     public const int GuildDataFieldNumber = 1;
     private global::Gserver.GuildData guildData_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4171,7 +4171,7 @@ namespace Gserver {
       return new GuildJoinReqTip(this);
     }
 
-    /// <summary>Field number for the "playerId" field.</summary>
+    /// <summary>Field number for the "PlayerId" field.</summary>
     public const int PlayerIdFieldNumber = 1;
     private long playerId_;
     /// <summary>
@@ -4186,7 +4186,7 @@ namespace Gserver {
       }
     }
 
-    /// <summary>Field number for the "playerName" field.</summary>
+    /// <summary>Field number for the "PlayerName" field.</summary>
     public const int PlayerNameFieldNumber = 2;
     private string playerName_ = "";
     /// <summary>
@@ -4410,7 +4410,7 @@ namespace Gserver {
       return new GuildJoinReqOpResult(this);
     }
 
-    /// <summary>Field number for the "error" field.</summary>
+    /// <summary>Field number for the "Error" field.</summary>
     public const int ErrorFieldNumber = 1;
     private string error_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4422,7 +4422,7 @@ namespace Gserver {
       }
     }
 
-    /// <summary>Field number for the "guildId" field.</summary>
+    /// <summary>Field number for the "GuildId" field.</summary>
     public const int GuildIdFieldNumber = 2;
     private long guildId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4434,7 +4434,7 @@ namespace Gserver {
       }
     }
 
-    /// <summary>Field number for the "managerPlayerId" field.</summary>
+    /// <summary>Field number for the "ManagerPlayerId" field.</summary>
     public const int ManagerPlayerIdFieldNumber = 3;
     private long managerPlayerId_;
     /// <summary>
@@ -4449,7 +4449,7 @@ namespace Gserver {
       }
     }
 
-    /// <summary>Field number for the "joinPlayerId" field.</summary>
+    /// <summary>Field number for the "JoinPlayerId" field.</summary>
     public const int JoinPlayerIdFieldNumber = 4;
     private long joinPlayerId_;
     /// <summary>
@@ -4464,7 +4464,7 @@ namespace Gserver {
       }
     }
 
-    /// <summary>Field number for the "isAgree" field.</summary>
+    /// <summary>Field number for the "IsAgree" field.</summary>
     public const int IsAgreeFieldNumber = 5;
     private bool isAgree_;
     /// <summary>

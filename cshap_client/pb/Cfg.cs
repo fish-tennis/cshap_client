@@ -90,46 +90,50 @@ namespace Gserver {
             "CgV2YWx1ZRgCIAEoCzIYLmdzZXJ2ZXIuVmFsdWVDb21wYXJlQ2ZnOgI4ARo4",
             "ChZTdHJpbmdFdmVudEZpZWxkc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1",
             "ZRgCIAEoCToCOAEaMQoPUHJvcGVydGllc0VudHJ5EgsKA2tleRgBIAEoCRIN",
-            "CgV2YWx1ZRgCIAEoCToCOAEiiwMKC0V4Y2hhbmdlQ2ZnEg0KBUNmZ0lkGAEg",
+            "CgV2YWx1ZRgCIAEoCToCOAEiogMKC0V4Y2hhbmdlQ2ZnEg0KBUNmZ0lkGAEg",
             "ASgFEikKCkNvbmRpdGlvbnMYAiADKAsyFS5nc2VydmVyLkNvbmRpdGlvbkNm",
             "ZxIiCghDb25zdW1lcxgDIAMoCzIQLmdzZXJ2ZXIuSXRlbU51bRIkCgdSZXdh",
             "cmRzGAQgAygLMhMuZ3NlcnZlci5BZGRFbGVtQXJnEhIKCkNvdW50TGltaXQY",
             "BSABKAUSEwoLUmVmcmVzaFR5cGUYBiABKAUSEAoIQ2F0ZWdvcnkYByABKAUS",
-            "OAoKUHJvcGVydGllcxgIIAMoCzIkLmdzZXJ2ZXIuRXhjaGFuZ2VDZmcuUHJv",
-            "cGVydGllc0VudHJ5Eg4KBkRldGFpbBgJIAEoCRIMCgRJY29uGAogASgJEjIK",
-            "EkNvbmRpdGlvblRlbXBsYXRlcxgVIAMoCzIWLmdzZXJ2ZXIuQ2ZnQXJnT3B0",
-            "aW9ucxoxCg9Qcm9wZXJ0aWVzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVl",
-            "GAIgASgJOgI4ASKYAwoLQWN0aXZpdHlDZmcSDQoFQ2ZnSWQYASABKAUSDAoE",
-            "TmFtZRgCIAEoCRIOCgZEZXRhaWwYAyABKAkSEAoIVGVtcGxhdGUYBCABKAkS",
-            "EwoLUmVmcmVzaFR5cGUYBSABKAUSEQoJQ3ljbGVUeXBlGAYgASgFEhAKCFRp",
-            "bWVUeXBlGAcgASgFEhEKCUJlZ2luVGltZRgIIAEoBRIPCgdFbmRUaW1lGAkg",
-            "ASgFEhMKC0V4Y2hhbmdlSWRzGAogAygFEg0KBUlzT2ZmGAsgASgIEhkKEVJl",
-            "bW92ZURhdGFXaGVuRW5kGAwgASgIEhYKDk1pblBsYXllckxldmVsGA4gASgF",
-            "EhYKDk1heFBsYXllckxldmVsGA8gASgFEhAKCFF1ZXN0SWRzGBAgAygFEjgK",
-            "ClByb3BlcnRpZXMYESADKAsyJC5nc2VydmVyLkFjdGl2aXR5Q2ZnLlByb3Bl",
+            "FQoNUmVjaGFyZ2VDZmdJZBgIIAEoBRI4CgpQcm9wZXJ0aWVzGAkgAygLMiQu",
+            "Z3NlcnZlci5FeGNoYW5nZUNmZy5Qcm9wZXJ0aWVzRW50cnkSDgoGRGV0YWls",
+            "GAogASgJEgwKBEljb24YCyABKAkSMgoSQ29uZGl0aW9uVGVtcGxhdGVzGBUg",
+            "AygLMhYuZ3NlcnZlci5DZmdBcmdPcHRpb25zGjEKD1Byb3BlcnRpZXNFbnRy",
+            "eRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBInwKC1JlY2hhcmdl",
+            "Q2ZnEg0KBUNmZ0lkGAEgASgFEg0KBVByaWNlGAIgASgFEhAKCEN1cnJlbmN5",
+            "GAMgASgJEhEKCVByb2R1Y3RJZBgEIAEoCRIMCgROYW1lGAUgASgJEgwKBElj",
+            "b24YBiABKAkSDgoGRGV0YWlsGAcgASgJIpgDCgtBY3Rpdml0eUNmZxINCgVD",
+            "ZmdJZBgBIAEoBRIMCgROYW1lGAIgASgJEg4KBkRldGFpbBgDIAEoCRIQCghU",
+            "ZW1wbGF0ZRgEIAEoCRITCgtSZWZyZXNoVHlwZRgFIAEoBRIRCglDeWNsZVR5",
+            "cGUYBiABKAUSEAoIVGltZVR5cGUYByABKAUSEQoJQmVnaW5UaW1lGAggASgF",
+            "Eg8KB0VuZFRpbWUYCSABKAUSEwoLRXhjaGFuZ2VJZHMYCiADKAUSDQoFSXNP",
+            "ZmYYCyABKAgSGQoRUmVtb3ZlRGF0YVdoZW5FbmQYDCABKAgSFgoOTWluUGxh",
+            "eWVyTGV2ZWwYDiABKAUSFgoOTWF4UGxheWVyTGV2ZWwYDyABKAUSEAoIUXVl",
+            "c3RJZHMYECADKAUSOAoKUHJvcGVydGllcxgRIAMoCzIkLmdzZXJ2ZXIuQWN0",
+            "aXZpdHlDZmcuUHJvcGVydGllc0VudHJ5GjEKD1Byb3BlcnRpZXNFbnRyeRIL",
+            "CgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIioKCExldmVsRXhwEg0K",
+            "BUxldmVsGAEgASgFEg8KB05lZWRFeHAYAiABKAUipAEKB1Nob3BDZmcSDQoF",
+            "Q2ZnSWQYASABKAUSDAoETmFtZRgCIAEoCRITCgtFeGNoYW5nZUlkcxgDIAMo",
+            "BRI0CgpQcm9wZXJ0aWVzGAggAygLMiAuZ3NlcnZlci5TaG9wQ2ZnLlByb3Bl",
             "cnRpZXNFbnRyeRoxCg9Qcm9wZXJ0aWVzRW50cnkSCwoDa2V5GAEgASgJEg0K",
-            "BXZhbHVlGAIgASgJOgI4ASIqCghMZXZlbEV4cBINCgVMZXZlbBgBIAEoBRIP",
-            "CgdOZWVkRXhwGAIgASgFIqQBCgdTaG9wQ2ZnEg0KBUNmZ0lkGAEgASgFEgwK",
-            "BE5hbWUYAiABKAkSEwoLRXhjaGFuZ2VJZHMYAyADKAUSNAoKUHJvcGVydGll",
-            "cxgIIAMoCzIgLmdzZXJ2ZXIuU2hvcENmZy5Qcm9wZXJ0aWVzRW50cnkaMQoP",
-            "UHJvcGVydGllc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToC",
-            "OAEqaQoFQ29sb3ISDgoKQ29sb3JfTm9uZRAAEg0KCUNvbG9yX1JlZBABEg8K",
-            "C0NvbG9yX0dyZWVuEAISDgoKQ29sb3JfQmx1ZRADEhAKDENvbG9yX1llbGxv",
-            "dxAEEg4KCkNvbG9yX0dyYXkQBSo4CgtSZWZyZXNoVHlwZRIUChBSZWZyZXNo",
-            "VHlwZV9Ob25lEAASEwoPUmVmcmVzaFR5cGVfRGF5EAEqSAoIVGltZVR5cGUS",
-            "EQoNVGltZVR5cGVfTm9uZRAAEhYKElRpbWVUeXBlX1RpbWVzdGFtcBABEhEK",
-            "DVRpbWVUeXBlX0RhdGUQAioxCghJdGVtVHlwZRIRCg1JdGVtVHlwZV9Ob25l",
-            "EAASEgoOSXRlbVR5cGVfRXF1aXAQASplCgtJdGVtU3ViVHlwZRIUChBJdGVt",
-            "U3ViVHlwZV9Ob25lEAASFAoQSXRlbVN1YlR5cGVfR29sZBABEhMKD0l0ZW1T",
-            "dWJUeXBlX0V4cBACEhUKEUl0ZW1TdWJUeXBlX1F1ZXN0EAMqJQoMSXRlbUNh",
-            "dGVnb3J5EhUKEUl0ZW1DYXRlZ29yeV9Ob25lEAAqPAoMSXRlbVZpZXdUeXBl",
-            "EhUKEUl0ZW1WaWV3VHlwZV9Ob25lEAASFQoRSXRlbVZpZXdUeXBlX0hpZGUQ",
-            "ASoqCgZJdGVtSWQSDwoLSXRlbUlkX05vbmUQABIPCgtJdGVtSWRfQ29pbhAB",
-            "KlIKCVF1ZXN0VHlwZRISCg5RdWVzdFR5cGVfTm9uZRAAEhYKElF1ZXN0VHlw",
-            "ZV9TdWJRdWVzdBABEhkKFVF1ZXN0VHlwZV9BY2hpZXZlbWVudBACKicKDVF1",
-            "ZXN0Q2F0ZWdvcnkSFgoSUXVlc3RDYXRlZ29yeV9Ob25lEAAqSAoQRXhjaGFu",
-            "Z2VDYXRlZ29yeRIZChVFeGNoYW5nZUNhdGVnb3J5X05vbmUQABIZChVFeGNo",
-            "YW5nZUNhdGVnb3J5X1Nob3AQAUIGWgQuL3BiYgZwcm90bzM="));
+            "BXZhbHVlGAIgASgJOgI4ASppCgVDb2xvchIOCgpDb2xvcl9Ob25lEAASDQoJ",
+            "Q29sb3JfUmVkEAESDwoLQ29sb3JfR3JlZW4QAhIOCgpDb2xvcl9CbHVlEAMS",
+            "EAoMQ29sb3JfWWVsbG93EAQSDgoKQ29sb3JfR3JheRAFKjgKC1JlZnJlc2hU",
+            "eXBlEhQKEFJlZnJlc2hUeXBlX05vbmUQABITCg9SZWZyZXNoVHlwZV9EYXkQ",
+            "ASpICghUaW1lVHlwZRIRCg1UaW1lVHlwZV9Ob25lEAASFgoSVGltZVR5cGVf",
+            "VGltZXN0YW1wEAESEQoNVGltZVR5cGVfRGF0ZRACKjEKCEl0ZW1UeXBlEhEK",
+            "DUl0ZW1UeXBlX05vbmUQABISCg5JdGVtVHlwZV9FcXVpcBABKmUKC0l0ZW1T",
+            "dWJUeXBlEhQKEEl0ZW1TdWJUeXBlX05vbmUQABIUChBJdGVtU3ViVHlwZV9H",
+            "b2xkEAESEwoPSXRlbVN1YlR5cGVfRXhwEAISFQoRSXRlbVN1YlR5cGVfUXVl",
+            "c3QQAyolCgxJdGVtQ2F0ZWdvcnkSFQoRSXRlbUNhdGVnb3J5X05vbmUQACo8",
+            "CgxJdGVtVmlld1R5cGUSFQoRSXRlbVZpZXdUeXBlX05vbmUQABIVChFJdGVt",
+            "Vmlld1R5cGVfSGlkZRABKioKBkl0ZW1JZBIPCgtJdGVtSWRfTm9uZRAAEg8K",
+            "C0l0ZW1JZF9Db2luEAEqUgoJUXVlc3RUeXBlEhIKDlF1ZXN0VHlwZV9Ob25l",
+            "EAASFgoSUXVlc3RUeXBlX1N1YlF1ZXN0EAESGQoVUXVlc3RUeXBlX0FjaGll",
+            "dmVtZW50EAIqJwoNUXVlc3RDYXRlZ29yeRIWChJRdWVzdENhdGVnb3J5X05v",
+            "bmUQACpIChBFeGNoYW5nZUNhdGVnb3J5EhkKFUV4Y2hhbmdlQ2F0ZWdvcnlf",
+            "Tm9uZRAAEhkKFUV4Y2hhbmdlQ2F0ZWdvcnlfU2hvcBABQgZaBC4vcGJiBnBy",
+            "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Gserver.Color), typeof(global::Gserver.RefreshType), typeof(global::Gserver.TimeType), typeof(global::Gserver.ItemType), typeof(global::Gserver.ItemSubType), typeof(global::Gserver.ItemCategory), typeof(global::Gserver.ItemViewType), typeof(global::Gserver.ItemId), typeof(global::Gserver.QuestType), typeof(global::Gserver.QuestCategory), typeof(global::Gserver.ExchangeCategory), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -148,7 +152,8 @@ namespace Gserver {
             new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.ConditionTemplateCfg), global::Gserver.ConditionTemplateCfg.Parser, new[]{ "CfgId", "Type", "Key", "Op", "Properties", "ClientCheck" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.ProgressCfg), global::Gserver.ProgressCfg.Parser, new[]{ "Type", "Total", "NeedInit", "Event", "ProgressField", "IntEventFields", "StringEventFields", "Properties" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.ProgressTemplateCfg), global::Gserver.ProgressTemplateCfg.Parser, new[]{ "CfgId", "Type", "NeedInit", "Event", "ProgressField", "IntEventFields", "StringEventFields", "Properties" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.ExchangeCfg), global::Gserver.ExchangeCfg.Parser, new[]{ "CfgId", "Conditions", "Consumes", "Rewards", "CountLimit", "RefreshType", "Category", "Properties", "Detail", "Icon", "ConditionTemplates" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.ExchangeCfg), global::Gserver.ExchangeCfg.Parser, new[]{ "CfgId", "Conditions", "Consumes", "Rewards", "CountLimit", "RefreshType", "Category", "RechargeCfgId", "Properties", "Detail", "Icon", "ConditionTemplates" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.RechargeCfg), global::Gserver.RechargeCfg.Parser, new[]{ "CfgId", "Price", "Currency", "ProductId", "Name", "Icon", "Detail" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.ActivityCfg), global::Gserver.ActivityCfg.Parser, new[]{ "CfgId", "Name", "Detail", "Template", "RefreshType", "CycleType", "TimeType", "BeginTime", "EndTime", "ExchangeIds", "IsOff", "RemoveDataWhenEnd", "MinPlayerLevel", "MaxPlayerLevel", "QuestIds", "Properties" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.LevelExp), global::Gserver.LevelExp.Parser, new[]{ "Level", "NeedExp" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.ShopCfg), global::Gserver.ShopCfg.Parser, new[]{ "CfgId", "Name", "ExchangeIds", "Properties" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
@@ -5751,6 +5756,7 @@ namespace Gserver {
       countLimit_ = other.countLimit_;
       refreshType_ = other.refreshType_;
       category_ = other.category_;
+      rechargeCfgId_ = other.rechargeCfgId_;
       properties_ = other.properties_.Clone();
       detail_ = other.detail_;
       icon_ = other.icon_;
@@ -5863,10 +5869,25 @@ namespace Gserver {
       }
     }
 
+    /// <summary>Field number for the "RechargeCfgId" field.</summary>
+    public const int RechargeCfgIdFieldNumber = 8;
+    private int rechargeCfgId_;
+    /// <summary>
+    /// 关联的充值配置ID(>0表示该兑换项由充值回调触发,玩家无法手动领取)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int RechargeCfgId {
+      get { return rechargeCfgId_; }
+      set {
+        rechargeCfgId_ = value;
+      }
+    }
+
     /// <summary>Field number for the "Properties" field.</summary>
-    public const int PropertiesFieldNumber = 8;
+    public const int PropertiesFieldNumber = 9;
     private static readonly pbc::MapField<string, string>.Codec _map_properties_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 66);
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 74);
     private readonly pbc::MapField<string, string> properties_ = new pbc::MapField<string, string>();
     /// <summary>
     /// 扩展属性
@@ -5878,7 +5899,7 @@ namespace Gserver {
     }
 
     /// <summary>Field number for the "Detail" field.</summary>
-    public const int DetailFieldNumber = 9;
+    public const int DetailFieldNumber = 10;
     private string detail_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5890,7 +5911,7 @@ namespace Gserver {
     }
 
     /// <summary>Field number for the "Icon" field.</summary>
-    public const int IconFieldNumber = 10;
+    public const int IconFieldNumber = 11;
     private string icon_ = "";
     /// <summary>
     /// 图标(客户端使用)
@@ -5940,6 +5961,7 @@ namespace Gserver {
       if (CountLimit != other.CountLimit) return false;
       if (RefreshType != other.RefreshType) return false;
       if (Category != other.Category) return false;
+      if (RechargeCfgId != other.RechargeCfgId) return false;
       if (!Properties.Equals(other.Properties)) return false;
       if (Detail != other.Detail) return false;
       if (Icon != other.Icon) return false;
@@ -5958,6 +5980,7 @@ namespace Gserver {
       if (CountLimit != 0) hash ^= CountLimit.GetHashCode();
       if (RefreshType != 0) hash ^= RefreshType.GetHashCode();
       if (Category != 0) hash ^= Category.GetHashCode();
+      if (RechargeCfgId != 0) hash ^= RechargeCfgId.GetHashCode();
       hash ^= Properties.GetHashCode();
       if (Detail.Length != 0) hash ^= Detail.GetHashCode();
       if (Icon.Length != 0) hash ^= Icon.GetHashCode();
@@ -5999,13 +6022,17 @@ namespace Gserver {
         output.WriteRawTag(56);
         output.WriteInt32(Category);
       }
+      if (RechargeCfgId != 0) {
+        output.WriteRawTag(64);
+        output.WriteInt32(RechargeCfgId);
+      }
       properties_.WriteTo(output, _map_properties_codec);
       if (Detail.Length != 0) {
-        output.WriteRawTag(74);
+        output.WriteRawTag(82);
         output.WriteString(Detail);
       }
       if (Icon.Length != 0) {
-        output.WriteRawTag(82);
+        output.WriteRawTag(90);
         output.WriteString(Icon);
       }
       conditionTemplates_.WriteTo(output, _repeated_conditionTemplates_codec);
@@ -6038,13 +6065,17 @@ namespace Gserver {
         output.WriteRawTag(56);
         output.WriteInt32(Category);
       }
+      if (RechargeCfgId != 0) {
+        output.WriteRawTag(64);
+        output.WriteInt32(RechargeCfgId);
+      }
       properties_.WriteTo(ref output, _map_properties_codec);
       if (Detail.Length != 0) {
-        output.WriteRawTag(74);
+        output.WriteRawTag(82);
         output.WriteString(Detail);
       }
       if (Icon.Length != 0) {
-        output.WriteRawTag(82);
+        output.WriteRawTag(90);
         output.WriteString(Icon);
       }
       conditionTemplates_.WriteTo(ref output, _repeated_conditionTemplates_codec);
@@ -6072,6 +6103,9 @@ namespace Gserver {
       }
       if (Category != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Category);
+      }
+      if (RechargeCfgId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(RechargeCfgId);
       }
       size += properties_.CalculateSize(_map_properties_codec);
       if (Detail.Length != 0) {
@@ -6107,6 +6141,9 @@ namespace Gserver {
       }
       if (other.Category != 0) {
         Category = other.Category;
+      }
+      if (other.RechargeCfgId != 0) {
+        RechargeCfgId = other.RechargeCfgId;
       }
       properties_.MergeFrom(other.properties_);
       if (other.Detail.Length != 0) {
@@ -6159,15 +6196,19 @@ namespace Gserver {
             Category = input.ReadInt32();
             break;
           }
-          case 66: {
-            properties_.AddEntriesFrom(input, _map_properties_codec);
+          case 64: {
+            RechargeCfgId = input.ReadInt32();
             break;
           }
           case 74: {
-            Detail = input.ReadString();
+            properties_.AddEntriesFrom(input, _map_properties_codec);
             break;
           }
           case 82: {
+            Detail = input.ReadString();
+            break;
+          }
+          case 90: {
             Icon = input.ReadString();
             break;
           }
@@ -6218,20 +6259,457 @@ namespace Gserver {
             Category = input.ReadInt32();
             break;
           }
-          case 66: {
-            properties_.AddEntriesFrom(ref input, _map_properties_codec);
+          case 64: {
+            RechargeCfgId = input.ReadInt32();
             break;
           }
           case 74: {
-            Detail = input.ReadString();
+            properties_.AddEntriesFrom(ref input, _map_properties_codec);
             break;
           }
           case 82: {
+            Detail = input.ReadString();
+            break;
+          }
+          case 90: {
             Icon = input.ReadString();
             break;
           }
           case 170: {
             conditionTemplates_.AddEntriesFrom(ref input, _repeated_conditionTemplates_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// 充值配置(独立配置表,存放价格等商务属性)
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class RechargeCfg : pb::IMessage<RechargeCfg>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<RechargeCfg> _parser = new pb::MessageParser<RechargeCfg>(() => new RechargeCfg());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<RechargeCfg> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Gserver.CfgReflection.Descriptor.MessageTypes[16]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RechargeCfg() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RechargeCfg(RechargeCfg other) : this() {
+      cfgId_ = other.cfgId_;
+      price_ = other.price_;
+      currency_ = other.currency_;
+      productId_ = other.productId_;
+      name_ = other.name_;
+      icon_ = other.icon_;
+      detail_ = other.detail_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RechargeCfg Clone() {
+      return new RechargeCfg(this);
+    }
+
+    /// <summary>Field number for the "CfgId" field.</summary>
+    public const int CfgIdFieldNumber = 1;
+    private int cfgId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CfgId {
+      get { return cfgId_; }
+      set {
+        cfgId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "Price" field.</summary>
+    public const int PriceFieldNumber = 2;
+    private int price_;
+    /// <summary>
+    /// 价格(分),如6800=68元
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int Price {
+      get { return price_; }
+      set {
+        price_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "Currency" field.</summary>
+    public const int CurrencyFieldNumber = 3;
+    private string currency_ = "";
+    /// <summary>
+    /// 货币类型(CNY/USD)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Currency {
+      get { return currency_; }
+      set {
+        currency_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "ProductId" field.</summary>
+    public const int ProductIdFieldNumber = 4;
+    private string productId_ = "";
+    /// <summary>
+    /// 平台商品ID(iOS/Android商店的productId)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ProductId {
+      get { return productId_; }
+      set {
+        productId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "Name" field.</summary>
+    public const int NameFieldNumber = 5;
+    private string name_ = "";
+    /// <summary>
+    /// 商品名称
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "Icon" field.</summary>
+    public const int IconFieldNumber = 6;
+    private string icon_ = "";
+    /// <summary>
+    /// 商品图标
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Icon {
+      get { return icon_; }
+      set {
+        icon_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "Detail" field.</summary>
+    public const int DetailFieldNumber = 7;
+    private string detail_ = "";
+    /// <summary>
+    /// 商品描述
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Detail {
+      get { return detail_; }
+      set {
+        detail_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as RechargeCfg);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(RechargeCfg other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (CfgId != other.CfgId) return false;
+      if (Price != other.Price) return false;
+      if (Currency != other.Currency) return false;
+      if (ProductId != other.ProductId) return false;
+      if (Name != other.Name) return false;
+      if (Icon != other.Icon) return false;
+      if (Detail != other.Detail) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (CfgId != 0) hash ^= CfgId.GetHashCode();
+      if (Price != 0) hash ^= Price.GetHashCode();
+      if (Currency.Length != 0) hash ^= Currency.GetHashCode();
+      if (ProductId.Length != 0) hash ^= ProductId.GetHashCode();
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (Icon.Length != 0) hash ^= Icon.GetHashCode();
+      if (Detail.Length != 0) hash ^= Detail.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (CfgId != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(CfgId);
+      }
+      if (Price != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(Price);
+      }
+      if (Currency.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Currency);
+      }
+      if (ProductId.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(ProductId);
+      }
+      if (Name.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(Name);
+      }
+      if (Icon.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(Icon);
+      }
+      if (Detail.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(Detail);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (CfgId != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(CfgId);
+      }
+      if (Price != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(Price);
+      }
+      if (Currency.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Currency);
+      }
+      if (ProductId.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(ProductId);
+      }
+      if (Name.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(Name);
+      }
+      if (Icon.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(Icon);
+      }
+      if (Detail.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(Detail);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (CfgId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(CfgId);
+      }
+      if (Price != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Price);
+      }
+      if (Currency.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Currency);
+      }
+      if (ProductId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ProductId);
+      }
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (Icon.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Icon);
+      }
+      if (Detail.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Detail);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(RechargeCfg other) {
+      if (other == null) {
+        return;
+      }
+      if (other.CfgId != 0) {
+        CfgId = other.CfgId;
+      }
+      if (other.Price != 0) {
+        Price = other.Price;
+      }
+      if (other.Currency.Length != 0) {
+        Currency = other.Currency;
+      }
+      if (other.ProductId.Length != 0) {
+        ProductId = other.ProductId;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.Icon.Length != 0) {
+        Icon = other.Icon;
+      }
+      if (other.Detail.Length != 0) {
+        Detail = other.Detail;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            CfgId = input.ReadInt32();
+            break;
+          }
+          case 16: {
+            Price = input.ReadInt32();
+            break;
+          }
+          case 26: {
+            Currency = input.ReadString();
+            break;
+          }
+          case 34: {
+            ProductId = input.ReadString();
+            break;
+          }
+          case 42: {
+            Name = input.ReadString();
+            break;
+          }
+          case 50: {
+            Icon = input.ReadString();
+            break;
+          }
+          case 58: {
+            Detail = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            CfgId = input.ReadInt32();
+            break;
+          }
+          case 16: {
+            Price = input.ReadInt32();
+            break;
+          }
+          case 26: {
+            Currency = input.ReadString();
+            break;
+          }
+          case 34: {
+            ProductId = input.ReadString();
+            break;
+          }
+          case 42: {
+            Name = input.ReadString();
+            break;
+          }
+          case 50: {
+            Icon = input.ReadString();
+            break;
+          }
+          case 58: {
+            Detail = input.ReadString();
             break;
           }
         }
@@ -6259,7 +6737,7 @@ namespace Gserver {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Gserver.CfgReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Gserver.CfgReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7017,7 +7495,7 @@ namespace Gserver {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Gserver.CfgReflection.Descriptor.MessageTypes[17]; }
+      get { return global::Gserver.CfgReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7253,7 +7731,7 @@ namespace Gserver {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Gserver.CfgReflection.Descriptor.MessageTypes[18]; }
+      get { return global::Gserver.CfgReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7290,7 +7768,7 @@ namespace Gserver {
     public const int CfgIdFieldNumber = 1;
     private int cfgId_;
     /// <summary>
-    /// 商店id
+    /// 配置id
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

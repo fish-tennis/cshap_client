@@ -25,8 +25,8 @@ namespace Gserver {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cg5iYXNlaW5mby5wcm90bxIHZ3NlcnZlchoMcGxheWVyLnByb3RvIigKEVBs",
-            "YXllckVudHJ5R2FtZU9rEhMKC2lzUmVjb25uZWN0GAEgASgIIi8KDEJhc2VJ",
-            "bmZvU3luYxIfCgRkYXRhGAEgASgLMhEuZ3NlcnZlci5CYXNlSW5mb0IGWgQu",
+            "YXllckVudHJ5R2FtZU9rEhMKC0lzUmVjb25uZWN0GAEgASgIIi8KDEJhc2VJ",
+            "bmZvU3luYxIfCgREYXRhGAEgASgLMhEuZ3NlcnZlci5CYXNlSW5mb0IGWgQu",
             "L3BiYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Gserver.PlayerReflection.Descriptor, },
@@ -87,7 +87,7 @@ namespace Gserver {
       return new PlayerEntryGameOk(this);
     }
 
-    /// <summary>Field number for the "isReconnect" field.</summary>
+    /// <summary>Field number for the "IsReconnect" field.</summary>
     public const int IsReconnectFieldNumber = 1;
     private bool isReconnect_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -277,7 +277,7 @@ namespace Gserver {
       return new BaseInfoSync(this);
     }
 
-    /// <summary>Field number for the "data" field.</summary>
+    /// <summary>Field number for the "Data" field.</summary>
     public const int DataFieldNumber = 1;
     private global::Gserver.BaseInfo data_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

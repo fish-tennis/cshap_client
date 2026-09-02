@@ -24,9 +24,9 @@ namespace Gserver {
     static AccountReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Cg1hY2NvdW50LnByb3RvEgdnc2VydmVyIjYKB0FjY291bnQSCwoDX2lkGAEg",
-            "ASgDEgwKBG5hbWUYAiABKAkSEAoIcGFzc3dvcmQYAyABKAlCBloELi9wYmIG",
-            "cHJvdG8z"));
+            "Cg1hY2NvdW50LnByb3RvEgdnc2VydmVyIjUKB0FjY291bnQSCgoCSWQYASAB",
+            "KAMSDAoETmFtZRgCIAEoCRIQCghQYXNzd29yZBgDIAEoCUIGWgQuL3BiYgZw",
+            "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -75,7 +75,7 @@ namespace Gserver {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Account(Account other) : this() {
-      Id_ = other.Id_;
+      id_ = other.id_;
       name_ = other.name_;
       password_ = other.password_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -87,19 +87,24 @@ namespace Gserver {
       return new Account(this);
     }
 
-    /// <summary>Field number for the "_id" field.</summary>
+    /// <summary>Field number for the "Id" field.</summary>
     public const int IdFieldNumber = 1;
-    private long Id_;
+    private long id_;
+    /// <summary>
+    /// 业务账号ID(由KV自增分配,登录/封禁/在线状态等业务均以此为准)。
+    /// 注意:account集合的mongodb _id是账号名(分片键),并非此字段;
+    /// 历史字段名_id是想映射mongo主键却从未实现,改造后语义已彻底错位,故更名
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long Id {
-      get { return Id_; }
+      get { return id_; }
       set {
-        Id_ = value;
+        id_ = value;
       }
     }
 
-    /// <summary>Field number for the "name" field.</summary>
+    /// <summary>Field number for the "Name" field.</summary>
     public const int NameFieldNumber = 2;
     private string name_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -111,7 +116,7 @@ namespace Gserver {
       }
     }
 
-    /// <summary>Field number for the "password" field.</summary>
+    /// <summary>Field number for the "Password" field.</summary>
     public const int PasswordFieldNumber = 3;
     private string password_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

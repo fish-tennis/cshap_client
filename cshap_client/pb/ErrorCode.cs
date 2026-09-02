@@ -24,13 +24,29 @@ namespace Gserver {
     static ErrorCodeReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChBlcnJvcl9jb2RlLnByb3RvEgdnc2VydmVyKuYBCglFcnJvckNvZGUSEAoM",
+            "ChBlcnJvcl9jb2RlLnByb3RvEgdnc2VydmVyKtoHCglFcnJvckNvZGUSEAoM",
             "RXJyb3JDb2RlX09LEAASFAoQRXJyb3JDb2RlX05vdFJlZxALEhsKF0Vycm9y",
             "Q29kZV9QYXNzd29yZEVycm9yEAwSEwoPRXJyb3JDb2RlX0RiRXJyEA0SGwoX",
             "RXJyb3JDb2RlX05hbWVEdXBsaWNhdGUQDhIWChJFcnJvckNvZGVfSGFzTG9n",
             "aW4QDxIaChZFcnJvckNvZGVfU2Vzc2lvbkVycm9yEBASFgoSRXJyb3JDb2Rl",
-            "X05vUGxheWVyEBESFgoSRXJyb3JDb2RlX1RyeUxhdGVyEBJCBloELi9wYmIG",
-            "cHJvdG8z"));
+            "X05vUGxheWVyEBESFgoSRXJyb3JDb2RlX1RyeUxhdGVyEBISGwoXRXJyb3JD",
+            "b2RlX1ZlcnNpb25Ub29Mb3cQExIjCh9FcnJvckNvZGVfUmVjb25uZWN0U2Vz",
+            "c2lvbkVycm9yEBQSGwoXRXJyb3JDb2RlX1NlcnZlckNsb3NpbmcQFRIiCh5F",
+            "cnJvckNvZGVfUmVjb25uZWN0TmVlZFJlbG9naW4QFhIkCiBFcnJvckNvZGVf",
+            "Um91dGVDbGllbnRQYWNrZXRFcnJvchAXEiMKH0Vycm9yQ29kZV9Sb3V0ZUNs",
+            "aWVudFBhY2tldExvc3MQGBIiCh5FcnJvckNvZGVfUHVzaENsaWVudFBhY2tl",
+            "dExvc3MQGRIUChBFcnJvckNvZGVfQmFubmVkEBoSGQoVRXJyb3JDb2RlX01h",
+            "aW50ZW5hbmNlEBsSJgoiRXJyb3JDb2RlX1JlZ2lvbkNsb3NlZFJlZ2lzdHJh",
+            "dGlvbhAcEhsKF0Vycm9yQ29kZV9SZWdpb25JZEVycm9yEB0SIAocRXJyb3JD",
+            "b2RlX1BsYXllckFscmVhZHlFeGlzdBAeEhsKF0Vycm9yQ29kZV9TZGtBdXRo",
+            "RmFpbGVkECkSGgoWRXJyb3JDb2RlX1Nka0NvbmZpZ0VychAqEhcKE0Vycm9y",
+            "Q29kZV9TZGtBcGlFcnIQKxIgChxFcnJvckNvZGVfSW52YWxpZEFjY291bnRO",
+            "YW1lECwSGQoVRXJyb3JDb2RlX05hbWVJbnZhbGlkEFsSHgoaRXJyb3JDb2Rl",
+            "X05hbWVGaWx0ZXJSZWplY3QQXBIbChdFcnJvckNvZGVfTmFtZUZpbHRlckVy",
+            "chBdEhoKFkVycm9yQ29kZV9NYWlsTm90Rm91bmQQZRIgChxFcnJvckNvZGVf",
+            "TWFpbEFscmVhZHlDbGFpbWVkEGYSGQoVRXJyb3JDb2RlX01haWxFeHBpcmVk",
+            "EGcSIwofRXJyb3JDb2RlX01haWxIYXNVbmNsYWltZWRJdGVtcxBoEh4KGkVy",
+            "cm9yQ29kZV9NYWlsTm9BdHRhY2htZW50EGlCBloELi9wYmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Gserver.ErrorCode), }, null, null));
@@ -42,7 +58,7 @@ namespace Gserver {
   public enum ErrorCode {
     [pbr::OriginalName("ErrorCode_OK")] Ok = 0,
     /// <summary>
-    /// 未注册
+    /// 账号未注册
     /// </summary>
     [pbr::OriginalName("ErrorCode_NotReg")] NotReg = 11,
     /// <summary>
@@ -57,10 +73,118 @@ namespace Gserver {
     /// 重名
     /// </summary>
     [pbr::OriginalName("ErrorCode_NameDuplicate")] NameDuplicate = 14,
+    /// <summary>
+    /// 该连接已经登录过(客户端需要退回登录界面)
+    /// </summary>
     [pbr::OriginalName("ErrorCode_HasLogin")] HasLogin = 15,
+    /// <summary>
+    /// 进游戏服的验证码错误
+    /// </summary>
     [pbr::OriginalName("ErrorCode_SessionError")] SessionError = 16,
+    /// <summary>
+    /// 还没创建角色
+    /// </summary>
     [pbr::OriginalName("ErrorCode_NoPlayer")] NoPlayer = 17,
+    /// <summary>
+    /// 稍后重试
+    /// </summary>
     [pbr::OriginalName("ErrorCode_TryLater")] TryLater = 18,
+    /// <summary>
+    /// 客户端版本号过低
+    /// </summary>
+    [pbr::OriginalName("ErrorCode_VersionTooLow")] VersionTooLow = 19,
+    /// <summary>
+    /// 重连session校验失败(客户端需要退回登录界面)
+    /// </summary>
+    [pbr::OriginalName("ErrorCode_ReconnectSessionError")] ReconnectSessionError = 20,
+    /// <summary>
+    /// 服务器正在关闭
+    /// </summary>
+    [pbr::OriginalName("ErrorCode_ServerClosing")] ServerClosing = 21,
+    /// <summary>
+    /// 重连失败需要重新登录(客户端需要退回登录界面)
+    /// </summary>
+    [pbr::OriginalName("ErrorCode_ReconnectNeedRelogin")] ReconnectNeedRelogin = 22,
+    /// <summary>
+    /// 网关转发消息失败(客户端需要退回登录界面)
+    /// </summary>
+    [pbr::OriginalName("ErrorCode_RouteClientPacketError")] RouteClientPacketError = 23,
+    /// <summary>
+    /// 网关转发消息丢失,可能目标服务器暂时繁忙
+    /// </summary>
+    [pbr::OriginalName("ErrorCode_RouteClientPacketLoss")] RouteClientPacketLoss = 24,
+    /// <summary>
+    /// 游戏服收到客户端消息丢失,玩家chan已满
+    /// </summary>
+    [pbr::OriginalName("ErrorCode_PushClientPacketLoss")] PushClientPacketLoss = 25,
+    /// <summary>
+    /// 账号或玩家被封禁
+    /// </summary>
+    [pbr::OriginalName("ErrorCode_Banned")] Banned = 26,
+    /// <summary>
+    /// 服务器维护中
+    /// </summary>
+    [pbr::OriginalName("ErrorCode_Maintenance")] Maintenance = 27,
+    /// <summary>
+    /// 区服已关闭注册新角色
+    /// </summary>
+    [pbr::OriginalName("ErrorCode_RegionClosedRegistration")] RegionClosedRegistration = 28,
+    /// <summary>
+    /// 区服Id错误
+    /// </summary>
+    [pbr::OriginalName("ErrorCode_RegionIdError")] RegionIdError = 29,
+    /// <summary>
+    /// 该账号在此区服已有角色
+    /// </summary>
+    [pbr::OriginalName("ErrorCode_PlayerAlreadyExist")] PlayerAlreadyExist = 30,
+    /// <summary>
+    /// SDK登录验证失败(客户端需要重新登录SDK)
+    /// </summary>
+    [pbr::OriginalName("ErrorCode_SdkAuthFailed")] SdkAuthFailed = 41,
+    /// <summary>
+    /// SDK配置错误(服务器未配置SDK验证地址,需运维排查)
+    /// </summary>
+    [pbr::OriginalName("ErrorCode_SdkConfigErr")] SdkConfigErr = 42,
+    /// <summary>
+    /// SDK验证接口异常(网络/响应异常,可稍后重试)
+    /// </summary>
+    [pbr::OriginalName("ErrorCode_SdkApiErr")] SdkApiErr = 43,
+    /// <summary>
+    /// 无效的账号名(自建账号名不允许包含下划线)
+    /// </summary>
+    [pbr::OriginalName("ErrorCode_InvalidAccountName")] InvalidAccountName = 44,
+    /// <summary>
+    /// 无效的角色名(长度或内容不合法)
+    /// </summary>
+    [pbr::OriginalName("ErrorCode_NameInvalid")] NameInvalid = 91,
+    /// <summary>
+    /// 角色名包含敏感词,未通过过滤
+    /// </summary>
+    [pbr::OriginalName("ErrorCode_NameFilterReject")] NameFilterReject = 92,
+    /// <summary>
+    /// 名称过滤服务异常,可稍后重试
+    /// </summary>
+    [pbr::OriginalName("ErrorCode_NameFilterErr")] NameFilterErr = 93,
+    /// <summary>
+    /// 邮件不存在
+    /// </summary>
+    [pbr::OriginalName("ErrorCode_MailNotFound")] MailNotFound = 101,
+    /// <summary>
+    /// 邮件附件已领取
+    /// </summary>
+    [pbr::OriginalName("ErrorCode_MailAlreadyClaimed")] MailAlreadyClaimed = 102,
+    /// <summary>
+    /// 邮件已过期
+    /// </summary>
+    [pbr::OriginalName("ErrorCode_MailExpired")] MailExpired = 103,
+    /// <summary>
+    /// 邮件有未领取附件,禁止删除
+    /// </summary>
+    [pbr::OriginalName("ErrorCode_MailHasUnclaimedItems")] MailHasUnclaimedItems = 104,
+    /// <summary>
+    /// 邮件没有附件
+    /// </summary>
+    [pbr::OriginalName("ErrorCode_MailNoAttachment")] MailNoAttachment = 105,
   }
 
   #endregion

@@ -25,12 +25,12 @@ namespace Gserver {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFjbGllbnRfYmFzZS5wcm90bxIHZ3NlcnZlciIhCgxIZWFydEJlYXRSZXES",
-            "EQoJdGltZXN0YW1wGAEgASgDIkMKDEhlYXJ0QmVhdFJlcxIYChByZXF1ZXN0",
-            "VGltZXN0YW1wGAEgASgDEhkKEXJlc3BvbnNlVGltZXN0YW1wGAIgASgDIkAK",
-            "CEVycm9yUmVzEg8KB2NvbW1hbmQYASABKAUSEAoIcmVzdWx0SWQYAiABKAUS",
-            "EQoJcmVzdWx0U3RyGAMgASgJImQKGkdhdGVSb3V0ZUNsaWVudFBhY2tldEVy",
-            "cm9yEhAKCHBsYXllcklkGAEgASgDEg8KB2NvbW1hbmQYAiABKAUSEAoIcmVz",
-            "dWx0SWQYAyABKAUSEQoJcmVzdWx0U3RyGAQgASgJQgZaBC4vcGJiBnByb3Rv",
+            "EQoJVGltZXN0YW1wGAEgASgDIkMKDEhlYXJ0QmVhdFJlcxIYChBSZXF1ZXN0",
+            "VGltZXN0YW1wGAEgASgDEhkKEVJlc3BvbnNlVGltZXN0YW1wGAIgASgDIkAK",
+            "CEVycm9yUmVzEg8KB0NvbW1hbmQYASABKAUSEAoIUmVzdWx0SWQYAiABKAUS",
+            "EQoJUmVzdWx0U3RyGAMgASgJImQKGkdhdGVSb3V0ZUNsaWVudFBhY2tldEVy",
+            "cm9yEhAKCFBsYXllcklkGAEgASgDEg8KB0NvbW1hbmQYAiABKAUSEAoIUmVz",
+            "dWx0SWQYAyABKAUSEQoJUmVzdWx0U3RyGAQgASgJQgZaBC4vcGJiBnByb3Rv",
             "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -93,7 +93,7 @@ namespace Gserver {
       return new HeartBeatReq(this);
     }
 
-    /// <summary>Field number for the "timestamp" field.</summary>
+    /// <summary>Field number for the "Timestamp" field.</summary>
     public const int TimestampFieldNumber = 1;
     private long timestamp_;
     /// <summary>
@@ -290,7 +290,7 @@ namespace Gserver {
       return new HeartBeatRes(this);
     }
 
-    /// <summary>Field number for the "requestTimestamp" field.</summary>
+    /// <summary>Field number for the "RequestTimestamp" field.</summary>
     public const int RequestTimestampFieldNumber = 1;
     private long requestTimestamp_;
     /// <summary>
@@ -305,7 +305,7 @@ namespace Gserver {
       }
     }
 
-    /// <summary>Field number for the "responseTimestamp" field.</summary>
+    /// <summary>Field number for the "ResponseTimestamp" field.</summary>
     public const int ResponseTimestampFieldNumber = 2;
     private long responseTimestamp_;
     /// <summary>
@@ -527,7 +527,7 @@ namespace Gserver {
       return new ErrorRes(this);
     }
 
-    /// <summary>Field number for the "command" field.</summary>
+    /// <summary>Field number for the "Command" field.</summary>
     public const int CommandFieldNumber = 1;
     private int command_;
     /// <summary>
@@ -542,7 +542,7 @@ namespace Gserver {
       }
     }
 
-    /// <summary>Field number for the "resultId" field.</summary>
+    /// <summary>Field number for the "ResultId" field.</summary>
     public const int ResultIdFieldNumber = 2;
     private int resultId_;
     /// <summary>
@@ -557,7 +557,7 @@ namespace Gserver {
       }
     }
 
-    /// <summary>Field number for the "resultStr" field.</summary>
+    /// <summary>Field number for the "ResultStr" field.</summary>
     public const int ResultStrFieldNumber = 3;
     private string resultStr_ = "";
     /// <summary>
@@ -804,7 +804,7 @@ namespace Gserver {
       return new GateRouteClientPacketError(this);
     }
 
-    /// <summary>Field number for the "playerId" field.</summary>
+    /// <summary>Field number for the "PlayerId" field.</summary>
     public const int PlayerIdFieldNumber = 1;
     private long playerId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -816,7 +816,7 @@ namespace Gserver {
       }
     }
 
-    /// <summary>Field number for the "command" field.</summary>
+    /// <summary>Field number for the "Command" field.</summary>
     public const int CommandFieldNumber = 2;
     private int command_;
     /// <summary>
@@ -831,7 +831,7 @@ namespace Gserver {
       }
     }
 
-    /// <summary>Field number for the "resultId" field.</summary>
+    /// <summary>Field number for the "ResultId" field.</summary>
     public const int ResultIdFieldNumber = 3;
     private int resultId_;
     /// <summary>
@@ -846,7 +846,7 @@ namespace Gserver {
       }
     }
 
-    /// <summary>Field number for the "resultStr" field.</summary>
+    /// <summary>Field number for the "ResultStr" field.</summary>
     public const int ResultStrFieldNumber = 4;
     private string resultStr_ = "";
     /// <summary>
