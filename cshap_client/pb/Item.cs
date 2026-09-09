@@ -26,9 +26,9 @@ namespace Gserver {
           string.Concat(
             "CgppdGVtLnByb3RvEgdnc2VydmVyIikKCUNvdW50SXRlbRINCgVDZmdJZBgB",
             "IAEoBRINCgVDb3VudBgCIAEoBSJDCg9VbmlxdWVDb3VudEl0ZW0SEAoIVW5p",
-            "cXVlSWQYASABKAMSDQoFQ2ZnSWQYAiABKAUSDwoHVGltZW91dBgDIAEoBSI5",
+            "cXVlSWQYASABKAMSDQoFQ2ZnSWQYAiABKAUSDwoHVGltZW91dBgDIAEoAyI5",
             "CgVFcXVpcBIQCghVbmlxdWVJZBgBIAEoAxINCgVDZmdJZBgCIAEoBRIPCgdU",
-            "aW1lb3V0GAMgASgFIjoKCkl0ZW1Vc2VSZXESDQoFQ2ZnSWQYASABKAUSEAoI",
+            "aW1lb3V0GAMgASgDIjoKCkl0ZW1Vc2VSZXESDQoFQ2ZnSWQYASABKAUSEAoI",
             "VW5pcXVlSWQYAiABKAMSCwoDTnVtGAMgASgFIjoKCkl0ZW1Vc2VSZXMSDQoF",
             "Q2ZnSWQYASABKAUSEAoIVW5pcXVlSWQYAiABKAMSCwoDTnVtGAMgASgFQgZa",
             "BC4vcGJiBnByb3RvMw=="));
@@ -364,13 +364,13 @@ namespace Gserver {
 
     /// <summary>Field number for the "Timeout" field.</summary>
     public const int TimeoutFieldNumber = 3;
-    private int timeout_;
+    private long timeout_;
     /// <summary>
     /// 超时时间戳(秒)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int Timeout {
+    public long Timeout {
       get { return timeout_; }
       set {
         timeout_ = value;
@@ -404,7 +404,7 @@ namespace Gserver {
       int hash = 1;
       if (UniqueId != 0L) hash ^= UniqueId.GetHashCode();
       if (CfgId != 0) hash ^= CfgId.GetHashCode();
-      if (Timeout != 0) hash ^= Timeout.GetHashCode();
+      if (Timeout != 0L) hash ^= Timeout.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -431,9 +431,9 @@ namespace Gserver {
         output.WriteRawTag(16);
         output.WriteInt32(CfgId);
       }
-      if (Timeout != 0) {
+      if (Timeout != 0L) {
         output.WriteRawTag(24);
-        output.WriteInt32(Timeout);
+        output.WriteInt64(Timeout);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -453,9 +453,9 @@ namespace Gserver {
         output.WriteRawTag(16);
         output.WriteInt32(CfgId);
       }
-      if (Timeout != 0) {
+      if (Timeout != 0L) {
         output.WriteRawTag(24);
-        output.WriteInt32(Timeout);
+        output.WriteInt64(Timeout);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -473,8 +473,8 @@ namespace Gserver {
       if (CfgId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(CfgId);
       }
-      if (Timeout != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Timeout);
+      if (Timeout != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Timeout);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -494,7 +494,7 @@ namespace Gserver {
       if (other.CfgId != 0) {
         CfgId = other.CfgId;
       }
-      if (other.Timeout != 0) {
+      if (other.Timeout != 0L) {
         Timeout = other.Timeout;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -521,7 +521,7 @@ namespace Gserver {
             break;
           }
           case 24: {
-            Timeout = input.ReadInt32();
+            Timeout = input.ReadInt64();
             break;
           }
         }
@@ -548,7 +548,7 @@ namespace Gserver {
             break;
           }
           case 24: {
-            Timeout = input.ReadInt32();
+            Timeout = input.ReadInt64();
             break;
           }
         }
@@ -640,13 +640,13 @@ namespace Gserver {
 
     /// <summary>Field number for the "Timeout" field.</summary>
     public const int TimeoutFieldNumber = 3;
-    private int timeout_;
+    private long timeout_;
     /// <summary>
     /// 超时时间戳(秒)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int Timeout {
+    public long Timeout {
       get { return timeout_; }
       set {
         timeout_ = value;
@@ -680,7 +680,7 @@ namespace Gserver {
       int hash = 1;
       if (UniqueId != 0L) hash ^= UniqueId.GetHashCode();
       if (CfgId != 0) hash ^= CfgId.GetHashCode();
-      if (Timeout != 0) hash ^= Timeout.GetHashCode();
+      if (Timeout != 0L) hash ^= Timeout.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -707,9 +707,9 @@ namespace Gserver {
         output.WriteRawTag(16);
         output.WriteInt32(CfgId);
       }
-      if (Timeout != 0) {
+      if (Timeout != 0L) {
         output.WriteRawTag(24);
-        output.WriteInt32(Timeout);
+        output.WriteInt64(Timeout);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -729,9 +729,9 @@ namespace Gserver {
         output.WriteRawTag(16);
         output.WriteInt32(CfgId);
       }
-      if (Timeout != 0) {
+      if (Timeout != 0L) {
         output.WriteRawTag(24);
-        output.WriteInt32(Timeout);
+        output.WriteInt64(Timeout);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -749,8 +749,8 @@ namespace Gserver {
       if (CfgId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(CfgId);
       }
-      if (Timeout != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Timeout);
+      if (Timeout != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Timeout);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -770,7 +770,7 @@ namespace Gserver {
       if (other.CfgId != 0) {
         CfgId = other.CfgId;
       }
-      if (other.Timeout != 0) {
+      if (other.Timeout != 0L) {
         Timeout = other.Timeout;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -797,7 +797,7 @@ namespace Gserver {
             break;
           }
           case 24: {
-            Timeout = input.ReadInt32();
+            Timeout = input.ReadInt64();
             break;
           }
         }
@@ -824,7 +824,7 @@ namespace Gserver {
             break;
           }
           case 24: {
-            Timeout = input.ReadInt32();
+            Timeout = input.ReadInt64();
             break;
           }
         }

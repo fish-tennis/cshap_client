@@ -105,8 +105,8 @@ namespace Gserver {
             "b24YBiABKAkSDgoGRGV0YWlsGAcgASgJIpgDCgtBY3Rpdml0eUNmZxINCgVD",
             "ZmdJZBgBIAEoBRIMCgROYW1lGAIgASgJEg4KBkRldGFpbBgDIAEoCRIQCghU",
             "ZW1wbGF0ZRgEIAEoCRITCgtSZWZyZXNoVHlwZRgFIAEoBRIRCglDeWNsZVR5",
-            "cGUYBiABKAUSEAoIVGltZVR5cGUYByABKAUSEQoJQmVnaW5UaW1lGAggASgF",
-            "Eg8KB0VuZFRpbWUYCSABKAUSEwoLRXhjaGFuZ2VJZHMYCiADKAUSDQoFSXNP",
+            "cGUYBiABKAUSEAoIVGltZVR5cGUYByABKAUSEQoJQmVnaW5UaW1lGAggASgD",
+            "Eg8KB0VuZFRpbWUYCSABKAMSEwoLRXhjaGFuZ2VJZHMYCiADKAUSDQoFSXNP",
             "ZmYYCyABKAgSGQoRUmVtb3ZlRGF0YVdoZW5FbmQYDCABKAgSFgoOTWluUGxh",
             "eWVyTGV2ZWwYDiABKAUSFgoOTWF4UGxheWVyTGV2ZWwYDyABKAUSEAoIUXVl",
             "c3RJZHMYECADKAUSOAoKUHJvcGVydGllcxgRIAMoCzIkLmdzZXJ2ZXIuQWN0",
@@ -6880,13 +6880,13 @@ namespace Gserver {
 
     /// <summary>Field number for the "BeginTime" field.</summary>
     public const int BeginTimeFieldNumber = 8;
-    private int beginTime_;
+    private long beginTime_;
     /// <summary>
     /// 开始时间(TimeType为TimeType_Timestamp时,格式是时间戳 TimeType为TimeType_Date时,格式是20240219)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int BeginTime {
+    public long BeginTime {
       get { return beginTime_; }
       set {
         beginTime_ = value;
@@ -6895,13 +6895,13 @@ namespace Gserver {
 
     /// <summary>Field number for the "EndTime" field.</summary>
     public const int EndTimeFieldNumber = 9;
-    private int endTime_;
+    private long endTime_;
     /// <summary>
     /// 结束时间(TimeType为TimeType_Timestamp时,格式是时间戳 TimeType为TimeType_Date时,格式是20240219)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int EndTime {
+    public long EndTime {
       get { return endTime_; }
       set {
         endTime_ = value;
@@ -7055,8 +7055,8 @@ namespace Gserver {
       if (RefreshType != 0) hash ^= RefreshType.GetHashCode();
       if (CycleType != 0) hash ^= CycleType.GetHashCode();
       if (TimeType != 0) hash ^= TimeType.GetHashCode();
-      if (BeginTime != 0) hash ^= BeginTime.GetHashCode();
-      if (EndTime != 0) hash ^= EndTime.GetHashCode();
+      if (BeginTime != 0L) hash ^= BeginTime.GetHashCode();
+      if (EndTime != 0L) hash ^= EndTime.GetHashCode();
       hash ^= exchangeIds_.GetHashCode();
       if (IsOff != false) hash ^= IsOff.GetHashCode();
       if (RemoveDataWhenEnd != false) hash ^= RemoveDataWhenEnd.GetHashCode();
@@ -7110,13 +7110,13 @@ namespace Gserver {
         output.WriteRawTag(56);
         output.WriteInt32(TimeType);
       }
-      if (BeginTime != 0) {
+      if (BeginTime != 0L) {
         output.WriteRawTag(64);
-        output.WriteInt32(BeginTime);
+        output.WriteInt64(BeginTime);
       }
-      if (EndTime != 0) {
+      if (EndTime != 0L) {
         output.WriteRawTag(72);
-        output.WriteInt32(EndTime);
+        output.WriteInt64(EndTime);
       }
       exchangeIds_.WriteTo(output, _repeated_exchangeIds_codec);
       if (IsOff != false) {
@@ -7175,13 +7175,13 @@ namespace Gserver {
         output.WriteRawTag(56);
         output.WriteInt32(TimeType);
       }
-      if (BeginTime != 0) {
+      if (BeginTime != 0L) {
         output.WriteRawTag(64);
-        output.WriteInt32(BeginTime);
+        output.WriteInt64(BeginTime);
       }
-      if (EndTime != 0) {
+      if (EndTime != 0L) {
         output.WriteRawTag(72);
-        output.WriteInt32(EndTime);
+        output.WriteInt64(EndTime);
       }
       exchangeIds_.WriteTo(ref output, _repeated_exchangeIds_codec);
       if (IsOff != false) {
@@ -7233,11 +7233,11 @@ namespace Gserver {
       if (TimeType != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(TimeType);
       }
-      if (BeginTime != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(BeginTime);
+      if (BeginTime != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(BeginTime);
       }
-      if (EndTime != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(EndTime);
+      if (EndTime != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(EndTime);
       }
       size += exchangeIds_.CalculateSize(_repeated_exchangeIds_codec);
       if (IsOff != false) {
@@ -7287,10 +7287,10 @@ namespace Gserver {
       if (other.TimeType != 0) {
         TimeType = other.TimeType;
       }
-      if (other.BeginTime != 0) {
+      if (other.BeginTime != 0L) {
         BeginTime = other.BeginTime;
       }
-      if (other.EndTime != 0) {
+      if (other.EndTime != 0L) {
         EndTime = other.EndTime;
       }
       exchangeIds_.Add(other.exchangeIds_);
@@ -7352,11 +7352,11 @@ namespace Gserver {
             break;
           }
           case 64: {
-            BeginTime = input.ReadInt32();
+            BeginTime = input.ReadInt64();
             break;
           }
           case 72: {
-            EndTime = input.ReadInt32();
+            EndTime = input.ReadInt64();
             break;
           }
           case 82:
@@ -7433,11 +7433,11 @@ namespace Gserver {
             break;
           }
           case 64: {
-            BeginTime = input.ReadInt32();
+            BeginTime = input.ReadInt64();
             break;
           }
           case 72: {
-            EndTime = input.ReadInt32();
+            EndTime = input.ReadInt64();
             break;
           }
           case 82:

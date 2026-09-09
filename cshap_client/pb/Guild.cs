@@ -45,7 +45,7 @@ namespace Gserver {
             "BCABKAUiMwoJR3VpbGRTeW5jEiYKBERhdGEYASABKAsyGC5nc2VydmVyLlBs",
             "YXllckd1aWxkRGF0YSJOChBHdWlsZEpvaW5SZXF1ZXN0EhAKCFBsYXllcklk",
             "GAEgASgDEhIKClBsYXllck5hbWUYAiABKAkSFAoMVGltZXN0YW1wU2VjGAMg",
-            "ASgFIiEKDEd1aWxkTGlzdFJlcRIRCglQYWdlSW5kZXgYASABKAUiXAoMR3Vp",
+            "ASgDIiEKDEd1aWxkTGlzdFJlcRIRCglQYWdlSW5kZXgYASABKAUiXAoMR3Vp",
             "bGRMaXN0UmVzEhEKCVBhZ2VJbmRleBgBIAEoBRIRCglQYWdlQ291bnQYAiAB",
             "KAUSJgoKR3VpbGRJbmZvcxgDIAMoCzISLmdzZXJ2ZXIuR3VpbGRJbmZvIi0K",
             "Dkd1aWxkQ3JlYXRlUmVxEgwKBE5hbWUYASABKAkSDQoFSW50cm8YAiABKAki",
@@ -1580,13 +1580,13 @@ namespace Gserver {
 
     /// <summary>Field number for the "TimestampSec" field.</summary>
     public const int TimestampSecFieldNumber = 3;
-    private int timestampSec_;
+    private long timestampSec_;
     /// <summary>
     /// 时间戳(秒)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int TimestampSec {
+    public long TimestampSec {
       get { return timestampSec_; }
       set {
         timestampSec_ = value;
@@ -1620,7 +1620,7 @@ namespace Gserver {
       int hash = 1;
       if (PlayerId != 0L) hash ^= PlayerId.GetHashCode();
       if (PlayerName.Length != 0) hash ^= PlayerName.GetHashCode();
-      if (TimestampSec != 0) hash ^= TimestampSec.GetHashCode();
+      if (TimestampSec != 0L) hash ^= TimestampSec.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1647,9 +1647,9 @@ namespace Gserver {
         output.WriteRawTag(18);
         output.WriteString(PlayerName);
       }
-      if (TimestampSec != 0) {
+      if (TimestampSec != 0L) {
         output.WriteRawTag(24);
-        output.WriteInt32(TimestampSec);
+        output.WriteInt64(TimestampSec);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -1669,9 +1669,9 @@ namespace Gserver {
         output.WriteRawTag(18);
         output.WriteString(PlayerName);
       }
-      if (TimestampSec != 0) {
+      if (TimestampSec != 0L) {
         output.WriteRawTag(24);
-        output.WriteInt32(TimestampSec);
+        output.WriteInt64(TimestampSec);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -1689,8 +1689,8 @@ namespace Gserver {
       if (PlayerName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(PlayerName);
       }
-      if (TimestampSec != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(TimestampSec);
+      if (TimestampSec != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(TimestampSec);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1710,7 +1710,7 @@ namespace Gserver {
       if (other.PlayerName.Length != 0) {
         PlayerName = other.PlayerName;
       }
-      if (other.TimestampSec != 0) {
+      if (other.TimestampSec != 0L) {
         TimestampSec = other.TimestampSec;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -1737,7 +1737,7 @@ namespace Gserver {
             break;
           }
           case 24: {
-            TimestampSec = input.ReadInt32();
+            TimestampSec = input.ReadInt64();
             break;
           }
         }
@@ -1764,7 +1764,7 @@ namespace Gserver {
             break;
           }
           case 24: {
-            TimestampSec = input.ReadInt32();
+            TimestampSec = input.ReadInt64();
             break;
           }
         }
