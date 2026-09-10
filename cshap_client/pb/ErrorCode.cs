@@ -24,7 +24,7 @@ namespace Gserver {
     static ErrorCodeReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChBlcnJvcl9jb2RlLnByb3RvEgdnc2VydmVyKvcHCglFcnJvckNvZGUSEAoM",
+            "ChBlcnJvcl9jb2RlLnByb3RvEgdnc2VydmVyKrAICglFcnJvckNvZGUSEAoM",
             "RXJyb3JDb2RlX09LEAASFAoQRXJyb3JDb2RlX05vdFJlZxALEhsKF0Vycm9y",
             "Q29kZV9QYXNzd29yZEVycm9yEAwSEwoPRXJyb3JDb2RlX0RiRXJyEA0SGwoX",
             "RXJyb3JDb2RlX05hbWVEdXBsaWNhdGUQDhIWChJFcnJvckNvZGVfSGFzTG9n",
@@ -39,15 +39,16 @@ namespace Gserver {
             "aW50ZW5hbmNlEBsSJgoiRXJyb3JDb2RlX1JlZ2lvbkNsb3NlZFJlZ2lzdHJh",
             "dGlvbhAcEhsKF0Vycm9yQ29kZV9SZWdpb25JZEVycm9yEB0SIAocRXJyb3JD",
             "b2RlX1BsYXllckFscmVhZHlFeGlzdBAeEhsKF0Vycm9yQ29kZV9SZWdpb25O",
-            "b3RPcGVuEB8SGwoXRXJyb3JDb2RlX1Nka0F1dGhGYWlsZWQQKRIaChZFcnJv",
-            "ckNvZGVfU2RrQ29uZmlnRXJyECoSFwoTRXJyb3JDb2RlX1Nka0FwaUVychAr",
-            "EiAKHEVycm9yQ29kZV9JbnZhbGlkQWNjb3VudE5hbWUQLBIZChVFcnJvckNv",
-            "ZGVfTmFtZUludmFsaWQQWxIeChpFcnJvckNvZGVfTmFtZUZpbHRlclJlamVj",
-            "dBBcEhsKF0Vycm9yQ29kZV9OYW1lRmlsdGVyRXJyEF0SGgoWRXJyb3JDb2Rl",
-            "X01haWxOb3RGb3VuZBBlEiAKHEVycm9yQ29kZV9NYWlsQWxyZWFkeUNsYWlt",
-            "ZWQQZhIZChVFcnJvckNvZGVfTWFpbEV4cGlyZWQQZxIjCh9FcnJvckNvZGVf",
-            "TWFpbEhhc1VuY2xhaW1lZEl0ZW1zEGgSHgoaRXJyb3JDb2RlX01haWxOb0F0",
-            "dGFjaG1lbnQQaUIGWgQuL3BiYgZwcm90bzM="));
+            "b3RPcGVuEB8SGwoXRXJyb3JDb2RlX05vTG9naW5TZXJ2ZXIQIBIaChZFcnJv",
+            "ckNvZGVfTm9HYW1lU2VydmVyECESGwoXRXJyb3JDb2RlX1Nka0F1dGhGYWls",
+            "ZWQQKRIaChZFcnJvckNvZGVfU2RrQ29uZmlnRXJyECoSFwoTRXJyb3JDb2Rl",
+            "X1Nka0FwaUVychArEiAKHEVycm9yQ29kZV9JbnZhbGlkQWNjb3VudE5hbWUQ",
+            "LBIZChVFcnJvckNvZGVfTmFtZUludmFsaWQQWxIeChpFcnJvckNvZGVfTmFt",
+            "ZUZpbHRlclJlamVjdBBcEhsKF0Vycm9yQ29kZV9OYW1lRmlsdGVyRXJyEF0S",
+            "GgoWRXJyb3JDb2RlX01haWxOb3RGb3VuZBBlEiAKHEVycm9yQ29kZV9NYWls",
+            "QWxyZWFkeUNsYWltZWQQZhIZChVFcnJvckNvZGVfTWFpbEV4cGlyZWQQZxIj",
+            "Ch9FcnJvckNvZGVfTWFpbEhhc1VuY2xhaW1lZEl0ZW1zEGgSHgoaRXJyb3JD",
+            "b2RlX01haWxOb0F0dGFjaG1lbnQQaUIGWgQuL3BiYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Gserver.ErrorCode), }, null, null));
@@ -142,6 +143,14 @@ namespace Gserver {
     /// 区服未到开服时间(仅白名单账号可进入)
     /// </summary>
     [pbr::OriginalName("ErrorCode_RegionNotOpen")] RegionNotOpen = 31,
+    /// <summary>
+    /// 没有找到可用的登录服
+    /// </summary>
+    [pbr::OriginalName("ErrorCode_NoLoginServer")] NoLoginServer = 32,
+    /// <summary>
+    /// 没有找到可用的游戏服
+    /// </summary>
+    [pbr::OriginalName("ErrorCode_NoGameServer")] NoGameServer = 33,
     /// <summary>
     /// SDK登录验证失败(客户端需要重新登录SDK)
     /// </summary>

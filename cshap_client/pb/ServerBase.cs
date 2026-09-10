@@ -24,23 +24,25 @@ namespace Gserver {
     static ServerBaseReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFzZXJ2ZXJfYmFzZS5wcm90bxIHZ3NlcnZlciLAAQoKU2VydmVySW5mbxIQ",
+            "ChFzZXJ2ZXJfYmFzZS5wcm90bxIHZ3NlcnZlciKgAgoKU2VydmVySW5mbxIQ",
             "CghTZXJ2ZXJJZBgBIAEoBRISCgpTZXJ2ZXJUeXBlGAIgASgJEhgKEFNlcnZl",
             "ckxpc3RlbkFkZHIYAyABKAkSGAoQQ2xpZW50TGlzdGVuQWRkchgEIAEoCRIa",
             "ChJXc0NsaWVudExpc3RlbkFkZHIYBSABKAkSFgoOR2F0ZUxpc3RlbkFkZHIY",
-            "BiABKAkSFgoOTGFzdEFjdGl2ZVRpbWUYByABKAMSDAoEUGluZxgIIAEoBSI0",
-            "Cg1LaWNrUGxheWVyUmVxEhEKCUFjY291bnRJZBgBIAEoAxIQCghQbGF5ZXJJ",
-            "ZBgCIAEoAyJDCg1LaWNrUGxheWVyUmVzEg0KBUVycm9yGAEgASgJEhEKCUFj",
-            "Y291bnRJZBgCIAEoAxIQCghQbGF5ZXJJZBgDIAEoAyIoChBDbGllbnREaXNj",
-            "b25uZWN0EhQKDENsaWVudENvbm5JZBgBIAEoDSIzCgtTZXJ2ZXJIZWxsbxIQ",
-            "CghTZXJ2ZXJJZBgBIAEoBRISCgpTZXJ2ZXJUeXBlGAIgASgJImQKCUJhblJl",
-            "Y29yZBIQCghUYXJnZXRJZBgBIAEoAxISCgpUYXJnZXRUeXBlGAIgASgFEg8K",
-            "B0JhblRpbWUYAyABKAMSEAoIRHVyYXRpb24YBCABKAMSDgoGUmVhc29uGAUg",
-            "ASgJQgZaBC4vcGJiBnByb3RvMw=="));
+            "BiABKAkSFgoOTGFzdEFjdGl2ZVRpbWUYByABKAMSDAoEUGluZxgIIAEoBRIS",
+            "CgpSZWxvYWRUaW1lGAkgASgDEhMKC1N0YXJ0dXBUaW1lGAogASgDEhMKC09u",
+            "bGluZUNvdW50GAsgASgFEhIKCkdpdFZlcnNpb24YDCABKAkSDAoESW5mbxgN",
+            "IAEoCSI0Cg1LaWNrUGxheWVyUmVxEhEKCUFjY291bnRJZBgBIAEoAxIQCghQ",
+            "bGF5ZXJJZBgCIAEoAyJDCg1LaWNrUGxheWVyUmVzEg0KBUVycm9yGAEgASgJ",
+            "EhEKCUFjY291bnRJZBgCIAEoAxIQCghQbGF5ZXJJZBgDIAEoAyIoChBDbGll",
+            "bnREaXNjb25uZWN0EhQKDENsaWVudENvbm5JZBgBIAEoDSIzCgtTZXJ2ZXJI",
+            "ZWxsbxIQCghTZXJ2ZXJJZBgBIAEoBRISCgpTZXJ2ZXJUeXBlGAIgASgJImQK",
+            "CUJhblJlY29yZBIQCghUYXJnZXRJZBgBIAEoAxISCgpUYXJnZXRUeXBlGAIg",
+            "ASgFEg8KB0JhblRpbWUYAyABKAMSEAoIRHVyYXRpb24YBCABKAMSDgoGUmVh",
+            "c29uGAUgASgJQgZaBC4vcGJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.ServerInfo), global::Gserver.ServerInfo.Parser, new[]{ "ServerId", "ServerType", "ServerListenAddr", "ClientListenAddr", "WsClientListenAddr", "GateListenAddr", "LastActiveTime", "Ping" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.ServerInfo), global::Gserver.ServerInfo.Parser, new[]{ "ServerId", "ServerType", "ServerListenAddr", "ClientListenAddr", "WsClientListenAddr", "GateListenAddr", "LastActiveTime", "Ping", "ReloadTime", "StartupTime", "OnlineCount", "GitVersion", "Info" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.KickPlayerReq), global::Gserver.KickPlayerReq.Parser, new[]{ "AccountId", "PlayerId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.KickPlayerRes), global::Gserver.KickPlayerRes.Parser, new[]{ "Error", "AccountId", "PlayerId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.ClientDisconnect), global::Gserver.ClientDisconnect.Parser, new[]{ "ClientConnId" }, null, null, null, null),
@@ -53,7 +55,7 @@ namespace Gserver {
   }
   #region Messages
   /// <summary>
-  /// 服务器信息
+  /// 服务器进程信息
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ServerInfo : pb::IMessage<ServerInfo>
@@ -98,6 +100,11 @@ namespace Gserver {
       gateListenAddr_ = other.gateListenAddr_;
       lastActiveTime_ = other.lastActiveTime_;
       ping_ = other.ping_;
+      reloadTime_ = other.reloadTime_;
+      startupTime_ = other.startupTime_;
+      onlineCount_ = other.onlineCount_;
+      gitVersion_ = other.gitVersion_;
+      info_ = other.info_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -227,6 +234,81 @@ namespace Gserver {
       }
     }
 
+    /// <summary>Field number for the "ReloadTime" field.</summary>
+    public const int ReloadTimeFieldNumber = 9;
+    private long reloadTime_;
+    /// <summary>
+    /// 最近热更配置表时间戳(秒)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long ReloadTime {
+      get { return reloadTime_; }
+      set {
+        reloadTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "StartupTime" field.</summary>
+    public const int StartupTimeFieldNumber = 10;
+    private long startupTime_;
+    /// <summary>
+    /// 进程启动时间戳(秒)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long StartupTime {
+      get { return startupTime_; }
+      set {
+        startupTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "OnlineCount" field.</summary>
+    public const int OnlineCountFieldNumber = 11;
+    private int onlineCount_;
+    /// <summary>
+    /// 在线人数(仅Game进程有值,含断线保留期玩家)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int OnlineCount {
+      get { return onlineCount_; }
+      set {
+        onlineCount_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "GitVersion" field.</summary>
+    public const int GitVersionFieldNumber = 12;
+    private string gitVersion_ = "";
+    /// <summary>
+    /// build时传入的GitVersion
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string GitVersion {
+      get { return gitVersion_; }
+      set {
+        gitVersion_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "Info" field.</summary>
+    public const int InfoFieldNumber = 13;
+    private string info_ = "";
+    /// <summary>
+    /// 自定义信息,用于不同的服务器上传自定义的内容
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Info {
+      get { return info_; }
+      set {
+        info_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -250,6 +332,11 @@ namespace Gserver {
       if (GateListenAddr != other.GateListenAddr) return false;
       if (LastActiveTime != other.LastActiveTime) return false;
       if (Ping != other.Ping) return false;
+      if (ReloadTime != other.ReloadTime) return false;
+      if (StartupTime != other.StartupTime) return false;
+      if (OnlineCount != other.OnlineCount) return false;
+      if (GitVersion != other.GitVersion) return false;
+      if (Info != other.Info) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -265,6 +352,11 @@ namespace Gserver {
       if (GateListenAddr.Length != 0) hash ^= GateListenAddr.GetHashCode();
       if (LastActiveTime != 0L) hash ^= LastActiveTime.GetHashCode();
       if (Ping != 0) hash ^= Ping.GetHashCode();
+      if (ReloadTime != 0L) hash ^= ReloadTime.GetHashCode();
+      if (StartupTime != 0L) hash ^= StartupTime.GetHashCode();
+      if (OnlineCount != 0) hash ^= OnlineCount.GetHashCode();
+      if (GitVersion.Length != 0) hash ^= GitVersion.GetHashCode();
+      if (Info.Length != 0) hash ^= Info.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -315,6 +407,26 @@ namespace Gserver {
         output.WriteRawTag(64);
         output.WriteInt32(Ping);
       }
+      if (ReloadTime != 0L) {
+        output.WriteRawTag(72);
+        output.WriteInt64(ReloadTime);
+      }
+      if (StartupTime != 0L) {
+        output.WriteRawTag(80);
+        output.WriteInt64(StartupTime);
+      }
+      if (OnlineCount != 0) {
+        output.WriteRawTag(88);
+        output.WriteInt32(OnlineCount);
+      }
+      if (GitVersion.Length != 0) {
+        output.WriteRawTag(98);
+        output.WriteString(GitVersion);
+      }
+      if (Info.Length != 0) {
+        output.WriteRawTag(106);
+        output.WriteString(Info);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -357,6 +469,26 @@ namespace Gserver {
         output.WriteRawTag(64);
         output.WriteInt32(Ping);
       }
+      if (ReloadTime != 0L) {
+        output.WriteRawTag(72);
+        output.WriteInt64(ReloadTime);
+      }
+      if (StartupTime != 0L) {
+        output.WriteRawTag(80);
+        output.WriteInt64(StartupTime);
+      }
+      if (OnlineCount != 0) {
+        output.WriteRawTag(88);
+        output.WriteInt32(OnlineCount);
+      }
+      if (GitVersion.Length != 0) {
+        output.WriteRawTag(98);
+        output.WriteString(GitVersion);
+      }
+      if (Info.Length != 0) {
+        output.WriteRawTag(106);
+        output.WriteString(Info);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -390,6 +522,21 @@ namespace Gserver {
       }
       if (Ping != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Ping);
+      }
+      if (ReloadTime != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(ReloadTime);
+      }
+      if (StartupTime != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(StartupTime);
+      }
+      if (OnlineCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(OnlineCount);
+      }
+      if (GitVersion.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(GitVersion);
+      }
+      if (Info.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Info);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -426,6 +573,21 @@ namespace Gserver {
       }
       if (other.Ping != 0) {
         Ping = other.Ping;
+      }
+      if (other.ReloadTime != 0L) {
+        ReloadTime = other.ReloadTime;
+      }
+      if (other.StartupTime != 0L) {
+        StartupTime = other.StartupTime;
+      }
+      if (other.OnlineCount != 0) {
+        OnlineCount = other.OnlineCount;
+      }
+      if (other.GitVersion.Length != 0) {
+        GitVersion = other.GitVersion;
+      }
+      if (other.Info.Length != 0) {
+        Info = other.Info;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -474,6 +636,26 @@ namespace Gserver {
             Ping = input.ReadInt32();
             break;
           }
+          case 72: {
+            ReloadTime = input.ReadInt64();
+            break;
+          }
+          case 80: {
+            StartupTime = input.ReadInt64();
+            break;
+          }
+          case 88: {
+            OnlineCount = input.ReadInt32();
+            break;
+          }
+          case 98: {
+            GitVersion = input.ReadString();
+            break;
+          }
+          case 106: {
+            Info = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -519,6 +701,26 @@ namespace Gserver {
           }
           case 64: {
             Ping = input.ReadInt32();
+            break;
+          }
+          case 72: {
+            ReloadTime = input.ReadInt64();
+            break;
+          }
+          case 80: {
+            StartupTime = input.ReadInt64();
+            break;
+          }
+          case 88: {
+            OnlineCount = input.ReadInt32();
+            break;
+          }
+          case 98: {
+            GitVersion = input.ReadString();
+            break;
+          }
+          case 106: {
+            Info = input.ReadString();
             break;
           }
         }
