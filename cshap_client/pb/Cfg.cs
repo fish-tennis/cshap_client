@@ -32,16 +32,16 @@ namespace Gserver {
             "VGltZVR5cGUYCCABKAUSDwoHVGltZW91dBgJIAEoBRIQCghWaWV3VHlwZRgK",
             "IAEoBRI0CgpQcm9wZXJ0aWVzGAsgAygLMiAuZ3NlcnZlci5JdGVtQ2ZnLlBy",
             "b3BlcnRpZXNFbnRyeRIMCgRJY29uGAwgASgJGjEKD1Byb3BlcnRpZXNFbnRy",
-            "eRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIscBCgpBZGRFbGVt",
+            "eRILCgNrZXkYASABKAUSDQoFdmFsdWUYAiABKAM6AjgBIscBCgpBZGRFbGVt",
             "QXJnEg0KBUNmZ0lkGAEgASgFEgsKA051bRgCIAEoBRIQCghUaW1lVHlwZRgD",
             "IAEoBRIPCgdUaW1lb3V0GAQgASgFEg4KBlNvdXJjZRgFIAEoBRI3CgpQcm9w",
             "ZXJ0aWVzGAYgAygLMiMuZ3NlcnZlci5BZGRFbGVtQXJnLlByb3BlcnRpZXNF",
-            "bnRyeRoxCg9Qcm9wZXJ0aWVzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVl",
-            "GAIgASgJOgI4ASK2AQoKRGVsRWxlbUFyZxIQCghVbmlxdWVJZBgBIAEoAxIN",
+            "bnRyeRoxCg9Qcm9wZXJ0aWVzRW50cnkSCwoDa2V5GAEgASgFEg0KBXZhbHVl",
+            "GAIgASgDOgI4ASK2AQoKRGVsRWxlbUFyZxIQCghVbmlxdWVJZBgBIAEoAxIN",
             "CgVDZmdJZBgCIAEoBRILCgNOdW0YAyABKAUSDgoGU291cmNlGAQgASgFEjcK",
             "ClByb3BlcnRpZXMYBSADKAsyIy5nc2VydmVyLkRlbEVsZW1BcmcuUHJvcGVy",
-            "dGllc0VudHJ5GjEKD1Byb3BlcnRpZXNFbnRyeRILCgNrZXkYASABKAkSDQoF",
-            "dmFsdWUYAiABKAk6AjgBIiQKBkNmZ0FyZxINCgVDZmdJZBgBIAEoBRILCgNB",
+            "dGllc0VudHJ5GjEKD1Byb3BlcnRpZXNFbnRyeRILCgNrZXkYASABKAUSDQoF",
+            "dmFsdWUYAiABKAM6AjgBIiQKBkNmZ0FyZxINCgVDZmdJZBgBIAEoBRILCgNB",
             "cmcYAiABKAUiJgoHQ2ZnQXJncxINCgVDZmdJZBgBIAEoBRIMCgRBcmdzGAIg",
             "AygFIj0KDUNmZ0FyZ09wdGlvbnMSDQoFQ2ZnSWQYASABKAUSDAoEQXJncxgC",
             "IAMoBRIPCgdPcHRpb25zGAMgAygFIigKCVR5cGVWYWx1ZRIMCgRUeXBlGAEg",
@@ -56,18 +56,18 @@ namespace Gserver {
             "dmVsGA0gASgFEiIKCENvbGxlY3RzGA4gAygLMhAuZ3NlcnZlci5JdGVtTnVt",
             "EjIKEkNvbmRpdGlvblRlbXBsYXRlcxgVIAMoCzIWLmdzZXJ2ZXIuQ2ZnQXJn",
             "T3B0aW9ucxIpChBQcm9ncmVzc1RlbXBsYXRlGBYgASgLMg8uZ3NlcnZlci5D",
-            "ZmdBcmcaMQoPUHJvcGVydGllc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1",
-            "ZRgCIAEoCToCOAEiLQoPVmFsdWVDb21wYXJlQ2ZnEgoKAk9wGAEgASgJEg4K",
+            "ZmdBcmcaMQoPUHJvcGVydGllc0VudHJ5EgsKA2tleRgBIAEoBRINCgV2YWx1",
+            "ZRgCIAEoAzoCOAEiLQoPVmFsdWVDb21wYXJlQ2ZnEgoKAk9wGAEgASgJEg4K",
             "BlZhbHVlcxgCIAMoBSLZAQoMQ29uZGl0aW9uQ2ZnEgwKBFR5cGUYASABKAUS",
             "CwoDS2V5GAIgASgJEgoKAk9wGAMgASgJEg4KBlZhbHVlcxgEIAMoBRIPCgdP",
             "cHRpb25zGAUgAygFEjkKClByb3BlcnRpZXMYBiADKAsyJS5nc2VydmVyLkNv",
             "bmRpdGlvbkNmZy5Qcm9wZXJ0aWVzRW50cnkSEwoLQ2xpZW50Q2hlY2sYByAB",
-            "KAgaMQoPUHJvcGVydGllc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgC",
-            "IAEoCToCOAEi1wEKFENvbmRpdGlvblRlbXBsYXRlQ2ZnEg0KBUNmZ0lkGAQg",
+            "KAgaMQoPUHJvcGVydGllc0VudHJ5EgsKA2tleRgBIAEoBRINCgV2YWx1ZRgC",
+            "IAEoAzoCOAEi1wEKFENvbmRpdGlvblRlbXBsYXRlQ2ZnEg0KBUNmZ0lkGAQg",
             "ASgFEgwKBFR5cGUYASABKAUSCwoDS2V5GAIgASgJEgoKAk9wGAMgASgJEkEK",
             "ClByb3BlcnRpZXMYBSADKAsyLS5nc2VydmVyLkNvbmRpdGlvblRlbXBsYXRl",
             "Q2ZnLlByb3BlcnRpZXNFbnRyeRITCgtDbGllbnRDaGVjaxgGIAEoCBoxCg9Q",
-            "cm9wZXJ0aWVzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4",
+            "cm9wZXJ0aWVzRW50cnkSCwoDa2V5GAEgASgFEg0KBXZhbHVlGAIgASgDOgI4",
             "ASLkAwoLUHJvZ3Jlc3NDZmcSDAoEVHlwZRgBIAEoBRINCgVUb3RhbBgCIAEo",
             "BRIQCghOZWVkSW5pdBgDIAEoCBINCgVFdmVudBgEIAEoCRIVCg1Qcm9ncmVz",
             "c0ZpZWxkGAUgASgJEkAKDkludEV2ZW50RmllbGRzGAYgAygLMiguZ3NlcnZl",
@@ -78,7 +78,7 @@ namespace Gserver {
             "c0VudHJ5EgsKA2tleRgBIAEoCRInCgV2YWx1ZRgCIAEoCzIYLmdzZXJ2ZXIu",
             "VmFsdWVDb21wYXJlQ2ZnOgI4ARo4ChZTdHJpbmdFdmVudEZpZWxkc0VudHJ5",
             "EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEaMQoPUHJvcGVydGll",
-            "c0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEihAQKE1By",
+            "c0VudHJ5EgsKA2tleRgBIAEoBRINCgV2YWx1ZRgCIAEoAzoCOAEihAQKE1By",
             "b2dyZXNzVGVtcGxhdGVDZmcSDQoFQ2ZnSWQYASABKAUSDAoEVHlwZRgCIAEo",
             "BRIQCghOZWVkSW5pdBgDIAEoCBINCgVFdmVudBgEIAEoCRIVCg1Qcm9ncmVz",
             "c0ZpZWxkGAUgASgJEkgKDkludEV2ZW50RmllbGRzGAYgAygLMjAuZ3NlcnZl",
@@ -89,8 +89,8 @@ namespace Gserver {
             "ZXNFbnRyeRpPChNJbnRFdmVudEZpZWxkc0VudHJ5EgsKA2tleRgBIAEoCRIn",
             "CgV2YWx1ZRgCIAEoCzIYLmdzZXJ2ZXIuVmFsdWVDb21wYXJlQ2ZnOgI4ARo4",
             "ChZTdHJpbmdFdmVudEZpZWxkc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1",
-            "ZRgCIAEoCToCOAEaMQoPUHJvcGVydGllc0VudHJ5EgsKA2tleRgBIAEoCRIN",
-            "CgV2YWx1ZRgCIAEoCToCOAEiogMKC0V4Y2hhbmdlQ2ZnEg0KBUNmZ0lkGAEg",
+            "ZRgCIAEoCToCOAEaMQoPUHJvcGVydGllc0VudHJ5EgsKA2tleRgBIAEoBRIN",
+            "CgV2YWx1ZRgCIAEoAzoCOAEiogMKC0V4Y2hhbmdlQ2ZnEg0KBUNmZ0lkGAEg",
             "ASgFEikKCkNvbmRpdGlvbnMYAiADKAsyFS5nc2VydmVyLkNvbmRpdGlvbkNm",
             "ZxIiCghDb25zdW1lcxgDIAMoCzIQLmdzZXJ2ZXIuSXRlbU51bRIkCgdSZXdh",
             "cmRzGAQgAygLMhMuZ3NlcnZlci5BZGRFbGVtQXJnEhIKCkNvdW50TGltaXQY",
@@ -99,7 +99,7 @@ namespace Gserver {
             "Z3NlcnZlci5FeGNoYW5nZUNmZy5Qcm9wZXJ0aWVzRW50cnkSDgoGRGV0YWls",
             "GAogASgJEgwKBEljb24YCyABKAkSMgoSQ29uZGl0aW9uVGVtcGxhdGVzGBUg",
             "AygLMhYuZ3NlcnZlci5DZmdBcmdPcHRpb25zGjEKD1Byb3BlcnRpZXNFbnRy",
-            "eRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBInwKC1JlY2hhcmdl",
+            "eRILCgNrZXkYASABKAUSDQoFdmFsdWUYAiABKAM6AjgBInwKC1JlY2hhcmdl",
             "Q2ZnEg0KBUNmZ0lkGAEgASgFEg0KBVByaWNlGAIgASgFEhAKCEN1cnJlbmN5",
             "GAMgASgJEhEKCVByb2R1Y3RJZBgEIAEoCRIMCgROYW1lGAUgASgJEgwKBElj",
             "b24YBiABKAkSDgoGRGV0YWlsGAcgASgJIpgDCgtBY3Rpdml0eUNmZxINCgVD",
@@ -111,12 +111,12 @@ namespace Gserver {
             "eWVyTGV2ZWwYDiABKAUSFgoOTWF4UGxheWVyTGV2ZWwYDyABKAUSEAoIUXVl",
             "c3RJZHMYECADKAUSOAoKUHJvcGVydGllcxgRIAMoCzIkLmdzZXJ2ZXIuQWN0",
             "aXZpdHlDZmcuUHJvcGVydGllc0VudHJ5GjEKD1Byb3BlcnRpZXNFbnRyeRIL",
-            "CgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIioKCExldmVsRXhwEg0K",
+            "CgNrZXkYASABKAUSDQoFdmFsdWUYAiABKAM6AjgBIioKCExldmVsRXhwEg0K",
             "BUxldmVsGAEgASgFEg8KB05lZWRFeHAYAiABKAUipAEKB1Nob3BDZmcSDQoF",
             "Q2ZnSWQYASABKAUSDAoETmFtZRgCIAEoCRITCgtFeGNoYW5nZUlkcxgDIAMo",
             "BRI0CgpQcm9wZXJ0aWVzGAggAygLMiAuZ3NlcnZlci5TaG9wQ2ZnLlByb3Bl",
-            "cnRpZXNFbnRyeRoxCg9Qcm9wZXJ0aWVzRW50cnkSCwoDa2V5GAEgASgJEg0K",
-            "BXZhbHVlGAIgASgJOgI4ASppCgVDb2xvchIOCgpDb2xvcl9Ob25lEAASDQoJ",
+            "cnRpZXNFbnRyeRoxCg9Qcm9wZXJ0aWVzRW50cnkSCwoDa2V5GAEgASgFEg0K",
+            "BXZhbHVlGAIgASgDOgI4ASppCgVDb2xvchIOCgpDb2xvcl9Ob25lEAASDQoJ",
             "Q29sb3JfUmVkEAESDwoLQ29sb3JfR3JlZW4QAhIOCgpDb2xvcl9CbHVlEAMS",
             "EAoMQ29sb3JfWWVsbG93EAQSDgoKQ29sb3JfR3JheRAFKjgKC1JlZnJlc2hU",
             "eXBlEhQKEFJlZnJlc2hUeXBlX05vbmUQABITCg9SZWZyZXNoVHlwZV9EYXkQ",
@@ -969,15 +969,15 @@ namespace Gserver {
 
     /// <summary>Field number for the "Properties" field.</summary>
     public const int PropertiesFieldNumber = 11;
-    private static readonly pbc::MapField<string, string>.Codec _map_properties_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 90);
-    private readonly pbc::MapField<string, string> properties_ = new pbc::MapField<string, string>();
+    private static readonly pbc::MapField<int, long>.Codec _map_properties_codec
+        = new pbc::MapField<int, long>.Codec(pb::FieldCodec.ForInt32(8, 0), pb::FieldCodec.ForInt64(16, 0L), 90);
+    private readonly pbc::MapField<int, long> properties_ = new pbc::MapField<int, long>();
     /// <summary>
-    /// 扩展属性
+    /// 扩展属性(key为int32枚举值,值为int64)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::MapField<string, string> Properties {
+    public pbc::MapField<int, long> Properties {
       get { return properties_; }
     }
 
@@ -1505,15 +1505,15 @@ namespace Gserver {
 
     /// <summary>Field number for the "Properties" field.</summary>
     public const int PropertiesFieldNumber = 6;
-    private static readonly pbc::MapField<string, string>.Codec _map_properties_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 50);
-    private readonly pbc::MapField<string, string> properties_ = new pbc::MapField<string, string>();
+    private static readonly pbc::MapField<int, long>.Codec _map_properties_codec
+        = new pbc::MapField<int, long>.Codec(pb::FieldCodec.ForInt32(8, 0), pb::FieldCodec.ForInt64(16, 0L), 50);
+    private readonly pbc::MapField<int, long> properties_ = new pbc::MapField<int, long>();
     /// <summary>
-    /// 扩展属性
+    /// 扩展属性(key为int32枚举值,值为int64)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::MapField<string, string> Properties {
+    public pbc::MapField<int, long> Properties {
       get { return properties_; }
     }
 
@@ -1874,15 +1874,15 @@ namespace Gserver {
 
     /// <summary>Field number for the "Properties" field.</summary>
     public const int PropertiesFieldNumber = 5;
-    private static readonly pbc::MapField<string, string>.Codec _map_properties_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 42);
-    private readonly pbc::MapField<string, string> properties_ = new pbc::MapField<string, string>();
+    private static readonly pbc::MapField<int, long>.Codec _map_properties_codec
+        = new pbc::MapField<int, long>.Codec(pb::FieldCodec.ForInt32(8, 0), pb::FieldCodec.ForInt64(16, 0L), 42);
+    private readonly pbc::MapField<int, long> properties_ = new pbc::MapField<int, long>();
     /// <summary>
-    /// 扩展属性
+    /// 扩展属性(key为int32枚举值,值为int64)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::MapField<string, string> Properties {
+    public pbc::MapField<int, long> Properties {
       get { return properties_; }
     }
 
@@ -3268,15 +3268,15 @@ namespace Gserver {
 
     /// <summary>Field number for the "Properties" field.</summary>
     public const int PropertiesFieldNumber = 11;
-    private static readonly pbc::MapField<string, string>.Codec _map_properties_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 90);
-    private readonly pbc::MapField<string, string> properties_ = new pbc::MapField<string, string>();
+    private static readonly pbc::MapField<int, long>.Codec _map_properties_codec
+        = new pbc::MapField<int, long>.Codec(pb::FieldCodec.ForInt32(8, 0), pb::FieldCodec.ForInt64(16, 0L), 90);
+    private readonly pbc::MapField<int, long> properties_ = new pbc::MapField<int, long>();
     /// <summary>
-    /// 扩展属性
+    /// 扩展属性(key为int32枚举值,值为int64)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::MapField<string, string> Properties {
+    public pbc::MapField<int, long> Properties {
       get { return properties_; }
     }
 
@@ -4162,15 +4162,15 @@ namespace Gserver {
 
     /// <summary>Field number for the "Properties" field.</summary>
     public const int PropertiesFieldNumber = 6;
-    private static readonly pbc::MapField<string, string>.Codec _map_properties_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 50);
-    private readonly pbc::MapField<string, string> properties_ = new pbc::MapField<string, string>();
+    private static readonly pbc::MapField<int, long>.Codec _map_properties_codec
+        = new pbc::MapField<int, long>.Codec(pb::FieldCodec.ForInt32(8, 0), pb::FieldCodec.ForInt64(16, 0L), 50);
+    private readonly pbc::MapField<int, long> properties_ = new pbc::MapField<int, long>();
     /// <summary>
-    /// 扩展属性
+    /// 扩展属性(key为int32枚举值,值为int64)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::MapField<string, string> Properties {
+    public pbc::MapField<int, long> Properties {
       get { return properties_; }
     }
 
@@ -4555,15 +4555,15 @@ namespace Gserver {
 
     /// <summary>Field number for the "Properties" field.</summary>
     public const int PropertiesFieldNumber = 5;
-    private static readonly pbc::MapField<string, string>.Codec _map_properties_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 42);
-    private readonly pbc::MapField<string, string> properties_ = new pbc::MapField<string, string>();
+    private static readonly pbc::MapField<int, long>.Codec _map_properties_codec
+        = new pbc::MapField<int, long>.Codec(pb::FieldCodec.ForInt32(8, 0), pb::FieldCodec.ForInt64(16, 0L), 42);
+    private readonly pbc::MapField<int, long> properties_ = new pbc::MapField<int, long>();
     /// <summary>
-    /// 扩展属性
+    /// 扩展属性(key为int32枚举值,值为int64)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::MapField<string, string> Properties {
+    public pbc::MapField<int, long> Properties {
       get { return properties_; }
     }
 
@@ -4985,15 +4985,15 @@ namespace Gserver {
 
     /// <summary>Field number for the "Properties" field.</summary>
     public const int PropertiesFieldNumber = 8;
-    private static readonly pbc::MapField<string, string>.Codec _map_properties_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 66);
-    private readonly pbc::MapField<string, string> properties_ = new pbc::MapField<string, string>();
+    private static readonly pbc::MapField<int, long>.Codec _map_properties_codec
+        = new pbc::MapField<int, long>.Codec(pb::FieldCodec.ForInt32(8, 0), pb::FieldCodec.ForInt64(16, 0L), 66);
+    private readonly pbc::MapField<int, long> properties_ = new pbc::MapField<int, long>();
     /// <summary>
-    /// 扩展属性
+    /// 扩展属性(key为int32枚举值,值为int64)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::MapField<string, string> Properties {
+    public pbc::MapField<int, long> Properties {
       get { return properties_; }
     }
 
@@ -5428,15 +5428,15 @@ namespace Gserver {
 
     /// <summary>Field number for the "Properties" field.</summary>
     public const int PropertiesFieldNumber = 8;
-    private static readonly pbc::MapField<string, string>.Codec _map_properties_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 66);
-    private readonly pbc::MapField<string, string> properties_ = new pbc::MapField<string, string>();
+    private static readonly pbc::MapField<int, long>.Codec _map_properties_codec
+        = new pbc::MapField<int, long>.Codec(pb::FieldCodec.ForInt32(8, 0), pb::FieldCodec.ForInt64(16, 0L), 66);
+    private readonly pbc::MapField<int, long> properties_ = new pbc::MapField<int, long>();
     /// <summary>
-    /// 扩展属性
+    /// 扩展属性(key为int32枚举值,值为int64)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::MapField<string, string> Properties {
+    public pbc::MapField<int, long> Properties {
       get { return properties_; }
     }
 
@@ -5886,15 +5886,15 @@ namespace Gserver {
 
     /// <summary>Field number for the "Properties" field.</summary>
     public const int PropertiesFieldNumber = 9;
-    private static readonly pbc::MapField<string, string>.Codec _map_properties_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 74);
-    private readonly pbc::MapField<string, string> properties_ = new pbc::MapField<string, string>();
+    private static readonly pbc::MapField<int, long>.Codec _map_properties_codec
+        = new pbc::MapField<int, long>.Codec(pb::FieldCodec.ForInt32(8, 0), pb::FieldCodec.ForInt64(16, 0L), 74);
+    private readonly pbc::MapField<int, long> properties_ = new pbc::MapField<int, long>();
     /// <summary>
-    /// 扩展属性
+    /// 扩展属性(key为int32枚举值,值为int64)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::MapField<string, string> Properties {
+    public pbc::MapField<int, long> Properties {
       get { return properties_; }
     }
 
@@ -6998,15 +6998,15 @@ namespace Gserver {
 
     /// <summary>Field number for the "Properties" field.</summary>
     public const int PropertiesFieldNumber = 17;
-    private static readonly pbc::MapField<string, string>.Codec _map_properties_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 138);
-    private readonly pbc::MapField<string, string> properties_ = new pbc::MapField<string, string>();
+    private static readonly pbc::MapField<int, long>.Codec _map_properties_codec
+        = new pbc::MapField<int, long>.Codec(pb::FieldCodec.ForInt32(8, 0), pb::FieldCodec.ForInt64(16, 0L), 138);
+    private readonly pbc::MapField<int, long> properties_ = new pbc::MapField<int, long>();
     /// <summary>
-    /// 扩展属性
+    /// 扩展属性(key为int32枚举值,值为int64)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::MapField<string, string> Properties {
+    public pbc::MapField<int, long> Properties {
       get { return properties_; }
     }
 
@@ -7810,15 +7810,15 @@ namespace Gserver {
 
     /// <summary>Field number for the "Properties" field.</summary>
     public const int PropertiesFieldNumber = 8;
-    private static readonly pbc::MapField<string, string>.Codec _map_properties_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 66);
-    private readonly pbc::MapField<string, string> properties_ = new pbc::MapField<string, string>();
+    private static readonly pbc::MapField<int, long>.Codec _map_properties_codec
+        = new pbc::MapField<int, long>.Codec(pb::FieldCodec.ForInt32(8, 0), pb::FieldCodec.ForInt64(16, 0L), 66);
+    private readonly pbc::MapField<int, long> properties_ = new pbc::MapField<int, long>();
     /// <summary>
-    /// 扩展属性
+    /// 扩展属性(key为int32枚举值,值为int64)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::MapField<string, string> Properties {
+    public pbc::MapField<int, long> Properties {
       get { return properties_; }
     }
 

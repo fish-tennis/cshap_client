@@ -58,16 +58,15 @@ namespace Gserver {
             "ZXNzYWdlc0VudHJ5EgsKA2tleRgBIAEoAxINCgV2YWx1ZRgCIAEoDDoCOAEa",
             "MQoPQWN0aXZpdGllc0VudHJ5EgsKA2tleRgBIAEoBRINCgV2YWx1ZRgCIAEo",
             "DDoCOAEaLwoNRXhjaGFuZ2VFbnRyeRILCgNrZXkYASABKAUSDQoFdmFsdWUY",
-            "AiABKAw6AjgBIsUBChdBY3Rpdml0eURlZmF1bHRCYXNlRGF0YRIWCg5MYXN0",
-            "VXBkYXRlVGltZRgBIAEoAxIQCghKb2luVGltZRgEIAEoAxJKCg1Qcm9wZXJ0",
-            "aWVzSW50GAUgAygLMjMuZ3NlcnZlci5BY3Rpdml0eURlZmF1bHRCYXNlRGF0",
-            "YS5Qcm9wZXJ0aWVzSW50RW50cnkaNAoSUHJvcGVydGllc0ludEVudHJ5EgsK",
-            "A2tleRgBIAEoBRINCgV2YWx1ZRgCIAEoAzoCOAEidwoOUGVuZGluZ01lc3Nh",
-            "Z2USEQoJTWVzc2FnZUlkGAEgASgDEhUKDVBhY2tldENvbW1hbmQYAiABKAUS",
-            "KAoKUGFja2V0RGF0YRgDIAEoCzIULmdvb2dsZS5wcm90b2J1Zi5BbnkSEQoJ",
-            "VGltZXN0YW1wGAQgASgDIkEKDkV4Y2hhbmdlUmVjb3JkEg0KBUNmZ0lkGAEg",
-            "ASgFEg0KBUNvdW50GAIgASgFEhEKCVRpbWVzdGFtcBgDIAEoA0IGWgQuL3Bi",
-            "YgZwcm90bzM="));
+            "AiABKAw6AjgBIrwBChdBY3Rpdml0eURlZmF1bHRCYXNlRGF0YRIWCg5MYXN0",
+            "VXBkYXRlVGltZRgBIAEoAxIQCghKb2luVGltZRgEIAEoAxJECgpQcm9wZXJ0",
+            "aWVzGAUgAygLMjAuZ3NlcnZlci5BY3Rpdml0eURlZmF1bHRCYXNlRGF0YS5Q",
+            "cm9wZXJ0aWVzRW50cnkaMQoPUHJvcGVydGllc0VudHJ5EgsKA2tleRgBIAEo",
+            "BRINCgV2YWx1ZRgCIAEoAzoCOAEidwoOUGVuZGluZ01lc3NhZ2USEQoJTWVz",
+            "c2FnZUlkGAEgASgDEhUKDVBhY2tldENvbW1hbmQYAiABKAUSKAoKUGFja2V0",
+            "RGF0YRgDIAEoCzIULmdvb2dsZS5wcm90b2J1Zi5BbnkSEQoJVGltZXN0YW1w",
+            "GAQgASgDIkEKDkV4Y2hhbmdlUmVjb3JkEg0KBUNmZ0lkGAEgASgFEg0KBUNv",
+            "dW50GAIgASgFEhEKCVRpbWVzdGFtcBgDIAEoA0IGWgQuL3BiYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.AnyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -78,7 +77,7 @@ namespace Gserver {
             new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.FinishedQuestData), global::Gserver.FinishedQuestData.Parser, new[]{ "Timestamp" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.PlayerGuildData), global::Gserver.PlayerGuildData.Parser, new[]{ "GuildId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.PlayerData), global::Gserver.PlayerData.Parser, new[]{ "Id", "Name", "AccountId", "RegionId", "BaseInfo", "Bags", "Quest", "Guild", "PendingMessages", "Activities", "Exchange" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.ActivityDefaultBaseData), global::Gserver.ActivityDefaultBaseData.Parser, new[]{ "LastUpdateTime", "JoinTime", "PropertiesInt" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.ActivityDefaultBaseData), global::Gserver.ActivityDefaultBaseData.Parser, new[]{ "LastUpdateTime", "JoinTime", "Properties" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.PendingMessage), global::Gserver.PendingMessage.Parser, new[]{ "MessageId", "PacketCommand", "PacketData", "Timestamp" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.ExchangeRecord), global::Gserver.ExchangeRecord.Parser, new[]{ "CfgId", "Count", "Timestamp" }, null, null, null, null)
           }));
@@ -2387,7 +2386,7 @@ namespace Gserver {
     public ActivityDefaultBaseData(ActivityDefaultBaseData other) : this() {
       lastUpdateTime_ = other.lastUpdateTime_;
       joinTime_ = other.joinTime_;
-      propertiesInt_ = other.propertiesInt_.Clone();
+      properties_ = other.properties_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2427,18 +2426,18 @@ namespace Gserver {
       }
     }
 
-    /// <summary>Field number for the "PropertiesInt" field.</summary>
-    public const int PropertiesIntFieldNumber = 5;
-    private static readonly pbc::MapField<int, long>.Codec _map_propertiesInt_codec
+    /// <summary>Field number for the "Properties" field.</summary>
+    public const int PropertiesFieldNumber = 5;
+    private static readonly pbc::MapField<int, long>.Codec _map_properties_codec
         = new pbc::MapField<int, long>.Codec(pb::FieldCodec.ForInt32(8, 0), pb::FieldCodec.ForInt64(16, 0L), 42);
-    private readonly pbc::MapField<int, long> propertiesInt_ = new pbc::MapField<int, long>();
+    private readonly pbc::MapField<int, long> properties_ = new pbc::MapField<int, long>();
     /// <summary>
     /// 动态属性,key为ActivityPropertyId枚举值
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::MapField<int, long> PropertiesInt {
-      get { return propertiesInt_; }
+    public pbc::MapField<int, long> Properties {
+      get { return properties_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2458,7 +2457,7 @@ namespace Gserver {
       }
       if (LastUpdateTime != other.LastUpdateTime) return false;
       if (JoinTime != other.JoinTime) return false;
-      if (!PropertiesInt.Equals(other.PropertiesInt)) return false;
+      if (!Properties.Equals(other.Properties)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2468,7 +2467,7 @@ namespace Gserver {
       int hash = 1;
       if (LastUpdateTime != 0L) hash ^= LastUpdateTime.GetHashCode();
       if (JoinTime != 0L) hash ^= JoinTime.GetHashCode();
-      hash ^= PropertiesInt.GetHashCode();
+      hash ^= Properties.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2495,7 +2494,7 @@ namespace Gserver {
         output.WriteRawTag(32);
         output.WriteInt64(JoinTime);
       }
-      propertiesInt_.WriteTo(output, _map_propertiesInt_codec);
+      properties_.WriteTo(output, _map_properties_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2514,7 +2513,7 @@ namespace Gserver {
         output.WriteRawTag(32);
         output.WriteInt64(JoinTime);
       }
-      propertiesInt_.WriteTo(ref output, _map_propertiesInt_codec);
+      properties_.WriteTo(ref output, _map_properties_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2531,7 +2530,7 @@ namespace Gserver {
       if (JoinTime != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(JoinTime);
       }
-      size += propertiesInt_.CalculateSize(_map_propertiesInt_codec);
+      size += properties_.CalculateSize(_map_properties_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -2550,7 +2549,7 @@ namespace Gserver {
       if (other.JoinTime != 0L) {
         JoinTime = other.JoinTime;
       }
-      propertiesInt_.MergeFrom(other.propertiesInt_);
+      properties_.MergeFrom(other.properties_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -2575,7 +2574,7 @@ namespace Gserver {
             break;
           }
           case 42: {
-            propertiesInt_.AddEntriesFrom(input, _map_propertiesInt_codec);
+            properties_.AddEntriesFrom(input, _map_properties_codec);
             break;
           }
         }
@@ -2602,7 +2601,7 @@ namespace Gserver {
             break;
           }
           case 42: {
-            propertiesInt_.AddEntriesFrom(ref input, _map_propertiesInt_codec);
+            properties_.AddEntriesFrom(ref input, _map_properties_codec);
             break;
           }
         }
