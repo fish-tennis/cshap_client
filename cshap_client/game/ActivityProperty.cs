@@ -1,9 +1,9 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace cshap_client.game
 {
     using ActivityPropertyGetter = System.Func<Activity, string, Gserver.ConditionCfg, int>;
-    
+
     public static class ActivityProperty
     {
         // 活动属性值接口 提供一个统一的属性值查询接口

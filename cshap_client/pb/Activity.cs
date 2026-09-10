@@ -27,11 +27,12 @@ namespace Gserver {
             "Cg5hY3Rpdml0eS5wcm90bxIHZ3NlcnZlchoMcGxheWVyLnByb3RvIlYKDEFj",
             "dGl2aXR5U3luYxISCgpBY3Rpdml0eUlkGAEgASgFEjIKCEJhc2VEYXRhGAIg",
             "ASgLMiAuZ3NlcnZlci5BY3Rpdml0eURlZmF1bHRCYXNlRGF0YSInChFBY3Rp",
-            "dml0eVJlbW92ZVJlcxISCgpBY3Rpdml0eUlkGAEgASgFQgZaBC4vcGJiBnBy",
-            "b3RvMw=="));
+            "dml0eVJlbW92ZVJlcxISCgpBY3Rpdml0eUlkGAEgASgFKjEKEkFjdGl2aXR5",
+            "UHJvcGVydHlJZBIICgROb25lEAASEQoNUmFuZG9tUXVlc3RJZBABQgZaBC4v",
+            "cGJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Gserver.PlayerReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Gserver.ActivityPropertyId), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.ActivitySync), global::Gserver.ActivitySync.Parser, new[]{ "ActivityId", "BaseData" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.ActivityRemoveRes), global::Gserver.ActivityRemoveRes.Parser, new[]{ "ActivityId" }, null, null, null, null)
           }));
@@ -39,6 +40,25 @@ namespace Gserver {
     #endregion
 
   }
+  #region Enums
+  /// <summary>
+  /// 活动属性名定义
+  /// 服务器和客户端共用的活动属性枚举,ActivityDefaultBaseData.PropertiesInt的key
+  /// 枚举值使用不带前缀的短名,配置表(如条件检查的Key)和客户端可以直接使用属性名
+  /// </summary>
+  public enum ActivityPropertyId {
+    /// <summary>
+    /// 解决"The first enum value must be zero in proto3."的报错
+    /// </summary>
+    [pbr::OriginalName("None")] None = 0,
+    /// <summary>
+    /// 随机任务id(game\activity_random_quest.go测试使用)
+    /// </summary>
+    [pbr::OriginalName("RandomQuestId")] RandomQuestId = 1,
+  }
+
+  #endregion
+
   #region Messages
   /// <summary>
   /// 同步活动数据给客户端
