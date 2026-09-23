@@ -26,17 +26,20 @@ namespace Gserver {
           string.Concat(
             "ChFjbGllbnRfYmFzZS5wcm90bxIHZ3NlcnZlciIhCgxIZWFydEJlYXRSZXES",
             "EQoJVGltZXN0YW1wGAEgASgDIkMKDEhlYXJ0QmVhdFJlcxIYChBSZXF1ZXN0",
-            "VGltZXN0YW1wGAEgASgDEhkKEVJlc3BvbnNlVGltZXN0YW1wGAIgASgDIkAK",
-            "CEVycm9yUmVzEg8KB0NvbW1hbmQYASABKAUSEAoIUmVzdWx0SWQYAiABKAUS",
-            "EQoJUmVzdWx0U3RyGAMgASgJImQKGkdhdGVSb3V0ZUNsaWVudFBhY2tldEVy",
-            "cm9yEhAKCFBsYXllcklkGAEgASgDEg8KB0NvbW1hbmQYAiABKAUSEAoIUmVz",
-            "dWx0SWQYAyABKAUSEQoJUmVzdWx0U3RyGAQgASgJQgZaBC4vcGJiBnByb3Rv",
-            "Mw=="));
+            "VGltZXN0YW1wGAEgASgDEhkKEVJlc3BvbnNlVGltZXN0YW1wGAIgASgDIlsK",
+            "DlNlcnZlclRpbWVTeW5jEhUKDVJlYWxUaW1lc3RhbXAYASABKAMSGAoQVmly",
+            "dHVhbFRpbWVzdGFtcBgCIAEoAxIYChBVdGNPZmZzZXRTZWNvbmRzGAMgASgF",
+            "IkAKCEVycm9yUmVzEg8KB0NvbW1hbmQYASABKAUSEAoIUmVzdWx0SWQYAiAB",
+            "KAUSEQoJUmVzdWx0U3RyGAMgASgJImQKGkdhdGVSb3V0ZUNsaWVudFBhY2tl",
+            "dEVycm9yEhAKCFBsYXllcklkGAEgASgDEg8KB0NvbW1hbmQYAiABKAUSEAoI",
+            "UmVzdWx0SWQYAyABKAUSEQoJUmVzdWx0U3RyGAQgASgJQgZaBC4vcGJiBnBy",
+            "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.HeartBeatReq), global::Gserver.HeartBeatReq.Parser, new[]{ "Timestamp" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.HeartBeatRes), global::Gserver.HeartBeatRes.Parser, new[]{ "RequestTimestamp", "ResponseTimestamp" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.ServerTimeSync), global::Gserver.ServerTimeSync.Parser, new[]{ "RealTimestamp", "VirtualTimestamp", "UtcOffsetSeconds" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.ErrorRes), global::Gserver.ErrorRes.Parser, new[]{ "Command", "ResultId", "ResultStr" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.GateRouteClientPacketError), global::Gserver.GateRouteClientPacketError.Parser, new[]{ "PlayerId", "Command", "ResultId", "ResultStr" }, null, null, null, null)
           }));
@@ -478,6 +481,282 @@ namespace Gserver {
   }
 
   /// <summary>
+  /// 同步服务器的时间给客户端
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ServerTimeSync : pb::IMessage<ServerTimeSync>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ServerTimeSync> _parser = new pb::MessageParser<ServerTimeSync>(() => new ServerTimeSync());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ServerTimeSync> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Gserver.ClientBaseReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ServerTimeSync() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ServerTimeSync(ServerTimeSync other) : this() {
+      realTimestamp_ = other.realTimestamp_;
+      virtualTimestamp_ = other.virtualTimestamp_;
+      utcOffsetSeconds_ = other.utcOffsetSeconds_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ServerTimeSync Clone() {
+      return new ServerTimeSync(this);
+    }
+
+    /// <summary>Field number for the "RealTimestamp" field.</summary>
+    public const int RealTimestampFieldNumber = 1;
+    private long realTimestamp_;
+    /// <summary>
+    /// 服务器的现实时间戳(毫秒)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long RealTimestamp {
+      get { return realTimestamp_; }
+      set {
+        realTimestamp_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "VirtualTimestamp" field.</summary>
+    public const int VirtualTimestampFieldNumber = 2;
+    private long virtualTimestamp_;
+    /// <summary>
+    /// 服务器的虚拟时间戳(毫秒)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long VirtualTimestamp {
+      get { return virtualTimestamp_; }
+      set {
+        virtualTimestamp_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "UtcOffsetSeconds" field.</summary>
+    public const int UtcOffsetSecondsFieldNumber = 3;
+    private int utcOffsetSeconds_;
+    /// <summary>
+    /// 服务器时区相对UTC的偏移秒数(取自服务器time.Local,如东八区=28800;客户端按服务器时区计算日期边界/每日重置/格式化显示,便于不同地区的客户端正确处理)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int UtcOffsetSeconds {
+      get { return utcOffsetSeconds_; }
+      set {
+        utcOffsetSeconds_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ServerTimeSync);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ServerTimeSync other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (RealTimestamp != other.RealTimestamp) return false;
+      if (VirtualTimestamp != other.VirtualTimestamp) return false;
+      if (UtcOffsetSeconds != other.UtcOffsetSeconds) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (RealTimestamp != 0L) hash ^= RealTimestamp.GetHashCode();
+      if (VirtualTimestamp != 0L) hash ^= VirtualTimestamp.GetHashCode();
+      if (UtcOffsetSeconds != 0) hash ^= UtcOffsetSeconds.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (RealTimestamp != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(RealTimestamp);
+      }
+      if (VirtualTimestamp != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(VirtualTimestamp);
+      }
+      if (UtcOffsetSeconds != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(UtcOffsetSeconds);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (RealTimestamp != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(RealTimestamp);
+      }
+      if (VirtualTimestamp != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(VirtualTimestamp);
+      }
+      if (UtcOffsetSeconds != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(UtcOffsetSeconds);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (RealTimestamp != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(RealTimestamp);
+      }
+      if (VirtualTimestamp != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(VirtualTimestamp);
+      }
+      if (UtcOffsetSeconds != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(UtcOffsetSeconds);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ServerTimeSync other) {
+      if (other == null) {
+        return;
+      }
+      if (other.RealTimestamp != 0L) {
+        RealTimestamp = other.RealTimestamp;
+      }
+      if (other.VirtualTimestamp != 0L) {
+        VirtualTimestamp = other.VirtualTimestamp;
+      }
+      if (other.UtcOffsetSeconds != 0) {
+        UtcOffsetSeconds = other.UtcOffsetSeconds;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            RealTimestamp = input.ReadInt64();
+            break;
+          }
+          case 16: {
+            VirtualTimestamp = input.ReadInt64();
+            break;
+          }
+          case 24: {
+            UtcOffsetSeconds = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            RealTimestamp = input.ReadInt64();
+            break;
+          }
+          case 16: {
+            VirtualTimestamp = input.ReadInt64();
+            break;
+          }
+          case 24: {
+            UtcOffsetSeconds = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// 通用的错误返回消息
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -495,7 +774,7 @@ namespace Gserver {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Gserver.ClientBaseReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Gserver.ClientBaseReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -771,7 +1050,7 @@ namespace Gserver {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Gserver.ClientBaseReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Gserver.ClientBaseReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

@@ -24,25 +24,26 @@ namespace Gserver {
     static ServerBaseReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFzZXJ2ZXJfYmFzZS5wcm90bxIHZ3NlcnZlciKgAgoKU2VydmVySW5mbxIQ",
+            "ChFzZXJ2ZXJfYmFzZS5wcm90bxIHZ3NlcnZlciLLAgoKU2VydmVySW5mbxIQ",
             "CghTZXJ2ZXJJZBgBIAEoBRISCgpTZXJ2ZXJUeXBlGAIgASgJEhgKEFNlcnZl",
             "ckxpc3RlbkFkZHIYAyABKAkSGAoQQ2xpZW50TGlzdGVuQWRkchgEIAEoCRIa",
             "ChJXc0NsaWVudExpc3RlbkFkZHIYBSABKAkSFgoOR2F0ZUxpc3RlbkFkZHIY",
             "BiABKAkSFgoOTGFzdEFjdGl2ZVRpbWUYByABKAMSDAoEUGluZxgIIAEoBRIS",
             "CgpSZWxvYWRUaW1lGAkgASgDEhMKC1N0YXJ0dXBUaW1lGAogASgDEhMKC09u",
             "bGluZUNvdW50GAsgASgFEhIKCkdpdFZlcnNpb24YDCABKAkSDAoESW5mbxgN",
-            "IAEoCSI0Cg1LaWNrUGxheWVyUmVxEhEKCUFjY291bnRJZBgBIAEoAxIQCghQ",
-            "bGF5ZXJJZBgCIAEoAyJDCg1LaWNrUGxheWVyUmVzEg0KBUVycm9yGAEgASgJ",
-            "EhEKCUFjY291bnRJZBgCIAEoAxIQCghQbGF5ZXJJZBgDIAEoAyIoChBDbGll",
-            "bnREaXNjb25uZWN0EhQKDENsaWVudENvbm5JZBgBIAEoDSIzCgtTZXJ2ZXJI",
-            "ZWxsbxIQCghTZXJ2ZXJJZBgBIAEoBRISCgpTZXJ2ZXJUeXBlGAIgASgJImQK",
-            "CUJhblJlY29yZBIQCghUYXJnZXRJZBgBIAEoAxISCgpUYXJnZXRUeXBlGAIg",
-            "ASgFEg8KB0JhblRpbWUYAyABKAMSEAoIRHVyYXRpb24YBCABKAMSDgoGUmVh",
-            "c29uGAUgASgJQgZaBC4vcGJiBnByb3RvMw=="));
+            "IAEoCRIRCglNYXhPbmxpbmUYDiABKAUSFgoOTG9naW5Gb3JiaWRkZW4YDyAB",
+            "KAgiNAoNS2lja1BsYXllclJlcRIRCglBY2NvdW50SWQYASABKAMSEAoIUGxh",
+            "eWVySWQYAiABKAMiQwoNS2lja1BsYXllclJlcxINCgVFcnJvchgBIAEoCRIR",
+            "CglBY2NvdW50SWQYAiABKAMSEAoIUGxheWVySWQYAyABKAMiKAoQQ2xpZW50",
+            "RGlzY29ubmVjdBIUCgxDbGllbnRDb25uSWQYASABKA0iMwoLU2VydmVySGVs",
+            "bG8SEAoIU2VydmVySWQYASABKAUSEgoKU2VydmVyVHlwZRgCIAEoCSJkCglC",
+            "YW5SZWNvcmQSEAoIVGFyZ2V0SWQYASABKAMSEgoKVGFyZ2V0VHlwZRgCIAEo",
+            "BRIPCgdCYW5UaW1lGAMgASgDEhAKCER1cmF0aW9uGAQgASgDEg4KBlJlYXNv",
+            "bhgFIAEoCUIGWgQuL3BiYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.ServerInfo), global::Gserver.ServerInfo.Parser, new[]{ "ServerId", "ServerType", "ServerListenAddr", "ClientListenAddr", "WsClientListenAddr", "GateListenAddr", "LastActiveTime", "Ping", "ReloadTime", "StartupTime", "OnlineCount", "GitVersion", "Info" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.ServerInfo), global::Gserver.ServerInfo.Parser, new[]{ "ServerId", "ServerType", "ServerListenAddr", "ClientListenAddr", "WsClientListenAddr", "GateListenAddr", "LastActiveTime", "Ping", "ReloadTime", "StartupTime", "OnlineCount", "GitVersion", "Info", "MaxOnline", "LoginForbidden" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.KickPlayerReq), global::Gserver.KickPlayerReq.Parser, new[]{ "AccountId", "PlayerId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.KickPlayerRes), global::Gserver.KickPlayerRes.Parser, new[]{ "Error", "AccountId", "PlayerId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Gserver.ClientDisconnect), global::Gserver.ClientDisconnect.Parser, new[]{ "ClientConnId" }, null, null, null, null),
@@ -105,6 +106,8 @@ namespace Gserver {
       onlineCount_ = other.onlineCount_;
       gitVersion_ = other.gitVersion_;
       info_ = other.info_;
+      maxOnline_ = other.maxOnline_;
+      loginForbidden_ = other.loginForbidden_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -309,6 +312,36 @@ namespace Gserver {
       }
     }
 
+    /// <summary>Field number for the "MaxOnline" field.</summary>
+    public const int MaxOnlineFieldNumber = 14;
+    private int maxOnline_;
+    /// <summary>
+    /// 在线人数上限(仅Game进程有值,登录服按剩余容量加权选服;0=未配置,选服时按默认容量计算)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int MaxOnline {
+      get { return maxOnline_; }
+      set {
+        maxOnline_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "LoginForbidden" field.</summary>
+    public const int LoginForbiddenFieldNumber = 15;
+    private bool loginForbidden_;
+    /// <summary>
+    /// 禁止登录
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool LoginForbidden {
+      get { return loginForbidden_; }
+      set {
+        loginForbidden_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -337,6 +370,8 @@ namespace Gserver {
       if (OnlineCount != other.OnlineCount) return false;
       if (GitVersion != other.GitVersion) return false;
       if (Info != other.Info) return false;
+      if (MaxOnline != other.MaxOnline) return false;
+      if (LoginForbidden != other.LoginForbidden) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -357,6 +392,8 @@ namespace Gserver {
       if (OnlineCount != 0) hash ^= OnlineCount.GetHashCode();
       if (GitVersion.Length != 0) hash ^= GitVersion.GetHashCode();
       if (Info.Length != 0) hash ^= Info.GetHashCode();
+      if (MaxOnline != 0) hash ^= MaxOnline.GetHashCode();
+      if (LoginForbidden != false) hash ^= LoginForbidden.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -427,6 +464,14 @@ namespace Gserver {
         output.WriteRawTag(106);
         output.WriteString(Info);
       }
+      if (MaxOnline != 0) {
+        output.WriteRawTag(112);
+        output.WriteInt32(MaxOnline);
+      }
+      if (LoginForbidden != false) {
+        output.WriteRawTag(120);
+        output.WriteBool(LoginForbidden);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -489,6 +534,14 @@ namespace Gserver {
         output.WriteRawTag(106);
         output.WriteString(Info);
       }
+      if (MaxOnline != 0) {
+        output.WriteRawTag(112);
+        output.WriteInt32(MaxOnline);
+      }
+      if (LoginForbidden != false) {
+        output.WriteRawTag(120);
+        output.WriteBool(LoginForbidden);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -537,6 +590,12 @@ namespace Gserver {
       }
       if (Info.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Info);
+      }
+      if (MaxOnline != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxOnline);
+      }
+      if (LoginForbidden != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -588,6 +647,12 @@ namespace Gserver {
       }
       if (other.Info.Length != 0) {
         Info = other.Info;
+      }
+      if (other.MaxOnline != 0) {
+        MaxOnline = other.MaxOnline;
+      }
+      if (other.LoginForbidden != false) {
+        LoginForbidden = other.LoginForbidden;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -656,6 +721,14 @@ namespace Gserver {
             Info = input.ReadString();
             break;
           }
+          case 112: {
+            MaxOnline = input.ReadInt32();
+            break;
+          }
+          case 120: {
+            LoginForbidden = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -721,6 +794,14 @@ namespace Gserver {
           }
           case 106: {
             Info = input.ReadString();
+            break;
+          }
+          case 112: {
+            MaxOnline = input.ReadInt32();
+            break;
+          }
+          case 120: {
+            LoginForbidden = input.ReadBool();
             break;
           }
         }
